@@ -7,5 +7,132 @@ import { nasa, number } from '../ui/presentation';
 export default function Understand({ result }: { result: AssessmentResult }) {
   const record = getRecord(result.assessmentId);
   const calculation = result.calculation;
-  return <><div className="page-heading"><div className="eyebrow">ASSESSMENT REVIEW / 03</div><h1>Understand my assessment</h1><p>{result.source === 'nasa-research-replay' ? 'Simulated analog research replay · research participant, not a crew assessment.' : 'Trace the comparison from measurement to finding.'}</p></div><AssessmentCard result={result} /><div className="detail-grid"><section className="panel"><h2>Recorded measurements</h2><dl className="facts">{Object.entries({ Participant: record?.subjectId, Date: record?.date, Phase: record?.phase, Metric: record?.metric, Value: record?.value == null ? null : `${record.value} ${record.unit ?? '(unit missing)'}`, 'Body mass': record?.bodyMassKg == null ? null : `${record.bodyMassKg} kg`, Method: record?.method, Modality: record?.modality, Protocol: record?.protocol }).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value ?? 'Not recorded'}</dd></div>)}</dl></section><section className="panel"><h2>Step-by-step calculation</h2>{calculation ? <ol className="steps"><li>Use current {number(calculation.current)} {calculation.unit} and baseline {number(calculation.baseline.value)} {calculation.baseline.unit}.</li><li>Capacity retained = current ÷ baseline × 100.<br /><strong>{number(calculation.current)} ÷ {number(calculation.baseline.value)} × 100 = {number(calculation.retainedPct)}%</strong></li><li>Change = (current − baseline) ÷ baseline × 100.<br /><strong>({number(calculation.current)} − {number(calculation.baseline.value)}) ÷ {number(calculation.baseline.value)} × 100 = {number(calculation.changePct)}%</strong></li></ol> : <p>Calculation withheld. Resolve the evidence issues before selecting a denominator or interpreting a change.</p>}<p>Absolute (L/min) and mass-normalized (mL/kg/min) capacity remain separate. Conversion requires the relevant body mass; none is inferred here.</p></section></div><section className="panel"><h2>Baseline selection</h2><p>{calculation?.baseline.rule ?? 'No baseline selected for this blocked comparison.'}</p>{calculation && <ul>{calculation.baseline.recordIds.map(id => { const baseline = getRecord(id); return <li key={id}><strong>{id}</strong> · {baseline?.date ?? 'Date missing'} · {number(baseline?.value)} {baseline?.unit ?? 'Unit missing'} · {baseline?.method ?? 'Method missing'}</li>; })}</ul>}<p>This selection rule is a demonstration assumption. <a href={nasa.measures}>NASA Standard Measures</a> supports consistent measurement across mission phases; it does not approve this baseline rule.</p></section>{result.source === 'nasa-research-replay' && record && <section className="panel"><h2>Simulated research trajectory</h2><p>Fixture values illustrate decline and recovery. Dates and participant identifiers are simulated, not verified NASA records.</p><TrendChart points={getTrend(record.subjectId)} research /><ul>{getTrend(record.subjectId).map(point => <li key={point.assessmentId}>{point.date} · {number(point.retainedPct)}% retained {point.isBaseline ? '· baseline record' : <a href={`#/understand/${point.assessmentId}`}>Review assessment</a>}</li>)}</ul></section>}<div className="actions"><a className="button" href={`#/evidence/${result.assessmentId}`}>View evidence & follow-up →</a><a href="#/fitness">Back to My Fitness</a></div></>;
+  return (
+    <>
+      <div className="page-heading">
+        <div className="eyebrow">ASSESSMENT REVIEW / 03</div>
+        <h1>Understand my assessment</h1>
+        <p>
+          {result.source === 'nasa-research-replay'
+            ? 'NASA research replay (bed rest analog) · research participant assessment.'
+            : 'Trace the comparison from measurement to finding.'}
+        </p>
+      </div>
+      <AssessmentCard result={result} />
+      <div className="detail-grid">
+        <section className="panel">
+          <h2>Recorded measurements</h2>
+          <dl className="facts">
+            {Object.entries({
+              Participant: record?.subjectId,
+              Date: record?.date,
+              Phase: record?.phase,
+              Metric: record?.metric,
+              Value:
+                record?.value == null ? null : `${record.value} ${record.unit ?? '(unit missing)'}`,
+              'Body mass': record?.bodyMassKg == null ? null : `${record.bodyMassKg} kg`,
+              Method: record?.method,
+              Modality: record?.modality,
+              Protocol: record?.protocol,
+            }).map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value ?? 'Not recorded'}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+        <section className="panel">
+          <h2>Step-by-step calculation</h2>
+          {calculation ? (
+            <ol className="steps">
+              <li>
+                Use current {number(calculation.current)} {calculation.unit} and baseline{' '}
+                {number(calculation.baseline.value)} {calculation.baseline.unit}.
+              </li>
+              <li>
+                Capacity retained = current ÷ baseline × 100.
+                <br />
+                <strong>
+                  {number(calculation.current)} ÷ {number(calculation.baseline.value)} × 100 ={' '}
+                  {number(calculation.retainedPct)}%
+                </strong>
+              </li>
+              <li>
+                Change = (current − baseline) ÷ baseline × 100.
+                <br />
+                <strong>
+                  ({number(calculation.current)} − {number(calculation.baseline.value)}) ÷{' '}
+                  {number(calculation.baseline.value)} × 100 = {number(calculation.changePct)}%
+                </strong>
+              </li>
+            </ol>
+          ) : (
+            <p>
+              Calculation withheld. Resolve the evidence issues before selecting a denominator or
+              interpreting a change.
+            </p>
+          )}
+          <p>
+            Absolute (L/min) and mass-normalized (mL/kg/min) capacity remain separate. Conversion
+            requires the relevant body mass; none is inferred here.
+          </p>
+        </section>
+      </div>
+      <section className="panel">
+        <h2>Baseline selection</h2>
+        <p>{calculation?.baseline.rule ?? 'No baseline selected for this blocked comparison.'}</p>
+        {calculation && (
+          <ul>
+            {calculation.baseline.recordIds.map((id) => {
+              const baseline = getRecord(id);
+              return (
+                <li key={id}>
+                  <strong>{id}</strong> · {baseline?.date ?? 'Date missing'} ·{' '}
+                  {number(baseline?.value)} {baseline?.unit ?? 'Unit missing'} ·{' '}
+                  {baseline?.method ?? 'Method missing'}
+                </li>
+              );
+            })}
+          </ul>
+        )}
+        <p>
+          This selection rule is a demonstration assumption.{' '}
+          <a href={nasa.measures}>NASA Standard Measures</a> supports consistent measurement across
+          mission phases; it does not approve this baseline rule.
+        </p>
+      </section>
+      {result.source === 'nasa-research-replay' && record && (
+        <section className="panel">
+          <h2>NASA research trajectory</h2>
+          <p>
+            MR080G bed-rest research · {record.subjectId} · {record.metric} · {record.unit}. Source
+            conflicts remain unresolved; affected comparisons are withheld.
+          </p>
+          <TrendChart points={getTrend(record.subjectId, record.metric, record.unit)} research />
+          <ul>
+            {getTrend(record.subjectId, record.metric, record.unit).map((point) => (
+              <li key={point.assessmentId}>
+                {point.date} ·{' '}
+                {point.retainedPct === null
+                  ? 'Comparison withheld'
+                  : `${number(point.retainedPct)}% retained`}{' '}
+                {point.isBaseline ? (
+                  '· baseline record'
+                ) : (
+                  <a href={`#/understand/${point.assessmentId}`}>Review assessment</a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      <div className="actions">
+        <a className="button" href={`#/evidence/${result.assessmentId}`}>
+          View evidence & follow-up →
+        </a>
+        <a href="#/fitness">Back to My Fitness</a>
+      </div>
+    </>
+  );
 }
