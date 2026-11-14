@@ -101,7 +101,9 @@ export default function BodyMap() {
           <div className="live-module">
             <div className="eyebrow">LIVE MODULE</div>
             <h2>Heart and lungs</h2>
-            <p>Aerobic capacity · personal baseline comparison</p>
+            <p>
+              Reduced cardiorespiratory and musculoskeletal fitness · personal baseline comparison
+            </p>
             {latest && <StatusBadge result={latest} />}
             <p>
               <a className="button" href="#/fitness">

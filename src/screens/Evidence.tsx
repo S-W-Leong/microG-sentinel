@@ -1,31 +1,28 @@
+import { buildReviewCard } from '../ui/reviewCard';
 import type { AssessmentResult } from '../types';
 import { StatusBadge } from '../components/AssessmentCard';
 import { getReplayResult, getRecords } from '../ui/dataSource';
-import { nasa, replayCitation } from '../ui/presentation';
+import { nasa, replayCitation, sourceLabel } from '../ui/presentation';
 
 export default function Evidence({ result }: { result: AssessmentResult }) {
   const ids = [
     ...new Set([result.assessmentId, ...(result.calculation?.baseline.recordIds ?? [])]),
   ];
+  const target = getRecords().find((r) => r.id === result.assessmentId)!;
+  const candidates = getRecords().filter(
+    (r) =>
+      r.isBaseline &&
+      r.source === target.source &&
+      r.subjectId === target.subjectId &&
+      r.comparisonGroupId === target.comparisonGroupId,
+  );
+  ids.push(...candidates.map((r) => r.id));
   const records = getRecords().filter(
-    (record) =>
-      ids.includes(record.id) ||
-      (record.duplicateOf !== undefined && ids.includes(record.duplicateOf)),
+    (r) => ids.includes(r.id) || (r.duplicateOf && ids.includes(r.duplicateOf)),
   );
   const research = result.source === 'nasa-research-replay';
   function download() {
-    const summary = {
-      title: 'MicroG Sentinel · Review card',
-      source: result.source,
-      sourceNotice: research
-        ? 'NASA bed-rest analog research replay; no clinical or mission determination.'
-        : 'Crew records simulated for demonstration; no clinical or mission determination.',
-      ...(research ? { datasetCitation: replayCitation } : {}),
-      exportedAt: new Date().toISOString(),
-      result,
-      records,
-      references: nasa,
-    };
+    const summary = buildReviewCard(getRecords(), result, new Date().toISOString());
     const url = URL.createObjectURL(
       new Blob([JSON.stringify(summary, null, 2)], { type: 'application/json' }),
     );
@@ -66,7 +63,7 @@ export default function Evidence({ result }: { result: AssessmentResult }) {
             <a href={replayCitation.url}>{replayCitation.title} ↗</a>
           </p>
         ) : (
-          <p>These crew records are simulated for demonstration.</p>
+          <p>{sourceLabel(result.source)}</p>
         )}
         {records.map((record) => (
           <details key={record.id} open>
@@ -158,8 +155,8 @@ export default function Evidence({ result }: { result: AssessmentResult }) {
           <a href={nasa.exercise}>NASA · Zero T2 ↗</a>
         </p>
         <h3>
-          {research
-            ? 'Astronaut workflow context (separate from this research participant)'
+          {research || result.source === 'user-entered'
+            ? 'Astronaut workflow context (separate from this record)'
             : 'What the astronaut can do'}
         </h3>
         <p>
@@ -174,6 +171,36 @@ export default function Evidence({ result }: { result: AssessmentResult }) {
         <p className="subtle">
           This prototype does not change exercise intensity, frequency, or duration. Research
           participants receive no crew recommendation or mission determination.
+        </p>
+      </section>
+      <section className="panel">
+        <h2>Spaceflight and research context</h2>
+        <p>
+          Changing gravity places new demands on the body, while distance from Earth makes access to
+          supplies and medical care more difficult.{' '}
+          <a href="https://www.nasa.gov/hrp/hazards/">NASA · Five Hazards</a>
+        </p>
+        <p>
+          NASA's ongoing Human Research Program investigates methods to protect crew health and
+          performance.{' '}
+          <a href="https://www.nasa.gov/hrp/ongoing-hrp-research/">Explore ongoing HRP research</a>
+        </p>
+        <p>
+          Tempus Pro research examines collecting and integrating health data and telemedicine
+          capabilities. <a href="https://www.nasa.gov/reference/tempus-pro/">NASA · Tempus Pro</a>
+        </p>
+        <p>
+          Space research can also contribute knowledge about physical inactivity and ageing on
+          Earth.{' '}
+          <a href="https://www.asc-csa.gc.ca/eng/iss/science/why-do-we-conduct-science-experiments-in-space.asp">
+            CSA · Science in space
+          </a>
+        </p>
+        <p>
+          <a href="https://www.asc-csa.gc.ca/eng/news/articles/2026/2026-02-26-monitoring-radiation-astronaut-health.asp">
+            CSA radiation monitoring background
+          </a>{' '}
+          · Radiation assessment is outside this prototype.
         </p>
       </section>
       <section className="panel">

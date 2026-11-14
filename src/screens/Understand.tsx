@@ -7,6 +7,9 @@ import { nasa, number } from '../ui/presentation';
 export default function Understand({ result }: { result: AssessmentResult }) {
   const record = getRecord(result.assessmentId);
   const calculation = result.calculation;
+  const paired = result.assessmentId.endsWith('-REL')
+    ? result.assessmentId.replace(/-REL$/, '-ABS')
+    : result.assessmentId.replace(/-ABS$/, '-REL');
   return (
     <>
       <div className="page-heading">
@@ -18,6 +21,13 @@ export default function Understand({ result }: { result: AssessmentResult }) {
             : 'Trace the comparison from measurement to finding.'}
         </p>
       </div>
+      {paired !== result.assessmentId && getRecord(paired) && (
+        <p>
+          <a href={`#/understand/${paired}`}>
+            View recorded {getRecord(paired)?.unit} series (no conversion)
+          </a>
+        </p>
+      )}
       <AssessmentCard result={result} />
       <div className="detail-grid">
         <section className="panel">
@@ -55,7 +65,7 @@ export default function Understand({ result }: { result: AssessmentResult }) {
                 <br />
                 <strong>
                   {number(calculation.current)} ÷ {number(calculation.baseline.value)} × 100 ={' '}
-                  {number(calculation.retainedPct)}%
+                  {calculation.retainedPct.toFixed(1)}%
                 </strong>
               </li>
               <li>
@@ -63,7 +73,7 @@ export default function Understand({ result }: { result: AssessmentResult }) {
                 <br />
                 <strong>
                   ({number(calculation.current)} − {number(calculation.baseline.value)}) ÷{' '}
-                  {number(calculation.baseline.value)} × 100 = {number(calculation.changePct)}%
+                  {number(calculation.baseline.value)} × 100 = {calculation.changePct.toFixed(1)}%
                 </strong>
               </li>
             </ol>
@@ -109,14 +119,29 @@ export default function Understand({ result }: { result: AssessmentResult }) {
             MR080G bed-rest research · {record.subjectId} · {record.metric} · {record.unit}. Source
             conflicts remain unresolved; affected comparisons are withheld.
           </p>
-          <TrendChart points={getTrend(record.subjectId, record.metric, record.unit)} research />
+          <TrendChart
+            points={getTrend(
+              record.subjectId,
+              record.metric,
+              record.unit,
+              record.source,
+              record.comparisonGroupId,
+            )}
+            research
+          />
           <ul>
-            {getTrend(record.subjectId, record.metric, record.unit).map((point) => (
+            {getTrend(
+              record.subjectId,
+              record.metric,
+              record.unit,
+              record.source,
+              record.comparisonGroupId,
+            ).map((point) => (
               <li key={point.assessmentId}>
-                {point.date} ·{' '}
+                {point.date ?? 'Timeline date withheld'} ·{' '}
                 {point.retainedPct === null
                   ? 'Comparison withheld'
-                  : `${number(point.retainedPct)}% retained`}{' '}
+                  : `${point.retainedPct.toFixed(1)}% retained`}{' '}
                 {point.isBaseline ? (
                   '· baseline record'
                 ) : (

@@ -17,7 +17,7 @@ const sameBasis = (record: Assessment, target: Assessment) =>
   record.metric === target.metric && record.unit === target.unit && record.method === target.method;
 const baselinesFor = (records: Assessment[], target: Assessment) =>
   records.filter(record => record.isBaseline && !record.duplicateOf &&
-    record.subjectId === target.subjectId && record.source === target.source);
+    record.subjectId === target.subjectId && record.source === target.source && record.comparisonGroupId === target.comparisonGroupId);
 const uniqueIds = (records: Assessment[]) =>
   records.filter((record, index) => records.findIndex(other => other.id === record.id) === index);
 
@@ -33,7 +33,7 @@ export function selectBaseline(records: Assessment[], target: Assessment): Basel
   const value = distinct.reduce((sum, record) => sum + record.value! / distinct.length, 0);
   if (!Number.isFinite(value) || value <= 0) return null;
   return {
-    rule: `Arithmetic mean of ${distinct.length} baseline assessments marked isBaseline for ${target.subjectId} (${target.source}), with metric ${target.metric}, unit ${target.unit}, and method "${target.method}". Included: ${distinct.map(record => `${record.id} (${record.phase ?? 'phase missing'}, ${record.date ?? 'date missing'})`).join(', ')}. Duplicate representations excluded; no unit conversion. This is a demonstration assumption, not a NASA-approved selection rule.`,
+    rule: `Arithmetic mean of ${distinct.length} baseline assessments marked isBaseline for ${target.subjectId} (${target.source}${target.comparisonGroupId ? `, series ${target.comparisonGroupId}` : ''}), with metric ${target.metric}, unit ${target.unit}, and method "${target.method}". Included: ${distinct.map(record => `${record.id} (${record.phase ?? 'phase missing'}, ${record.date ?? 'date missing'})`).join(', ')}. Duplicate representations excluded; no unit conversion. This is a demonstration assumption, not a NASA-approved selection rule.`,
     recordIds: distinct.map(record => record.id), value, unit: target.unit,
   };
 }
@@ -45,6 +45,7 @@ export function assess(records: Assessment[], assessmentId: string): AssessmentR
   const add = (code: Issue['code'], message: string, followUp = followUps.records) => {
     if (!issues.some(issue => issue.code === code && issue.message === message)) issues.push({ code, message, followUp });
   };
+  if (target.source === 'user-entered' && !target.comparisonGroupId?.trim()) add('missing', 'Assessment series is missing.');
   const candidates = baselinesFor(records, target);
   const matching = candidates.filter(record => sameBasis(record, target));
   const relevant = [target, ...matching];
@@ -60,6 +61,8 @@ export function assess(records: Assessment[], assessmentId: string): AssessmentR
     if (representations.some(other => other.id === record.id && (other.value !== record.value || !sameBasis(other, record)))) {
       add('missing', `Conflicting measurements under assessment ID ${record.id}; comparison needs review.`);
     }
+    if (representations.some(other => other !== record && Number.isFinite(other.value) && Number.isFinite(record.value) && other.value !== null && record.value !== null && other.unit === record.unit && other.metric === record.metric && other.value !== record.value)) add('measurement', `Conflicting capacity assertions for assessment ${record.id}; review the original records.`);
+    if (representations.some(other => other.phase && record.phase && other.phase !== record.phase)) add('timing', `Conflicting phases for assessment ${record.id}; timeline interpretation is withheld.`);
     if (!record.subjectId.trim()) add('missing', `Participant identity is missing for ${record.id}.`);
     if (!record.date) add('missing', `Assessment date is missing for ${record.id}.`);
     else if (!validDate(record.date)) add('timing', `Invalid assessment date for ${record.id}; timeline interpretation is withheld.`);
@@ -84,7 +87,7 @@ export function assess(records: Assessment[], assessmentId: string): AssessmentR
     if (validDate(record.date) && validDate(target.date) && !target.isBaseline && record.date > target.date) {
       add('timing', `Baseline ${record.id} is dated after the current assessment; timeline interpretation is withheld.`);
     }
-    if (record.phase && record.phase !== (target.source === 'simulated-crew' ? 'pre-mission' : 'pre-bed-rest')) {
+    if (record.phase && record.phase !== (['pre-mission', 'in-mission', 'post-mission'].includes(target.phase ?? '') ? 'pre-mission' : target.phase === 'not-applicable' ? 'not-applicable' : 'pre-bed-rest')) {
       add('timing', `Baseline ${record.id} has a contradictory phase (${record.phase ?? 'missing'}); a pre-exposure baseline is required.`);
     }
     for (const field of ['modality', 'protocol'] as const) {
@@ -95,7 +98,7 @@ export function assess(records: Assessment[], assessmentId: string): AssessmentR
   }
   const baseline = selectBaseline(records, target);
   if (!baseline) add('baseline', 'No usable matching baseline: baseline values must be present, positive and finite, with the same participant, source, metric, units and method.', followUps.baseline);
-  let evidence: AssessmentResult['evidence'] = issues.some(issue => issue.code === 'identity' || issue.code === 'timing')
+  let evidence: AssessmentResult['evidence'] = issues.some(issue => issue.code === 'identity' || issue.code === 'timing' || issue.code === 'measurement')
     ? 'conflicting' : issues.length ? 'insufficient' : 'supported';
   let calculation: AssessmentResult['calculation'] = evidence === 'supported' && baseline && target.value !== null && target.unit
     ? { current: target.value, unit: target.unit, baseline,
@@ -107,7 +110,7 @@ export function assess(records: Assessment[], assessmentId: string): AssessmentR
     calculation = null;
   }
   const research = target.source === 'nasa-research-replay';
-  const applicable = !research && evidence === 'supported' && target.phase === 'in-mission' && calculation !== null;
+  const applicable = target.source === 'simulated-crew' && evidence === 'supported' && target.phase === 'in-mission' && calculation !== null;
   const state = applicable ? (calculation!.retainedPct < 80 ? 'below' : 'at-or-above') : 'not-applicable';
   const finding = calculation
     ? `${calculation.changePct < 0 ? 'Measured decrease' : calculation.changePct > 0 ? 'Measured increase' : 'No measured change'}${calculation.changePct === 0 ? '' : ` of ${Math.abs(calculation.changePct).toFixed(1)}%`} from baseline; ${calculation.retainedPct.toFixed(1)}% retained.${state === 'below' ? ' Below the displayed reference.' : ''}`
@@ -119,7 +122,7 @@ export function assess(records: Assessment[], assessmentId: string): AssessmentR
     reference: {
       label: 'NASA-STD-3001 V1 4003: in-mission aerobic capacity at or above 80% of pre-mission',
       thresholdPct: 80, state,
-      note: research ? 'Analog research records receive no compliance determination; the NASA reference is context only.'
+      note: target.source === 'user-entered' ? 'User-entered transcription; NASA reference is context only. No clinical or mission determination.' : research ? 'Analog research records receive no compliance determination; the NASA reference is context only.'
         : applicable ? 'Simulated crew reference comparison for demonstration only; this does not establish clinical clearance or satisfaction of task-specific EVA requirements.'
           : 'Reference comparison requires supported in-mission evidence against pre-mission capacity.',
     },
@@ -133,11 +136,11 @@ export function assess(records: Assessment[], assessmentId: string): AssessmentR
 }
 
 export function trend(records: Assessment[], subjectId: string): TrendPoint[] {
-  return uniqueIds(records.filter(record => record.subjectId === subjectId && !record.duplicateOf && validDate(record.date)))
-    .sort((a, b) => a.date!.localeCompare(b.date!) || a.id.localeCompare(b.id))
+  return uniqueIds(records.filter(record => record.subjectId === subjectId && !record.duplicateOf))
+    .sort((a, b) => (a.date ?? '9999').localeCompare(b.date ?? '9999') || a.id.localeCompare(b.id))
     .map(record => {
       const result = assess(records, record.id);
-      return { assessmentId: record.id, date: record.date!, retainedPct: result.calculation?.retainedPct ?? null,
+      return { assessmentId: record.id, date: validDate(record.date) && !result.issues.some(i => i.code === 'timing') ? record.date : null, retainedPct: result.calculation?.retainedPct ?? null,
         evidence: result.evidence, isBaseline: record.isBaseline };
     });
 }

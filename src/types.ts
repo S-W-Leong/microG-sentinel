@@ -3,7 +3,7 @@
 
 export type Metric = 'VO2peak' | 'VO2max';
 export type Unit = 'L/min' | 'mL/kg/min';
-export type DataSource = 'simulated-crew' | 'nasa-research-replay';
+export type DataSource = 'simulated-crew' | 'nasa-research-replay' | 'user-entered';
 export type Phase =
   | 'pre-mission'
   | 'in-mission'
@@ -11,11 +11,13 @@ export type Phase =
   | 'pre-bed-rest'
   | 'bed-rest'
   | 'post-bed-rest'
-  | 'recovery';
+  | 'recovery'
+  | 'not-applicable';
 
 /** One assessment exactly as recorded. Missing values stay null, never 0. */
 export interface Assessment {
   id: string;
+  comparisonGroupId?: string;
   subjectId: string;
   source: DataSource;
   date: string | null; // ISO yyyy-mm-dd
@@ -35,6 +37,7 @@ export interface Assessment {
 export type EvidenceStatus = 'supported' | 'insufficient' | 'conflicting';
 
 export type IssueCode =
+  | 'measurement'
   | 'identity'
   | 'timing'
   | 'missing'
@@ -90,7 +93,7 @@ export interface AssessmentResult {
 
 export interface TrendPoint {
   assessmentId: string;
-  date: string;
+  date: string | null;
   retainedPct: number | null;
   evidence: EvidenceStatus; // non-supported points render hollow and are not joined
   isBaseline: boolean;

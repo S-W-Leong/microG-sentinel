@@ -4,6 +4,12 @@ export function status(result: AssessmentResult) {
     return { tone: 'muted', icon: '?', label: 'Insufficient evidence' };
   if (result.evidence === 'conflicting')
     return { tone: 'muted', icon: '!', label: 'Conflicting records' };
+  if (result.source === 'user-entered')
+    return {
+      tone: 'neutral',
+      icon: '✓',
+      label: 'Supported recorded comparison · user-entered, not independently verified',
+    };
   if (result.source === 'nasa-research-replay')
     return { tone: 'neutral', icon: '✓', label: 'Supported comparison · research context only' };
   return result.reference.state === 'below'
@@ -18,7 +24,7 @@ export function status(result: AssessmentResult) {
       };
 }
 export const number = (value: number | null | undefined) =>
-  value == null ? 'Not available' : value.toLocaleString('en', { maximumFractionDigits: 1 });
+  value == null ? 'Not available' : value.toLocaleString('en', { maximumFractionDigits: 12 });
 export const nasa = {
   risk: 'https://www.nasa.gov/reference/risk-of-reduced-cardiorespiratory-and-musculoskeletal-fitness/',
   risks: 'https://www.nasa.gov/hrp/risks/',
@@ -34,3 +40,11 @@ export const replayCitation = {
   url: 'https://nlsp.nasa.gov/search/data/details/852cd84a-464d-572b-99ac-9555f4dda464?dataType=DATASETS',
   note: 'Frozen bed-rest research subset curated from the supplied download on 2026-11-14; not astronaut assessments.',
 };
+
+export const percent = (value: number) => value.toFixed(1);
+export const sourceLabel = (source: string) =>
+  source === 'user-entered'
+    ? 'User-entered assessment'
+    : source === 'nasa-research-replay'
+      ? 'NASA research replay (bed rest analog)'
+      : 'Simulated crew data';

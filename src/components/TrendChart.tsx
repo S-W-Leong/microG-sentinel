@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import type { TrendPoint } from '../types';
 import { number } from '../ui/presentation';
 
@@ -8,22 +9,29 @@ export default function TrendChart({
   points: TrendPoint[];
   research?: boolean;
 }) {
-  const sorted = [...points].sort((a, b) => a.date.localeCompare(b.date));
-  const start = Date.parse(sorted[0]?.date ?? '2026-01-01');
-  const end = Date.parse(sorted[sorted.length - 1]?.date ?? '2026-01-02');
+  const chartId = useId();
+  const sorted = [...points].sort((a, b) => (a.date ?? '9999').localeCompare(b.date ?? '9999'));
+  const dated = sorted.filter((p) => p.date !== null);
+  const start = Date.parse(dated[0]?.date ?? '2026-01-01');
+  const end = Date.parse(dated[dated.length - 1]?.date ?? '2026-01-02');
   const values = sorted.flatMap((point) => (point.retainedPct === null ? [] : [point.retainedPct]));
   const low = Math.min(60, ...values) - 5;
   const high = Math.max(110, ...values) + 5;
-  const x = (date: string) => 55 + ((Date.parse(date) - start) / (end - start || 1)) * 580;
+  const x = (date: string | null) =>
+    55 + ((Date.parse(date ?? dated[0]?.date ?? '2026-01-01') - start) / (end - start || 1)) * 580;
   const y = (value: number) => 205 - ((value - low) / (high - low)) * 170;
   return (
     <div className="trend">
-      <svg viewBox="0 0 690 290" role="img" aria-labelledby="trend-title trend-description">
-        <title id="trend-title">Capacity retained over time</title>
-        <desc id="trend-description">
+      <svg
+        viewBox="0 0 690 290"
+        role="img"
+        aria-labelledby={`${chartId}-title ${chartId}-description`}
+      >
+        <title id={`${chartId}-title`}>Capacity retained over time</title>
+        <desc id={`${chartId}-description`}>
           Solid points are supported comparisons. Squares mark baseline records. Hollow points are
-          not joined to the line. Unknown values appear in a separate unquantified row. Full values
-          are in the timeline below.
+          not joined to the line. Unknown values and withheld dates appear in an unquantified row.
+          Full values are in the timeline below.
         </desc>
         {[60, 80, 100]
           .filter((value) => value >= low && value <= high)
@@ -46,7 +54,8 @@ export default function TrendChart({
         </text>
         {sorted.map((point, index) => {
           const previous = sorted[index - 1];
-          return previous &&
+          return !sorted.some((p) => !p.date || p.evidence === 'conflicting') &&
+            previous &&
             previous.evidence === 'supported' &&
             point.evidence === 'supported' &&
             previous.retainedPct !== null &&
@@ -64,7 +73,7 @@ export default function TrendChart({
         {sorted.map((point) => (
           <g key={point.assessmentId}>
             <title>
-              {point.date}:{' '}
+              {point.date ?? 'Date withheld'}:{' '}
               {point.retainedPct === null
                 ? 'Unquantified'
                 : `${number(point.retainedPct)}% retained`}
@@ -73,9 +82,9 @@ export default function TrendChart({
             </title>
             {point.isBaseline ? (
               <rect
-                className="chart-point"
+                className={`chart-point ${point.evidence !== 'supported' ? 'hollow' : ''}`}
                 x={x(point.date) - 5}
-                y={y(point.retainedPct ?? 100) - 5}
+                y={(point.retainedPct === null ? 242 : y(point.retainedPct)) - 5}
                 width="10"
                 height="10"
               />
@@ -95,10 +104,10 @@ export default function TrendChart({
           </text>
         )}
         <text x="55" y="275">
-          {sorted[0]?.date}
+          {dated[0]?.date}
         </text>
         <text x="635" y="275" textAnchor="end">
-          {sorted[sorted.length - 1]?.date}
+          {dated[dated.length - 1]?.date}
         </text>
       </svg>
       <p className="chart-legend">

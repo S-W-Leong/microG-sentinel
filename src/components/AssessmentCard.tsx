@@ -1,6 +1,6 @@
 import type { AssessmentResult } from '../types';
 import { getRecord } from '../ui/dataSource';
-import { number, status } from '../ui/presentation';
+import { number, status, sourceLabel } from '../ui/presentation';
 
 export function StatusBadge({ result }: { result: AssessmentResult }) {
   const display = status(result);
@@ -18,7 +18,7 @@ export default function AssessmentCard({ result }: { result: AssessmentResult })
       <div className="eyebrow">
         {result.source === 'nasa-research-replay'
           ? 'NASA research participant · bed rest analog replay'
-          : 'Simulated crew assessment'}
+          : sourceLabel(result.source)}
       </div>
       <h2>
         {record?.date ?? 'Date unavailable'}{' '}
@@ -46,14 +46,14 @@ export default function AssessmentCard({ result }: { result: AssessmentResult })
               </div>
               <div>
                 <strong>
-                  {number(calculation.retainedPct)}
+                  {calculation.retainedPct.toFixed(1)}
                   <small>%</small>
                 </strong>
                 <span>Capacity retained</span>
               </div>
             </div>
             <p className="subtle">
-              Current ÷ baseline × 100 · change {number(calculation.changePct)}%
+              Current ÷ baseline × 100 · change {calculation.changePct.toFixed(1)}%
             </p>
           </>
         ) : (

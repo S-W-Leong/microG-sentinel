@@ -138,7 +138,7 @@ describe('evidence checks', () => {
   it('skips undated records and sorts trend points, keeping insufficient evidence separate', () => {
     const records = [record({ id: 'later', date: '2026-03-01', method: null }), record({ id: 'undated', date: null }), record(), baseline()];
     const points = trend(records, 'SYNTHETIC-01');
-    expect(points.map(point => point.assessmentId)).toEqual(['baseline', 'current', 'later']);
+    expect(points.map(point => point.assessmentId)).toEqual(['baseline', 'current', 'later', 'undated']);
     expect(points[0].isBaseline).toBe(true);
     expect(points[2]).toMatchObject({ evidence: 'insufficient', retainedPct: null });
   });

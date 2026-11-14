@@ -3,10 +3,17 @@ import BodyMap from './components/BodyMap';
 import MyFitness from './screens/MyFitness';
 import Understand from './screens/Understand';
 import Evidence from './screens/Evidence';
-import { getReplayResult, getResult } from './ui/dataSource';
+import { sourceLabel } from './ui/presentation';
+import { getReplayResult, getResult, getActiveScope } from './ui/dataSource';
 
 export default function App() {
   const [hash, setHash] = useState(window.location.hash || '#/');
+  const [, refresh] = useState(0);
+  useEffect(() => {
+    const update = () => refresh((n) => n + 1);
+    window.addEventListener('assessmentschange', update);
+    return () => window.removeEventListener('assessmentschange', update);
+  }, []);
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
     const change = () => {
@@ -43,10 +50,7 @@ export default function App() {
           MicroG Sentinel
         </a>
         <span className="simulation-badge">
-          {result?.source === 'nasa-research-replay' &&
-          (route === 'understand' || route === 'evidence')
-            ? 'NASA research replay (bed rest analog)'
-            : 'Simulated crew data'}
+          {sourceLabel(result?.source ?? getActiveScope().source)}
         </span>
         <nav aria-label="Main navigation">
           <a href="#/" aria-current={!route ? 'page' : undefined}>
