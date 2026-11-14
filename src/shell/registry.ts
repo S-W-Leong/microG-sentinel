@@ -3,9 +3,12 @@ import { riskTab as sleep } from '../risks/sleep';
 import { riskTab as immune } from '../risks/immune';
 import { riskTab as bone } from '../risks/bone';
 import { riskTab as food } from '../risks/food';
+import { riskTab as microbiome } from '../risks/microbiome';
+import { riskTab as balance } from '../risks/balance';
+import { riskTab as sans } from '../risks/sans';
 import type { RiskId, RiskTab, RiskEvaluationContext } from '../risks/types';
 
-export const riskTabs: Partial<Record<RiskId, RiskTab>> = { cardio, sleep, immune, bone, food };
+export const riskTabs: Partial<Record<RiskId, RiskTab>> = { cardio, sleep, immune, bone, food, sans, balance, microbiome };
 export function tabStatus(risk: RiskId, context: RiskEvaluationContext) {
   const tab = riskTabs[risk];
   if (!tab) return { text: 'Planned', evaluation: null };

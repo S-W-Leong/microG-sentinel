@@ -38,7 +38,7 @@ describe('real vector shell integration', () => {
     expect(tabStatus('immune', { crewId: 'SIM-PLT', vector }).text).toBe('No data');
   });
   it('shows planned and failed evaluations without invented values', () => {
-    expect(tabStatus('sans', { crewId: 'SIM-CDR', vector }).text).toBe('Planned');
+    expect(tabStatus('mood', { crewId: 'SIM-CDR', vector }).text).toBe('Planned');
     expect(tabStatus('immune', { crewId: 'unregistered', vector }).text).toBe('No data');
   });
 });
