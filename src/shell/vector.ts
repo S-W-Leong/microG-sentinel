@@ -1,5 +1,13 @@
 import type { VectorApi } from '../risks/types';
 import { createVector } from '../vector/store';
+import { missionTime } from '../scenario/mission';
+import { scenarioRegistrations } from '../scenario/registrations';
+import { riskTabs } from './registry';
+import { seedScenario } from './scenario';
 
-export const demoTime = '2026-11-14T11:00:00.000Z';
-export const vector: VectorApi = createVector({ clock: () => Date.parse(demoTime) });
+export const demoTime = missionTime;
+export const vector: VectorApi = createVector({
+  clock: () => Date.parse(demoTime),
+  registrations: scenarioRegistrations,
+});
+seedScenario(vector, riskTabs, typeof window === 'undefined' ? '' : window.location.search);

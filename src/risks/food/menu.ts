@@ -79,4 +79,19 @@ export const menu: readonly MenuItem[] = [
     },
     source,
   },
+  ...[false, true].map((savoury) => ({
+    id: savoury ? 'sim-savoury-chicken' : 'sim-chicken-rice',
+    name: savoury ? 'Savoury chicken rice' : 'Chicken rice',
+    ingredients: 'Rice, chicken, vegetables, oil, salt',
+    allergens: [],
+    per100g: {
+      energyKcal: 180,
+      proteinG: 8,
+      sodiumMg: savoury ? 300 : 100,
+      calciumMg: 60,
+      vitaminDIu: 20,
+      fibreG: 1.5,
+    },
+    source,
+  })),
 ];

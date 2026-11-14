@@ -925,7 +925,7 @@ For scalar observations without a documented pattern model, compare to a support
 | Existing `src/exercise/*`, `src/logic/assess.ts`, `src/components/exercise/*` | Shi Wei for cardio integration | Preserve current behaviour; wrap first, move only by agreement |
 | App navigation/body-map registration and shared presentation | Siang Woo | Wire descriptors and source labels; coordinate any shared-component changes |
 
-Every implemented tab exports `riskTab` from `src/risks/<risk>/index.ts`. Mood uses the same contract if enabled; no stub is advertised as live. Each descriptor has exactly these five fields:
+Every implemented tab exports `riskTab` from `src/risks/<risk>/index.ts`. Mood uses the same contract if enabled; no stub is advertised as live. Each descriptor has these five required fields and an optional scenario loader:
 
 ```ts
 export interface RiskRegionMap {
@@ -953,8 +953,11 @@ export interface RiskTab<R extends RiskId = RiskId> {
   title: string;
   Component: ComponentType<RiskTabProps>;
   evaluate(context: RiskEvaluationContext): RiskEvaluation;
+  loadScenario?(context: RiskEvaluationContext): void;
 }
 ```
+
+`loadScenario?(context: RiskEvaluationContext): void` saves the Mission day 100 simulated inputs for `context.crewId` through the tab's normal save path, emitting the same signals as a user save. It must be idempotent, preserve existing user observations, and never seed real/research identities. The shell calls available loaders once on startup, Food first, isolating failures per tab and crew; `?scenario=off` skips seeding in a fresh session. See `src/scenario/mission.ts` for the shared story and `docs/requests/scenario-shiwei.md` for the remaining loaders.
 
 Use `satisfies RiskTab<'sleep'>` (and the corresponding literal for every tab) to enforce the region pairing. Titles are `Cardiovascular`, `Sleep`, `Immune`, `Bone`, `Balance`, `Microbiome`, `SANS`, `Food`, `Mood`. Region IDs are registration keys; the body-map integration adapter maps existing region identifiers without silently changing this contract. `evaluate` is synchronous and read-only: read that tab's selected private input state and vector snapshots, calculate base output, personalise once, and return its own risk and the requested crew. It never emits, changes selection, schedules work, fetches data, or renders UI. Components subscribe and re-evaluate after input saves/vector notifications. Detached exposures are not a permission to read another tab's store.
 

@@ -233,6 +233,10 @@ function BalancePanel(ctx: RiskTabProps) {
             <Metric label="Eyes closed" value={display(signals?.swayAreaEyesClosedDeg2, '°²')} />
             <Metric label="MISC" value={display(saved?.misc, '/10')} />
           </dl>
+          <p>
+            Motion sickness history: {display(person.traits.motionSicknessHistory, '/3')}
+            {person.traits.motionSicknessHistory === 3 && ' ? Recurrent with vomiting'}.
+          </p>
           <section aria-label="Stand test">
             <h2>30 s stand test</h2>
             <p>Ground / partial-gravity demo only. Not free-floating ISS standing.</p>
@@ -414,11 +418,6 @@ function BalancePanel(ctx: RiskTabProps) {
         <p>
           Vector baselines contain area only; their dashed circle shows equivalent area, not
           measured baseline shape. Sampling gaps remain in the packet.
-        </p>
-        <p>
-          Motion sickness history:{' '}
-          {urgent ? 'Withheld during urgent contact' : display(person.traits.motionSicknessHistory)}
-          . No numerical adjustment.
         </p>
         <p>
           <a href="https://registry.opendata.aws/hbedb/">Human Balance Evaluation Database</a> ·

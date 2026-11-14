@@ -31,10 +31,10 @@ describe('radiation dose display', () => {
   it('selects independent crew fixtures', () => {
     expect(
       ['SIM-CDR', 'SIM-PLT', 'SIM-MS1'].map((crewId) => getRadiationDose(crewId)?.missionDoseMsv),
-    ).toEqual([64, 42, 90]);
+    ).toEqual([64, 60, 75]);
     expect(
       ['SIM-CDR', 'SIM-PLT', 'SIM-MS1'].map((crewId) => getRadiationDose(crewId)?.missionDays),
-    ).toEqual([100, 70, 120]);
+    ).toEqual([100, 100, 100]);
   });
   it('splits the assumed daily dose and preserves missing readings', () => {
     const dose = getRadiationDose('SIM-CDR')!;

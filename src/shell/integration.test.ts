@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import { riskTabs, tabStatus } from './registry';
 import { demoTime, vector } from './vector';
+import { createVector } from '../vector/store';
 import { demoInput } from '../risks/food/model';
 import { saveFood } from '../risks/food/store';
 import { immuneSample, saveImmune } from '../risks/immune/model';
@@ -18,6 +19,7 @@ describe('real vector shell integration', () => {
     }
   });
   it('connects the existing Food and Immune fixture actions through one vector', () => {
+    const vector = createVector({ clock: () => Date.parse(demoTime) });
     const context = { crewId: 'SIM-CDR', vector };
     expect(vector.getVector(context.crewId)?.exposures.asOf).toBe(demoTime);
     saveImmune(context, immuneSample());

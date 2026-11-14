@@ -1,3 +1,5 @@
+import { storyFor } from '../../scenario/mission';
+
 export const CAREER_LIMIT_MSV = 600;
 export const NASA_SOURCE =
   'https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf';
@@ -11,20 +13,12 @@ export interface RadiationDose {
   readonly neutronShare: number | null;
 }
 
-const crewDoses: Readonly<Record<string, RadiationDose | undefined>> = {
-  'SIM-CDR': { missionDoseMsv: 64, dailyDoseMsv: 0.64, missionDays: 100, neutronShare: 0.3 },
-  'SIM-PLT': { missionDoseMsv: 42, dailyDoseMsv: 0.6, missionDays: 70, neutronShare: 0.3 },
-  'SIM-MS1': { missionDoseMsv: 90, dailyDoseMsv: 0.75, missionDays: 120, neutronShare: 0.3 },
-};
-
 function nonnegative(value: number | null | undefined): number | null {
   return value != null && Number.isFinite(value) && value >= 0 ? value : null;
 }
 
 export function getRadiationDose(crewId: string): RadiationDose | null {
-  return Object.prototype.hasOwnProperty.call(crewDoses, crewId)
-    ? (crewDoses[crewId] ?? null)
-    : null;
+  return storyFor(crewId)?.radiation ?? null;
 }
 
 export function careerPercentage(doseMsv: number | null | undefined): number | null {

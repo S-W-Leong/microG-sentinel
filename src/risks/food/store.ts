@@ -1,9 +1,17 @@
 import type { RiskEvaluationContext, VectorApi } from '../types';
-import { baseEvaluation, buildRecord, emptyInput, type FoodInput } from './model';
+import { baseEvaluation, buildRecord, emptyInput, nutrientTotals, type FoodInput } from './model';
 
 export interface FoodState {
   input: FoodInput;
-  history: { observedAt: string; bodyMassKg: number | null }[];
+  history: {
+    observedAt: string;
+    bodyMassKg: number | null;
+    energyKcal: number | null;
+    energyTargetKcal: number | null;
+    logComplete: boolean;
+    sodiumMg: number | null;
+    sodiumTargetMg: number | null;
+  }[];
 }
 
 const stores = new WeakMap<VectorApi, Map<string, FoodState>>();
@@ -39,7 +47,18 @@ export function saveFood(context: RiskEvaluationContext, input: FoodInput) {
   savedInput.observedAt = record.recordedAt;
   stores.get(context.vector)!.set(context.crewId, {
     input: savedInput,
-    history: [...previous.history, { observedAt: record.recordedAt, bodyMassKg: input.bodyMassKg }],
+    history: [
+      ...previous.history,
+      {
+        observedAt: record.recordedAt,
+        bodyMassKg: input.bodyMassKg,
+        energyKcal: nutrientTotals(input).energyKcal,
+        energyTargetKcal: input.targets.energyKcal,
+        logComplete: input.logComplete,
+        sodiumMg: record.signals.sodiumMg,
+        sodiumTargetMg: input.targets.sodiumMg,
+      },
+    ],
   });
   try {
     context.vector.emitSignals(record);
@@ -65,4 +84,42 @@ export function evaluateFood(context: RiskEvaluationContext) {
   if (evaluation.escalation?.level === 'urgent') return evaluation;
   const personalised = context.vector.personalise('food', context.crewId, evaluation);
   return { ...evaluation, reasons: personalised.reasons };
+}
+
+/** Five adjacent complete 24-hour logs; use the sum of targets, not a mean of percentages. */
+export function lowEnergySummary(history: FoodState['history']): string | null {
+  const days = history.slice(-5);
+  if (
+    days.length !== 5 ||
+    days.some(
+      (entry, index) =>
+        !entry.logComplete ||
+        entry.energyKcal === null ||
+        entry.energyTargetKcal === null ||
+        entry.energyTargetKcal <= 0 ||
+        entry.energyKcal >= entry.energyTargetKcal ||
+        (index > 0 &&
+          Date.parse(entry.observedAt) - Date.parse(days[index - 1].observedAt) !== 86_400_000),
+    )
+  )
+    return null;
+  const energy = days.reduce((sum, entry) => sum + entry.energyKcal!, 0);
+  const target = days.reduce((sum, entry) => sum + entry.energyTargetKcal!, 0);
+  return `${Math.round((100 * energy) / target)}% of need for 5 days`;
+}
+
+export function highSodiumWeek(history: FoodState['history']): boolean {
+  const days = history.slice(-7);
+  return (
+    days.length === 7 &&
+    days.every(
+      (entry, index) =>
+        entry.logComplete &&
+        entry.sodiumMg !== null &&
+        entry.sodiumTargetMg !== null &&
+        entry.sodiumMg > entry.sodiumTargetMg &&
+        (index === 0 ||
+          Date.parse(entry.observedAt) - Date.parse(days[index - 1].observedAt) === 86_400_000),
+    )
+  );
 }

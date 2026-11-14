@@ -23,7 +23,14 @@ import {
   type DailyTargets,
   type FoodInput,
 } from './model';
-import { evaluateFood, getFoodState, saveFood, subscribeFood } from './store';
+import {
+  evaluateFood,
+  getFoodState,
+  highSodiumWeek,
+  lowEnergySummary,
+  saveFood,
+  subscribeFood,
+} from './store';
 import './food.css';
 
 const number = (value: number | null) =>
@@ -328,6 +335,8 @@ function FoodPanel({ crewId, vector }: RiskTabProps) {
           </div>
           <section className="food-mass">
             <h2>Body mass</h2>
+            {highSodiumWeek(saved.history) && <p>7 days above sodium target</p>}
+            {lowEnergySummary(saved.history) && <p>{lowEnergySummary(saved.history)}</p>}
             <strong className={input.bodyMassKg === null ? '' : 'food-value'}>
               {number(input.bodyMassKg)}
               {input.bodyMassKg !== null && ' kg'}
@@ -693,7 +702,7 @@ function FoodPanel({ crewId, vector }: RiskTabProps) {
         <p>
           Menu nutrient values are simulated, version local-menu-v1, not USDA FoodData Central data.
         </p>
-        <p>Targets and check-ins stay in this session; refreshing clears the tab history.</p>
+        <p>Check-ins stay in this session; refreshing restores the simulated mission.</p>
         <p>
           The shared baseline supplies no observed range, so persistent outside-range detection is
           unavailable.

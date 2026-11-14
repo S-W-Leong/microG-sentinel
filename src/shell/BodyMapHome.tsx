@@ -135,6 +135,7 @@ export default function BodyMapHome({
     >
       <p className="body-simulation">Simulated</p>
       <h1 id="body-title">Body map</h1>
+      <p className="body-caption">Mission day 100</p>
       <div className="body-board" ref={board}>
         <svg className="body-leaders" aria-hidden="true">
           {regions.map((item) => (
@@ -227,17 +228,6 @@ export default function BodyMapHome({
         })}
       </div>
       <RadiationCard crewId={crewId} />
-      <details className="shell-demo">
-        <summary>Demo path</summary>
-        <p>
-          For SIM-CDR: Food → Load demo → Save check-in; Skin → Immune → Load sample → Save
-          check-in.
-        </p>
-        <p>
-          The simulated rule changes the base 60% match to 80% using food exposure and allergy
-          traits.
-        </p>
-      </details>
       <dialog
         className="shell-note"
         ref={dialog}

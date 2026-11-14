@@ -89,8 +89,15 @@ function fakeVector(reference: BaselineValue<'bodyMassKg'> = baseline) {
 }
 
 describe('Food save-to-emit contract', () => {
-  it('exports only the required descriptor fields', () => {
-    expect(Object.keys(riskTab).sort()).toEqual(['Component', 'evaluate', 'id', 'region', 'title']);
+  it('exports the required descriptor fields and optional scenario loader', () => {
+    expect(Object.keys(riskTab).sort()).toEqual([
+      'Component',
+      'evaluate',
+      'id',
+      'loadScenario',
+      'region',
+      'title',
+    ]);
     expect(riskTab).toMatchObject({ id: 'food', region: 'gut', title: 'Food' });
   });
 

@@ -270,4 +270,5 @@ export interface RiskTab<R extends RiskId = RiskId> {
   title: string;
   Component: ComponentType<RiskTabProps>;
   evaluate(context: RiskEvaluationContext): RiskEvaluation;
+  loadScenario?(context: RiskEvaluationContext): void;
 }

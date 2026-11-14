@@ -1,3 +1,4 @@
+import { missionDay } from './scenario/mission';
 import { useEffect, useRef, useState } from 'react';
 import Exercise from './screens/Exercise';
 import ExerciseResearch from './screens/ExerciseResearch';
@@ -8,6 +9,7 @@ import { sourceLabel } from './ui/presentation';
 import { getResult, getActiveScope } from './ui/dataSource';
 import type { RiskId } from './risks/types';
 import BodyMapHome from './shell/BodyMapHome';
+import CrewProfile from './shell/profile/CrewProfile';
 import type { LocalNote } from './shell/BodyMapHome';
 import {
   crews,
@@ -28,6 +30,7 @@ export default function App() {
   const main = useRef<HTMLElement>(null);
   const { page, id, crewId, at } = parseRoute(hash);
   const home = !page || page === 'body-map';
+  const profile = page === 'profile';
   const region = page === 'risk' ? regionForRisk(id) : undefined;
   const tab = region ? riskTabs[id as RiskId] : undefined;
   const Component = tab?.Component;
@@ -67,15 +70,17 @@ export default function App() {
       ? 'Body map'
       : region
         ? titles[id as RiskId]
-        : page === 'exercise-research'
-          ? 'NASA evidence'
-          : page === 'exercise'
-            ? 'Exercise monitoring'
-            : page === 'fitness'
-              ? 'My Fitness'
-              : page === 'understand'
-                ? 'Understand my assessment'
-                : 'Evidence and follow-up';
+        : page === 'profile'
+          ? 'Crew profile'
+          : page === 'exercise-research'
+            ? 'NASA evidence'
+            : page === 'exercise'
+              ? 'Exercise monitoring'
+              : page === 'fitness'
+                ? 'My Fitness'
+                : page === 'understand'
+                  ? 'Understand my assessment'
+                  : 'Evidence and follow-up';
     document.title = title + ' | MicroG Sentinel';
   }, [home, region, id, page]);
   return (
@@ -98,6 +103,9 @@ export default function App() {
           <a href={routeHref('/', crewId)} aria-current={home ? 'page' : undefined}>
             Body map
           </a>
+          <a href={routeHref('/profile', crewId)} aria-current={profile ? 'page' : undefined}>
+            Crew profile
+          </a>
           <a
             href="#/exercise-research"
             aria-current={page === 'exercise-research' ? 'page' : undefined}
@@ -105,7 +113,7 @@ export default function App() {
             NASA evidence
           </a>
         </nav>
-        {(home || region) && (
+        {(home || region || profile) && (
           <label className="shell-crew">
             Simulated crew
             <select
@@ -113,7 +121,7 @@ export default function App() {
               value={crewId}
               onChange={(event) => {
                 window.location.hash = routeHref(
-                  region ? '/risk/' + id : '/',
+                  region ? '/risk/' + id : profile ? '/profile' : '/',
                   event.target.value,
                   at,
                 );
@@ -136,10 +144,10 @@ export default function App() {
       >
         {(home || region) && (
           <p className="shell-clock">
-            Simulated fixture time · <time dateTime={demoTime}>14 Nov 2026 · 11:00 UTC</time>
+            Mission day {missionDay} · <time dateTime={demoTime}>14 Nov 2026</time>
           </p>
         )}
-        {!home && !region && page !== 'exercise' && (
+        {!home && !region && !profile && page !== 'exercise' && (
           <div className="source-strip">
             <span className="simulation-badge">{source}</span>
             <a href={routeHref('/', crewId)}>Body map</a>
@@ -153,6 +161,8 @@ export default function App() {
             notes={notes}
             queueNote={(note) => setNotes((current) => [...current, note])}
           />
+        ) : profile ? (
+          <CrewProfile key={crewId} crewId={crewId} vector={vector} />
         ) : region ? (
           <>
             <header className="shell-risk-header">
