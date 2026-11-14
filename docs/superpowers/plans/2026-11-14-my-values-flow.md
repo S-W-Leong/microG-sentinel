@@ -1,0 +1,11 @@
+# My values: baseline → later report → explanation
+
+Use the existing three-part task requested by the user: save the earlier report as baseline, save the later result, explain the comparison. Route entry/baseline/later/compare under fitness to a separate guided screen; retain the existing formal assessment dashboard at fitness and its advanced entry tools.
+
+Carry identity and an isolated comparison-series ID automatically between the two records. Use stable IDs so corrections update records rather than creating additional baseline values. Keep drafts and saved records in tab memory, including across navigation, and retain the existing refresh-clears-data behavior. Do not use local storage for personal reports.
+
+Baseline: date, reported capacity, metric, units and documented method; optional identity, mass, modality, protocol, notes and phase. The earlier report is marked baseline automatically. Later report: date and capacity, with test details copied for the user to check/change and an explicit check acknowledgment. Never force a mismatch into compatibility or convert units. Missing method remains missing and must withhold the numerical comparison. Block missing/invalid capacities, nonpositive baselines and a later date before the baseline.
+
+Save using the existing parser and data bridge. Only open later after saving baseline, and comparison after saving both. Editing either report requires re-saving before returning to comparison. Show real engine results: numeric difference, percentage change, capacity relative to baseline, exact arithmetic in optional details and specific correction paths for withheld comparisons. State that a measured difference is not a diagnosis or explanation of cause. Offer the existing complete review-card JSON export directly, and links to detailed evidence/calculation views.
+
+Verify with real assessment logic: 3→2.1 yields 70% of baseline / 30% lower, increases above 100%, zero change, zero follow-up, reversed dates, missing method, incompatible metrics/units, isolation from other pairs and stable correction IDs. Add browser acceptance for baseline/later/back/correction/export and direct-link guards. Run tests/build/lint, then verify desktop and mobile with synthetic reports in the in-app browser.

@@ -77,8 +77,10 @@ test('explains the default values before collection and links to personal entry'
   ).toHaveAttribute('aria-pressed', 'true');
   await page.screenshot({ path: 'artifacts/adaptive-exercise.png', fullPage: true });
   await page.getByRole('link', { name: 'My values', exact: true }).click();
-  await expect(page.getByLabel('Participant identifier')).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'How to use your own values' })).toBeVisible();
+  await expect(page.getByLabel('Baseline capacity', { exact: true })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Start with your earlier result.' }),
+  ).toBeVisible();
 });
 test('imports and links actual CSV observations without changing the baseline', async ({
   page,

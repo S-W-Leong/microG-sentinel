@@ -3,6 +3,7 @@ import BodyMap from './components/BodyMap';
 import Exercise from './screens/Exercise';
 import ExerciseResearch from './screens/ExerciseResearch';
 import MyFitness from './screens/MyFitness';
+import GuidedValues from './screens/GuidedValues';
 import Understand from './screens/Understand';
 import Evidence from './screens/Evidence';
 import { sourceLabel } from './ui/presentation';
@@ -30,6 +31,8 @@ export default function App() {
   const result = id ? getResult(id) : undefined;
   const replay = getReplayResult();
   const exercise = !route || route === 'exercise';
+  const guidedValues =
+    route === 'fitness' && ['entry', 'baseline', 'later', 'compare'].includes(id);
   const source = sourceLabel(
     route === 'exercise-research'
       ? 'nasa-research-replay'
@@ -38,8 +41,8 @@ export default function App() {
         : (result?.source ?? getActiveScope().source),
   );
   useEffect(() => {
-    document.title = `${!route || route === 'exercise' ? 'Exercise Monitoring' : route === 'exercise-research' ? 'Exercise Research' : route === 'fitness' ? 'My Fitness' : route === 'understand' ? 'Understand My Assessment' : route === 'evidence' ? 'Evidence and Follow-up' : 'Body Map'} | MicroG Sentinel`;
-  }, [route]);
+    document.title = `${!route || route === 'exercise' ? 'Exercise Monitoring' : route === 'exercise-research' ? 'Exercise Research' : route === 'fitness' ? (guidedValues ? 'My Values' : 'My Fitness') : route === 'understand' ? 'Understand My Assessment' : route === 'evidence' ? 'Evidence and Follow-up' : 'Body Map'} | MicroG Sentinel`;
+  }, [route, guidedValues]);
   return (
     <>
       <a
@@ -89,8 +92,13 @@ export default function App() {
         </nav>
         <span className="header-caption">SPACE APPS / 2026</span>
       </header>
-      <main id="main" ref={main} tabIndex={-1} className={exercise ? 'exercise-main' : ''}>
-        {!exercise && (
+      <main
+        id="main"
+        ref={main}
+        tabIndex={-1}
+        className={exercise || guidedValues ? 'exercise-main' : ''}
+      >
+        {!exercise && !guidedValues && (
           <div className="source-strip">
             <span className="simulation-badge">{source}</span>
             <a href="#/exercise">Return to exercise</a>
@@ -102,6 +110,8 @@ export default function App() {
           <ExerciseResearch />
         ) : route === 'body-map' ? (
           <BodyMap />
+        ) : guidedValues ? (
+          <GuidedValues />
         ) : route === 'fitness' ? (
           <MyFitness />
         ) : result && route === 'understand' ? (
