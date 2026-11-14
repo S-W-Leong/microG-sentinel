@@ -49,3 +49,9 @@ This is not a clinical tool and provides no clinical clearance, mission determin
 ## AI tools used
 
 Claude was used for orchestration and review. OpenAI Codex was used for implementation workers. This disclosure is included for NASA Space Apps transparency requirements; AI assistance does not establish clinical validity or resolve source-data conflicts.
+
+## User-entered assessments
+
+My Fitness supports transcribing an existing assessment, adding baseline records, correcting your entries and exporting review JSON. Enter a participant identifier and assessment series to keep contexts separate. Real entries remain in tab memory only: refresh/close clears them. Export before leaving if you need a copy. User entries are labelled separately from simulated crew and NASA research; their reference is context only and no operational or clinical determination is issued.
+
+Browser acceptance: `npx playwright install chromium`, `npm run build`, then `npm run test:e2e`. See `docs/verification.md`, `docs/usability.md` and `docs/submission.md` for release evidence and remaining human work.
