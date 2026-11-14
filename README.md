@@ -1,73 +1,82 @@
 # MicroG Sentinel
 
-The default experience is a **three-step guided exercise walkthrough**: read the cycling measurements and their plain-language explanations, try filling a missing reading from a simulated prescribed workout, then prepare and download a review. The **My values** navigation link opens instructions and the entry form for your own existing VO₂ reports. **NASA evidence** opens the separate research replay.
+An offline crew health app for astronauts, built for NASA Space Apps 2026 (Kuala Lumpur) by team SW²: Siang Woo and Shi Wei.
 
-To compare your own results, save an earlier report with **Baseline record** ticked, then save a later report with it unticked. Keep the participant identifier, assessment series, metric and units consistent. The app brings the explained comparison into view after saving the later report. Use **Evidence & follow-up** to export before refreshing or closing the tab.
+> Your body changes in space. See what changed for you.
 
-See [exercise demonstration](docs/exercise-demo.md), [CSV format](docs/exercise-import.md), [evaluation limits](docs/exercise-evaluation.md) and [implementation ledger](docs/adaptive-implementation-progress.md). Exercise work persists in browser storage; the older user-entered VO₂ form remains session-only. Reset clears the exercise demonstration key.
+The astronaut opens a **body map**, taps a region, and lands in a tab for one spaceflight health risk. Each tab has its own input and display, compares results with that person's own baseline or a reference pattern, and says what to share with the flight surgeon. An **astronaut vector** (traits, baselines and recent exposures per crew member) links the tabs: for example, a shellfish meal logged in Food raises the hives pattern shown in Immune for a crew member with a known shellfish allergy.
 
-## Flight Deck interface
+Results are pattern matches or personal-baseline changes, never diagnoses. Red flags hand the crew member to the flight surgeon (private medical conference); the app gives no treatment advice.
 
-The exercise workspace uses the selected black, off-white and signal-orange Flight Deck design. Numbered steps put the explained measurements before the planner and review on both desktop and narrow screens. The chart, schedule switches, comparison details and demonstration inputs are optional disclosures. Available-workout switches recompute the actual plan. Missing measurements never become plotted numeric values. Review preparation includes a readable snapshot and a stale-evidence indicator, alongside the existing exports and response workflow.
+## What's in the app
 
-NASA evidence, the body map, formal VO₂ assessments and user-entered assessments remain separate and accessible. The comparison, planner, store, CSV and source-data contracts are unchanged. See [visual verification](design-qa.md) and [the implementation plan](docs/superpowers/plans/2026-11-14-flight-deck-overhaul.md).
+| Body map region | Tab | NASA risk | Status |
+|---|---|---|---|
+| Heart & lungs | Cardio | Reduced cardiorespiratory fitness; cardiovascular adaptations | Live (real NASA data) |
+| Head | Sleep | Sleep loss and circadian desynchronisation | Live |
+| Skin | Immune | Altered immune response | Live |
+| Bones | Bone | Spaceflight-induced bone change | Live |
+| Gut | Food | Inadequate nutrition | Live |
+| Head | Balance | Sensorimotor and vestibular change | In progress |
+| Gut | Microbiome | Host–microorganism interactions | In progress |
+| Eyes | SANS | Spaceflight-associated neuro-ocular syndrome | In progress |
+| Head | Mood | Behavioural health (optional) | Planned |
 
-Interface resources: [IBM Plex](https://github.com/IBM/plex) fonts are bundled locally through [Fontsource](https://fontsource.org/); icons use [Phosphor](https://phosphoricons.com/); exercise graphics use [Observable Plot](https://observablehq.com/plot/). Their code and font licences remain in the installed packages. The selected visual reference and verification captures are in `artifacts/flight-deck/`.
+Every tab with no build shows **Planned** on the body map, with no values.
 
-## Existing assessment tools
-
-MicroG Sentinel is a NASA Space Apps 2026 hackathon prototype that helps an astronaut review an existing aerobic fitness (VO2) assessment against a personal baseline, inspect the comparison evidence, and export a review card. Built with Vite 6, React 19, and TypeScript, it runs offline with no backend: simulated crew assessments demonstrate the astronaut workflow, while a separately labelled NASA bed-rest analog research replay shows measured change and unresolved source conflicts.
-
-## Run locally
+## Run it
 
 ```sh
 npm install
 npm run dev
-npm test
-npm run build
 ```
 
-Open the local URL printed by Vite. `npm test` runs the data and assessment checks; `npm run build` produces `dist/`. The bundled workflow needs no network connection after installation. External NASA links require internet access.
+Open the URL Vite prints. Everything runs offline after install; external NASA and dataset links need internet.
 
-Use `npm run lint` for code checks and `npm run format` to format `src/` with Prettier. `.prettierignore` preserves the shared contract and Developer A-owned logic and data files.
+On Windows with Smart App Control, also run `npm install --no-save "rollup@npm:@rollup/wasm-node@4.68.3"` after installing, or the build is blocked.
 
-## Project structure and team split
+Checks: `npm test`, `npm run lint`, `npm run build`. Browser tests: `npx playwright install chromium`, then `npm run test:e2e`.
 
-| Path | Purpose / owner |
-| --- | --- |
-| `src/types.ts` | Shared input/output contract; coordinate changes between both developers |
-| `src/logic/` | Assessment validation, baseline selection, calculations and trends; Developer A |
-| `src/data/` | Bundled simulated crew records and typed NASA replay projection; Developer A |
-| `src/ui/dataSource.ts` | Bridge between screens and real assessment logic/data; all screen data comes through here |
-| `src/screens/` | My Fitness, Understand, and Evidence views; Developer B |
-| `src/components/` | Body map, assessment card, status and trend chart; Developer B |
-| `data/raw/` | Untouched NASA download |
-| `data/curated/` | Frozen replay subset, mappings, provenance and unresolved issues; Developer A |
+## Demo: the core story
 
-Developer A owns logic and data. Developer B owns the interface and explanations, consuming the shared contract through the data bridge.
+Crew member **SIM-CDR** (simulated) has a declared shellfish allergy. The demo clock is fixed at 14 Nov 2026, 11:00 UTC.
 
-## Data sources and research replay
+1. Body map → **Gut → Food** → **Load demo** → **Save**. Logs "Shrimp rice" three hours earlier.
+2. Body map → **Skin → Immune** → **Load sample** → **Save**.
+3. Immune shows **Hives pattern 80%**: a 60% base match from five hives metrics, plus +10 for the known allergy and +10 for the allergen eaten within six hours, each listed as a reason.
+4. Answer a red-flag question with **Yes** (for example "Trouble breathing") to see the score replaced by **Contact the flight surgeon now**.
 
-Crew assessments are simulated for demonstration. Research participants are not astronauts. The NASA replay uses **NASA Life Sciences Data Archive / NASA Life Sciences Portal, MR080G, UTMB Flight Analog Project, Campaign 3, Physical Fitness Evaluation - Cycle Ergometry**. [Dataset page](https://nlsp.nasa.gov/search/data/details/852cd84a-464d-572b-99ac-9555f4dda464?dataType=DATASETS). The subset was curated from the supplied download on 2026-11-14; the portal was not re-fetched. See [curation notes](data/curated/README.md) for raw filenames, field mappings, conflicts and arithmetic. Evidence views and JSON exports preserve source notes and include this citation for replay records.
+**Cardio** keeps the exercise heart-rate check and the NASA bed-rest replay (participant C3D-3985: VO₂peak 73.9% of baseline after bed rest, 98.0% after recovery; +41.5 bpm at 100 W). **NASA evidence** in the header opens the research replay.
 
-Open **My Fitness → Research replay** for four examples:
+## How it's built
 
-- **C3D-3985:** immediate post-bed-rest measured decrease (73.9% retained) and recovery (98.0%). The mass-normalized baseline is the arithmetic mean of two pre-tests, 29.9 mL/kg/min.
-- **C3A-0224:** conflicting campaign and participant fields; comparison needs review.
-- **C3G-5580:** conflicting dates in linked source representations; comparison needs review.
+React 19, TypeScript and Vite. No backend. Data for the demo is simulated crew data plus a curated NASA research subset.
 
-The header demo link and Evidence replay link open C3D-3985's immediate post-bed-rest assessment. Its chart separates measurement units and shows baseline records, decline and recovery. The 80% line is shown for context only; research records receive no determination.
+| Path | What it is |
+|---|---|
+| `src/shell/` | Body map home, routing (`#/risk/<risk>?crewId=`), crew picker |
+| `src/risks/<risk>/` | One folder per risk tab; each exports a `riskTab` descriptor |
+| `src/risks/types.ts` | Shared contract: signals, vector API, evaluation, escalation |
+| `src/vector/` | Astronaut vector: crew registry, signal store, exposures, personalisation |
+| `src/exercise/`, `src/logic/` | Existing exercise and VO₂ logic, used by the Cardio tab |
+| `data/raw/`, `data/curated/` | Untouched NASA download and the curated, cited subset |
+| `design/` | Body map design options |
+| `docs/battleplan.md` | Team plan, every tab's spec and the full contract |
+
+Coding agents: read [`AGENTS.md`](AGENTS.md).
+
+## Data sources
+
+- **NASA MR080G** (real, bundled): NASA Life Sciences Data Archive / NASA Life Sciences Portal, UTMB Flight Analog Project, Campaign 3, Physical Fitness Evaluation, Cycle Ergometry. [Dataset page](https://nlsp.nasa.gov/search/data/details/852cd84a-464d-572b-99ac-9555f4dda464?dataType=DATASETS). Curated from the supplied download on 2026-11-14; see [curation notes](data/curated/README.md). Research participants are not astronauts.
+- **Reference datasets** for the other tabs, cited in the battleplan: Sleep-EDF (PhysioNet), Google SCIN skin images, NHANES DXA, Human Balance Evaluation Database, NASA OSDR ISS microbial studies, USDA FoodData Central. The demo uses simulated crew data and does not claim analysis of these datasets.
+- **Clinical screening scores** used as "pattern for follow-up" context (for example UAS7, PSQI, MISC, MUST): see "Indicative clinical scores" in [the battleplan](docs/battleplan.md).
 
 ## Limitations
 
-This is not a clinical tool and provides no clinical clearance, mission determination, exercise prescription or changes to exercise intensity, frequency or duration. Evidence status describes comparability, not clinical adjudication. Research records receive no compliance determination. NASA-STD-3001 V1 requirement 4003 concerns in-mission aerobic capacity relative to pre-mission capacity; it cannot establish compliance for a bed-rest participant or task-specific EVA capability. The baseline averaging rule is an explicit demonstration assumption, not a NASA-approved rule. VO2peak and VO2max remain distinct, absolute and mass-normalized values stay separate, and missing or conflicting evidence is not treated as zero. Other body-map modules are planned only. See [the project brief](docs/brief.md).
+A hackathon prototype, not a clinical tool. It gives no diagnosis, clearance, treatment or exercise prescription. Personalisation weights are documented demo assumptions, not trained or validated. Screening thresholds come from Earth populations, not astronauts. Simulated data is always labelled. The NASA-STD-3001 80% reference applies to in-mission crew only; research records get no determination. VO₂peak and VO₂max stay distinct, and missing values are never treated as zero.
 
 ## AI tools used
 
-Claude was used for orchestration and review. OpenAI Codex was used for implementation workers. This disclosure is included for NASA Space Apps transparency requirements; AI assistance does not establish clinical validity or resolve source-data conflicts.
+Claude orchestrated the work and reviewed it. OpenAI Codex built most of the code as implementation workers. DeepSeek was used to prototype the 3D body map. This disclosure follows NASA Space Apps transparency requirements; AI assistance does not establish clinical validity.
 
-## User-entered assessments
-
-My Fitness supports transcribing an existing assessment, adding baseline records, correcting your entries and exporting review JSON. Enter a participant identifier and assessment series to keep contexts separate. Real entries remain in tab memory only: refresh/close clears them. Export before leaving if you need a copy. User entries are labelled separately from simulated crew and NASA research; their reference is context only and no operational or clinical determination is issued.
-
-Browser acceptance: `npx playwright install chromium`, `npm run build`, then `npm run test:e2e`. See `docs/verification.md`, `docs/usability.md` and `docs/submission.md` for release evidence and remaining human work.
+Interface resources: [IBM Plex](https://github.com/IBM/plex) fonts via [Fontsource](https://fontsource.org/), [Phosphor](https://phosphoricons.com/) icons, [Observable Plot](https://observablehq.com/plot/) charts, [three.js](https://threejs.org/) (MIT) for 3D.
