@@ -1,0 +1,114 @@
+.radiation-card {
+  width: min(100%, 410px);
+  min-width: 0;
+  margin: 12px auto 24px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+.radiation-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.radiation-card h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+.radiation-tag,
+.radiation-label,
+.radiation-reference,
+.radiation-readings dt {
+  color: var(--subtle);
+}
+.radiation-tag {
+  border: 1px solid var(--line);
+  padding: 2px 6px;
+}
+.radiation-card p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+.radiation-card .radiation-total {
+  margin-top: 18px;
+}
+.radiation-total strong,
+.radiation-total span,
+.radiation-reference span,
+.radiation-readings dd,
+.radiation-breakdown span {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+.radiation-total strong {
+  font-size: 1.25rem;
+}
+.radiation-bar,
+.radiation-split {
+  height: 6px;
+  background: var(--line);
+  overflow: hidden;
+}
+.radiation-bar {
+  margin-top: 12px;
+}
+.radiation-bar span,
+.radiation-split span {
+  display: block;
+  height: 100%;
+  background: var(--text);
+}
+.radiation-readings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 18px 0 8px;
+}
+.radiation-readings > div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.radiation-readings dd {
+  margin: 0 0 4px;
+}
+.radiation-split {
+  margin-top: 16px;
+}
+.radiation-source {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.radiation-card details {
+  border-top: 1px solid var(--line);
+  padding: 0;
+  margin: 0;
+}
+.radiation-card summary {
+  padding-block: 12px;
+  min-height: 44px;
+  cursor: pointer;
+}
+.radiation-card a:hover {
+  color: var(--text);
+}
+.radiation-card a:focus-visible,
+.radiation-card summary:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+.radiation-card li a {
+  display: inline-block;
+  padding-block: 10px;
+}
+.radiation-notice {
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .radiation-card {
+    width: 100%;
+  }
+}

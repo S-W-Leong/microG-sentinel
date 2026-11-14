@@ -417,16 +417,7 @@
     gap: 12px 16px;
   }
 }
-@media (max-width: 760px) {
-  .shell-header {
-    padding-inline: 16px;
-  }
-  .shell-crew {
-    margin-left: 0;
-  }
-  .shell-main {
-    padding: 24px 16px;
-  }
+@media (max-width: 900px) {
   .body-board {
     display: flex;
     flex-direction: column;
@@ -441,6 +432,17 @@
   }
   .body-leaders {
     display: none;
+  }
+}
+@media (max-width: 760px) {
+  .shell-header {
+    padding-inline: 16px;
+  }
+  .shell-crew {
+    margin-left: 0;
+  }
+  .shell-main {
+    padding: 24px 16px;
   }
   .shell-risk-header {
     align-items: flex-start;

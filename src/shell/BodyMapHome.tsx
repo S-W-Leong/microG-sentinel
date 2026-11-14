@@ -5,6 +5,7 @@ import RegionDetails from './astronaut3d/RegionDetails';
 import type { ProjectedMarkers, RegionFlags, RegionId } from './astronaut3d/types';
 import { regions, titles } from './routes';
 import { tabStatus } from './registry';
+import RadiationCard from './radiation/RadiationCard';
 
 export interface LocalNote {
   crewId: string;
@@ -225,6 +226,7 @@ export default function BodyMapHome({
           );
         })}
       </div>
+      <RadiationCard crewId={crewId} />
       <details className="shell-demo">
         <summary>Demo path</summary>
         <p>
