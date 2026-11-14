@@ -1,45 +1,83 @@
 import { useEffect, useRef, useState } from 'react';
-import BodyMap from './components/BodyMap';
 import Exercise from './screens/Exercise';
 import ExerciseResearch from './screens/ExerciseResearch';
 import MyFitness from './screens/MyFitness';
 import Understand from './screens/Understand';
 import Evidence from './screens/Evidence';
 import { sourceLabel } from './ui/presentation';
-import { getReplayResult, getResult, getActiveScope } from './ui/dataSource';
+import { getResult, getActiveScope } from './ui/dataSource';
+import type { RiskId } from './risks/types';
+import BodyMapHome from './shell/BodyMapHome';
+import type { LocalNote } from './shell/BodyMapHome';
+import {
+  crews,
+  navigationHref,
+  parseRoute,
+  regionForRisk,
+  routeHref,
+  titles,
+} from './shell/routes';
+import { riskTabs } from './shell/registry';
+import { demoTime, vector } from './shell/vector';
+import './shell/shell.css';
 
 export default function App() {
   const [hash, setHash] = useState(window.location.hash || '#/');
   const [, refresh] = useState(0);
-  useEffect(() => {
-    const update = () => refresh((n) => n + 1);
-    window.addEventListener('assessmentschange', update);
-    return () => window.removeEventListener('assessmentschange', update);
-  }, []);
+  const [notes, setNotes] = useState<LocalNote[]>([]);
   const main = useRef<HTMLElement>(null);
+  const { page, id, crewId, at } = parseRoute(hash);
+  const home = !page || page === 'body-map';
+  const region = page === 'risk' ? regionForRisk(id) : undefined;
+  const tab = region ? riskTabs[id as RiskId] : undefined;
+  const Component = tab?.Component;
+  const result = id && page !== 'risk' ? getResult(id) : undefined;
+  const source = sourceLabel(
+    page === 'exercise-research'
+      ? 'nasa-research-replay'
+      : page === 'exercise'
+        ? 'simulated-crew'
+        : (result?.source ?? getActiveScope().source),
+  );
   useEffect(() => {
     const change = () => {
       setHash(window.location.hash || '#/');
       window.scrollTo(0, 0);
       main.current?.focus({ preventScroll: true });
     };
+    const navigate = (event: Event) => {
+      const href = navigationHref((event as CustomEvent<unknown>).detail);
+      if (href) {
+        if (window.location.hash === href) change();
+        else window.location.hash = href;
+      }
+    };
+    const update = () => refresh((value) => value + 1);
     window.addEventListener('hashchange', change);
-    return () => window.removeEventListener('hashchange', change);
+    window.addEventListener('microg:risk-navigation', navigate);
+    window.addEventListener('assessmentschange', update);
+    return () => {
+      window.removeEventListener('hashchange', change);
+      window.removeEventListener('microg:risk-navigation', navigate);
+      window.removeEventListener('assessmentschange', update);
+    };
   }, []);
-  const [, route, id] = hash.split('/');
-  const result = id ? getResult(id) : undefined;
-  const replay = getReplayResult();
-  const exercise = !route || route === 'exercise';
-  const source = sourceLabel(
-    route === 'exercise-research'
-      ? 'nasa-research-replay'
-      : exercise
-        ? 'simulated-crew'
-        : (result?.source ?? getActiveScope().source),
-  );
   useEffect(() => {
-    document.title = `${!route || route === 'exercise' ? 'Exercise Monitoring' : route === 'exercise-research' ? 'Exercise Research' : route === 'fitness' ? 'My Fitness' : route === 'understand' ? 'Understand My Assessment' : route === 'evidence' ? 'Evidence and Follow-up' : 'Body Map'} | MicroG Sentinel`;
-  }, [route]);
+    const title = home
+      ? 'Body map'
+      : region
+        ? titles[id as RiskId]
+        : page === 'exercise-research'
+          ? 'NASA evidence'
+          : page === 'exercise'
+            ? 'Exercise monitoring'
+            : page === 'fitness'
+              ? 'My Fitness'
+              : page === 'understand'
+                ? 'Understand my assessment'
+                : 'Evidence and follow-up';
+    document.title = title + ' | MicroG Sentinel';
+  }, [home, region, id, page]);
   return (
     <>
       <a
@@ -52,83 +90,116 @@ export default function App() {
       >
         Skip to content
       </a>
-      <header className="site-header">
-        <a className="brand" href="#/" aria-label="MicroG Sentinel home">
+      <header className="site-header shell-header">
+        <a className="brand" href={routeHref('/', crewId)} aria-label="MicroG Sentinel home">
           MicroG Sentinel
         </a>
         <nav aria-label="Main navigation">
-          <a href="#/exercise" aria-current={exercise ? 'page' : undefined}>
-            Guided demo
-          </a>
-          <a href="#/fitness/entry" aria-current={route === 'fitness' ? 'page' : undefined}>
-            My values
+          <a href={routeHref('/', crewId)} aria-current={home ? 'page' : undefined}>
+            Body map
           </a>
           <a
             href="#/exercise-research"
-            aria-current={route === 'exercise-research' ? 'page' : undefined}
+            aria-current={page === 'exercise-research' ? 'page' : undefined}
           >
             NASA evidence
           </a>
-          <details className="about-menu" key={hash}>
-            <summary>About</summary>
-            <div className="about-content">
-              <span className="eyebrow">MicroG Sentinel prototype</span>
-              <h2>About this prototype</h2>
-              <p>
-                Compare exercise response, identify evidence gaps and select the smallest useful
-                observation from an already prescribed workout.
-              </p>
-              <a href="#/body-map">Explore the body map</a>
-              <a href="#/fitness">Formal VO₂ assessments</a>
-              <p className="subtle">
-                Simulated crew workflows and a separate NASA bed-rest analog replay. No clinical or
-                mission determination.
-              </p>
-            </div>
-          </details>
         </nav>
+        {(home || region) && (
+          <label className="shell-crew">
+            Simulated crew
+            <select
+              aria-label="Simulated crew"
+              value={crewId}
+              onChange={(event) => {
+                window.location.hash = routeHref(
+                  region ? '/risk/' + id : '/',
+                  event.target.value,
+                  at,
+                );
+              }}
+            >
+              {crews.map((crew) => (
+                <option key={crew} value={crew}>
+                  {crew}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
       </header>
-      <main id="main" ref={main} tabIndex={-1} className={exercise ? 'exercise-main' : ''}>
-        {!exercise && (
+      <main
+        id="main"
+        ref={main}
+        tabIndex={-1}
+        className={page === 'exercise' ? 'exercise-main' : 'shell-main'}
+      >
+        {(home || region) && (
+          <p className="shell-clock">
+            Simulated fixture time · <time dateTime={demoTime}>14 Nov 2026 · 11:00 UTC</time>
+          </p>
+        )}
+        {!home && !region && page !== 'exercise' && (
           <div className="source-strip">
             <span className="simulation-badge">{source}</span>
-            <a href="#/exercise">Return to exercise</a>
+            <a href={routeHref('/', crewId)}>Body map</a>
           </div>
         )}
-        {!route || route === 'exercise' ? (
+        {home ? (
+          <BodyMapHome
+            key={crewId}
+            crewId={crewId}
+            vector={vector}
+            notes={notes}
+            queueNote={(note) => setNotes((current) => [...current, note])}
+          />
+        ) : region ? (
+          <>
+            <header className="shell-risk-header">
+              <a href={routeHref('/', crewId)}>← Body map</a>
+              <h1>{region.name}</h1>
+              <nav aria-label="Region tabs">
+                {region.tabs.map((risk) => (
+                  <a
+                    key={risk}
+                    href={routeHref('/risk/' + risk, crewId, at)}
+                    aria-current={risk === id ? 'page' : undefined}
+                  >
+                    {titles[risk]}
+                  </a>
+                ))}
+              </nav>
+              <span className="shell-person">{crewId} · Simulated</span>
+            </header>
+            {Component ? (
+              <Component key={id + crewId + (at ?? '')} crewId={crewId} vector={vector} />
+            ) : (
+              <section className="panel">
+                <h2>{titles[id as RiskId]}</h2>
+                <p>Planned</p>
+                <p>No measurements or assessments are available.</p>
+              </section>
+            )}
+          </>
+        ) : page === 'exercise' ? (
           <Exercise />
-        ) : route === 'exercise-research' ? (
+        ) : page === 'exercise-research' ? (
           <ExerciseResearch />
-        ) : route === 'body-map' ? (
-          <BodyMap />
-        ) : route === 'fitness' ? (
+        ) : page === 'fitness' ? (
           <MyFitness />
-        ) : result && route === 'understand' ? (
+        ) : result && page === 'understand' ? (
           <Understand result={result} />
-        ) : result && route === 'evidence' ? (
+        ) : result && page === 'evidence' ? (
           <Evidence result={result} />
         ) : (
           <section className="panel">
             <h1>Assessment not found</h1>
             <p>This route does not match a bundled assessment.</p>
-            <a href="#/fitness">Return to My Fitness</a>
+            <a href={routeHref('/', crewId)}>Body map</a>
           </section>
         )}
       </main>
-      <footer className="site-footer">
-        <nav aria-label="Supporting tools">
-          <a href="#/body-map" aria-current={route === 'body-map' ? 'page' : undefined}>
-            Body Map
-          </a>
-          <a href="#/fitness" aria-current={route === 'fitness' ? 'page' : undefined}>
-            My Fitness
-          </a>
-          {replay && <a href={`#/understand/${replay.assessmentId}`}>Demo: research replay</a>}
-        </nav>
-        <span className="footer-note">
-          Offline prototype · No clinical or mission determination
-        </span>
-      </footer>
+      <footer className="site-footer shell-footer">Prototype · not for clinical use</footer>
     </>
   );
 }

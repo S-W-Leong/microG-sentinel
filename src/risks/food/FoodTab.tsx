@@ -155,7 +155,10 @@ function FoodPanel({ crewId, vector }: RiskTabProps) {
   const [, refresh] = useReducer((value: number) => value + 1, 0);
   useEffect(() => vector.subscribe(crewId, refresh), [crewId, vector]);
   const [draft, setDraft] = useState<FoodInput>(() =>
-    saved.history.length ? structuredClone(saved.input) : emptyInput(),
+    saved.history.length
+      ? structuredClone(saved.input)
+      : // Use the vector's clock, not wall time: the demo runs on a fixed clock and rejects future records.
+        emptyInput(vector.getVector(crewId)?.exposures.asOf ?? new Date().toISOString()),
   );
   const [itemId, setItemId] = useState(menu[0].id);
   const [grams, setGrams] = useState('');

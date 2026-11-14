@@ -4,7 +4,7 @@ test('adaptive observation, refresh and locally prepared review', async ({ page,
   await context.route('**/*', (r) =>
     new URL(r.request().url()).hostname === '127.0.0.1' ? r.continue() : r.abort(),
   );
-  await page.goto('/');
+  await page.goto('/#/exercise');
   await expect(
     page.getByRole('heading', { name: 'Next useful observation', exact: true }),
   ).toBeVisible();
@@ -36,7 +36,7 @@ test('adaptive observation, refresh and locally prepared review', async ({ page,
 });
 test('symptoms bypass collection at narrow width', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('/');
+  await page.goto('/#/exercise');
   await page.getByText('Demonstration inputs and prescribed schedule', { exact: true }).click();
   await page.getByLabel('Scenario', { exact: true }).selectOption('symptoms');
   await expect(
@@ -55,7 +55,7 @@ test('symptoms bypass collection at narrow width', async ({ page }) => {
 test('explains the default values before collection and links to personal entry', async ({
   page,
 }) => {
-  await page.goto('/');
+  await page.goto('/#/exercise');
   await expect(
     page.getByRole('heading', { name: 'Understand your exercise numbers.' }),
   ).toBeVisible();
@@ -66,14 +66,14 @@ test('explains the default values before collection and links to personal entry'
     page.getByRole('heading', { name: 'Next useful observation', exact: true }),
   ).toBeVisible();
   await page.screenshot({ path: 'artifacts/adaptive-exercise.png', fullPage: true });
-  await page.getByRole('link', { name: 'My values', exact: true }).click();
+  await page.goto('/#/fitness/entry');
   await expect(page.getByLabel('Participant identifier')).toBeVisible();
   await expect(page.getByRole('heading', { name: 'How to use your own values' })).toBeVisible();
 });
 test('imports and links actual CSV observations without changing the baseline', async ({
   page,
 }) => {
-  await page.goto('/');
+  await page.goto('/#/exercise');
   await page.getByText('Import demonstration observations', { exact: true }).click();
   const header =
     'sessionId,subjectId,seriesId,date,isBaseline,deviceId,protocolId,posture,stageId,stageIndex,workloadW,durationSec,hrBpm,rpe,rpeScale,quality,qualityBasis,symptoms,notes';

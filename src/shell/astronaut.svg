@@ -1,0 +1,46 @@
+<svg class="figure-art" viewBox="0 0 480 640" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="suit" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4e7dd"/><stop offset="1" stop-color="#9eafb0"/></linearGradient>
+<linearGradient id="visor" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#38525c"/><stop offset="1" stop-color="#15242c"/></linearGradient>
+<linearGradient id="wash" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9d8da" stop-opacity="0"/><stop offset="1" stop-color="#b9d8da" stop-opacity=".18"/></linearGradient>
+<radialGradient id="aura"><stop stop-color="#34494d" stop-opacity=".3"/><stop offset="1" stop-color="#34494d" stop-opacity="0"/></radialGradient>
+<clipPath id="lens-clip"><circle id="lens-clip-circle" cx="240" cy="100" r="49"/></clipPath>
+</defs>
+<ellipse cx="240" cy="320" rx="225" ry="310" fill="url(#aura)"/>
+<g opacity=".3" stroke="#637b80" fill="none"><ellipse cx="240" cy="320" rx="171" ry="232"/><path d="M240 30v580M45 320h390" stroke-dasharray="2 8"/><ellipse cx="240" cy="600" rx="80" ry="9"/></g>
+<path class="scan-frame" d="M115 48H95v22m270-22h20v22M95 563v22h20m250 0h20v-22"/>
+<g class="suit">
+<rect x="155" y="209" width="170" height="190" rx="35" fill="#5e7279"/>
+<path d="M166 233Q137 215 122 248L85 359q-5 20 16 28 21 9 30-14l49-99M314 233q29-18 44 15l37 111q5 20-16 28-21 9-30-14l-49-99" fill="url(#suit)"/>
+<path d="M92 359l38 15-10 27q-9 17-21 8l-3-8q-16 1-17-11zM388 359l-38 15 10 27q9 17 21 8l3-8q16 1 17-11z" fill="#82999d"/>
+<path d="M180 371l-8 142q-1 27 26 29t32-25l10-88 10 88q5 27 32 25t26-29l-8-142z" fill="url(#suit)"/>
+<path d="M173 518l55 4-2 44q-32 16-66 2l2-25zM252 522l55-4 11 25 2 25q-34 14-66-2z" fill="#70888f"/>
+<path d="M161 559q36 10 66-2m26 0q30 12 66 2" fill="none" stroke="#c4d3d1"/>
+<rect x="156" y="224" width="168" height="180" rx="53" fill="url(#suit)"/>
+<path d="M164 365q76 24 152 0l-4 24q-72 24-144 0z" fill="#788e93"/>
+<rect x="218" y="377" width="44" height="22" rx="5" fill="#ced9d3"/>
+<path class="seam" d="M174 254l12 90m120-90-12 90M177 432l44 6m38 0 44-6M175 477l48 5m34 0 48-5M108 298l35 13m194 0 35-13M104 310l35 13m202 0 35-13"/>
+<rect x="194" y="262" width="92" height="68" rx="13" fill="#6e858b"/>
+<rect x="207" y="274" width="66" height="25" rx="5" fill="#20353e" stroke="#9cb2b4" stroke-width="1"/>
+<path d="M214 287h13l5-6 6 12 6-9h20" fill="none" stroke="#bbdad8" stroke-width="2"/>
+<circle cx="212" cy="314" r="4" fill="#c5e1dc" stroke="none"/><circle cx="229" cy="314" r="4" fill="#bdcbcb" stroke="none"/><path d="M249 312h21m-21 5h14" stroke="#c7d6d3" stroke-width="2"/>
+<path d="M181 221q59 31 118 0l-4 18q-55 28-110 0z" fill="#82999c"/>
+<circle cx="240" cy="140" r="89" fill="url(#suit)"/>
+<rect x="147" y="121" width="18" height="44" rx="7" fill="#7a9098"/><rect x="315" y="121" width="18" height="44" rx="7" fill="#7a9098"/>
+<rect x="172" y="87" width="136" height="110" rx="49" fill="url(#visor)" stroke="#81999f" stroke-width="5"/>
+<path d="M187 127q5-23 26-26" fill="none" stroke="#96b7bf" stroke-width="5" stroke-linecap="round"/>
+<path d="M207 172q33 10 66 0" fill="none" stroke="#4d6b78" stroke-width="2"/>
+<path d="M218 144v5m44-5v5" stroke="#d8e8e0" stroke-width="5" stroke-linecap="round"/>
+<path d="M231 162q9 5 18 0" fill="none" stroke="#b9cdca" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g class="load-scan"><rect x="79" y="-55" width="322" height="55" fill="url(#wash)"/><path d="M79 0h322" stroke="#c7e4df" stroke-width="1.5"/></g>
+<g class="lens" id="lens"><g clip-path="url(#lens-clip)"><rect width="480" height="640" fill="#12262d"/><path d="M80 100h330M80 120h330M80 140h330M80 160h330M80 280h330M80 300h330M80 320h330M80 340h330M80 360h330M80 380h330M80 450h330M80 470h330M80 490h330" stroke="#34525b" stroke-width=".6"/>
+<g class="organ" data-organ="head"><path d="M237 78q-12-13-23-2-16 0-17 15-13 12-3 25-3 15 13 18 13 11 30 0zM243 78q12-13 23-2 16 0 17 15 13 12 3 25 3 15-13 18-13 11-30 0z"/><path d="M215 81l6 11-11 10 7 12-5 13m53-46-6 11 11 10-7 12 5 13M222 103l10 5m26-5-10 5" fill="none"/></g>
+<g class="organ" data-organ="eyes"><path d="M201 145q15-20 30 0-15 20-30 0zM249 145q15-20 30 0-15 20-30 0z"/><circle cx="216" cy="145" r="6"/><circle cx="264" cy="145" r="6"/></g>
+<g class="organ" data-organ="heart"><path d="M226 273q-17-5-24 19t-1 29q9 9 24-5zM254 273q17-5 24 19t1 29q-9 9-24-5zM240 263v24m0-8-12 10m12-10 12 10"/><path d="M229 306q-1-12 11-7 12-5 11 7-2 10-11 17-9-7-11-17z" fill="#90b7b8"/></g>
+<g class="organ" data-organ="skin"><path d="M326 323l39-9 19 16-39 10zM326 323v24l19 17 39-10v-24M345 340v24"/><path d="M328 334l17 15 37-10m-51 4 14 13 34-9M341 324l5 5m11-9 5 5" fill="none"/></g>
+<g class="organ" data-organ="gut"><path d="M232 332v10q14-7 20 3 8 14-6 21-18 9-26-4-6-10 4-15v-15"/><path d="M216 373h45q10 0 10 10v19h-11v-14h-36v14h-11v-19q0-10 3-10zM234 390v8h16v-8m-8 8v8" fill="none"/></g>
+<g class="organ" data-organ="bones"><path d="M265 441q-9-8-13-1-4 6 4 12l7 35q-7 7-1 12 5 4 10-2 8 3 10-4 2-5-7-8l-7-35q9-7 3-12-4-3-6 3z" fill="#91b5b8"/><path d="M264 504l-3 24m15-25 5 24M249 426q15 8 31-2" fill="none"/></g>
+<g id="lens-pass"><rect class="lens-sweep" x="0" y="0" width="480" height="22" fill="url(#wash)"/></g>
+</g><circle id="lens-ring" class="lens-ring" cx="240" cy="100" r="49"/></g>
+</svg>
