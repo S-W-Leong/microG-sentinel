@@ -3,7 +3,7 @@ import { compareSession } from '../exercise/comparison';
 import { useState } from 'react';
 import { buildStageReadings } from '../ui/exercisePresentation';
 import ExerciseComparison from '../components/exercise/ExerciseComparison';
-import { Circle, ArrowUpRight } from '@phosphor-icons/react';
+import { Circle, ArrowUpRight, Database } from '@phosphor-icons/react';
 export default function ExerciseResearch() {
   const [id, setId] = useState(nasaExercise.sessions[2].id);
   const result = compareSession(
@@ -22,7 +22,6 @@ export default function ExerciseResearch() {
   return (
     <>
       <div className="page-heading">
-        <div className="eyebrow">NASA BED-REST ANALOG • RESEARCH ONLY</div>
         <h1>Same workload, different response.</h1>
         <p>
           Formal laboratory stages, not routine astronaut workouts. No prospective crew
@@ -40,7 +39,10 @@ export default function ExerciseResearch() {
             ))}
           </select>
         </label>
-        <span className="subtle">MR080G / C3D-3985 · Four recorded occasions</span>
+        <span className="subtle">
+          <Database size={16} aria-hidden="true" />{' '}
+          <span className="record-id">MR080G / C3D-3985</span> · Four recorded occasions
+        </span>
       </section>
       {result.symptoms.map((s) => (
         <p className="notice" key={s}>
@@ -49,10 +51,10 @@ export default function ExerciseResearch() {
       ))}
       <section className="research-evidence" aria-label="NASA exercise stage evidence">
         <div className="evidence-heading">
-          <h2 className="instrument-label">Recorded response / fixed workload</h2>
+          <h2 className="instrument-label">Recorded response at fixed workload</h2>
           <div className="plot-legend">
             <span>
-              <Circle size={12} weight="fill" className="baseline-symbol" aria-hidden="true" />
+              <Circle size={12} weight="regular" className="baseline-symbol" aria-hidden="true" />
               Pre-bed-rest baseline
             </span>
             <span>
@@ -61,39 +63,74 @@ export default function ExerciseResearch() {
             </span>
           </div>
         </div>
-        <ExerciseComparison rows={rows} />
+        <ExerciseComparison rows={rows} showValues={false} />
       </section>
       <section className="research-readings" aria-label="Research comparison details">
-        {result.stages.map((s) => (
-          <article className="research-reading" key={s.targetStageId}>
-            <h2>
-              {nasaExercise.stages.find((r) => r.id === s.targetStageId)?.context.workloadW} W
-            </h2>
-            <div className="research-current">
-              {s.currentBpm ?? 'Missing'} <small>bpm recorded</small>
-            </div>
-            <p>
-              Baseline {s.baselineRangeBpm?.join('–') ?? 'unavailable'} bpm (
-              {s.baselineSessionIds.length} sessions)
-            </p>
-            <strong className="research-delta">
-              {s.deltaBpm === null
-                ? 'Comparison withheld'
-                : `${s.deltaBpm >= 0 ? '+' : ''}${s.deltaBpm.toFixed(1)} bpm`}
-            </strong>
-            <p>{s.limits.join(' ')}</p>
-            <details>
-              <summary>Source evidence</summary>
-              <pre style={{ whiteSpace: 'pre-wrap' }}>
-                {JSON.stringify(
-                  nasaExercise.stages.find((r) => r.id === s.targetStageId)?.sourceRefs,
-                  null,
-                  2,
-                )}
-              </pre>
-            </details>
-          </article>
-        ))}
+        <table className="research-table">
+          <caption className="sr-only">
+            Recorded heart rate compared with pre-bed-rest baseline
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Workload</th>
+              <th scope="col">Recorded</th>
+              <th scope="col">Baseline range (n)</th>
+              <th scope="col">Difference</th>
+              <th scope="col">Source evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            {result.stages.map((s) => (
+              <tr key={s.targetStageId}>
+                <th scope="row">
+                  {nasaExercise.stages.find((r) => r.id === s.targetStageId)?.context.workloadW} W
+                </th>
+                <td data-label="Recorded">
+                  <span className="measurement">
+                    {s.currentBpm === null ? 'Missing' : `${s.currentBpm} bpm`}
+                  </span>
+                </td>
+                <td data-label="Baseline range (n)">
+                  <span className="measurement">
+                    {s.baselineRangeBpm?.join('\u2013') ?? 'unavailable'} bpm
+                  </span>{' '}
+                  ({s.baselineSessionIds.length} sessions)
+                </td>
+                <td data-label="Difference">
+                  <strong className="measurement">
+                    {s.deltaBpm === null
+                      ? 'Comparison withheld'
+                      : `${s.deltaBpm >= 0 ? '+' : ''}${s.deltaBpm.toFixed(1)} bpm`}
+                  </strong>
+                </td>
+                <td className="research-source">
+                  <details>
+                    <summary>Source evidence</summary>
+                    <pre>
+                      {JSON.stringify(
+                        nasaExercise.stages.find((r) => r.id === s.targetStageId)?.sourceRefs,
+                        null,
+                        2,
+                      )}
+                    </pre>
+                  </details>
+                  {s.limits
+                    .filter(
+                      (limit) => !result.stages.every((stage) => stage.limits.includes(limit)),
+                    )
+                    .map((limit) => (
+                      <p key={limit}>{limit}</p>
+                    ))}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p className="research-caveat">
+          {[...new Set(result.stages[0]?.limits ?? [])]
+            .filter((limit) => result.stages.every((stage) => stage.limits.includes(limit)))
+            .join(' ')}
+        </p>
       </section>
       <section className="panel research-context">
         <h2 className="instrument-label">What this evidence can establish</h2>

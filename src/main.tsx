@@ -8,6 +8,7 @@ import '@fontsource/ibm-plex-mono/latin-400.css';
 import '@fontsource/ibm-plex-mono/latin-500.css';
 import './index.css';
 import './exercise.css';
+import './legacy.css';
 import App from './App.tsx';
 import { IconContext } from '@phosphor-icons/react';
 

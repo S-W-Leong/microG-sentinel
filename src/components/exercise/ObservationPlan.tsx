@@ -80,7 +80,7 @@ export default function ObservationPlan({
       {plan.state !== 'review' && (
         <section className="opportunities" aria-label="Prescribed opportunities">
           <h3 className="instrument-label">
-            Prescribed opportunities <small>/ simulated</small>
+            Prescribed opportunities <small>(simulated)</small>
           </h3>
           {w.opportunities.map((o, i) => {
             const chosen = plan.selectedIds.includes(o.id);

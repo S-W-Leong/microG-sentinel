@@ -16,7 +16,7 @@ export default function AssessmentEntry({
   const [editing, setEditing] = useState('');
   const user = getRecords().filter((r) => r.source === 'user-entered');
   return (
-    <details className="panel">
+    <details className="panel assessment-entry">
       <summary>Enter an existing assessment</summary>
       <p>
         User-entered records stay in this tab only and clear on refresh. Export a review card to

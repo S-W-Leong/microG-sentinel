@@ -11,9 +11,9 @@ export default function Understand({ result }: { result: AssessmentResult }) {
     ? result.assessmentId.replace(/-REL$/, '-ABS')
     : result.assessmentId.replace(/-ABS$/, '-REL');
   return (
-    <>
+    <div className="legacy-screen legacy-understand">
       <div className="page-heading">
-        <div className="eyebrow">ASSESSMENT REVIEW / 03</div>
+        <div className="eyebrow">Assessment review</div>
         <h1>Understand my assessment</h1>
         <p>
           {result.source === 'nasa-research-replay'
@@ -158,6 +158,6 @@ export default function Understand({ result }: { result: AssessmentResult }) {
         </a>
         <a href="#/fitness">Back to My Fitness</a>
       </div>
-    </>
+    </div>
   );
 }

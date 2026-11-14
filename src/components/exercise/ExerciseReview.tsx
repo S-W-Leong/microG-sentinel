@@ -17,9 +17,8 @@ export default function ExerciseReview({ workspace: w, onPrepare, onResponse, on
     <section className="review-workspace" id="exercise-review" aria-labelledby="review-heading">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">EPISODE / REVIEW</span>
           <h2 id="review-heading" tabIndex={-1}>
-            Keep the evidence together.
+            Review observations
           </h2>
         </div>
         <button className={review ? 'button secondary' : 'button'} onClick={onPrepare}>

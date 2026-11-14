@@ -21,37 +21,37 @@ export default function AssessmentCard({ result }: { result: AssessmentResult })
           : sourceLabel(result.source)}
       </div>
       <h2>
-        {record?.date ?? 'Date unavailable'}{' '}
+        <span className="assessment-date">{record?.date ?? 'Date unavailable'}</span>{' '}
         <span className="subtle">/ {record?.metric ?? 'Metric unavailable'}</span>
       </h2>
       <p className="subtle">
         {record?.phase?.replace(/-/g, ' ') ?? 'Phase unavailable'} · {record?.subjectId}
       </p>
       <section>
-        <h3>01 / Finding</h3>
+        <h3>Finding</h3>
         <p className="finding">{result.finding}</p>
       </section>
       <section>
-        <h3>02 / Calculation</h3>
+        <h3>Calculation</h3>
         {calculation ? (
           <>
-            <div className="metrics">
+            <dl className="metrics">
               <div>
-                <strong>{number(calculation.current)}</strong>
-                <span>Current · {calculation.unit}</span>
+                <dt>Current · {calculation.unit}</dt>
+                <dd>{number(calculation.current)}</dd>
               </div>
               <div>
-                <strong>{number(calculation.baseline.value)}</strong>
-                <span>Baseline · {calculation.baseline.unit}</span>
+                <dt>Baseline · {calculation.baseline.unit}</dt>
+                <dd>{number(calculation.baseline.value)}</dd>
               </div>
-              <div>
-                <strong>
+              <div className="retained-reading">
+                <dt>Capacity retained</dt>
+                <dd>
                   {calculation.retainedPct.toFixed(1)}
                   <small>%</small>
-                </strong>
-                <span>Capacity retained</span>
+                </dd>
               </div>
-            </div>
+            </dl>
             <p className="subtle">
               Current ÷ baseline × 100 · change {calculation.changePct.toFixed(1)}%
             </p>
@@ -61,14 +61,14 @@ export default function AssessmentCard({ result }: { result: AssessmentResult })
         )}
       </section>
       <section>
-        <h3>03 / Evidence status</h3>
+        <h3>Evidence status</h3>
         <StatusBadge result={result} />
         {result.issues.map((issue, index) => (
           <p key={index}>{issue.message}</p>
         ))}
       </section>
       <section>
-        <h3>04 / Interpretation limits</h3>
+        <h3>Interpretation limits</h3>
         <p>{result.reference.label}.</p>
         <p>{result.reference.note}</p>
         <ul>
@@ -78,7 +78,7 @@ export default function AssessmentCard({ result }: { result: AssessmentResult })
         </ul>
       </section>
       <section>
-        <h3>05 / Follow-up</h3>
+        <h3>Follow-up</h3>
         {result.followUp.map((item) => (
           <p key={item}>{item}</p>
         ))}

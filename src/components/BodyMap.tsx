@@ -37,10 +37,10 @@ export default function BodyMap() {
   const [selected, setSelected] = useState<number | null>(null);
   const latest = getLatestResult();
   return (
-    <>
+    <div className="legacy-screen legacy-body">
       <div className="page-heading">
-        <div className="eyebrow">CREW REVIEW / 01</div>
-        <h1>Your fitness, in context.</h1>
+        <div className="eyebrow">Crew review</div>
+        <h1>Body map</h1>
         <p>
           Start with heart and lungs to review your aerobic fitness assessment against your personal
           baseline.
@@ -99,7 +99,7 @@ export default function BodyMap() {
         </div>
         <div className="body-modules">
           <div className="live-module">
-            <div className="eyebrow">LIVE MODULE</div>
+            <div className="eyebrow">Live module</div>
             <h2>Heart and lungs</h2>
             <p>
               Reduced cardiorespiratory and musculoskeletal fitness · personal baseline comparison
@@ -144,6 +144,6 @@ export default function BodyMap() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

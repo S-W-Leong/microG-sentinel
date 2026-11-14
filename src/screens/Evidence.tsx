@@ -36,10 +36,10 @@ export default function Evidence({ result }: { result: AssessmentResult }) {
   }
   const replay = getReplayResult();
   return (
-    <>
+    <div className="legacy-screen legacy-evidence">
       <div className="page-heading">
-        <div className="eyebrow">EVIDENCE AND FOLLOW-UP / 04</div>
-        <h1>Prepare for review.</h1>
+        <div className="eyebrow">Evidence and follow-up</div>
+        <h1>Prepare for review</h1>
         <p>Keep the measurements, assumptions, and unresolved questions together.</p>
       </div>
       <section className="panel">
@@ -141,7 +141,7 @@ export default function Evidence({ result }: { result: AssessmentResult }) {
         </ul>
       </section>
       <section className="panel">
-        <div className="eyebrow">HEALTH-IMPROVEMENT CONTEXT</div>
+        <div className="eyebrow">Health-improvement context</div>
         <h2>Why aerobic fitness matters</h2>
         <p>
           Aerobic capacity supports demanding mission activities, including spacewalks and emergency
@@ -234,6 +234,6 @@ export default function Evidence({ result }: { result: AssessmentResult }) {
         )}
       </section>
       <a href={`#/understand/${result.assessmentId}`}>← Understand this assessment</a>
-    </>
+    </div>
   );
 }

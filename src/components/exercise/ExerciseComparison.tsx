@@ -3,7 +3,13 @@ import * as Plot from '@observablehq/plot';
 import { ArrowRight, Circle, MinusCircle } from '@phosphor-icons/react';
 import { evidenceLabel, type StageReading } from '../../ui/exercisePresentation';
 
-export default function ExerciseComparison({ rows }: { rows: readonly StageReading[] }) {
+export default function ExerciseComparison({
+  rows,
+  showValues = true,
+}: {
+  rows: readonly StageReading[];
+  showValues?: boolean;
+}) {
   const container = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const host = container.current;
@@ -42,14 +48,15 @@ export default function ExerciseComparison({ rows }: { rows: readonly StageReadi
           Plot.axisX({
             ticks,
             tickSize: 7,
-            label: 'HEART RATE (BPM)',
+            label: 'Heart rate (bpm)',
+            fontFamily: 'IBM Plex Sans, sans-serif',
             labelAnchor: 'right',
             labelOffset: 42,
           }),
           Plot.axisY({
             tickSize: 0,
             tickPadding: 20,
-            fontSize: 27,
+            fontSize: 17,
             fontFamily: 'IBM Plex Sans, sans-serif',
             fontWeight: 600,
             tickFormat: (id: string) => {
@@ -69,7 +76,9 @@ export default function ExerciseComparison({ rows }: { rows: readonly StageReadi
             x: 'baselineMean',
             y: 'id',
             r: 6,
-            fill: '#aabfc8',
+            fill: '#111315',
+            stroke: '#aabfc8',
+            strokeWidth: 2,
             dy: 5,
             title: (r: StageReading) => `Recorded baseline: ${r.baselineRange!.join('–')} bpm`,
           }),
@@ -105,9 +114,10 @@ export default function ExerciseComparison({ rows }: { rows: readonly StageReadi
             {
               y: 'id',
               frameAnchor: 'right',
-              text: () => 'MISSING / NO POINT PLOTTED',
+              text: () => 'Missing: no point plotted',
+              fontFamily: 'IBM Plex Sans, sans-serif',
               textAnchor: 'end',
-              fill: '#ff6b3d',
+              fill: '#aeb7bd',
               fontSize: 12,
             },
           ),
@@ -131,77 +141,85 @@ export default function ExerciseComparison({ rows }: { rows: readonly StageReadi
   return (
     <>
       <div className="comparison-plot" ref={container} />
-      <div className="mobile-readings" aria-label="Exercise response values">
-        {rows.map((row) => (
-          <article className="mobile-reading" key={row.id}>
-            <header>
-              <strong>{row.workloadW ?? 'Unknown'} W</strong>
-              <span className="reading-state">
-                {row.currentBpm === null ? (
-                  <MinusCircle size={16} />
-                ) : (
-                  <Circle size={12} weight="fill" />
-                )}
-                {evidenceLabel[row.state]}
-              </span>
-            </header>
-            <dl>
-              <div>
-                <dt>Baseline HR</dt>
-                <dd>{row.baselineRange ? `${row.baselineRange.join('–')} bpm` : 'Withheld'}</dd>
-              </div>
-              <div>
-                <dt>Current HR</dt>
-                <dd className={row.currentBpm === null ? 'text-accent' : ''}>
-                  {row.currentBpm === null ? 'Missing' : `${row.currentBpm} bpm`}
-                </dd>
-              </div>
-              <div>
-                <dt>Difference</dt>
-                <dd>
-                  {row.deltaBpm === null
-                    ? 'Withheld'
-                    : `${row.deltaBpm >= 0 ? '+' : ''}${row.deltaBpm.toFixed(1)} bpm`}
-                </dd>
-              </div>
-            </dl>
-          </article>
-        ))}
-      </div>
-      <details className="comparison-values">
-        <summary>
-          View measurement values <ArrowRight size={15} aria-hidden="true" />
-        </summary>
-        <div className="table-scroll">
-          <table>
-            <caption className="sr-only">Exercise response and evidence status by workload</caption>
-            <thead>
-              <tr>
-                <th scope="col">Workload</th>
-                <th scope="col">Baseline HR</th>
-                <th scope="col">Current HR</th>
-                <th scope="col">Difference</th>
-                <th scope="col">Evidence</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row) => (
-                <tr key={row.id}>
-                  <th scope="row">{row.workloadW ?? 'Unknown'} W</th>
-                  <td>{row.baselineRange ? `${row.baselineRange.join('–')} bpm` : 'Withheld'}</td>
-                  <td>{row.currentBpm === null ? 'Missing' : `${row.currentBpm} bpm`}</td>
-                  <td>
-                    {row.deltaBpm === null
-                      ? 'Withheld'
-                      : `${row.deltaBpm >= 0 ? '+' : ''}${row.deltaBpm.toFixed(1)} bpm`}
-                  </td>
-                  <td>{evidenceLabel[row.state]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </details>
+      {showValues && (
+        <>
+          <div className="mobile-readings" aria-label="Exercise response values">
+            {rows.map((row) => (
+              <article className="mobile-reading" key={row.id}>
+                <header>
+                  <strong>{row.workloadW ?? 'Unknown'} W</strong>
+                  <span className="reading-state">
+                    {row.currentBpm === null ? (
+                      <MinusCircle size={16} />
+                    ) : (
+                      <Circle size={12} weight="fill" />
+                    )}
+                    {evidenceLabel[row.state]}
+                  </span>
+                </header>
+                <dl>
+                  <div>
+                    <dt>Baseline HR</dt>
+                    <dd>{row.baselineRange ? `${row.baselineRange.join('–')} bpm` : 'Withheld'}</dd>
+                  </div>
+                  <div>
+                    <dt>Current HR</dt>
+                    <dd className={row.currentBpm === null ? 'missing-reading' : ''}>
+                      {row.currentBpm === null ? 'Missing' : `${row.currentBpm} bpm`}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Difference</dt>
+                    <dd>
+                      {row.deltaBpm === null
+                        ? 'Withheld'
+                        : `${row.deltaBpm >= 0 ? '+' : ''}${row.deltaBpm.toFixed(1)} bpm`}
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+            ))}
+          </div>
+          <details className="comparison-values">
+            <summary>
+              View measurement values <ArrowRight size={15} aria-hidden="true" />
+            </summary>
+            <div className="table-scroll">
+              <table>
+                <caption className="sr-only">
+                  Exercise response and evidence status by workload
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Workload</th>
+                    <th scope="col">Baseline HR</th>
+                    <th scope="col">Current HR</th>
+                    <th scope="col">Difference</th>
+                    <th scope="col">Evidence</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((row) => (
+                    <tr key={row.id}>
+                      <th scope="row">{row.workloadW ?? 'Unknown'} W</th>
+                      <td>
+                        {row.baselineRange ? `${row.baselineRange.join('–')} bpm` : 'Withheld'}
+                      </td>
+                      <td>{row.currentBpm === null ? 'Missing' : `${row.currentBpm} bpm`}</td>
+                      <td>
+                        {row.deltaBpm === null
+                          ? 'Withheld'
+                          : `${row.deltaBpm >= 0 ? '+' : ''}${row.deltaBpm.toFixed(1)} bpm`}
+                      </td>
+                      <td>{evidenceLabel[row.state]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </>
+      )}
     </>
   );
 }

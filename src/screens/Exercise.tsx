@@ -5,6 +5,7 @@ import {
   CheckCircle,
   Circle,
   RadioButton,
+  Flask,
 } from '@phosphor-icons/react';
 import { createExerciseStore, evaluateWorkspace } from '../exercise/store';
 import { parseExerciseCsv, exerciseCsvHeader, type CsvPreview } from '../exercise/csv';
@@ -94,7 +95,9 @@ export default function Exercise() {
   return (
     <>
       <div className="episode-meta">
-        <span>CYCLING / {comparison.scope.subjectId}</span>
+        <span>
+          Cycling: <span className="record-id">{comparison.scope.subjectId}</span>
+        </span>
         <time dateTime={w.nowISO}>
           {new Intl.DateTimeFormat('en-GB', {
             weekday: 'short',
@@ -104,9 +107,11 @@ export default function Exercise() {
             timeZone: 'UTC',
           }).format(new Date(w.nowISO))}
         </time>
-        <span className="simulation-badge">Simulated crew</span>
+        <span className="simulation-badge">
+          <Flask size={16} aria-hidden="true" /> Simulated crew
+        </span>
         <span className="local-status" role="status">
-          {w.notice || (w.revision > 0 ? 'Restored local episode' : 'Demonstration workspace')}
+          {w.notice || (w.revision > 0 ? 'Restored local episode' : '')}
         </span>
       </div>
       {error && (
@@ -141,7 +146,7 @@ export default function Exercise() {
             <h2 className="instrument-label">Evidence: heart rate during prescribed cycling</h2>
             <div className="plot-legend">
               <span>
-                <Circle size={12} weight="fill" className="baseline-symbol" aria-hidden="true" />
+                <Circle size={12} weight="regular" className="baseline-symbol" aria-hidden="true" />
                 Baseline
               </span>
               <span>

@@ -69,7 +69,7 @@ export default function App() {
           <details className="about-menu" key={hash}>
             <summary>About</summary>
             <div className="about-content">
-              <span className="eyebrow">MICROG SENTINEL / PROTOTYPE</span>
+              <span className="eyebrow">MicroG Sentinel prototype</span>
               <h2>Useful evidence. Less collection.</h2>
               <p>
                 Compare exercise response, identify evidence gaps and select the smallest useful
@@ -84,7 +84,6 @@ export default function App() {
             </div>
           </details>
         </nav>
-        <span className="header-caption">SPACE APPS / 2026</span>
       </header>
       <main id="main" ref={main} tabIndex={-1} className={exercise ? 'exercise-main' : ''}>
         {!exercise && (
@@ -114,9 +113,6 @@ export default function App() {
         )}
       </main>
       <footer className="site-footer">
-        <span>
-          MICROG SENTINEL <span className="footer-divider">/</span> SPACE APPS 2026
-        </span>
         <nav aria-label="Supporting tools">
           <a href="#/body-map" aria-current={route === 'body-map' ? 'page' : undefined}>
             Body Map

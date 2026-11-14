@@ -32,7 +32,7 @@ export default function MyFitness() {
   const subject = latest && getRecord(latest.assessmentId)?.subjectId;
   if (!latest || !subject)
     return (
-      <>
+      <div className="legacy-screen legacy-fitness">
         <h1>My Fitness</h1>
         {entry}
         <p>Add a follow-up record to review a comparison.</p>
@@ -44,11 +44,11 @@ export default function MyFitness() {
         >
           Return to simulated crew demo
         </button>
-      </>
+      </div>
     );
   const record = getRecord(latest.assessmentId)!;
   return (
-    <>
+    <div className="legacy-screen legacy-fitness">
       {selection && (
         <button
           onClick={() => {
@@ -60,7 +60,7 @@ export default function MyFitness() {
         </button>
       )}
       <div className="page-heading">
-        <div className="eyebrow">SUPPORTING EVIDENCE / FORMAL VO₂ ASSESSMENTS</div>
+        <div className="eyebrow">Formal VO₂ assessments</div>
         <h1>My Fitness</h1>
         <p>What changed, what supports the comparison, and what to review next.</p>
       </div>
@@ -83,7 +83,7 @@ export default function MyFitness() {
         </section>
       )}
       <section className="panel">
-        <div className="eyebrow">PERSONAL HISTORY</div>
+        <div className="eyebrow">Personal history</div>
         <h2>Capacity retained</h2>
         <p>
           {record.source === 'user-entered' ? 'User-entered' : 'Simulated crew'} · {subject} ·{' '}
@@ -153,6 +153,6 @@ export default function MyFitness() {
           ))}
         </ul>
       </section>
-    </>
+    </div>
   );
 }
