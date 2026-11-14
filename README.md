@@ -17,9 +17,9 @@ Results are pattern matches or personal-baseline changes, never diagnoses. Red f
 | Skin | Immune | Altered immune response | Live |
 | Bones | Bone | Spaceflight-induced bone change | Live |
 | Gut | Food | Inadequate nutrition | Live |
-| Head | Balance | Sensorimotor and vestibular change | In progress |
-| Gut | Microbiome | Host–microorganism interactions | In progress |
-| Eyes | SANS | Spaceflight-associated neuro-ocular syndrome | In progress |
+| Head | Balance | Sensorimotor and vestibular change | Live |
+| Gut | Microbiome | Host–microorganism interactions | Live |
+| Eyes | SANS | Spaceflight-associated neuro-ocular syndrome | Live |
 | Head | Mood | Behavioural health (optional) | Planned |
 
 Every tab with no build shows **Planned** on the body map, with no values.
