@@ -21,7 +21,7 @@ export default function App() {
     const change = () => {
       setHash(window.location.hash || '#/');
       window.scrollTo(0, 0);
-      main.current?.focus();
+      main.current?.focus({ preventScroll: true });
     };
     window.addEventListener('hashchange', change);
     return () => window.removeEventListener('hashchange', change);
@@ -58,7 +58,10 @@ export default function App() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#/exercise" aria-current={exercise ? 'page' : undefined}>
-            Exercise
+            Guided demo
+          </a>
+          <a href="#/fitness/entry" aria-current={route === 'fitness' ? 'page' : undefined}>
+            My values
           </a>
           <a
             href="#/exercise-research"
@@ -70,7 +73,7 @@ export default function App() {
             <summary>About</summary>
             <div className="about-content">
               <span className="eyebrow">MicroG Sentinel prototype</span>
-              <h2>Useful evidence. Less collection.</h2>
+              <h2>About this prototype</h2>
               <p>
                 Compare exercise response, identify evidence gaps and select the smallest useful
                 observation from an already prescribed workout.

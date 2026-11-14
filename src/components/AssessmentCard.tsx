@@ -14,7 +14,7 @@ export default function AssessmentCard({ result }: { result: AssessmentResult })
   const record = getRecord(result.assessmentId);
   const calculation = result.calculation;
   return (
-    <article className="panel assessment">
+    <article className="panel assessment" id="assessment-result" tabIndex={-1}>
       <div className="eyebrow">
         {result.source === 'nasa-research-replay'
           ? 'NASA research participant · bed rest analog replay'
@@ -54,6 +54,15 @@ export default function AssessmentCard({ result }: { result: AssessmentResult })
             </dl>
             <p className="subtle">
               Current ÷ baseline × 100 · change {calculation.changePct.toFixed(1)}%
+            </p>
+            <p className="calculation-explainer">
+              Your later result is {number(calculation.current)} {calculation.unit}, compared with a
+              baseline average of {number(calculation.baseline.value)} {calculation.baseline.unit}.{' '}
+              {calculation.retainedPct.toFixed(1)}% retained means your recorded capacity is{' '}
+              {calculation.retainedPct.toFixed(1)}% of that starting point.{' '}
+              {calculation.changePct === 0
+                ? 'There is no measured change.'
+                : `That is ${Math.abs(calculation.changePct).toFixed(1)}% ${calculation.changePct > 0 ? 'higher' : 'lower'}.`}
             </p>
           </>
         ) : (

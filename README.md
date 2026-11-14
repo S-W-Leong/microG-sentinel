@@ -1,12 +1,14 @@
 # MicroG Sentinel
 
-The default experience is now **adaptive exercise monitoring**: compare cycling observations, select an eligible observation from a simulated prescribed schedule, preserve the episode locally and prepare a readable review. Open **Exercise research** for the separate NASA stage replay. Formal VO₂ assessment tools remain available under My Fitness.
+The default experience is a **three-step guided exercise walkthrough**: read the cycling measurements and their plain-language explanations, try filling a missing reading from a simulated prescribed workout, then prepare and download a review. The **My values** navigation link opens instructions and the entry form for your own existing VO₂ reports. **NASA evidence** opens the separate research replay.
+
+To compare your own results, save an earlier report with **Baseline record** ticked, then save a later report with it unticked. Keep the participant identifier, assessment series, metric and units consistent. The app brings the explained comparison into view after saving the later report. Use **Evidence & follow-up** to export before refreshing or closing the tab.
 
 See [exercise demonstration](docs/exercise-demo.md), [CSV format](docs/exercise-import.md), [evaluation limits](docs/exercise-evaluation.md) and [implementation ledger](docs/adaptive-implementation-progress.md). Exercise work persists in browser storage; the older user-entered VO₂ form remains session-only. Reset clears the exercise demonstration key.
 
 ## Flight Deck interface
 
-The exercise workspace uses the selected black, off-white and signal-orange Flight Deck design. The comparison and live observation planner sit together on desktop; on narrow screens the planner precedes readable workload summaries. Available-workout switches recompute the actual plan. Missing measurements never become plotted numeric values. Review preparation now includes a readable snapshot and a stale-evidence indicator, alongside the existing exports and response workflow.
+The exercise workspace uses the selected black, off-white and signal-orange Flight Deck design. Numbered steps put the explained measurements before the planner and review on both desktop and narrow screens. The chart, schedule switches, comparison details and demonstration inputs are optional disclosures. Available-workout switches recompute the actual plan. Missing measurements never become plotted numeric values. Review preparation includes a readable snapshot and a stale-evidence indicator, alongside the existing exports and response workflow.
 
 NASA evidence, the body map, formal VO₂ assessments and user-entered assessments remain separate and accessible. The comparison, planner, store, CSV and source-data contracts are unchanged. See [visual verification](design-qa.md) and [the implementation plan](docs/superpowers/plans/2026-11-14-flight-deck-overhaul.md).
 

@@ -43,7 +43,10 @@ export default function ObservationPlan({
           ? `Selected opportunity: ${selected.map((o) => opportunityTime(o.scheduledAt)).join(', ')}. ${plan.totalAdditionalCrewActions} modelled added actions.`
           : title}
       </p>
-      <h2 className="instrument-label">{title}</h2>
+      <span className="eyebrow">Step 2 · Choose the next step</span>
+      <h2 id="observation-heading" tabIndex={-1}>
+        {title}
+      </h2>
       {plan.state === 'planned' ? (
         <>
           <div className="plan-workload">
@@ -56,7 +59,14 @@ export default function ObservationPlan({
               : 'Recorded duration'}{' '}
             · prescribed cycling segment
           </p>
-          <p className="plan-intro">Collect a new comparable heart-rate observation.</p>
+          <p className="plan-intro">
+            The missing reading is at this cycling effort. Try the two buttons below to see how a
+            follow-up reading changes the comparison.
+          </p>
+          <p className="selected-workout">
+            Suggested demo workout: {selected.map((o) => opportunityTime(o.scheduledAt)).join(', ')}
+            .
+          </p>
         </>
       ) : (
         <div className="plan-state">
@@ -78,7 +88,11 @@ export default function ObservationPlan({
         </div>
       )}
       {plan.state !== 'review' && (
-        <section className="opportunities" aria-label="Prescribed opportunities">
+        <details className="opportunities" aria-label="Prescribed opportunities">
+          <summary>Change the demo schedule (optional)</summary>
+          <p className="subtle">
+            Switch a workout off to mark it unavailable. The planner chooses again.
+          </p>
           <h3 className="instrument-label">
             Prescribed opportunities <small>(simulated)</small>
           </h3>
@@ -125,7 +139,7 @@ export default function ObservationPlan({
               </div>
             );
           })}
-        </section>
+        </details>
       )}
       {plan.state === 'planned' && (
         <div className="plan-reason">
@@ -146,6 +160,13 @@ export default function ObservationPlan({
         </ul>
       )}
       <div className="plan-actions">
+        {plan.state === 'planned' && (
+          <p className="action-instruction">
+            {accepted
+              ? 'Plan selected. Now generate a demo reading. The table in step 1 will update; no measurement is taken.'
+              : 'First, select the suggested plan. Then generate a demo reading. No workout or device is required.'}
+          </p>
+        )}
         {plan.state === 'planned' ? (
           accepted ? (
             <button className="button" onClick={onCapture}>
@@ -170,6 +191,11 @@ export default function ObservationPlan({
       {accepted && (
         <p className="plan-accepted" role="status">
           Plan accepted. The next action creates explicitly synthetic data.
+        </p>
+      )}
+      {plan.state !== 'planned' && (
+        <p className="subtle">
+          Next, prepare a review in step 3. You can save it even when a reading is missing.
         </p>
       )}
       <p className="plan-footnote">

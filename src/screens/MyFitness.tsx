@@ -20,6 +20,8 @@ export default function MyFitness() {
   );
   const entry = (
     <AssessmentEntry
+      key={window.location.hash.endsWith('/entry') ? 'entry' : 'overview'}
+      initiallyOpen={window.location.hash.endsWith('/entry')}
       onSelect={(subject, group) => {
         setActiveScope(subject, group);
         setSelection({ subject, group });
@@ -34,6 +36,17 @@ export default function MyFitness() {
     return (
       <div className="legacy-screen legacy-fitness">
         <h1>My Fitness</h1>
+        <section className="personal-walkthrough">
+          <h2>Next: add your later result</h2>
+          <p>
+            Use the same participant identifier, assessment series, metric and units as your
+            baseline. Update the date and capacity, then untick “Baseline record” and save.
+          </p>
+          <p className="subtle">
+            A baseline alone has no later result to compare. Your entries stay in this tab until you
+            refresh or close it.
+          </p>
+        </section>
         {entry}
         <p>Add a follow-up record to review a comparison.</p>
         <button
@@ -60,10 +73,41 @@ export default function MyFitness() {
         </button>
       )}
       <div className="page-heading">
-        <div className="eyebrow">Formal VO₂ assessments</div>
+        <div className="eyebrow">My values · existing VO₂ test reports</div>
         <h1>My Fitness</h1>
-        <p>What changed, what supports the comparison, and what to review next.</p>
+        <p>Compare an earlier fitness assessment with a later one to understand the change.</p>
       </div>
+      <section className="personal-walkthrough" aria-labelledby="personal-guide">
+        <h2 id="personal-guide">How to use your own values</h2>
+        <ol>
+          <li>
+            <strong>Have two existing test reports ready.</strong> Use the same metric and unit,
+            such as VO2peak in L/min, measured with matching methods.
+          </li>
+          <li>
+            <strong>Save your earlier result as the baseline.</strong> This is your starting point.
+            Tick “Baseline record” in the form below.
+          </li>
+          <li>
+            <strong>Save your later result.</strong> Use the same participant identifier and
+            assessment series. Leave “Baseline record” unticked.
+          </li>
+          <li>
+            <strong>Read your comparison, then export it.</strong> “Understand this assessment”
+            explains the calculation. “Evidence & follow-up” lets you export your review card.
+          </li>
+        </ol>
+        <p className="subtle">
+          Your entries clear when you refresh or close this tab. Export before leaving. This form
+          transcribes reports; it does not measure fitness.
+        </p>
+        {!selection && (
+          <p className="demo-callout">
+            <strong>You are viewing an example.</strong> The result below belongs to simulated crew.
+            Enter your own reports to replace it with your comparison.
+          </p>
+        )}
+      </section>
       {entry}
       <AssessmentCard result={latest} />
       {selection && (
