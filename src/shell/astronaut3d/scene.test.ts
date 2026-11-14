@@ -147,14 +147,12 @@ afterEach(() => {
 });
 
 describe('astronaut scene and fallback', () => {
-  it('uses the existing SVG and selected lens while the lazy scene loads', () => {
+  it('shows an empty loading stage, not the 2D figure, while the lazy scene loads', () => {
     const html = renderToStaticMarkup(
       createElement(AstronautView, { selected: 'heart-lungs', onSelect: vi.fn(), flags }),
     );
-    expect(html).toContain('body-fallback');
-    expect(html).toContain('data-selected="heart"');
-    expect(html).toContain('Scan Heart &amp; lungs');
-    expect(html.match(/class="body-hotspot"/g)).toHaveLength(6);
+    expect(html).toContain('astronaut-loading');
+    expect(html).not.toContain('body-fallback');
   });
   it('keeps all six accessible fallback buttons and selection state', () => {
     const html = renderToStaticMarkup(
