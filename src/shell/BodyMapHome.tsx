@@ -1,10 +1,11 @@
-import { useEffect, useLayoutEffect, useReducer, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useReducer, useRef, useState } from 'react';
 import type { RiskTabProps } from '../risks/types';
-import astronaut from './astronaut.svg?raw';
-import { regions, routeHref, titles } from './routes';
+import AstronautView from './astronaut3d/AstronautView';
+import RegionDetails from './astronaut3d/RegionDetails';
+import type { ProjectedMarkers, RegionFlags, RegionId } from './astronaut3d/types';
+import { regions, titles } from './routes';
 import { tabStatus } from './registry';
 
-type RegionId = (typeof regions)[number]['id'];
 export interface LocalNote {
   crewId: string;
   text: string;
@@ -21,7 +22,20 @@ export default function BodyMapHome({
 }) {
   const [selected, setSelected] = useState<RegionId | null>(null);
   const [, refresh] = useReducer((value) => value + 1, 0);
-  const [leaders, setLeaders] = useState<{ id: string; path: string }[]>([]);
+  const projected = useRef<ProjectedMarkers | null>(null);
+  const leaderGeometry = useRef<
+    {
+      id: RegionId;
+      startX: number;
+      startY: number;
+      endX: number;
+      endY: number;
+      offsetX: number;
+      offsetY: number;
+      left: boolean;
+      path: SVGPathElement;
+    }[]
+  >([]);
   const [note, setNote] = useState('');
   const [notice, setNotice] = useState('');
   const board = useRef<HTMLDivElement>(null);
@@ -30,67 +44,78 @@ export default function BodyMapHome({
   const noteButton = useRef<HTMLButtonElement>(null);
   useEffect(() => vector.subscribe(crewId, refresh), [crewId, vector]);
   const region = regions.find((item) => item.id === selected);
-  const art = astronaut
-    .replace(
-      /cx="240" cy="100" r="49"/g,
-      region
-        ? 'cx="' + region.point[0] + '" cy="' + region.point[1] + '" r="' + region.radius + '"'
-        : 'cx="240" cy="100" r="49"',
-    )
-    .replace(
-      'id="lens-pass"',
-      'id="lens-pass" transform="translate(0 ' + (region?.point[1] ?? 100) + ')"',
-    );
+  const statusesByRegion = regions.map((item) => ({
+    id: item.id,
+    statuses: item.tabs.map((risk) => ({ risk, ...tabStatus(risk, { crewId, vector }) })),
+  }));
+  const flags = Object.fromEntries(
+    statusesByRegion.map(({ id, statuses }) => [
+      id,
+      statuses.some((status) => status.evaluation?.escalation?.level === 'urgent')
+        ? 'urgent'
+        : statuses.some((status) => status.evaluation?.escalation)
+          ? 'next-pmc'
+          : statuses.every((status) => status.text === 'Planned')
+            ? 'planned'
+            : statuses.some((status) => status.evaluation?.value != null)
+              ? 'recorded'
+              : 'empty',
+    ]),
+  ) as RegionFlags;
+  const drawLeaders = useCallback((positions: ProjectedMarkers | null) => {
+    projected.current = positions;
+    for (const entry of leaderGeometry.current) {
+      const position = positions?.[entry.id];
+      const endX = position ? entry.offsetX + position.x : entry.endX;
+      const endY = position ? entry.offsetY + position.y : entry.endY;
+      entry.path.style.display = position && !position.visible ? 'none' : '';
+      entry.path.setAttribute(
+        'd',
+        `M${entry.startX} ${entry.startY}H${entry.startX + (entry.left ? 18 : -18)}L${endX} ${endY}`,
+      );
+    }
+  }, []);
   useLayoutEffect(() => {
     const element = board.current;
     if (!element) return;
-    const draw = () => {
+    const measure = () => {
       const bounds = element.getBoundingClientRect();
       const stage = figure.current?.getBoundingClientRect();
       if (!stage) return;
-      setLeaders(
-        regions.map((item, index) => {
-          const card = element
-            .querySelector('[data-card="' + item.id + '"]')!
-            .getBoundingClientRect();
-          const left = index % 2 === 0;
-          const startX = (left ? card.right : card.left) - bounds.left;
-          const startY = card.top - bounds.top + 28;
-          const endX = stage.left - bounds.left + (stage.width * item.point[0]) / 480;
-          const endY = stage.top - bounds.top + (stage.height * item.point[1]) / 640;
-          return {
-            id: item.id,
-            path:
-              'M' +
-              startX +
-              ' ' +
-              startY +
-              'H' +
-              (startX + (left ? 18 : -18)) +
-              'L' +
-              endX +
-              ' ' +
-              endY,
-          };
-        }),
-      );
+      leaderGeometry.current = regions.map((item, index) => {
+        const card = element
+          .querySelector('[data-card="' + item.id + '"]')!
+          .getBoundingClientRect();
+        const left = index % 2 === 0;
+        return {
+          id: item.id,
+          left,
+          startX: (left ? card.right : card.left) - bounds.left,
+          startY: card.top - bounds.top + 28,
+          offsetX: stage.left - bounds.left,
+          offsetY: stage.top - bounds.top,
+          endX: stage.left - bounds.left + (stage.width * item.point[0]) / 480,
+          endY: stage.top - bounds.top + (stage.height * item.point[1]) / 640,
+          path: element.querySelector<SVGPathElement>('[data-leader="' + item.id + '"]')!,
+        };
+      });
+      drawLeaders(projected.current);
     };
-    const observer = new ResizeObserver(draw);
+    const observer = new ResizeObserver(measure);
     observer.observe(element);
     if (figure.current) observer.observe(figure.current);
     element.querySelectorAll('[data-card]').forEach((card) => observer.observe(card));
-    draw();
-    // Entrance animations move cards without resizing them, so redraw once they settle.
-    element.addEventListener('animationend', draw);
-    element.addEventListener('transitionend', draw);
-    const settle = window.setTimeout(draw, 900);
+    measure();
+    element.addEventListener('animationend', measure);
+    element.addEventListener('transitionend', measure);
+    const settle = window.setTimeout(measure, 900);
     return () => {
       observer.disconnect();
-      element.removeEventListener('animationend', draw);
-      element.removeEventListener('transitionend', draw);
+      element.removeEventListener('animationend', measure);
+      element.removeEventListener('transitionend', measure);
       window.clearTimeout(settle);
     };
-  }, [selected]);
+  }, [selected, drawLeaders]);
   function selectRegion(id: RegionId) {
     setSelected((current) => (current === id ? null : id));
   }
@@ -101,21 +126,21 @@ export default function BodyMapHome({
       onKeyDown={(event) => {
         if (event.key === 'Escape' && !dialog.current?.open && selected) {
           board.current
-            ?.querySelector<HTMLButtonElement>('[data-select="' + selected + '"]')
+            ?.querySelector<HTMLButtonElement>('[data-card="' + selected + '"] .body-chip')
             ?.focus();
           setSelected(null);
         }
       }}
     >
-      <p className="eyebrow">Simulated crew</p>
+      <p className="body-simulation">Simulated</p>
       <h1 id="body-title">Body map</h1>
       <div className="body-board" ref={board}>
         <svg className="body-leaders" aria-hidden="true">
-          {leaders.map((leader) => (
+          {regions.map((item) => (
             <path
-              key={leader.id}
-              d={leader.path}
-              className={selected === leader.id ? 'active' : ''}
+              key={item.id}
+              data-leader={item.id}
+              className={selected === item.id ? 'active' : ''}
             />
           ))}
         </svg>
@@ -125,27 +150,12 @@ export default function BodyMapHome({
             ref={figure}
             data-selected={selected === 'heart-lungs' ? 'heart' : (selected ?? '')}
           >
-            <div
-              className="body-art"
-              aria-hidden="true"
-              dangerouslySetInnerHTML={{ __html: art }}
+            <AstronautView
+              selected={selected}
+              onSelect={setSelected}
+              flags={flags}
+              onProject={drawLeaders}
             />
-            {regions.map((item) => (
-              <button
-                key={item.id}
-                className="body-hotspot"
-                type="button"
-                data-select={item.id}
-                style={{
-                  left: (item.point[0] / 480) * 100 + '%',
-                  top: (item.point[1] / 640) * 100 + '%',
-                }}
-                aria-label={'Scan ' + item.name}
-                aria-pressed={selected === item.id}
-                aria-controls={'region-' + item.id}
-                onClick={() => selectRegion(item.id)}
-              />
-            ))}
           </div>
           <p className="body-caption" role="status">
             {region ? region.name : 'Tap a region'}
@@ -162,10 +172,7 @@ export default function BodyMapHome({
           </button>
         </div>
         {regions.map((item, index) => {
-          const statuses = item.tabs.map((risk) => ({
-            risk,
-            ...tabStatus(risk, { crewId, vector }),
-          }));
+          const statuses = statusesByRegion[index].statuses;
           const escalations = statuses.filter((status) => status.evaluation?.escalation);
           const expanded = item.id === selected;
           return (
@@ -207,14 +214,12 @@ export default function BodyMapHome({
                 </p>
               ))}
               <div id={'region-' + item.id} hidden={!expanded} className="body-details">
-                {statuses.map((status) => (
-                  <div key={status.risk}>
-                    {status.evaluation?.value != null && <p>{status.evaluation.label}</p>}
-                    <a href={routeHref('/risk/' + status.risk, crewId)}>
-                      {titles[status.risk]} <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
-                ))}
+                <RegionDetails
+                  region={item.id}
+                  name={item.name}
+                  statuses={statuses}
+                  crewId={crewId}
+                />
               </div>
             </article>
           );

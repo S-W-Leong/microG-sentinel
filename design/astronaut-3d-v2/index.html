@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111315" />
+    <title>Body map · MicroG Sentinel</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./astronaut3d.css" />
+    <script type="importmap">
+      { "imports": { "three": "/node_modules/three/build/three.module.js" } }
+    </script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="masthead">
+        <a class="brand" href="./index.html"
+          ><span class="brand-orbit" aria-hidden="true">✳</span
+          ><span>MicroG <strong>Sentinel</strong></span></a
+        ><span class="mission-label">CREW HEALTH / EXPLORER</span
+        ><span class="simulation">◌ &nbsp; Simulated</span>
+      </header>
+      <main>
+        <div class="heading">
+          <div>
+            <p class="eyebrow">A DIFFERENT PERSPECTIVE</p>
+            <h1>Body map<span>.</span></h1>
+            <p class="subtitle">Your body. A little closer.</p>
+          </div>
+          <p class="map-key">◦ &nbsp; Six regions to explore</p>
+        </div>
+        <section class="map" aria-label="Interactive astronaut body map">
+          <div id="stage" class="stage">
+            <div class="stage-glow"></div>
+            <div class="stage-caption" aria-hidden="true">
+              <span>HUMAN SYSTEMS</span><span>01 — 06</span>
+            </div>
+            <div id="markers" class="markers"></div>
+            <p class="gesture">Drag to orbit <span>·</span> Scroll to zoom</p>
+            <button class="reset" id="reset" type="button" hidden>↶ Full body</button>
+            <p class="load-state" id="load-state" role="status">Preparing your body map…</p>
+          </div>
+          <svg class="leaders" id="leaders" aria-hidden="true"></svg>
+          <div class="region-column left" id="left-regions"></div>
+          <div class="region-column right" id="right-regions"></div>
+        </section>
+        <div class="selection-note" id="selection-note" role="status" aria-live="polite">
+          Select a region to see beneath the suit.
+        </div>
+      </main>
+      <footer>
+        <span>Prototype · not for clinical use</span><span>MicroG Sentinel / Space Apps 2026</span>
+      </footer>
+    </div>
+    <script type="module" src="./astronaut3d.js"></script>
+  </body>
+</html>
