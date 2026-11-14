@@ -1,18 +1,13 @@
 import { useMemo, useState, useSyncExternalStore } from 'react';
-import {
-  ArrowCounterClockwise,
-  ArrowRight,
-  CheckCircle,
-  Circle,
-  RadioButton,
-} from '@phosphor-icons/react';
+import { ArrowCounterClockwise, ArrowRight, Circle } from '@phosphor-icons/react';
 import { createExerciseStore, evaluateWorkspace } from '../exercise/store';
 import { parseExerciseCsv, exerciseCsvHeader, type CsvPreview } from '../exercise/csv';
 import type { ScenarioVariant } from '../exercise/data/scenarios';
-import { buildStageReadings, evidenceLabel, getEpisodeProgress } from '../ui/exercisePresentation';
+import { buildStageReadings, evidenceLabel } from '../ui/exercisePresentation';
 import ExerciseComparison from '../components/exercise/ExerciseComparison';
 import ObservationPlan from '../components/exercise/ObservationPlan';
 import ExerciseReview from '../components/exercise/ExerciseReview';
+import ReadingGuide from '../components/exercise/ReadingGuide';
 
 let store: ReturnType<typeof createExerciseStore> | undefined;
 function getStore() {
@@ -65,9 +60,8 @@ export default function Exercise() {
           : missing.length > 1
             ? `${missing.length} observations are missing.`
             : collected
-              ? 'A new observation. A clearer picture.'
-              : 'Your exercise response, in context.';
-  const progress = getEpisodeProgress(w);
+              ? 'Your follow-up readings are ready.'
+              : 'Your readings are ready to compare.';
   function act(fn: () => unknown) {
     try {
       fn();
@@ -91,8 +85,48 @@ export default function Exercise() {
         review?.querySelector('h2')?.focus();
       });
   }
+  function goTo(id: string) {
+    const target = document.getElementById(id);
+    target?.scrollIntoView({ behavior: 'instant', block: 'start' });
+    target?.focus({ preventScroll: true });
+  }
   return (
     <>
+      <section className="walkthrough-intro" aria-labelledby="walkthrough-title">
+        <div className="eyebrow">START HERE / A THREE-STEP WALKTHROUGH</div>
+        <h1 id="walkthrough-title">Understand your exercise numbers.</h1>
+        <p>
+          See what changed from earlier readings, what is missing, and what to do next. Start with
+          this cycling example. All readings below are simulated, not yours.
+        </p>
+        <a className="own-values-link" href="#/fitness/entry">
+          Have an existing VO₂ test report? Use my own values{' '}
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+        <nav className="walkthrough-steps" aria-label="Walkthrough steps">
+          <button onClick={() => goTo('read-values')}>
+            <span>1</span>
+            <span>
+              <strong>Read the numbers</strong>
+              <small>Earlier readings vs. the latest session</small>
+            </span>
+          </button>
+          <button onClick={() => goTo('observation-heading')}>
+            <span>2</span>
+            <span>
+              <strong>Choose the next step</strong>
+              <small>Try filling a gap with a demo reading</small>
+            </span>
+          </button>
+          <button onClick={() => goTo('review-heading')}>
+            <span>3</span>
+            <span>
+              <strong>Save the review</strong>
+              <small>Keep a copy of the evidence</small>
+            </span>
+          </button>
+        </nav>
+      </section>
       <div className="episode-meta">
         <span>CYCLING / {comparison.scope.subjectId}</span>
         <time dateTime={w.nowISO}>
@@ -114,47 +148,43 @@ export default function Exercise() {
           {error}
         </p>
       )}
-      <div className="exercise-grid">
+      <div className="exercise-grid guided-workspace">
         <div className="episode-heading">
-          <h1>{heading}</h1>
+          <span className="eyebrow">1 / READ THE NUMBERS</span>
+          <h2 id="read-values" tabIndex={-1}>
+            {heading}
+          </h2>
           <p>
             {plan.state === 'review'
               ? 'Review the available evidence before considering any further collection.'
               : missing.length
                 ? `The heart-rate observation at ${missing.map((r) => `${r.workloadW} W`).join(', ')} is missing from the latest cycling session.`
-                : 'Compare this observation with your frozen baseline, then prepare the evidence for review.'}
+                : 'Compare these readings with your earlier sessions, then save the evidence for review.'}
           </p>
         </div>
-        <ObservationPlan
-          workspace={w}
-          plan={plan}
-          comparison={comparison}
-          onAvailability={(id, available) => act(() => s.setAvailability(id, available))}
-          onAccept={() => act(() => s.accept(w.revision))}
-          onCapture={() => act(() => s.capture(w.revision))}
-          onReview={() => {
-            if (act(() => s.requestReview())) prepare(true);
-          }}
-        />
         <section className="exercise-evidence" aria-label="Exercise response">
-          <div className="evidence-heading">
-            <h2 className="instrument-label">Evidence: heart rate during prescribed cycling</h2>
-            <div className="plot-legend">
-              <span>
-                <Circle size={12} weight="fill" className="baseline-symbol" aria-hidden="true" />
-                Baseline
-              </span>
-              <span>
-                <Circle size={12} weight="fill" aria-hidden="true" />
-                Latest session
-              </span>
+          <ReadingGuide rows={rows} />
+          <details className="optional-chart">
+            <summary>See these readings on a chart</summary>
+            <div className="evidence-heading">
+              <h2 className="instrument-label">Evidence: heart rate during prescribed cycling</h2>
+              <div className="plot-legend">
+                <span>
+                  <Circle size={12} weight="fill" className="baseline-symbol" aria-hidden="true" />
+                  Baseline
+                </span>
+                <span>
+                  <Circle size={12} weight="fill" aria-hidden="true" />
+                  Latest session
+                </span>
+              </div>
             </div>
-          </div>
-          <p className="baseline-caption">
-            Frozen baseline: {w.baseline.sessions.length} independent sessions.{' '}
-            <span>Observed range, not a clinical threshold.</span>
-          </p>
-          <ExerciseComparison rows={rows} />
+            <p className="baseline-caption">
+              Frozen baseline: {w.baseline.sessions.length} independent sessions.{' '}
+              <span>Observed range, not a clinical threshold.</span>
+            </p>
+            <ExerciseComparison rows={rows} />
+          </details>
           <details className="evidence-details">
             <summary>
               Inspect comparison basis <ArrowRight size={17} aria-hidden="true" />
@@ -186,33 +216,34 @@ export default function Exercise() {
               <pre>{JSON.stringify({ baseline: w.baseline, observations: w.data }, null, 2)}</pre>
             </details>
           </details>
+          <button className="button secondary" onClick={() => goTo('observation-heading')}>
+            Next: choose what to do <ArrowRight size={18} aria-hidden="true" />
+          </button>
         </section>
+        <ObservationPlan
+          workspace={w}
+          plan={plan}
+          comparison={comparison}
+          onAvailability={(id, available) => act(() => s.setAvailability(id, available))}
+          onAccept={() => act(() => s.accept(w.revision))}
+          onCapture={() => {
+            if (act(() => s.capture(w.revision))) goTo('read-values');
+          }}
+          onReview={() => {
+            if (act(() => s.requestReview())) prepare(true);
+          }}
+        />
       </div>
-      <section className="episode-progress" aria-label="Episode progress">
-        <h2 className="instrument-label">Episode history</h2>
-        <ol>
-          {['Gap identified', 'Plan observation', 'Collect', 'Prepare review'].map((label, i) => (
-            <li
-              key={label}
-              className={`is-${progress[i]}`}
-              aria-current={progress[i] === 'current' ? 'step' : undefined}
-            >
-              {progress[i] === 'complete' ? (
-                <CheckCircle size={24} />
-              ) : progress[i] === 'current' ? (
-                <RadioButton size={27} />
-              ) : (
-                <Circle size={24} aria-hidden="true" />
-              )}
-              <span>
-                {label}
-                {progress[i] === 'skipped' && <small> · skipped</small>}
-              </span>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <ExerciseReview
+        workspace={w}
+        onPrepare={() => prepare(false)}
+        onDownload={download}
+        onResponse={(text) => {
+          act(() => s.recordResponse(text));
+        }}
+      />
       <div className="exercise-tools">
+        <h2 className="instrument-label">Optional / explore the demonstration</h2>
         <details className="episode-records">
           <summary>
             Observation history{' '}
@@ -347,14 +378,6 @@ export default function Exercise() {
           </label>
         </details>
       </div>
-      <ExerciseReview
-        workspace={w}
-        onPrepare={() => prepare(false)}
-        onDownload={download}
-        onResponse={(text) => {
-          act(() => s.recordResponse(text));
-        }}
-      />
     </>
   );
 }

@@ -2,6 +2,317 @@
   max-width: 1600px;
   padding-top: 32px;
 }
+.walkthrough-intro {
+  padding-bottom: 30px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #707579;
+}
+.walkthrough-intro h1 {
+  max-width: 32ch;
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  margin-bottom: 16px;
+}
+.walkthrough-intro > p {
+  max-width: 70ch;
+  color: var(--subtle);
+  font-size: 1.06rem;
+  line-height: 1.6;
+}
+.own-values-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-size: 0.95rem;
+}
+.walkthrough-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.walkthrough-steps button {
+  justify-content: flex-start;
+  text-align: left;
+  gap: 14px;
+  padding: 16px;
+  border-color: var(--line);
+}
+.walkthrough-steps button > span:first-child {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+.walkthrough-steps strong,
+.walkthrough-steps small {
+  display: block;
+}
+.walkthrough-steps strong {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.walkthrough-steps small {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--subtle);
+  line-height: 1.5;
+}
+.guided-workspace.exercise-grid {
+  display: block;
+}
+.guided-workspace .episode-heading {
+  margin-bottom: 20px;
+}
+.guided-workspace .episode-heading h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  margin-bottom: 12px;
+}
+.guided-workspace .exercise-evidence {
+  border-top: 0;
+  padding-top: 0;
+}
+.reading-guide > p {
+  max-width: 80ch;
+  color: var(--subtle);
+  line-height: 1.6;
+}
+.guided-values {
+  width: 100%;
+  min-width: 650px;
+}
+.guided-values th,
+.guided-values td {
+  padding: 18px 16px;
+}
+.guided-values thead th {
+  color: var(--subtle);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.guided-values tbody th {
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+.guided-values td:nth-child(2),
+.guided-values td:nth-child(3) {
+  font-family: var(--mono);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.guided-values td:last-child {
+  max-width: 40ch;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+.baseline-average {
+  display: block;
+  margin-top: 5px;
+  color: var(--subtle);
+  font-size: 0.8rem;
+}
+.reading-guide .reading-limit {
+  font-size: 0.9rem;
+  margin: 16px 0;
+}
+.optional-chart {
+  padding: 16px 0;
+  border: 0;
+}
+.optional-chart summary {
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+.guided-workspace .exercise-evidence > .button {
+  margin-top: 20px;
+}
+.guided-workspace .observation-plan {
+  border-left: 0;
+  border-top: 1px solid #707579;
+  margin-top: 32px;
+  padding: 30px 0 0;
+}
+.guided-workspace .observation-plan > h2 {
+  font-size: 2rem;
+}
+.guided-workspace .plan-workload {
+  font-size: 3.5rem;
+  margin-top: 18px;
+}
+.guided-workspace .plan-intro {
+  max-width: 70ch;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+.selected-workout {
+  font-size: 0.94rem;
+  color: var(--subtle);
+}
+.guided-workspace .opportunities {
+  max-width: 700px;
+  border: 0;
+  padding: 10px 0;
+}
+.opportunities > summary {
+  font-size: 0.9rem;
+}
+.opportunities > .subtle {
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+.guided-workspace .plan-reason {
+  max-width: 70ch;
+  margin: 18px 0;
+}
+.guided-workspace .plan-reason p {
+  font-size: 0.95rem;
+  color: var(--subtle);
+}
+.guided-workspace .plan-actions {
+  max-width: 700px;
+}
+.action-instruction {
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+.guided-workspace .plan-actions > .button {
+  font-size: 0.95rem;
+  min-height: 52px;
+}
+.guided-workspace .plan-footnote {
+  max-width: none;
+  font-size: 0.72rem;
+}
+.guided-workspace + .episode-progress {
+  margin-top: 28px;
+}
+.personal-walkthrough {
+  margin: 24px 0;
+  padding: 24px 0;
+  border-block: 1px solid var(--line);
+}
+.personal-walkthrough h2 {
+  font-size: 1.4rem;
+}
+.personal-walkthrough ol {
+  max-width: 85ch;
+  padding-left: 24px;
+}
+.personal-walkthrough li {
+  padding: 5px 0 8px 6px;
+  line-height: 1.6;
+}
+.personal-walkthrough > p {
+  max-width: 85ch;
+  line-height: 1.6;
+}
+.demo-callout,
+.entry-tip {
+  padding: 16px 20px;
+  border-left: 2px solid var(--accent);
+  background: var(--panel);
+}
+.assessment-entry fieldset {
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+  margin: 24px 0 0;
+  min-width: 0;
+}
+.assessment-entry legend {
+  padding-right: 12px;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+.assessment-entry fieldset > p {
+  color: var(--subtle);
+  max-width: 75ch;
+  line-height: 1.6;
+}
+.assessment-entry fieldset label {
+  display: block;
+  max-width: 700px;
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+}
+.assessment-entry fieldset input:not([type='checkbox']),
+.assessment-entry fieldset select,
+.assessment-entry fieldset textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  min-height: 44px;
+}
+.calculation-explainer {
+  max-width: 80ch;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .walkthrough-steps {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .walkthrough-steps button {
+    padding: 12px 16px;
+  }
+  .walkthrough-steps small {
+    margin-top: 3px;
+  }
+  .walkthrough-intro {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  .walkthrough-intro > p {
+    font-size: 0.96rem;
+  }
+  .own-values-link {
+    font-size: 0.9rem;
+  }
+  .guided-values {
+    min-width: 0;
+  }
+  .guided-values thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .guided-values tbody,
+  .guided-values tr,
+  .guided-values th,
+  .guided-values td {
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+  .guided-values tr {
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .guided-values th,
+  .guided-values td {
+    border: 0;
+    padding: 5px 0;
+  }
+  .guided-values td:nth-child(2)::before {
+    content: 'Earlier readings: ';
+    color: var(--subtle);
+    font:
+      0.85rem 'IBM Plex Sans',
+      sans-serif;
+  }
+  .guided-values td:nth-child(3)::before {
+    content: 'Latest reading: ';
+    color: var(--subtle);
+    font:
+      0.85rem 'IBM Plex Sans',
+      sans-serif;
+  }
+  .guided-values td:last-child {
+    padding-top: 10px;
+  }
+}
 .episode-meta {
   display: flex;
   gap: 28px;
@@ -413,6 +724,8 @@
 }
 .exercise-tools {
   border-top: 1px solid var(--line);
+  margin-top: 32px;
+  padding-top: 24px;
 }
 .exercise-tools > details {
   padding: 18px 0;

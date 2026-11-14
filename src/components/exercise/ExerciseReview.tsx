@@ -17,9 +17,9 @@ export default function ExerciseReview({ workspace: w, onPrepare, onResponse, on
     <section className="review-workspace" id="exercise-review" aria-labelledby="review-heading">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">EPISODE / REVIEW</span>
+          <span className="eyebrow">3 / SAVE THE REVIEW</span>
           <h2 id="review-heading" tabIndex={-1}>
-            Keep the evidence together.
+            Save what you found.
           </h2>
         </div>
         <button className={review ? 'button secondary' : 'button'} onClick={onPrepare}>
@@ -40,7 +40,11 @@ export default function ExerciseReview({ workspace: w, onPrepare, onResponse, on
               contain the last prepared snapshot.
             </p>
           )}
-          <details className="review-preview" open>
+          <p>
+            Your review is ready to download. It includes the recorded readings, baseline,
+            comparison results and any questions that still need review.
+          </p>
+          <details className="review-preview">
             <summary>Readable review preview</summary>
             <pre>{review.text}</pre>
           </details>
@@ -79,8 +83,9 @@ export default function ExerciseReview({ workspace: w, onPrepare, onResponse, on
         </>
       ) : (
         <p className="subtle">
-          Prepare a readable, source-labelled snapshot of the observations, baseline and unresolved
-          questions. Review preparation stays on this device.
+          Click “Prepare review” to gather the readings, their comparison and any missing evidence.
+          Then download the text to keep or discuss with a reviewer. Preparing a review saves it on
+          this device; it does not send anything.
         </p>
       )}
       {w.responses.length > 0 && (
