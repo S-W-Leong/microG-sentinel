@@ -70,3 +70,7 @@ Under `data/raw/MR080G_Campaign_3_Aerobic_Capacity_`:
 - `Data_Entry/`: 0224 Submax 050303 averages; 5580 Peak 090529 and 090609 averages and observations used as cross-checks. Exact imported fields appear in each JSON row's provenance.
 
 `npm test` checks frozen-artifact parity, both 3985 baseline means and retained percentages, linked identity/date conflicts, duplicate exclusion from trends, and `not-applicable` reference state for every replay representation. UI behavior and clinical validity are outside these data/logic checks.
+
+## Adaptive exercise stage artifact
+
+`mr080g_exercise_stages.json` separately preserves stages 1–3 of four C3D-3985 occasions (070122, 070127, 070506, 070517), with physical CSV row provenance, watts, seconds, HR and Borg exertion ratings. Peak rows are excluded from these three-minute stages. At 100 W, HR is 125, 124, 166 and 139 bpm respectively. Missing device, posture, named protocol and signal quality remain unknown. May 6 termination context is retained. These are formal analog laboratory tests, not routine astronaut workout records. Existing peak replay data are unchanged.
