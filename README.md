@@ -4,6 +4,14 @@ The default experience is now **adaptive exercise monitoring**: compare cycling 
 
 See [exercise demonstration](docs/exercise-demo.md), [CSV format](docs/exercise-import.md), [evaluation limits](docs/exercise-evaluation.md) and [implementation ledger](docs/adaptive-implementation-progress.md). Exercise work persists in browser storage; the older user-entered VO₂ form remains session-only. Reset clears the exercise demonstration key.
 
+## Flight Deck interface
+
+The exercise workspace uses the selected black, off-white and signal-orange Flight Deck design. The comparison and live observation planner sit together on desktop; on narrow screens the planner precedes readable workload summaries. Available-workout switches recompute the actual plan. Missing measurements never become plotted numeric values. Review preparation now includes a readable snapshot and a stale-evidence indicator, alongside the existing exports and response workflow.
+
+NASA evidence, the body map, formal VO₂ assessments and user-entered assessments remain separate and accessible. The comparison, planner, store, CSV and source-data contracts are unchanged. See [visual verification](design-qa.md) and [the implementation plan](docs/superpowers/plans/2026-11-14-flight-deck-overhaul.md).
+
+Interface resources: [IBM Plex](https://github.com/IBM/plex) fonts are bundled locally through [Fontsource](https://fontsource.org/); icons use [Phosphor](https://phosphoricons.com/); exercise graphics use [Observable Plot](https://observablehq.com/plot/). Their code and font licences remain in the installed packages. The selected visual reference and verification captures are in `artifacts/flight-deck/`.
+
 ## Existing assessment tools
 
 MicroG Sentinel is a NASA Space Apps 2026 hackathon prototype that helps an astronaut review an existing aerobic fitness (VO2) assessment against a personal baseline, inspect the comparison evidence, and export a review card. Built with Vite 6, React 19, and TypeScript, it runs offline with no backend: simulated crew assessments demonstrate the astronaut workflow, while a separately labelled NASA bed-rest analog research replay shows measured change and unresolved source conflicts.
