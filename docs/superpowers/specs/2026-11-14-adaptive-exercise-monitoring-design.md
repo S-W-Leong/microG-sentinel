@@ -1,6 +1,6 @@
 # Adaptive exercise monitoring design
 
-Status: proposed design for user review. Direction selected by the user: adaptive exercise monitoring. Product code has not been changed for this pivot.
+Status: approved by the user on 2026-11-14. Direction selected: adaptive exercise monitoring. The user subsequently requested the implementation plan; product implementation has not started.
 
 ## Intent
 
@@ -14,7 +14,7 @@ The distinctive capability proposed here is selecting feasible observation oppor
 
 The user selected this direction over crew-and-habitat incident detection. The following implementation choices are proposals, not additional user decisions:
 
-When approved, this design replaces the earlier brief's default body-map journey and session-only persistence choices for the pivot. Earlier documents remain a record of the current product until updated during implementation; their screen-count requirements must not silently override this design.
+This approved design replaces the earlier brief's default body-map journey and session-only persistence choices for the pivot. Earlier documents remain a record of the current product until updated during implementation; their screen-count requirements must not silently override this design.
 
 - Retain the existing offline React/TypeScript/Vite application and reusable provenance, identity, source-isolation and export logic.
 - Deliver a software-only prototype: bundled NASA stage records, one documented CSV input format, and simulated prescribed-workout schedules. Live device connectivity is a later integration.
@@ -140,4 +140,4 @@ Reviewed sequentially in the main session, honoring the user's instruction to ke
 
 Builder discretion: exact internal interfaces, local-storage mechanism, schema-version migration, layout implementation after visual decisions, documented CSV column names and test tooling within the existing stack. Baseline and planner policy parameters must be visible, versioned assumptions rather than hidden medical rules.
 
-User review requested: approve or revise this software-only scope and the proposed workflow before implementation. No hardware, clinician access, efficacy or additional user preferences have been assumed as agreed.
+User approval received for this software-only scope and proposed workflow. No hardware, clinician access or efficacy has been assumed. See the companion implementation plan at `../plans/2026-11-14-adaptive-exercise-monitoring.md`.
