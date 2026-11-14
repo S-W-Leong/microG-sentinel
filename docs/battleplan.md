@@ -2,7 +2,7 @@
 
 > **For coding agents:** this file is the source of truth. Build only inside your owner's folders (see "File ownership and integration"), implement against the TypeScript contract in "Astronaut vector" → "Agent instructions", and never use diagnosis wording. Shared facts: `docs/battleplan-parts/_context.md`.
 
-Sections: Header · Status · The brief · The polish bar · Risk tabs (main table + details) · Astronaut vector and signals contract · Mandatory vs Stretch · Team tracks · Build timeline · Rehearsals and backup
+Sections: Header · Status · The brief · The polish bar · Risk tabs (main table, indicative clinical scores, ground medical escalation, details) · Astronaut vector and signals contract · Mandatory vs Stretch · Team tracks · Build timeline · Rehearsals and backup
 
 ## Header
 
@@ -82,6 +82,61 @@ Each tab has exactly five metric groups; paired quantities remain separately lab
 | SANS | Eyes | Siang Woo | Amsler + near vision + headache + medical OCT | Marked grid + vision/OCT trends | Distortion 0–3; vision lines; headache 0–10; OCT µm; sodium mg + CO₂ mmHg | `Near vision −0.5 lines vs baseline` | Food, Balance, Sleep | [NASA OSDR](https://osdr.nasa.gov/bio/repo/) (mouse retina candidate; crew OCT unavailable) |
 | Food | Gut | Siang Woo | Meal photo confirmation or ISS menu pick | Nutrient rings + meal timeline | Energy need %; protein g/kg/day; sodium mg/day; calcium mg/day + vitamin D IU/day; mass kg | `Energy 78% of need for 5 days · −1.4 kg` | Immune, Bone, SANS, Microbiome, Cardiovascular | [USDA FoodData Central](https://fdc.nal.usda.gov/download-datasets.html) |
 | Mood (optional) | Head | Siang Woo | 20 s sliders + conflict flag | Calendar heatmap with workload marks | Mood 0–10; stress 0–10; workload 0–10; isolation 0–10; conflict yes/no | `Mood 3/10 · workload 8/10` | Sleep, Food | [HERA Standard Measures](https://nlsp.nasa.gov/explore/home/lsda_sm_hera) |
+
+## Indicative clinical scores
+
+Where an established screening score exists, the tab computes it (self-report) or displays it (medical-team entry) and words the result as "matches the pattern for follow-up", never "you have X". Thresholds come from Earth populations, not astronauts; say so in the slides. **Verified** = checked against a primary or clinical source on 14 Nov; **Unverified** = must be checked before it appears in the app.
+
+| Tab | Score | What it measures | Indicative threshold | Who supplies it | Status |
+|---|---|---|---|---|---|
+| Cardiovascular | VO2peak % of pre-mission | Aerobic capacity retained | < 80% = below the NASA-STD-3001 V1 4003 reference | Test report | Verified (existing app) |
+| Sleep | PSQI (Pittsburgh Sleep Quality Index), 0–21 | Sleep quality over the past month | > 5 = poor sleep quality (sensitivity 89.6%, specificity 86.5% in the 1989 validation) | Self-report | Verified |
+| Sleep | KSS (Karolinska Sleepiness Scale), 1–9 | Current sleepiness | ≥ 7 = sleepy | Self-report | Unverified |
+| Immune | UAS7 (Urticaria Activity Score, 7 days), 0–42 | Daily wheals 0–3 + itch 0–3, summed over 7 days | 0 none · 1–6 well controlled · 7–15 mild · 16–27 moderate · 28–42 severe | Self-report | Verified |
+| Immune | Jackson cold score | 8 cold symptoms, each 0–3 | Total ≥ 14 over 6 days plus feeling of having a cold = likely cold (original criteria) | Self-report | Verified |
+| Immune | Latent virus reactivation (saliva) | Dormant viruses becoming active | Detected / not detected | Lab result, display only | Context (NASA measures this) |
+| Bone | DXA Z-score | Bone density vs same age group | ≤ −2.0 = below expected range for age | Scan result, display only | Unverified |
+| Balance | MISC (Misery Scale), 0–10 | Motion sickness symptom stage | 0–1 none · 2–5 pre-nausea · 6–9 nausea · 10 vomiting; ≥ 6 used as nausea cut-off | Self-report | Verified |
+| Microbiome | GSRS (Gastrointestinal Symptom Rating Scale) | GI symptom burden | Higher = more symptoms; no fixed cut-off | Self-report | Unverified |
+| SANS | Frisén scale, grade 0–5 | Optic disc swelling | ≥ 1 = swelling present; good for change over time, limited inter-rater agreement | Eye exam, display only | Verified |
+| Food | MUST (Malnutrition Universal Screening Tool) | BMI + unplanned weight loss (+ acute illness) | Weight loss < 5% = 0, 5–10% = 1, > 10% = 2; total ≥ 2 = high risk | Self-report + mass | Verified |
+| Mood (optional) | PHQ-9, 0–27 | Depressive symptoms (screener) | 10–14 moderate; ≥ 10 = positive screen (88% sensitivity/specificity, 2001) | Self-report | Verified |
+
+## Ground medical escalation
+
+The app never decides alone. It hands the crew member to the real channel: the **flight surgeon** (Mission Control call sign "Surgeon"), reached through the weekly 15-minute **private medical conference (PMC)** or an **unscheduled PMC** requested through the flight director for serious issues. The app prepares the review packet (existing export) so the conversation starts with evidence. It gives no treatment instructions; onboard emergency procedures stay with the crew's medical checklist.
+
+Two escalation levels, shown as a fixed banner above the tab result (text + icon, never colour alone):
+
+| Level | Banner text (≤ 6 words) | Action button | When |
+|---|---|---|---|
+| `urgent` | `Contact the flight surgeon now` | `Request call` (prepares packet, opens unscheduled-PMC request) | Any red flag below is reported, regardless of pattern scores or baselines |
+| `next-pmc` | `Raise at your next PMC` | `Add to PMC` (queues packet for the weekly conference) | The problem cannot be identified: see "unidentified" rules below |
+
+**1. Serious situations — red flags (`urgent`).** Red flags are explicit yes/no questions in each tab's input, asked whenever the tab is used. One "yes" triggers `urgent` immediately and suppresses scores and personalisation on that screen (no "80% hives" next to a breathing problem).
+
+| Tab | Red-flag questions (any yes = urgent) |
+|---|---|
+| Immune | Trouble breathing or wheezing · throat tightness or hoarse voice · lip/tongue swelling · dizziness or fainting (hives plus any of these can signal a severe allergic reaction) |
+| Cardiovascular | Chest pain or pressure · fainting or near-fainting · test stopped for dizziness or breathlessness (as in the MR080G record) · palpitations at rest |
+| SANS | Sudden vision loss or new blind spot · severe or worst-ever headache |
+| Balance | Fall with head strike · vertigo that does not settle at rest · new weakness or numbness |
+| Microbiome | Blood in stool · fever with abdominal pain · unable to keep fluids down for 24 h |
+| Food | Unable to eat or drink for 24 h · unplanned weight loss > 10% (MUST 2) |
+| Bone | Sudden bone pain after load or impact |
+| Sleep | Fell asleep during a critical task |
+| Mood (optional) | Thoughts of self-harm (always urgent; show only the contact action, no score) |
+
+**2. Unidentified problems (`next-pmc`).** Any of these:
+- No reference pattern reaches the tab's minimum base match (demo rule: best base match < 40%), or fewer than the required metric groups are recorded after two check-ins.
+- Evidence is `conflicting` (for example identity, date or method conflicts).
+- A metric stays outside the person's observed baseline range for 3 consecutive check-ins with no linked explanation from another tab.
+- The crew member uses `Something else` on the body map (a free-text entry that maps to no risk tab).
+- An indicative clinical score crosses its threshold (table above) without a red flag.
+
+Wording rules: name what was observed and why it is being shared ("Pattern not recognised · 3 check-ins outside your range"), never a suspected condition. The crew member can always request a PMC manually from any tab; the app never blocks or delays contact.
+
+Future (stretch, not in scope): Mars communication delay — show the estimated one-way delay on `Request call` and queue the packet for transmission.
 
 ## Tab details
 
@@ -809,7 +864,7 @@ Return reasons in this order:
 }
 ```
 
-The fixture states its food/allergen log is reviewed; unknown nutrient totals remain null. With base evaluation `{"risk":"immune","crewId":"SIM-CDR","kind":"pattern-match","value":60,"unit":"%","label":"Hives pattern","reasons":[],"evidence":"supported","simulated":true}`, call `personalise('immune', 'SIM-CDR', baseEvaluation)`. Result: **60 + 10 + 10 = 80** with the two reasons above. The tab returns the final evaluation below and shows “Hives pattern 80%”, “Simulated”, and optional context “Shellfish · 3 h ago”. This is a pattern match, never a diagnosis. With allergy null, no matching allergen, event exactly six hours old, rash false/null, or stale food, the result stays 60 with no reasons. With unsupported base evidence it stays non-numeric; context cannot rescue it.
+The fixture states its food/allergen log is reviewed; unknown nutrient totals remain null. With base evaluation `{"risk":"immune","crewId":"SIM-CDR","kind":"pattern-match","value":60,"unit":"%","label":"Hives pattern","reasons":[],"evidence":"supported","simulated":true,"escalation":null}`, call `personalise('immune', 'SIM-CDR', baseEvaluation)`. Result: **60 + 10 + 10 = 80** with the two reasons above. The tab returns the final evaluation below and shows “Hives pattern 80%”, “Simulated”, and optional context “Shellfish · 3 h ago”. This is a pattern match, never a diagnosis. With allergy null, no matching allergen, event exactly six hours old, rash false/null, or stale food, the result stays 60 with no reasons. With unsupported base evidence it stays non-numeric; context cannot rescue it.
 
 ## Evaluation output
 
@@ -828,10 +883,16 @@ export interface RiskEvaluation {
   reasons: Reason[];
   evidence: EvidenceStatus;
   simulated: boolean;
+  escalation: Escalation | null;
+}
+export interface Escalation {
+  level: 'urgent' | 'next-pmc';
+  trigger: 'red-flag' | 'no-pattern' | 'conflicting' | 'persistent-change' | 'something-else' | 'indicative-score';
+  text: string; // observed fact, 1–12 words, no suspected condition
 }
 ```
 
-`pattern-match` requires unit `%` and value 0–100 or null. The number is similarity to an explicitly documented pattern, not disease likelihood. `change-vs-baseline` includes signed differences and explicitly labelled ratios/percent-retained measures; unit and label must distinguish them. Never clamp VO2peak retention to 100. Do not reverse a sign to make it look like risk. `value: null` requires evidence `insufficient` or `conflicting`; either of those evidence states requires null value. Conflicting takes precedence over insufficient. Supported means this calculation's evidence gates passed; it does not mean clinical validation. An uncalibrated rule must still be disclosed as a demo rule. The envelope's simulated flag must equal the registered vector's flag; source is read from that vector and remains visible in the tab. Evaluators reject an unregistered crew ID rather than silently selecting a default person.
+`escalation` follows "Ground medical escalation": a red flag sets `urgent` and the tab sets `value: null` for display while keeping raw observations; `personalise` never changes `escalation`. `pattern-match` requires unit `%` and value 0–100 or null. The number is similarity to an explicitly documented pattern, not disease likelihood. `change-vs-baseline` includes signed differences and explicitly labelled ratios/percent-retained measures; unit and label must distinguish them. Never clamp VO2peak retention to 100. Do not reverse a sign to make it look like risk. `value: null` requires evidence `insufficient` or `conflicting`; either of those evidence states requires null value. Conflicting takes precedence over insufficient. Supported means this calculation's evidence gates passed; it does not mean clinical validation. An uncalibrated rule must still be disclosed as a demo rule. The envelope's simulated flag must equal the registered vector's flag; source is read from that vector and remains visible in the tab. Evaluators reject an unregistered crew ID rather than silently selecting a default person.
 
 For scalar observations without a documented pattern model, compare to a supported personal baseline; if none exists, return a null headline and display raw readings separately. Sleep may show raw three-day debt but must not label debt itself a personal-baseline difference. Mood can return current mood minus personal baseline with `unit: 'score/10'`. A Food energy ring may show raw `energyPctOfNeed` as a target comparison, but it is not a personal-baseline change; use body-mass change for the shared evaluation or return null. Microbiome stool categories are not percentages; use an explicitly documented pattern method or null.
 
@@ -845,12 +906,12 @@ For scalar observations without a documented pattern model, compare to a support
     {"direction":"up","text":"Known matching food allergy","sourceRisk":"immune","signal":"traits.allergies"},
     {"direction":"up","text":"Matching allergen eaten within six hours","sourceRisk":"food","signal":"food.allergensEaten"}
   ],
-  "evidence":"supported","simulated":true
+  "evidence":"supported","simulated":true,"escalation":null
 }
 ```
 
 ```json
-{"risk":"balance","crewId":"SIM-MS1","kind":"change-vs-baseline","value":null,"unit":"ratio","label":"Eyes-closed sway ratio","reasons":[],"evidence":"insufficient","simulated":true}
+{"risk":"balance","crewId":"SIM-MS1","kind":"change-vs-baseline","value":null,"unit":"ratio","label":"Eyes-closed sway ratio","reasons":[],"evidence":"insufficient","simulated":true,"escalation":null}
 ```
 
 ## File ownership and integration
@@ -918,6 +979,7 @@ Definition of done:
 - Vector-owner tests cover duplicate idempotence/conflicts, stale/latest-null behaviour, time boundaries, source/series isolation, notification count and no feedback loop. Include the complete 60 → 80 fixture, unknown allergy, unmatched food, an event exactly 6 h old, missing/unsupported base, no stacking, upper clamp, and unchanged change-vs-baseline values. Baseline tests retain independent IDs/count and conflicting evidence.
 - Verify the real registered tab flow: select person → enter/save input → observe signals → see updated evaluation/context. A build or mocked test alone is not UI verification; report which check ran and what remains unverified.
 - Meet the settled polish bar: headlines ≤ 6 words; labels/buttons ≤ 3; main-screen paragraphs at most one sentence; monospace only for values/units/IDs/times; orange only for primary action/current selection; status text/icon accompanies colour; usable at 320 px; every simulated view tagged `Simulated`; footer `Prototype · not for clinical use`.
+- Implement the tab's red-flag questions and `escalation` rules from "Ground medical escalation"; test that any red flag yields `urgent` and hides the score.
 - Display pattern match or personal-baseline change with honest evidence and source labels. No diagnosis, treatment, prescription, “healthy”, “safe”, or “cleared” wording. A missing classifier, sensor permission, baseline or research dataset remains visibly unavailable, not a simulated result presented as measured.
 
 # Delivery
@@ -942,7 +1004,7 @@ Build priority follows demo value per minute; protected core dependencies come b
 | 12 | Stretch | Crew profiles | Additional profile UI; the core still needs one simulated crew vector. |
 | 13 | Stretch | Mood | Daily sliders and calendar view. |
 
-SCIN hives coverage is unverified. Check reference suitability and licence before using photos; a labelled simulated walkthrough must not be presented as validated matching. Remaining tabs are build targets, subject to the noon gate below.
+Every tab ships with its red-flag questions and the escalation banner (see "Ground medical escalation"); this is part of the minimum useful result, not a stretch item. SCIN hives coverage is unverified. Check reference suitability and licence before using photos; a labelled simulated walkthrough must not be presented as validated matching. Remaining tabs are build targets, subject to the noon gate below.
 
 ## Team tracks
 
