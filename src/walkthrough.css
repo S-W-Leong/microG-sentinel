@@ -1,0 +1,526 @@
+.step-workspace {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.demo-topline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.demo-topline .instrument-label {
+  margin: 0;
+}
+.demo-topline .local-status {
+  font-size: 0.75rem;
+}
+.step-navigation ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+}
+.step-navigation li + li {
+  margin: 0;
+}
+.step-navigation a {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  gap: 12px;
+  padding: 12px 8px;
+  text-decoration: none;
+  color: var(--subtle);
+  border-bottom: 3px solid transparent;
+  font-size: 0.9rem;
+}
+.step-navigation a[aria-current='step'] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+[aria-current='step'] .step-number {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.step-content {
+  padding: 32px 0 0;
+}
+.step-heading h1 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  margin-bottom: 12px;
+}
+.step-heading .eyebrow {
+  margin-bottom: 10px;
+}
+.step-heading > p {
+  max-width: 78ch;
+  color: var(--subtle);
+  font-size: 1rem;
+  margin-bottom: 26px;
+}
+.workload-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.workload-picker button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 14px 18px;
+  border-color: var(--line);
+}
+.workload-picker button strong {
+  font-size: 1.15rem;
+}
+.workload-picker button small {
+  color: var(--subtle);
+  font-size: 0.78rem;
+}
+.workload-picker button[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.selected-reading {
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+.reading-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 24px 28px;
+}
+.reading-pair > div > strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+.reading-pair strong small {
+  font-size: 1rem;
+  color: var(--subtle);
+  letter-spacing: 0;
+}
+.reading-pair .instrument-label {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--subtle);
+  margin-bottom: 10px;
+}
+.reading-pair p {
+  font-size: 0.85rem;
+  color: var(--subtle);
+  margin: 8px 0 0;
+}
+.reading-pair-arrow {
+  color: var(--subtle);
+}
+.reading-takeaway {
+  padding: 18px 28px;
+  border-top: 1px solid var(--line);
+}
+.reading-takeaway .instrument-label {
+  color: var(--accent);
+  font-size: 0.65rem;
+  display: block;
+  margin-bottom: 7px;
+}
+.reading-takeaway p {
+  font-size: 1.08rem;
+  margin-bottom: 8px;
+}
+.reading-takeaway small {
+  display: block;
+  line-height: 1.6;
+  color: var(--subtle);
+  font-size: 0.85rem;
+}
+.reading-glossary {
+  border: 0;
+  padding: 14px 0;
+  font-size: 0.87rem;
+}
+.reading-glossary dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.reading-glossary dt {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.reading-glossary dd {
+  margin: 0;
+  color: var(--subtle);
+}
+.step-hint {
+  color: var(--subtle);
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+}
+.step-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  padding: 16px 0;
+  margin-top: 26px;
+}
+.step-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 0.9rem;
+}
+.step-footer > .button {
+  text-align: center;
+}
+.walkthrough-tools {
+  border: 0;
+  padding: 20px 0 0;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--subtle);
+}
+.walkthrough-tools > .exercise-tools {
+  margin-top: 12px;
+  padding-top: 0;
+}
+.walkthrough-tools summary {
+  font-size: 0.85rem;
+}
+.step-workspace .observation-plan {
+  border: 1px solid var(--line);
+  padding: 24px 28px;
+  margin: 0;
+}
+.step-workspace .observation-plan > h2 {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+.step-workspace .plan-workload {
+  font-size: 3.5rem;
+  margin-bottom: 8px;
+}
+.step-workspace .plan-segment {
+  font-size: 0.8rem;
+}
+.step-workspace .plan-intro {
+  font-size: 1rem;
+  max-width: 72ch;
+  margin-bottom: 12px;
+}
+.step-workspace .selected-workout {
+  color: var(--subtle);
+  font-size: 0.9rem;
+}
+.step-workspace .opportunities {
+  border: 0;
+  padding: 6px 0;
+  max-width: 700px;
+  margin-bottom: 12px;
+}
+.step-workspace .opportunities > p {
+  margin-top: 14px;
+  font-size: 0.9rem;
+}
+.step-workspace .plan-reason {
+  margin: 12px 0;
+  max-width: 78ch;
+}
+.step-workspace .plan-reason h3 {
+  font-size: 0.7rem;
+}
+.step-workspace .plan-reason p {
+  font-size: 0.9rem;
+  color: var(--subtle);
+}
+.step-workspace .plan-actions {
+  max-width: 700px;
+}
+.step-workspace .action-instruction {
+  font-size: 0.9rem;
+  margin: 0 0 4px;
+}
+.step-workspace .plan-actions > .button {
+  min-height: 50px;
+  font-size: 0.9rem;
+}
+.step-workspace .plan-footnote {
+  max-width: none;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 0.65rem;
+}
+.step-workspace .plan-accepted {
+  margin-bottom: 0;
+}
+.step-workspace .plan-state {
+  max-width: 75ch;
+}
+.step-workspace .plan-state > svg {
+  display: none;
+}
+.step-workspace .plan-state h3 {
+  font-size: 1.6rem;
+}
+.step-workspace .plan-state p {
+  margin-bottom: 16px;
+}
+.step-workspace .review-workspace {
+  margin: 0;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+}
+.step-workspace .section-heading h2 {
+  font-size: 1.3rem;
+}
+.step-workspace .section-heading {
+  margin-bottom: 16px;
+}
+.personal-next {
+  margin-top: 24px;
+}
+.personal-next h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+.personal-next p {
+  color: var(--subtle);
+  font-size: 0.9rem;
+}
+.change-context {
+  color: var(--subtle);
+  max-width: 78ch;
+}
+.change-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 24px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 20px 24px;
+  margin: 20px 0;
+  align-items: center;
+}
+.change-summary .instrument-label {
+  display: block;
+  color: var(--subtle);
+  font-size: 0.65rem;
+}
+.change-summary strong {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.change-summary p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--subtle);
+}
+.change-table {
+  width: 100%;
+}
+.change-table th,
+.change-table td {
+  padding: 16px 12px;
+  font-size: 0.9rem;
+}
+.change-table thead th {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--subtle);
+}
+.change-table tbody th {
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+.change-table td:not(:last-child) {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.change-table td:last-child {
+  max-width: 30ch;
+  line-height: 1.5;
+}
+.step-workspace .optional-chart {
+  border: 0;
+  padding: 18px 0 8px;
+}
+.step-workspace .optional-chart summary {
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+@media (max-width: 700px) {
+  .demo-topline {
+    gap: 8px 12px;
+    margin-bottom: 16px;
+  }
+  .demo-topline .instrument-label {
+    font-size: 0.65rem;
+  }
+  .demo-topline .local-status {
+    width: 100%;
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  .step-navigation ol {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+  }
+  .step-navigation a {
+    font-size: 0.76rem;
+    min-height: 50px;
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .step-number {
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
+  }
+  .step-content {
+    padding-top: 24px;
+  }
+  .step-heading > p {
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+  }
+  .workload-picker {
+    gap: 8px;
+  }
+  .workload-picker button {
+    padding: 12px 9px;
+  }
+  .workload-picker button strong {
+    font-size: 1rem;
+  }
+  .workload-picker button small {
+    font-size: 0.65rem;
+    text-align: left;
+  }
+  .reading-pair {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 16px;
+    gap: 18px;
+    align-items: start;
+  }
+  .reading-pair-arrow {
+    display: none;
+  }
+  .reading-pair > div > strong {
+    font-size: 1.8rem;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .reading-pair strong small {
+    font-size: 0.8rem;
+  }
+  .reading-pair .instrument-label {
+    font-size: 0.59rem;
+    min-height: 30px;
+  }
+  .reading-pair p {
+    font-size: 0.75rem;
+  }
+  .reading-takeaway {
+    padding: 16px;
+  }
+  .reading-takeaway p {
+    font-size: 0.98rem;
+  }
+  .reading-takeaway small {
+    font-size: 0.78rem;
+  }
+  .reading-glossary dl {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .step-footer {
+    gap: 14px;
+    align-items: center;
+  }
+  .step-footer > .button {
+    font-size: 0.75rem;
+    padding: 12px;
+  }
+  .step-back {
+    font-size: 0.8rem;
+  }
+  .step-workspace .observation-plan,
+  .step-workspace .review-workspace {
+    padding: 20px 16px;
+  }
+  .change-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+  .change-summary p {
+    grid-column: 1 / -1;
+  }
+  .change-summary .instrument-label {
+    font-size: 0.56rem;
+  }
+  .change-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .change-table tbody,
+  .change-table tr,
+  .change-table th,
+  .change-table td {
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+  .change-table tr {
+    border-top: 1px solid var(--line);
+    padding: 12px 0;
+  }
+  .change-table th,
+  .change-table td {
+    border: 0;
+    padding: 5px 0;
+  }
+  .change-table td[data-label]::before {
+    content: attr(data-label) ': ';
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--subtle);
+  }
+  .change-table td:last-child {
+    max-width: none;
+  }
+}

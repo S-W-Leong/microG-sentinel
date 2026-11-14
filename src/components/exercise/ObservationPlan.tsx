@@ -43,7 +43,6 @@ export default function ObservationPlan({
           ? `Selected opportunity: ${selected.map((o) => opportunityTime(o.scheduledAt)).join(', ')}. ${plan.totalAdditionalCrewActions} modelled added actions.`
           : title}
       </p>
-      <span className="eyebrow">2 / CHOOSE THE NEXT STEP</span>
       <h2 id="observation-heading" tabIndex={-1}>
         {title}
       </h2>
@@ -60,8 +59,7 @@ export default function ObservationPlan({
             · prescribed cycling segment
           </p>
           <p className="plan-intro">
-            The missing reading is at this cycling effort. Try the two buttons below to see how a
-            follow-up reading changes the comparison.
+            This fills the gap at the same cycling effort without changing the prescribed workout.
           </p>
           <p className="selected-workout">
             Suggested demo workout: {selected.map((o) => opportunityTime(o.scheduledAt)).join(', ')}
@@ -163,7 +161,7 @@ export default function ObservationPlan({
         {plan.state === 'planned' && (
           <p className="action-instruction">
             {accepted
-              ? 'Plan selected. Now generate a demo reading. The table in step 1 will update; no measurement is taken.'
+              ? 'Plan selected. Generate a demo reading to open the before-and-after comparison. No measurement is taken.'
               : 'First, select the suggested plan. Then generate a demo reading. No workout or device is required.'}
           </p>
         )}
@@ -179,12 +177,12 @@ export default function ObservationPlan({
           )
         ) : (
           <button className="button" onClick={onReview}>
-            Prepare review <ArrowRight size={18} aria-hidden="true" />
+            Continue to review <ArrowRight size={18} aria-hidden="true" />
           </button>
         )}
         {plan.state === 'planned' && (
           <button className="text-button" onClick={onReview}>
-            Prepare review instead
+            Skip collection and review
           </button>
         )}
       </div>
@@ -194,9 +192,7 @@ export default function ObservationPlan({
         </p>
       )}
       {plan.state !== 'planned' && (
-        <p className="subtle">
-          Next, prepare a review in step 3. You can save it even when a reading is missing.
-        </p>
+        <p className="subtle">You can continue to the review even when a reading is missing.</p>
       )}
       <p className="plan-footnote">
         Demonstration effort estimate. Uses an existing prescribed workout.

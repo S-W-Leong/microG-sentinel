@@ -17,7 +17,6 @@ export default function ExerciseReview({ workspace: w, onPrepare, onResponse, on
     <section className="review-workspace" id="exercise-review" aria-labelledby="review-heading">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">3 / SAVE THE REVIEW</span>
           <h2 id="review-heading" tabIndex={-1}>
             Save what you found.
           </h2>
@@ -41,8 +40,9 @@ export default function ExerciseReview({ workspace: w, onPrepare, onResponse, on
             </p>
           )}
           <p>
-            Your review is ready to download. It includes the recorded readings, baseline,
-            comparison results and any questions that still need review.
+            {review.current
+              ? 'Your review is ready to download. It includes the recorded readings, baseline, comparison results and any questions that still need review.'
+              : 'This saved review contains earlier evidence. Update it to include your latest readings before downloading a current copy.'}
           </p>
           <details className="review-preview">
             <summary>Readable review preview</summary>

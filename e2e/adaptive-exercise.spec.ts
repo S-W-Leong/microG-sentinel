@@ -4,11 +4,10 @@ test('adaptive observation, refresh and locally prepared review', async ({ page,
   await context.route('**/*', (r) =>
     new URL(r.request().url()).hostname === '127.0.0.1' ? r.continue() : r.abort(),
   );
-  await page.goto('/');
+  await page.goto('/#/exercise/plan');
   await expect(
     page.getByRole('heading', { name: 'Next useful observation', exact: true }),
   ).toBeVisible();
-  await page.getByText('Demonstration inputs and prescribed schedule', { exact: true }).click();
   await page.getByText('Change the demo schedule (optional)', { exact: true }).click();
   await page.getByRole('switch', { name: 'Available: 14 Nov · 09:00 UTC', exact: true }).uncheck();
   await page.getByText('Planning basis', { exact: true }).click();
@@ -19,6 +18,7 @@ test('adaptive observation, refresh and locally prepared review', async ({ page,
   await page.getByText('See these readings on a chart', { exact: true }).click();
   await page.getByText('View measurement values', { exact: true }).click();
   await expect(page.getByText('145 bpm', { exact: true }).first()).toBeVisible();
+  await page.getByRole('link', { name: 'Next: save your review', exact: true }).click();
   await page
     .locator('#exercise-review')
     .getByRole('button', { name: 'Prepare review', exact: true })
@@ -37,12 +37,15 @@ test('adaptive observation, refresh and locally prepared review', async ({ page,
 test('symptoms bypass collection at narrow width', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
+  await page.getByText('Demo settings & records', { exact: true }).click();
   await page.getByText('Demonstration inputs and prescribed schedule', { exact: true }).click();
   await page.getByLabel('Scenario', { exact: true }).selectOption('symptoms');
+  await page.getByRole('link', { name: 'Next: try a follow-up', exact: true }).click();
   await expect(
-    page.getByRole('heading', { name: 'Review takes priority.', exact: true }),
+    page.getByRole('heading', { name: 'Review takes priority', exact: true }),
   ).toBeVisible();
   await expect(page.getByRole('button', { name: 'Use this observation plan' })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Continue to review', exact: true }).click();
   await page
     .locator('#exercise-review')
     .getByRole('button', { name: 'Prepare review', exact: true })
@@ -56,15 +59,22 @@ test('explains the default values before collection and links to personal entry'
   page,
 }) => {
   await page.goto('/');
-  await expect(
-    page.getByRole('heading', { name: 'Understand your exercise numbers.' }),
-  ).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'What do these readings mean?' })).toBeVisible();
+  await page.getByRole('button', { name: '100 W Reading missing', exact: true }).click();
   await expect(
     page.getByText('No reading recorded. There is no change to calculate yet.'),
   ).toBeVisible();
   await expect(
     page.getByRole('heading', { name: 'Next useful observation', exact: true }),
+  ).toHaveCount(0);
+  await page.getByRole('link', { name: 'Next: try a follow-up', exact: true }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Next useful observation', exact: true }),
   ).toBeVisible();
+  await page.getByRole('link', { name: 'Back', exact: false }).click();
+  await expect(
+    page.getByRole('button', { name: '100 W Reading missing', exact: true }),
+  ).toHaveAttribute('aria-pressed', 'true');
   await page.screenshot({ path: 'artifacts/adaptive-exercise.png', fullPage: true });
   await page.getByRole('link', { name: 'My values', exact: true }).click();
   await expect(page.getByLabel('Participant identifier')).toBeVisible();
@@ -74,6 +84,7 @@ test('imports and links actual CSV observations without changing the baseline', 
   page,
 }) => {
   await page.goto('/');
+  await page.getByText('Demo settings & records', { exact: true }).click();
   await page.getByText('Import demonstration observations', { exact: true }).click();
   const header =
     'sessionId,subjectId,seriesId,date,isBaseline,deviceId,protocolId,posture,stageId,stageIndex,workloadW,durationSec,hrBpm,rpe,rpeScale,quality,qualityBasis,symptoms,notes';

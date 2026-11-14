@@ -7,7 +7,14 @@ import { buildStageReadings, evidenceLabel } from '../ui/exercisePresentation';
 import ExerciseComparison from '../components/exercise/ExerciseComparison';
 import ObservationPlan from '../components/exercise/ObservationPlan';
 import ExerciseReview from '../components/exercise/ExerciseReview';
-import ReadingGuide from '../components/exercise/ReadingGuide';
+import ReadingExplorer from '../components/exercise/ReadingExplorer';
+import ObservationChanges from '../components/exercise/ObservationChanges';
+import {
+  getWalkthroughStep,
+  walkthroughSteps,
+  type WalkthroughStep,
+} from '../ui/exerciseWalkthrough';
+import '../walkthrough.css';
 
 let store: ReturnType<typeof createExerciseStore> | undefined;
 function getStore() {
@@ -47,21 +54,19 @@ export default function Exercise() {
   const rows = useMemo(() => buildStageReadings(w.data, comparison), [w.data, comparison]);
   const [error, setError] = useState('');
   const [preview, setPreview] = useState<CsvPreview | null>(null);
+  const [selectedWorkload, setSelectedWorkload] = useState<number | null>(50);
+  const step = getWalkthroughStep(window.location.hash);
+  const stepIndex = walkthroughSteps.findIndex((item) => item.id === step);
   const active = w.data.sessions.find((session) => session.id === w.activeSessionId);
-  const missing = rows.filter((r) => r.currentBpm === null);
-  const collected = w.history.length > 1;
-  const heading =
-    plan.state === 'review'
-      ? 'Review takes priority.'
-      : rows.some((r) => r.state === 'incompatible')
-        ? 'The comparison needs review.'
-        : missing.length === 1
-          ? 'One observation is missing.'
-          : missing.length > 1
-            ? `${missing.length} observations are missing.`
-            : collected
-              ? 'Your follow-up readings are ready.'
-              : 'Your readings are ready to compare.';
+  const titles: Record<WalkthroughStep, string> = {
+    read: 'What do these readings mean?',
+    plan: 'Choose what to do next.',
+    compare: 'See what changed.',
+    review: 'Keep a copy of the evidence.',
+  };
+  function navigate(next: WalkthroughStep) {
+    window.location.hash = `/exercise/${next}`;
+  }
   function act(fn: () => unknown) {
     try {
       fn();
@@ -72,312 +77,361 @@ export default function Exercise() {
       return false;
     }
   }
-  function prepare(scroll: boolean) {
-    if (act(() => s.prepare()) && scroll)
-      requestAnimationFrame(() => {
-        const review = document.getElementById('exercise-review');
-        review?.scrollIntoView({
-          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-            ? 'instant'
-            : 'smooth',
-          block: 'start',
-        });
-        review?.querySelector('h2')?.focus();
-      });
-  }
-  function goTo(id: string) {
-    const target = document.getElementById(id);
-    target?.scrollIntoView({ behavior: 'instant', block: 'start' });
-    target?.focus({ preventScroll: true });
-  }
-  return (
-    <>
-      <section className="walkthrough-intro" aria-labelledby="walkthrough-title">
-        <div className="eyebrow">START HERE / A THREE-STEP WALKTHROUGH</div>
-        <h1 id="walkthrough-title">Understand your exercise numbers.</h1>
+  const evidenceDetails = (
+    <details className="evidence-details">
+      <summary>
+        Inspect comparison basis <ArrowRight size={17} aria-hidden="true" />
+      </summary>
+      <p>
+        Only matching test conditions support a comparison. Missing measurements never become zero.
+      </p>
+      {rows.map((r) => (
+        <div className="basis-row" key={r.id}>
+          <h3>
+            {r.workloadW ?? 'Unknown'} W <span>{evidenceLabel[r.state]}</span>
+          </h3>
+          <p>
+            {r.issues.length
+              ? r.issues.join('; ')
+              : 'Matching participant, series, device, protocol, posture, stage order, duration and usable signal assertions.'}
+          </p>
+          <p className="subtle">{r.limits.join(' ')}</p>
+        </div>
+      ))}
+      <details>
+        <summary>Original observations and frozen baseline</summary>
         <p>
-          See what changed from earlier readings, what is missing, and what to do next. Start with
-          this cycling example. All readings below are simulated, not yours.
+          Active observation: {w.activeSessionId} · {active?.date ?? 'Date unavailable'}
         </p>
-        <a className="own-values-link" href="#/fitness/entry">
-          Have an existing VO₂ test report? Use my own values{' '}
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-        <nav className="walkthrough-steps" aria-label="Walkthrough steps">
-          <button onClick={() => goTo('read-values')}>
-            <span>1</span>
-            <span>
-              <strong>Read the numbers</strong>
-              <small>Earlier readings vs. the latest session</small>
-            </span>
-          </button>
-          <button onClick={() => goTo('observation-heading')}>
-            <span>2</span>
-            <span>
-              <strong>Choose the next step</strong>
-              <small>Try filling a gap with a demo reading</small>
-            </span>
-          </button>
-          <button onClick={() => goTo('review-heading')}>
-            <span>3</span>
-            <span>
-              <strong>Save the review</strong>
-              <small>Keep a copy of the evidence</small>
-            </span>
-          </button>
-        </nav>
-      </section>
-      <div className="episode-meta">
-        <span>CYCLING / {comparison.scope.subjectId}</span>
-        <time dateTime={w.nowISO}>
-          {new Intl.DateTimeFormat('en-GB', {
-            weekday: 'short',
-            day: '2-digit',
-            month: 'short',
-            year: 'numeric',
-            timeZone: 'UTC',
-          }).format(new Date(w.nowISO))}
-        </time>
+        <p>Baseline IDs: {w.baseline.sessions.map((session) => session.id).join(', ')}</p>
+        <pre>{JSON.stringify({ baseline: w.baseline, observations: w.data }, null, 2)}</pre>
+      </details>
+    </details>
+  );
+  return (
+    <div className="step-workspace">
+      <div className="demo-topline">
+        <span className="instrument-label">EXERCISE WALKTHROUGH</span>
         <span className="simulation-badge">Simulated crew</span>
         <span className="local-status" role="status">
-          {w.notice || (w.revision > 0 ? 'Restored local episode' : 'Demonstration workspace')}
+          {w.notice || 'Your demo work stays on this device'}
         </span>
       </div>
-      {error && (
-        <p className="notice" role="alert">
-          {error}
-        </p>
-      )}
-      <div className="exercise-grid guided-workspace">
-        <div className="episode-heading">
-          <span className="eyebrow">1 / READ THE NUMBERS</span>
-          <h2 id="read-values" tabIndex={-1}>
-            {heading}
-          </h2>
-          <p>
-            {plan.state === 'review'
-              ? 'Review the available evidence before considering any further collection.'
-              : missing.length
-                ? `The heart-rate observation at ${missing.map((r) => `${r.workloadW} W`).join(', ')} is missing from the latest cycling session.`
-                : 'Compare these readings with your earlier sessions, then save the evidence for review.'}
-          </p>
-        </div>
-        <section className="exercise-evidence" aria-label="Exercise response">
-          <ReadingGuide rows={rows} />
-          <details className="optional-chart">
-            <summary>See these readings on a chart</summary>
-            <div className="evidence-heading">
-              <h2 className="instrument-label">Evidence: heart rate during prescribed cycling</h2>
-              <div className="plot-legend">
-                <span>
-                  <Circle size={12} weight="fill" className="baseline-symbol" aria-hidden="true" />
-                  Baseline
-                </span>
-                <span>
-                  <Circle size={12} weight="fill" aria-hidden="true" />
-                  Latest session
-                </span>
-              </div>
-            </div>
-            <p className="baseline-caption">
-              Frozen baseline: {w.baseline.sessions.length} independent sessions.{' '}
-              <span>Observed range, not a clinical threshold.</span>
-            </p>
-            <ExerciseComparison rows={rows} />
-          </details>
-          <details className="evidence-details">
-            <summary>
-              Inspect comparison basis <ArrowRight size={17} aria-hidden="true" />
-            </summary>
-            <p>
-              Baseline values are recorded observations. A missing current value has no difference
-              or plotted point. Compatibility is checked separately from the size of a measured
-              change.
-            </p>
-            {rows.map((r) => (
-              <div className="basis-row" key={r.id}>
-                <h3>
-                  {r.workloadW ?? 'Unknown'} W <span>{evidenceLabel[r.state]}</span>
-                </h3>
-                <p>
-                  {r.issues.length
-                    ? r.issues.join('; ')
-                    : 'Matching participant, series, device, protocol, posture, stage order, duration and usable signal assertions.'}
-                </p>
-                <p className="subtle">{r.limits.join(' ')}</p>
-              </div>
-            ))}
-            <details>
-              <summary>Original observations and frozen baseline</summary>
-              <p>
-                Active observation: {w.activeSessionId} · {active?.date ?? 'Date unavailable'}
-              </p>
-              <p>Baseline IDs: {w.baseline.sessions.map((session) => session.id).join(', ')}</p>
-              <pre>{JSON.stringify({ baseline: w.baseline, observations: w.data }, null, 2)}</pre>
-            </details>
-          </details>
-          <button className="button secondary" onClick={() => goTo('observation-heading')}>
-            Next: choose what to do <ArrowRight size={18} aria-hidden="true" />
-          </button>
-        </section>
-        <ObservationPlan
-          workspace={w}
-          plan={plan}
-          comparison={comparison}
-          onAvailability={(id, available) => act(() => s.setAvailability(id, available))}
-          onAccept={() => act(() => s.accept(w.revision))}
-          onCapture={() => {
-            if (act(() => s.capture(w.revision))) goTo('read-values');
-          }}
-          onReview={() => {
-            if (act(() => s.requestReview())) prepare(true);
-          }}
-        />
-      </div>
-      <ExerciseReview
-        workspace={w}
-        onPrepare={() => prepare(false)}
-        onDownload={download}
-        onResponse={(text) => {
-          act(() => s.recordResponse(text));
-        }}
-      />
-      <div className="exercise-tools">
-        <h2 className="instrument-label">Optional / explore the demonstration</h2>
-        <details className="episode-records">
-          <summary>
-            Observation history{' '}
-            <span>
-              {w.history.length} linked {w.history.length === 1 ? 'session' : 'sessions'}
-            </span>
-          </summary>
-          <ol className="history-list">
-            {w.history.map((id, i) => {
-              const session = w.data.sessions.find((item) => item.id === id);
-              return (
-                <li key={`${id}-${i}`}>
-                  <span className="instrument-label">
-                    {i === 0 ? 'Original observation' : 'Linked follow-up'}
-                  </span>
-                  <strong>{session?.date ?? 'Date unavailable'}</strong>
-                  <span>{id}</span>
-                  {id === w.activeSessionId && (
-                    <span className="simulation-badge">Current comparison</span>
-                  )}
-                  <p>
-                    {w.data.stages
-                      .filter((r) => r.sessionId === id)
-                      .map(
-                        (r) =>
-                          `${r.context.workloadW} W: ${r.hrBpm === null ? 'Missing' : `${r.hrBpm} bpm`}`,
-                      )
-                      .join(' · ')}
-                  </p>
-                </li>
-              );
-            })}
-          </ol>
-        </details>
-        <details className="demo-controls">
-          <summary>Demonstration inputs and prescribed schedule</summary>
-          <div className="demo-control-row">
-            <label>
-              Scenario
-              <select
-                aria-label="Scenario"
-                value={w.scenario}
-                onChange={(e) => {
-                  act(() => s.selectScenario(e.target.value as ScenarioVariant));
-                  setPreview(null);
-                }}
+      <nav className="step-navigation" aria-label="Walkthrough steps">
+        <ol>
+          {walkthroughSteps.map((item, index) => (
+            <li key={item.id}>
+              <a
+                href={`#/exercise/${item.id}`}
+                aria-current={step === item.id ? 'step' : undefined}
               >
-                {scenarios.map((v) => (
-                  <option key={v.value} value={v.value}>
-                    {v.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <button
-              onClick={() => {
-                act(() => s.reset());
-                setPreview(null);
-              }}
-            >
-              <ArrowCounterClockwise size={17} aria-hidden="true" />
-              Reset local demonstration
-            </button>
-          </div>
-          <p className="subtle">
-            Simulated clock: {w.nowISO}. Availability switches above change the actual planner
-            inputs. Added actions are modelled counts, not measured crew time.
+                <span className="step-number">{index + 1}</span>
+                <span>{item.label}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <section className="step-content" key={step} aria-labelledby="step-title">
+        <header className="step-heading">
+          <span className="eyebrow">
+            STEP {stepIndex + 1} OF {walkthroughSteps.length}
+          </span>
+          <h1 id="step-title">{titles[step]}</h1>
+          {step === 'read' && (
+            <p>
+              Select a cycling effort to explore one pair of readings. These are example values, not
+              your own measurements.
+            </p>
+          )}
+          {step === 'plan' && (
+            <p>
+              {plan.state === 'planned'
+                ? 'Try collecting a synthetic reading from an existing workout. The app will show you the result in the next step.'
+                : plan.state === 'review'
+                  ? 'This scenario needs a review of the available evidence. Further collection is bypassed.'
+                  : plan.state === 'none-needed'
+                    ? 'The current evidence needs no extra collection. Continue to review or inspect the comparison.'
+                    : 'No matching workout is available. Continue with the evidence you have.'}
+            </p>
+          )}
+          {step === 'compare' && (
+            <p>
+              See the original and latest evidence side by side, with the same baseline for both.
+            </p>
+          )}
+          {step === 'review' && (
+            <p>Prepare a local snapshot, then download it to keep or discuss with a reviewer.</p>
+          )}
+        </header>
+        {error && (
+          <p className="notice" role="alert">
+            {error}
           </p>
-        </details>
-        <details className="import-controls">
-          <summary>Import demonstration observations</summary>
-          <p>
-            Use subject DEMO-CREW and series {w.scenario}. Imports are synthetic demonstration data
-            only.
-          </p>
-          <button onClick={() => download(exerciseCsvHeader + '\n', 'csv')}>
-            Download CSV header
-          </button>
-          <label className="field">
-            Observation CSV
-            <input
-              type="file"
-              accept=".csv,text/csv"
-              onChange={(e) => {
-                const f = e.target.files?.[0];
-                if (f)
-                  f.text()
-                    .then((t) => setPreview(parseExerciseCsv(t)))
-                    .catch(() => setError('Unable to read file'));
+        )}
+        {step === 'read' && (
+          <>
+            <ReadingExplorer
+              rows={rows}
+              workload={selectedWorkload}
+              onWorkloadChange={setSelectedWorkload}
+            />
+            <p className="step-hint">
+              {rows.some((row) => row.workloadW === selectedWorkload && row.currentBpm === null)
+                ? 'You found the missing reading. Continue to try a matching follow-up.'
+                : 'Switch efforts to explore the readings, then continue to the follow-up step.'}
+            </p>
+          </>
+        )}
+        {step === 'plan' && (
+          <ObservationPlan
+            workspace={w}
+            plan={plan}
+            comparison={comparison}
+            onAvailability={(id, available) => act(() => s.setAvailability(id, available))}
+            onAccept={() => act(() => s.accept(w.revision))}
+            onCapture={() => {
+              if (act(() => s.capture(w.revision))) navigate('compare');
+            }}
+            onReview={() => {
+              if (act(() => s.requestReview())) navigate('review');
+            }}
+          />
+        )}
+        {step === 'compare' && (
+          <>
+            <ObservationChanges workspace={w} />
+            <details className="optional-chart">
+              <summary>See these readings on a chart</summary>
+              <div className="evidence-heading">
+                <h2 className="instrument-label">Heart rate at each cycling effort</h2>
+                <div className="plot-legend">
+                  <span>
+                    <Circle
+                      size={12}
+                      weight="fill"
+                      className="baseline-symbol"
+                      aria-hidden="true"
+                    />
+                    Baseline
+                  </span>
+                  <span>
+                    <Circle size={12} weight="fill" aria-hidden="true" />
+                    Latest session
+                  </span>
+                </div>
+              </div>
+              <p className="baseline-caption">
+                Frozen baseline: {w.baseline.sessions.length} independent sessions.{' '}
+                <span>Observed range, not a clinical threshold.</span>
+              </p>
+              <ExerciseComparison rows={rows} />
+            </details>
+            {evidenceDetails}
+          </>
+        )}
+        {step === 'review' && (
+          <>
+            <ExerciseReview
+              workspace={w}
+              onPrepare={() => act(() => s.prepare())}
+              onDownload={download}
+              onResponse={(text) => {
+                act(() => s.recordResponse(text));
               }}
             />
-          </label>
-          {preview && (
-            <div className="import-preview">
+            <div className="personal-next">
+              <h3>Ready to understand your own values?</h3>
               <p>
-                {preview.acceptedRows.length} accepted rows; {preview.rejectedRows.length} rejected.
+                Use two existing VO₂ test reports to compare your baseline with a later assessment.
               </p>
-              <ul>
-                {preview.rejectedRows.map((r, i) => (
-                  <li key={i}>
-                    Record {r.row}: {r.message}
-                  </li>
-                ))}
-              </ul>
-              <button
-                disabled={!preview.canCommit}
-                onClick={() => {
-                  if (act(() => s.importPreview(preview))) setPreview(null);
-                }}
-              >
-                Commit import
-              </button>
+              <a className="button secondary" href="#/fitness/entry">
+                Use my own values <ArrowRight size={18} aria-hidden="true" />
+              </a>
             </div>
+          </>
+        )}
+        <div className="step-footer">
+          {stepIndex > 0 ? (
+            <a href={`#/exercise/${walkthroughSteps[stepIndex - 1].id}`} className="step-back">
+              ← Back
+            </a>
+          ) : (
+            <a className="step-back" href="#/fitness/entry">
+              Use my own values
+            </a>
           )}
-          <label className="field">
-            Link imported follow-up
-            <select
-              value=""
-              onChange={(e) => {
-                if (e.target.value) act(() => s.linkObservation(e.target.value));
+          {step !== 'review' && (
+            <a
+              className={step === 'plan' ? 'step-back' : 'button'}
+              href={`#/exercise/${walkthroughSteps[stepIndex + 1].id}`}
+            >
+              {step === 'read'
+                ? 'Next: try a follow-up'
+                : step === 'plan'
+                  ? 'View current comparison'
+                  : 'Next: save your review'}{' '}
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+          )}
+          {step === 'review' && (
+            <button
+              className="text-button"
+              onClick={() => {
+                if (act(() => s.reset())) {
+                  setPreview(null);
+                  setSelectedWorkload(50);
+                  navigate('read');
+                }
               }}
             >
-              <option value="">Select observation</option>
-              {w.data.sessions
-                .filter((item) => !item.isBaseline)
-                .map((item) => (
-                  <option key={item.id} value={item.id}>
-                    {item.id}
-                  </option>
-                ))}
-            </select>
-          </label>
-        </details>
-      </div>
-    </>
+              Restart the demo
+            </button>
+          )}
+        </div>
+      </section>
+      <details className="walkthrough-tools">
+        <summary>Demo settings & records</summary>
+        <div className="exercise-tools">
+          <details className="episode-records">
+            <summary>
+              Observation history{' '}
+              <span>
+                {w.history.length} linked {w.history.length === 1 ? 'session' : 'sessions'}
+              </span>
+            </summary>
+            <ol className="history-list">
+              {w.history.map((id, i) => {
+                const session = w.data.sessions.find((item) => item.id === id);
+                return (
+                  <li key={`${id}-${i}`}>
+                    <span className="instrument-label">
+                      {i === 0 ? 'Original observation' : 'Linked follow-up'}
+                    </span>
+                    <strong>{session?.date ?? 'Date unavailable'}</strong>
+                    <span>{id}</span>
+                    {id === w.activeSessionId && (
+                      <span className="simulation-badge">Current comparison</span>
+                    )}
+                    <p>
+                      {w.data.stages
+                        .filter((r) => r.sessionId === id)
+                        .map(
+                          (r) =>
+                            `${r.context.workloadW} W: ${r.hrBpm === null ? 'Missing' : `${r.hrBpm} bpm`}`,
+                        )
+                        .join(' · ')}
+                    </p>
+                  </li>
+                );
+              })}
+            </ol>
+          </details>
+          <details className="demo-controls">
+            <summary>Demonstration inputs and prescribed schedule</summary>
+            <div className="demo-control-row">
+              <label>
+                Scenario
+                <select
+                  aria-label="Scenario"
+                  value={w.scenario}
+                  onChange={(e) => {
+                    act(() => s.selectScenario(e.target.value as ScenarioVariant));
+                    setPreview(null);
+                    navigate('read');
+                  }}
+                >
+                  {scenarios.map((v) => (
+                    <option key={v.value} value={v.value}>
+                      {v.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <button
+                onClick={() => {
+                  act(() => s.reset());
+                  setPreview(null);
+                  navigate('read');
+                }}
+              >
+                <ArrowCounterClockwise size={17} aria-hidden="true" />
+                Reset local demonstration
+              </button>
+            </div>
+            <p className="subtle">
+              Simulated clock: {w.nowISO}. Availability switches above change the actual planner
+              inputs. Added actions are modelled counts, not measured crew time.
+            </p>
+          </details>
+          <details className="import-controls">
+            <summary>Import demonstration observations</summary>
+            <p>
+              Use subject DEMO-CREW and series {w.scenario}. Imports are synthetic demonstration
+              data only.
+            </p>
+            <button onClick={() => download(exerciseCsvHeader + '\n', 'csv')}>
+              Download CSV header
+            </button>
+            <label className="field">
+              Observation CSV
+              <input
+                type="file"
+                accept=".csv,text/csv"
+                onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (f)
+                    f.text()
+                      .then((t) => setPreview(parseExerciseCsv(t)))
+                      .catch(() => setError('Unable to read file'));
+                }}
+              />
+            </label>
+            {preview && (
+              <div className="import-preview">
+                <p>
+                  {preview.acceptedRows.length} accepted rows; {preview.rejectedRows.length}{' '}
+                  rejected.
+                </p>
+                <ul>
+                  {preview.rejectedRows.map((r, i) => (
+                    <li key={i}>
+                      Record {r.row}: {r.message}
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  disabled={!preview.canCommit}
+                  onClick={() => {
+                    if (act(() => s.importPreview(preview))) setPreview(null);
+                  }}
+                >
+                  Commit import
+                </button>
+              </div>
+            )}
+            <label className="field">
+              Link imported follow-up
+              <select
+                value=""
+                onChange={(e) => {
+                  if (e.target.value && act(() => s.linkObservation(e.target.value)))
+                    navigate('compare');
+                }}
+              >
+                <option value="">Select observation</option>
+                {w.data.sessions
+                  .filter((item) => !item.isBaseline)
+                  .map((item) => (
+                    <option key={item.id} value={item.id}>
+                      {item.id}
+                    </option>
+                  ))}
+              </select>
+            </label>
+          </details>
+        </div>
+      </details>
+    </div>
   );
 }
