@@ -19,3 +19,5 @@ Release checklist:
 - [ ] Team rehearsal and submission.
 
 Backup capture: build and preview locally, record the sequence above using the team's screen recorder, then play the recording from beginning to end. Record the artifact path here once created. A short automated walkthrough has been produced at `artifacts/backup-demo.webm`; WebM decoding and a representative frame were checked.
+
+Adaptive pivot: use `docs/exercise-demo.md` for the current demonstration sequence and `docs/exercise-evaluation.md` for claim boundaries. Prior backup narration/sequence above describes the legacy assessment demo. User testing, expert feedback, rehearsal and submission remain pending human work.

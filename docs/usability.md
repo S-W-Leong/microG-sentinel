@@ -14,3 +14,5 @@ For each session record an anonymous identifier, date, observed answers, misunde
 | Participant | Observations | Misunderstandings | Change / recheck |
 |---|---|---|---|
 | Pending | | | |
+
+For the adaptive exercise pivot, use the comparative protocol in `exercise-evaluation.md`. No actual adaptive-workflow sessions have been conducted by the implementation agent.

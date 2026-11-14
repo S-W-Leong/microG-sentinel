@@ -15,3 +15,5 @@ Verification: 61 unit tests, production build and lint passed. Production browse
 Ruling: parser accepts FormData directly instead of an additional draft-object layer, retaining a pure numeric parsing function and direct unit tests. Risk: callers outside an HTML form must construct FormData.
 
 Ruling: retained stable frozen replay ID pairing rather than modifying curated records. Risk: future replay ID conventions need a new explicit pairing mechanism; frozen curated IDs are verified today.
+
+Adaptive pivot: see `docs/adaptive-implementation-progress.md`. The default route now opens exercise monitoring; body map is `#/body-map`. Legacy assessment entry behavior remains session-only; the new exercise workspace persists independently.

@@ -1,5 +1,11 @@
 # MicroG Sentinel
 
+The default experience is now **adaptive exercise monitoring**: compare cycling observations, select an eligible observation from a simulated prescribed schedule, preserve the episode locally and prepare a readable review. Open **Exercise research** for the separate NASA stage replay. Formal VO₂ assessment tools remain available under My Fitness.
+
+See [exercise demonstration](docs/exercise-demo.md), [CSV format](docs/exercise-import.md), [evaluation limits](docs/exercise-evaluation.md) and [implementation ledger](docs/adaptive-implementation-progress.md). Exercise work persists in browser storage; the older user-entered VO₂ form remains session-only. Reset clears the exercise demonstration key.
+
+## Existing assessment tools
+
 MicroG Sentinel is a NASA Space Apps 2026 hackathon prototype that helps an astronaut review an existing aerobic fitness (VO2) assessment against a personal baseline, inspect the comparison evidence, and export a review card. Built with Vite 6, React 19, and TypeScript, it runs offline with no backend: simulated crew assessments demonstrate the astronaut workflow, while a separately labelled NASA bed-rest analog research replay shows measured change and unresolved source conflicts.
 
 ## Run locally

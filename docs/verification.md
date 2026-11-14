@@ -15,3 +15,11 @@ Environment: Playwright browsers downloaded to `/private/tmp/microg-playwright`.
 All fifteen brief criteria have implementation coverage in the plan, but this suite is not a claim that every accessibility, wording or reference boundary has exhaustive browser coverage. Remaining release work: physically disconnected demonstration, actual three-to-five-person usability sessions, team rehearsal and submission. See usability.md, submission.md and implementation-progress.md. No clinical validation is claimed.
 
 Backup video: `artifacts/backup-demo.webm` (12 seconds, bundled data only). WebM decoding succeeded and a representative frame was inspected; this is a short automated walkthrough, with no narration.
+
+## Adaptive exercise monitoring implementation — 2026-11-14
+
+The exercise feature adds a separate stage dataset, CSV input, strict/qualified comparisons, exact minimum-action planning, frozen baselines, revision checks, local episode persistence/recovery, readable/JSON reviews and a separate research route. See `docs/adaptive-implementation-progress.md` for implementation rulings and residual limits.
+
+Fresh unit verification: 76 tests passed, including original 61. TypeScript/production build and lint passed. Production Playwright checks cover adaptive availability changes, capture/refresh/export, narrow-screen symptom bypass, actual CSV upload/link/refresh, the default screen and all four legacy browser checks. Final rerun after the baseline-history regression fix: all eight browser checks passed (16.6 seconds). Screenshot artifacts: `artifacts/adaptive-exercise.png`, `artifacts/adaptive-research.png`.
+
+External requests are blocked in the main new workflow and legacy offline workflow while loopback supplies the production app. This establishes external-network independence for those flows, not PWA installation or a physically disconnected demo. No actual users, astronauts or clinicians participated in these automated checks.
