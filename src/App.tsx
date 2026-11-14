@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import BodyMap from './components/BodyMap';
+import Exercise from './screens/Exercise';
+import ExerciseResearch from './screens/ExerciseResearch';
 import MyFitness from './screens/MyFitness';
 import Understand from './screens/Understand';
 import Evidence from './screens/Evidence';
@@ -28,7 +30,7 @@ export default function App() {
   const result = id ? getResult(id) : undefined;
   const replay = getReplayResult();
   useEffect(() => {
-    document.title = `${route === 'fitness' ? 'My Fitness' : route === 'understand' ? 'Understand My Assessment' : route === 'evidence' ? 'Evidence and Follow-up' : 'Body Map'} | MicroG Sentinel`;
+    document.title = `${!route || route === 'exercise' ? 'Exercise Monitoring' : route === 'exercise-research' ? 'Exercise Research' : route === 'fitness' ? 'My Fitness' : route === 'understand' ? 'Understand My Assessment' : route === 'evidence' ? 'Evidence and Follow-up' : 'Body Map'} | MicroG Sentinel`;
   }, [route]);
   return (
     <>
@@ -50,10 +52,18 @@ export default function App() {
           MicroG Sentinel
         </a>
         <span className="simulation-badge">
-          {sourceLabel(result?.source ?? getActiveScope().source)}
+          {sourceLabel(
+            route === 'exercise-research'
+              ? 'nasa-research-replay'
+              : !route || route === 'exercise'
+                ? 'simulated-crew'
+                : (result?.source ?? getActiveScope().source),
+          )}
         </span>
         <nav aria-label="Main navigation">
-          <a href="#/" aria-current={!route ? 'page' : undefined}>
+          <a href="#/exercise">Exercise</a>
+          <a href="#/exercise-research">Exercise research</a>
+          <a href="#/body-map" aria-current={route === 'body-map' ? 'page' : undefined}>
             Body Map
           </a>
           <a href="#/fitness" aria-current={route === 'fitness' ? 'page' : undefined}>
@@ -63,7 +73,11 @@ export default function App() {
         </nav>
       </header>
       <main id="main" ref={main} tabIndex={-1}>
-        {!route ? (
+        {!route || route === 'exercise' ? (
+          <Exercise />
+        ) : route === 'exercise-research' ? (
+          <ExerciseResearch />
+        ) : route === 'body-map' ? (
           <BodyMap />
         ) : route === 'fitness' ? (
           <MyFitness />

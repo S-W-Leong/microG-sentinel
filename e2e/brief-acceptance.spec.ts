@@ -4,7 +4,7 @@ test('offline production entry, evidence export and session reset', async ({ pag
   await context.route('**/*', (route) =>
     new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort(),
   );
-  await page.goto('/');
+  await page.goto('/#/body-map');
   await page.getByRole('link', { name: 'Open My Fitness →', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'My Fitness', exact: true })).toBeVisible();
   async function enter(value: string, baseline: boolean) {
@@ -48,7 +48,7 @@ test('NASA replay keeps units separate', async ({ page }) => {
 });
 
 test('backup demonstration sequence', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/#/body-map');
   await page.getByRole('link', { name: 'Open My Fitness →', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'My Fitness', exact: true })).toBeVisible();
   await page.waitForTimeout(2000); // Allow the recorded demonstration to be read.
@@ -73,7 +73,7 @@ test('planned regions, unsupported chart points and research conflicts at narrow
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('/');
+  await page.goto('/#/body-map');
   await page
     .getByRole('button', { name: '1 / Head · sleep and stress Planned module', exact: true })
     .click();

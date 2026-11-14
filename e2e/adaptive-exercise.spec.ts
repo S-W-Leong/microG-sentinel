@@ -1,0 +1,75 @@
+import { test, expect } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
+test('adaptive observation, refresh and locally prepared review', async ({ page, context }) => {
+  await context.route('**/*', (r) =>
+    new URL(r.request().url()).hostname === '127.0.0.1' ? r.continue() : r.abort(),
+  );
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: 'Next observation', exact: true })).toBeVisible();
+  await page.getByText('Demonstration inputs and prescribed schedule', { exact: true }).click();
+  await page.getByLabel('Available: DEMO-missing-hr-op-0').uncheck();
+  await expect(page.getByTestId('selected-plan')).toContainText('DEMO-missing-hr-op-1');
+  await page.getByRole('button', { name: 'Accept observation plan', exact: true }).click();
+  await page.reload();
+  await page.getByRole('button', { name: 'Generate synthetic observation', exact: true }).click();
+  await expect(page.getByText('145 bpm', { exact: true }).first()).toBeVisible();
+  await page.getByRole('button', { name: 'Prepare review', exact: true }).click();
+  const waiting = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download review JSON', exact: true }).click();
+  const file = await waiting;
+  const packet = JSON.parse(await readFile((await file.path())!, 'utf8'));
+  expect(packet.transferState).toBe('prepared-locally');
+  expect(packet.baseline.sessions).toHaveLength(2);
+  await page.getByRole('link', { name: 'Exercise research', exact: true }).click();
+  await expect(page.getByText('+41.5 bpm', { exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Accept observation plan' })).toHaveCount(0);
+  await page.screenshot({ path: 'artifacts/adaptive-research.png', fullPage: true });
+});
+test('symptoms bypass collection at narrow width', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await page.getByText('Demonstration inputs and prescribed schedule', { exact: true }).click();
+  await page.getByLabel('Scenario', { exact: true }).selectOption('symptoms');
+  await expect(
+    page.getByText('Review requested; collection optimization bypassed', { exact: true }),
+  ).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Accept observation plan' })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Prepare review', exact: true }).click();
+  await page.reload();
+  await expect(
+    page.getByText('Prepared locally. No transmission or receipt is claimed.', { exact: true }),
+  ).toBeVisible();
+});
+test('captures the default action-first exercise workspace', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: 'Next observation', exact: true })).toBeVisible();
+  await page.screenshot({ path: 'artifacts/adaptive-exercise.png', fullPage: true });
+});
+test('imports and links actual CSV observations without changing the baseline', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await page.getByText('Import demonstration observations', { exact: true }).click();
+  const header =
+    'sessionId,subjectId,seriesId,date,isBaseline,deviceId,protocolId,posture,stageId,stageIndex,workloadW,durationSec,hrBpm,rpe,rpeScale,quality,qualityBasis,symptoms,notes';
+  const rows = [50, 100, 150].map(
+    (w, i) =>
+      `csv-followup,DEMO-CREW,missing-hr,2026-11-14,false,DEMO-CYCLE,DEMO-PROTOCOL,seated,csv-stage-${i},${i + 1},${w},180,${120 + i * 20},11,borg-6-20,usable,Imported demo,,Synthetic`,
+  );
+  await page
+    .getByLabel('Observation CSV')
+    .setInputFiles({
+      name: 'observations.csv',
+      mimeType: 'text/csv',
+      buffer: Buffer.from([header, ...rows].join('\n')),
+    });
+  await expect(page.getByText('3 accepted rows; 0 rejected.', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Commit import', exact: true }).click();
+  await page.getByLabel('Link imported follow-up').selectOption('csv-followup');
+  await expect(page.getByText('140 bpm', { exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByText('140 bpm', { exact: true })).toBeVisible();
+  await expect(
+    page.getByText('Frozen baseline: 2 independent sessions.', { exact: false }),
+  ).toBeVisible();
+});
