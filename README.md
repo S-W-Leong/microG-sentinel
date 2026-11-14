@@ -65,6 +65,16 @@ React 19, TypeScript and Vite. No backend. Data for the demo is simulated crew d
 
 Coding agents: read [`AGENTS.md`](AGENTS.md).
 
+## Challenge resources and how we used them
+
+| Resource | How it shaped the app |
+|---|---|
+| [NASA: 5 Hazards of Human Spaceflight](https://www.nasa.gov/hrp/hazards/) | The body map is organised around them. Altered gravity → Bone, Balance, SANS, Cardio. Isolation and confinement → Mood, Sleep. Hostile, closed environment → Immune, Microbiome, Food. Radiation → the radiation dose card. Distance from Earth → every red flag hands off to the flight surgeon. |
+| [NASA: Risks of Human Spaceflight](https://www.nasa.gov/hrp/risks/) | Each tab is one of NASA's named risks (8 of the 17, plus radiation as context). Risks that are not personal readings (for example decompression sickness, hypoxia, landing injury) are left out on purpose. |
+| [NASA: Ongoing HRP Research](https://www.nasa.gov/hrp/ongoing-hrp-research/) | ARCHeR tracks well-being, activity and sleep on Artemis II, the model for our Sleep, Mood and Balance check-ins. Standard Measures collects the same measures from every crew member, the model for our per-person baselines. Tempus Pro sends crew health data to ground doctors, the model for our flight-surgeon review packet. |
+| [CSA: Monitoring Radiation for Astronaut Health](https://www.asc-csa.gc.ca/eng/news/articles/2026/2026-02-26-monitoring-radiation-astronaut-health.asp) | The radiation card shows mission dose against NASA's 600 mSv career limit and the neutron share measured by CSA's CANS detector (about 30% of ISS radiation). Dose values in the demo are simulated. |
+| [CSA: Why Do We Conduct Science Experiments in Space?](https://www.asc-csa.gc.ca/eng/iss/science/why-do-we-conduct-science-experiments-in-space.asp) | Why we build on research data: our real numbers come from NASA's MR080G bed-rest study, a ground analog for spaceflight deconditioning, and they are kept separate from crew data. |
+
 ## Data sources
 
 - **NASA MR080G** (real, bundled): NASA Life Sciences Data Archive / NASA Life Sciences Portal, UTMB Flight Analog Project, Campaign 3, Physical Fitness Evaluation, Cycle Ergometry. [Dataset page](https://nlsp.nasa.gov/search/data/details/852cd84a-464d-572b-99ac-9555f4dda464?dataType=DATASETS). Curated from the supplied download on 2026-11-14; see [curation notes](data/curated/README.md). Research participants are not astronauts.
