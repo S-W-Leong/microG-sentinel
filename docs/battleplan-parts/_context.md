@@ -30,5 +30,5 @@ Head = Sleep, Balance, Mood · Eyes = SANS · Heart & lungs = Cardiovascular · 
 8 Food & nutrition (Siang Woo). Input: meal photo or ISS menu pick list matched to FoodData Central. Display: nutrient rings vs daily target. Metrics: energy % of need; protein g/kg; sodium mg; calcium mg + vitamin D IU; body-mass trend kg. Eval: "Energy 78% of need for 5 days · −1.4 kg". Feeds Immune (allergens), Bone, SANS, Microbiome, Cardio. Data: USDA FoodData Central https://fdc.nal.usda.gov/download-datasets.html (CC0; allergens only in ingredient text).
 Optional Mood (Siang Woo). Input: 20-s daily sliders (NeuroVAS-style) + workload/conflict flags. Display: calendar heatmap of mood vs workload. Metrics: mood 0–10; stress 0–10; workload 0–10; isolation 0–10; crew conflict yes/no. Data: HERA Standard Measures https://nlsp.nasa.gov/explore/home/lsda_sm_hera (by request).
 
-## Signals record (the only shared shape; exact field names to be defined in part 3)
+## Signals record (the only shared shape; exact field names: see the contract section of docs/battleplan.md)
 Example: `{ risk: "sleep", crewId: "SIM-CDR", date: "2026-11-14", simulated: true, signals: { sleepDebtHours: 6.5, fatigue: 5 } }`.
