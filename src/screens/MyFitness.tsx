@@ -49,7 +49,6 @@ export default function MyFitness() {
   const record = getRecord(latest.assessmentId)!;
   return (
     <>
-      {entry}
       {selection && (
         <button
           onClick={() => {
@@ -61,10 +60,11 @@ export default function MyFitness() {
         </button>
       )}
       <div className="page-heading">
-        <div className="eyebrow">HEART AND LUNGS / 02</div>
+        <div className="eyebrow">SUPPORTING EVIDENCE / FORMAL VO₂ ASSESSMENTS</div>
         <h1>My Fitness</h1>
         <p>What changed, what supports the comparison, and what to review next.</p>
       </div>
+      {entry}
       <AssessmentCard result={latest} />
       {selection && (
         <section className="panel">
@@ -122,7 +122,11 @@ export default function MyFitness() {
                 </div>
                 {result ? (
                   <a href={`#/understand/${point.assessmentId}`}>
-                    Review <span className="sr-only">assessment from {point.date ?? 'Timeline date withheld'}</span> →
+                    Review{' '}
+                    <span className="sr-only">
+                      assessment from {point.date ?? 'Timeline date withheld'}
+                    </span>{' '}
+                    →
                   </a>
                 ) : (
                   <span className="subtle">

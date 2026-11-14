@@ -1,8 +1,19 @@
-import { renderExerciseReviewText } from '../exercise/reviewPacket';
-import { useState, useSyncExternalStore } from 'react';
+import { useMemo, useState, useSyncExternalStore } from 'react';
+import {
+  ArrowCounterClockwise,
+  ArrowRight,
+  CheckCircle,
+  Circle,
+  RadioButton,
+} from '@phosphor-icons/react';
 import { createExerciseStore, evaluateWorkspace } from '../exercise/store';
 import { parseExerciseCsv, exerciseCsvHeader, type CsvPreview } from '../exercise/csv';
 import type { ScenarioVariant } from '../exercise/data/scenarios';
+import { buildStageReadings, evidenceLabel, getEpisodeProgress } from '../ui/exercisePresentation';
+import ExerciseComparison from '../components/exercise/ExerciseComparison';
+import ObservationPlan from '../components/exercise/ObservationPlan';
+import ExerciseReview from '../components/exercise/ExerciseReview';
+
 let store: ReturnType<typeof createExerciseStore> | undefined;
 function getStore() {
   if (!store) {
@@ -10,264 +21,340 @@ function getStore() {
     try {
       storage = window.localStorage;
     } catch {
-      /* Explicit memory-only store. */
+      /* Keep the memory-only fallback. */
     }
     store = createExerciseStore(storage);
   }
   return store;
 }
 function download(text: string, extension: string) {
-  const url = URL.createObjectURL(
-    new Blob([text], { type: extension === 'json' ? 'application/json' : 'text/plain' }),
-  );
+  const mime =
+    extension === 'json' ? 'application/json' : extension === 'csv' ? 'text/csv' : 'text/plain';
+  const url = URL.createObjectURL(new Blob([text], { type: mime }));
   const a = document.createElement('a');
   a.href = url;
   a.download = `microg-exercise-review.${extension}`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
+const scenarios: { value: ScenarioVariant; label: string }[] = [
+  { value: 'missing-hr', label: 'Missing heart-rate observation' },
+  { value: 'complete', label: 'Complete evidence' },
+  { value: 'mismatch', label: 'Incompatible protocol' },
+  { value: 'no-opportunity', label: 'No available opportunity' },
+  { value: 'symptoms', label: 'Reported symptoms' },
+];
+
 export default function Exercise() {
   const s = getStore();
   const w = useSyncExternalStore(s.subscribe, s.getSnapshot);
-  const { comparison, plan } = evaluateWorkspace(w);
+  const { comparison, plan } = useMemo(() => evaluateWorkspace(w), [w]);
+  const rows = useMemo(() => buildStageReadings(w.data, comparison), [w.data, comparison]);
   const [error, setError] = useState('');
   const [preview, setPreview] = useState<CsvPreview | null>(null);
-  const [response, setResponse] = useState('');
+  const active = w.data.sessions.find((session) => session.id === w.activeSessionId);
+  const missing = rows.filter((r) => r.currentBpm === null);
+  const collected = w.history.length > 1;
+  const heading =
+    plan.state === 'review'
+      ? 'Review takes priority.'
+      : rows.some((r) => r.state === 'incompatible')
+        ? 'The comparison needs review.'
+        : missing.length === 1
+          ? 'One observation is missing.'
+          : missing.length > 1
+            ? `${missing.length} observations are missing.`
+            : collected
+              ? 'A new observation. A clearer picture.'
+              : 'Your exercise response, in context.';
+  const progress = getEpisodeProgress(w);
   function act(fn: () => unknown) {
     try {
       fn();
       setError('');
+      return true;
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Action failed');
+      return false;
     }
+  }
+  function prepare(scroll: boolean) {
+    if (act(() => s.prepare()) && scroll)
+      requestAnimationFrame(() => {
+        const review = document.getElementById('exercise-review');
+        review?.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ? 'instant'
+            : 'smooth',
+          block: 'start',
+        });
+        review?.querySelector('h2')?.focus();
+      });
   }
   return (
     <>
-      <div className="page-heading">
-        <div className="eyebrow">SIMULATED CREW • CYCLING</div>
-        <h1>Your next useful observation.</h1>
-        <p>Compare prescribed cycling, resolve evidence gaps and prepare review.</p>
-        <p role="status">
-          {w.notice || 'Demonstration workspace'} · {w.status}
-        </p>
+      <div className="episode-meta">
+        <span>CYCLING / {comparison.scope.subjectId}</span>
+        <time dateTime={w.nowISO}>
+          {new Intl.DateTimeFormat('en-GB', {
+            weekday: 'short',
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+            timeZone: 'UTC',
+          }).format(new Date(w.nowISO))}
+        </time>
+        <span className="simulation-badge">Simulated crew</span>
+        <span className="local-status" role="status">
+          {w.notice || (w.revision > 0 ? 'Restored local episode' : 'Demonstration workspace')}
+        </span>
       </div>
-      {error && <p role="alert">{error}</p>}
-      <section className="panel">
-        <h2>Next observation</h2>
-        <p>{plan.reasons.join(' ')}</p>
-        <p data-testid="selected-plan">{plan.selectedIds.join(', ') || 'No collection selected'}</p>
-        {plan.selectedIds.length > 0 && (
+      {error && (
+        <p className="notice" role="alert">
+          {error}
+        </p>
+      )}
+      <div className="exercise-grid">
+        <div className="episode-heading">
+          <h1>{heading}</h1>
           <p>
-            {plan.totalAdditionalCrewActions} additional demonstration actions · simulated
-            completion {plan.completionAt}
+            {plan.state === 'review'
+              ? 'Review the available evidence before considering any further collection.'
+              : missing.length
+                ? `The heart-rate observation at ${missing.map((r) => `${r.workloadW} W`).join(', ')} is missing from the latest cycling session.`
+                : 'Compare this observation with your frozen baseline, then prepare the evidence for review.'}
           </p>
-        )}
-        {plan.state === 'planned' && (
-          <button className="button" onClick={() => act(() => s.accept(w.revision))}>
-            Accept observation plan
-          </button>
-        )}
-        {w.acceptedRevision === w.revision && (
-          <button className="button" onClick={() => act(() => s.capture(w.revision))}>
-            Generate synthetic observation
-          </button>
-        )}
-        <button onClick={() => act(() => s.requestReview())}>Request review now</button>
-        <p className="subtle">
-          Observations use an existing prescribed workout. The prototype does not change your
-          exercise prescription or diagnose a cause.
-        </p>
-        {plan.unmetGapIds.length > 0 && (
-          <ul>
-            {comparison.gaps.map((g) => (
-              <li key={g.id}>{g.reason}</li>
-            ))}
-          </ul>
-        )}
-      </section>
-      <section className="panel">
-        <h2>Exercise response</h2>
-        <p>
-          Frozen baseline: {w.baseline.sessions.length} independent sessions. Observed ranges are
-          descriptive, not confidence intervals.
-        </p>
-        <div style={{ overflowX: 'auto' }}>
-          <table>
-            <thead>
-              <tr>
-                <th>Workload</th>
-                <th>Baseline HR</th>
-                <th>Current HR</th>
-                <th>Difference</th>
-                <th>Evidence</th>
-              </tr>
-            </thead>
-            <tbody>
-              {comparison.stages.map((c) => {
-                const stage = w.data.stages.find((s) => s.id === c.targetStageId)!;
-                return (
-                  <tr key={c.targetStageId}>
-                    <td>{stage.context.workloadW} W</td>
-                    <td>{c.baselineRangeBpm?.join('–') ?? 'Unavailable'}</td>
-                    <td>{c.currentBpm === null ? 'Missing' : `${c.currentBpm} bpm`}</td>
-                    <td>
-                      {c.deltaBpm === null
-                        ? 'Withheld'
-                        : `${c.deltaBpm >= 0 ? '+' : ''}${c.deltaBpm.toFixed(1)} bpm`}
-                    </td>
-                    <td>{c.state}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
         </div>
-        <details>
-          <summary>Comparison details and original observations</summary>
-          {comparison.stages.map((c) => (
-            <div key={c.targetStageId}>
-              <h3>{c.targetStageId}</h3>
-              <p>{[...c.issues, ...c.limits].join(' ')}</p>
+        <ObservationPlan
+          workspace={w}
+          plan={plan}
+          comparison={comparison}
+          onAvailability={(id, available) => act(() => s.setAvailability(id, available))}
+          onAccept={() => act(() => s.accept(w.revision))}
+          onCapture={() => act(() => s.capture(w.revision))}
+          onReview={() => {
+            if (act(() => s.requestReview())) prepare(true);
+          }}
+        />
+        <section className="exercise-evidence" aria-label="Exercise response">
+          <div className="evidence-heading">
+            <h2 className="instrument-label">Evidence: heart rate during prescribed cycling</h2>
+            <div className="plot-legend">
+              <span>
+                <Circle size={12} weight="fill" className="baseline-symbol" aria-hidden="true" />
+                Baseline
+              </span>
+              <span>
+                <Circle size={12} weight="fill" aria-hidden="true" />
+                Latest session
+              </span>
             </div>
-          ))}
-          <p>Episode history: {w.history.join(', ')}</p>
-          <pre style={{ whiteSpace: 'pre-wrap' }}>{JSON.stringify(w.baseline, null, 2)}</pre>
-        </details>
-      </section>
-      <section className="panel">
-        <h2>Review episode</h2>
-        <button className="button" onClick={() => act(() => s.prepare())}>
-          Prepare review
-        </button>
-        {w.reviews.length > 0 && (
-          <>
-            <p>Prepared locally. No transmission or receipt is claimed.</p>
+          </div>
+          <p className="baseline-caption">
+            Frozen baseline: {w.baseline.sessions.length} independent sessions.{' '}
+            <span>Observed range, not a clinical threshold.</span>
+          </p>
+          <ExerciseComparison rows={rows} />
+          <details className="evidence-details">
+            <summary>
+              Inspect comparison basis <ArrowRight size={17} aria-hidden="true" />
+            </summary>
             <p>
-              Downloads preserve the last prepared snapshot. After inputs change, prepare a new
-              review for current evidence.
+              Baseline values are recorded observations. A missing current value has no difference
+              or plotted point. Compatibility is checked separately from the size of a measured
+              change.
             </p>
-            <button onClick={() => download(w.reviews[w.reviews.length - 1], 'json')}>
-              Download review JSON
-            </button>
-            <button
-              onClick={() =>
-                download(renderExerciseReviewText(w.reviews[w.reviews.length - 1]), 'txt')
-              }
+            {rows.map((r) => (
+              <div className="basis-row" key={r.id}>
+                <h3>
+                  {r.workloadW ?? 'Unknown'} W <span>{evidenceLabel[r.state]}</span>
+                </h3>
+                <p>
+                  {r.issues.length
+                    ? r.issues.join('; ')
+                    : 'Matching participant, series, device, protocol, posture, stage order, duration and usable signal assertions.'}
+                </p>
+                <p className="subtle">{r.limits.join(' ')}</p>
+              </div>
+            ))}
+            <details>
+              <summary>Original observations and frozen baseline</summary>
+              <p>
+                Active observation: {w.activeSessionId} · {active?.date ?? 'Date unavailable'}
+              </p>
+              <p>Baseline IDs: {w.baseline.sessions.map((session) => session.id).join(', ')}</p>
+              <pre>{JSON.stringify({ baseline: w.baseline, observations: w.data }, null, 2)}</pre>
+            </details>
+          </details>
+        </section>
+      </div>
+      <section className="episode-progress" aria-label="Episode progress">
+        <h2 className="instrument-label">Episode history</h2>
+        <ol>
+          {['Gap identified', 'Plan observation', 'Collect', 'Prepare review'].map((label, i) => (
+            <li
+              key={label}
+              className={`is-${progress[i]}`}
+              aria-current={progress[i] === 'current' ? 'step' : undefined}
             >
-              Download review text
-            </button>
+              {progress[i] === 'complete' ? (
+                <CheckCircle size={24} />
+              ) : progress[i] === 'current' ? (
+                <RadioButton size={27} />
+              ) : (
+                <Circle size={24} aria-hidden="true" />
+              )}
+              <span>
+                {label}
+                {progress[i] === 'skipped' && <small> · skipped</small>}
+              </span>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <div className="exercise-tools">
+        <details className="episode-records">
+          <summary>
+            Observation history{' '}
+            <span>
+              {w.history.length} linked {w.history.length === 1 ? 'session' : 'sessions'}
+            </span>
+          </summary>
+          <ol className="history-list">
+            {w.history.map((id, i) => {
+              const session = w.data.sessions.find((item) => item.id === id);
+              return (
+                <li key={`${id}-${i}`}>
+                  <span className="instrument-label">
+                    {i === 0 ? 'Original observation' : 'Linked follow-up'}
+                  </span>
+                  <strong>{session?.date ?? 'Date unavailable'}</strong>
+                  <span>{id}</span>
+                  {id === w.activeSessionId && (
+                    <span className="simulation-badge">Current comparison</span>
+                  )}
+                  <p>
+                    {w.data.stages
+                      .filter((r) => r.sessionId === id)
+                      .map(
+                        (r) =>
+                          `${r.context.workloadW} W: ${r.hrBpm === null ? 'Missing' : `${r.hrBpm} bpm`}`,
+                      )
+                      .join(' · ')}
+                  </p>
+                </li>
+              );
+            })}
+          </ol>
+        </details>
+        <details className="demo-controls">
+          <summary>Demonstration inputs and prescribed schedule</summary>
+          <div className="demo-control-row">
             <label>
-              Human review response
-              <textarea value={response} onChange={(e) => setResponse(e.target.value)} />
+              Scenario
+              <select
+                aria-label="Scenario"
+                value={w.scenario}
+                onChange={(e) => {
+                  act(() => s.selectScenario(e.target.value as ScenarioVariant));
+                  setPreview(null);
+                }}
+              >
+                {scenarios.map((v) => (
+                  <option key={v.value} value={v.value}>
+                    {v.label}
+                  </option>
+                ))}
+              </select>
             </label>
             <button
-              onClick={() =>
-                act(() => {
-                  s.recordResponse(response);
-                  setResponse('');
-                })
-              }
+              onClick={() => {
+                act(() => s.reset());
+                setPreview(null);
+              }}
             >
-              Record human response
+              <ArrowCounterClockwise size={17} aria-hidden="true" />
+              Reset local demonstration
             </button>
-          </>
-        )}
-        {w.responses.map((r, i) => (
-          <p key={i}>{r}</p>
-        ))}
-      </section>
-      <details className="panel">
-        <summary>Demonstration inputs and prescribed schedule</summary>
-        <p>Simulated clock: {w.nowISO}. These controls change the planner's inputs.</p>
-        <label>
-          Scenario
-          <select
-            aria-label="Scenario"
-            value={w.scenario}
-            onChange={(e) => act(() => s.selectScenario(e.target.value as ScenarioVariant))}
-          >
-            {['missing-hr', 'complete', 'mismatch', 'no-opportunity', 'symptoms'].map((v) => (
-              <option key={v}>{v}</option>
-            ))}
-          </select>
-        </label>
-        {w.opportunities.map((o) => (
-          <label key={o.id}>
+          </div>
+          <p className="subtle">
+            Simulated clock: {w.nowISO}. Availability switches above change the actual planner
+            inputs. Added actions are modelled counts, not measured crew time.
+          </p>
+        </details>
+        <details className="import-controls">
+          <summary>Import demonstration observations</summary>
+          <p>
+            Use subject DEMO-CREW and series {w.scenario}. Imports are synthetic demonstration data
+            only.
+          </p>
+          <button onClick={() => download(exerciseCsvHeader + '\n', 'csv')}>
+            Download CSV header
+          </button>
+          <label className="field">
+            Observation CSV
             <input
-              type="checkbox"
-              checked={o.available}
-              onChange={(e) => act(() => s.setAvailability(o.id, e.target.checked))}
+              type="file"
+              accept=".csv,text/csv"
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f)
+                  f.text()
+                    .then((t) => setPreview(parseExerciseCsv(t)))
+                    .catch(() => setError('Unable to read file'));
+              }}
             />
-            Available: {o.id}
-            <p>
-              {o.scheduledAt} · {o.additionalCrewActions} modelled actions · {o.effortBasis}
-            </p>
           </label>
-        ))}
-        <button onClick={() => act(() => s.reset())}>Reset local demonstration</button>
-      </details>
-      <details className="panel">
-        <summary>Import demonstration observations</summary>
-        <p>
-          Use subject DEMO-CREW and series {w.scenario}. Imports are synthetic demonstration data
-          only.
-        </p>
-        <button onClick={() => download(exerciseCsvHeader + '\n', 'csv')}>
-          Download CSV header
-        </button>
-        <label>
-          Observation CSV
-          <input
-            type="file"
-            accept=".csv,text/csv"
-            onChange={(e) => {
-              const f = e.target.files?.[0];
-              if (f)
-                f.text()
-                  .then((t) => setPreview(parseExerciseCsv(t)))
-                  .catch(() => setError('Unable to read file'));
-            }}
-          />
-        </label>
-        {preview && (
-          <>
-            <p>
-              {preview.acceptedRows.length} accepted rows; {preview.rejectedRows.length} rejected.
-            </p>
-            <ul>
-              {preview.rejectedRows.map((r, i) => (
-                <li key={i}>
-                  Record {r.row}: {r.message}
-                </li>
-              ))}
-            </ul>
-            <button
-              disabled={!preview.canCommit}
-              onClick={() =>
-                act(() => {
-                  s.importPreview(preview);
-                  setPreview(null);
-                })
-              }
+          {preview && (
+            <div className="import-preview">
+              <p>
+                {preview.acceptedRows.length} accepted rows; {preview.rejectedRows.length} rejected.
+              </p>
+              <ul>
+                {preview.rejectedRows.map((r, i) => (
+                  <li key={i}>
+                    Record {r.row}: {r.message}
+                  </li>
+                ))}
+              </ul>
+              <button
+                disabled={!preview.canCommit}
+                onClick={() => {
+                  if (act(() => s.importPreview(preview))) setPreview(null);
+                }}
+              >
+                Commit import
+              </button>
+            </div>
+          )}
+          <label className="field">
+            Link imported follow-up
+            <select
+              value=""
+              onChange={(e) => {
+                if (e.target.value) act(() => s.linkObservation(e.target.value));
+              }}
             >
-              Commit import
-            </button>
-          </>
-        )}
-        <label>
-          Link imported follow-up
-          <select value="" onChange={(e) => act(() => s.linkObservation(e.target.value))}>
-            <option value="">Select observation</option>
-            {w.data.sessions
-              .filter((s) => !s.isBaseline)
-              .map((s) => (
-                <option key={s.id} value={s.id}>
-                  {s.id}
-                </option>
-              ))}
-          </select>
-        </label>
-      </details>
+              <option value="">Select observation</option>
+              {w.data.sessions
+                .filter((item) => !item.isBaseline)
+                .map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {item.id}
+                  </option>
+                ))}
+            </select>
+          </label>
+        </details>
+      </div>
+      <ExerciseReview
+        workspace={w}
+        onPrepare={() => prepare(false)}
+        onDownload={download}
+        onResponse={(text) => {
+          act(() => s.recordResponse(text));
+        }}
+      />
     </>
   );
 }

@@ -29,6 +29,14 @@ export default function App() {
   const [, route, id] = hash.split('/');
   const result = id ? getResult(id) : undefined;
   const replay = getReplayResult();
+  const exercise = !route || route === 'exercise';
+  const source = sourceLabel(
+    route === 'exercise-research'
+      ? 'nasa-research-replay'
+      : exercise
+        ? 'simulated-crew'
+        : (result?.source ?? getActiveScope().source),
+  );
   useEffect(() => {
     document.title = `${!route || route === 'exercise' ? 'Exercise Monitoring' : route === 'exercise-research' ? 'Exercise Research' : route === 'fitness' ? 'My Fitness' : route === 'understand' ? 'Understand My Assessment' : route === 'evidence' ? 'Evidence and Follow-up' : 'Body Map'} | MicroG Sentinel`;
   }, [route]);
@@ -46,33 +54,45 @@ export default function App() {
       </a>
       <header className="site-header">
         <a className="brand" href="#/" aria-label="MicroG Sentinel home">
-          <span className="brand-mark" aria-hidden="true">
-            µG
-          </span>{' '}
           MicroG Sentinel
         </a>
-        <span className="simulation-badge">
-          {sourceLabel(
-            route === 'exercise-research'
-              ? 'nasa-research-replay'
-              : !route || route === 'exercise'
-                ? 'simulated-crew'
-                : (result?.source ?? getActiveScope().source),
-          )}
-        </span>
         <nav aria-label="Main navigation">
-          <a href="#/exercise">Exercise</a>
-          <a href="#/exercise-research">Exercise research</a>
-          <a href="#/body-map" aria-current={route === 'body-map' ? 'page' : undefined}>
-            Body Map
+          <a href="#/exercise" aria-current={exercise ? 'page' : undefined}>
+            Exercise
           </a>
-          <a href="#/fitness" aria-current={route === 'fitness' ? 'page' : undefined}>
-            My Fitness
+          <a
+            href="#/exercise-research"
+            aria-current={route === 'exercise-research' ? 'page' : undefined}
+          >
+            NASA evidence
           </a>
-          {replay && <a href={`#/understand/${replay.assessmentId}`}>Demo: research replay</a>}
+          <details className="about-menu" key={hash}>
+            <summary>About</summary>
+            <div className="about-content">
+              <span className="eyebrow">MICROG SENTINEL / PROTOTYPE</span>
+              <h2>Useful evidence. Less collection.</h2>
+              <p>
+                Compare exercise response, identify evidence gaps and select the smallest useful
+                observation from an already prescribed workout.
+              </p>
+              <a href="#/body-map">Explore the body map</a>
+              <a href="#/fitness">Formal VO₂ assessments</a>
+              <p className="subtle">
+                Simulated crew workflows and a separate NASA bed-rest analog replay. No clinical or
+                mission determination.
+              </p>
+            </div>
+          </details>
         </nav>
+        <span className="header-caption">SPACE APPS / 2026</span>
       </header>
-      <main id="main" ref={main} tabIndex={-1}>
+      <main id="main" ref={main} tabIndex={-1} className={exercise ? 'exercise-main' : ''}>
+        {!exercise && (
+          <div className="source-strip">
+            <span className="simulation-badge">{source}</span>
+            <a href="#/exercise">Return to exercise</a>
+          </div>
+        )}
         {!route || route === 'exercise' ? (
           <Exercise />
         ) : route === 'exercise-research' ? (
@@ -93,11 +113,21 @@ export default function App() {
           </section>
         )}
       </main>
-      <footer>
-        <span>MicroG Sentinel · NASA Space Apps 2026 prototype</span>
+      <footer className="site-footer">
         <span>
-          Simulated crew demonstration and NASA analog research replay · No clinical or mission
-          determination
+          MICROG SENTINEL <span className="footer-divider">/</span> SPACE APPS 2026
+        </span>
+        <nav aria-label="Supporting tools">
+          <a href="#/body-map" aria-current={route === 'body-map' ? 'page' : undefined}>
+            Body Map
+          </a>
+          <a href="#/fitness" aria-current={route === 'fitness' ? 'page' : undefined}>
+            My Fitness
+          </a>
+          {replay && <a href={`#/understand/${replay.assessmentId}`}>Demo: research replay</a>}
+        </nav>
+        <span className="footer-note">
+          Offline prototype · No clinical or mission determination
         </span>
       </footer>
     </>
