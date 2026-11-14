@@ -89,7 +89,7 @@ Each tab has exactly five metric groups; paired quantities remain separately lab
 
 **Owner:** Shi Wei. **NASA risk name:** Reduced cardiorespiratory and musculoskeletal fitness; Cardiovascular adaptations. This tab implements the cardiorespiratory part, not all musculoskeletal outcomes.
 
-**Input:** Reuse `src/types.ts` and `src/exercise/types.ts`, preserving the existing validation and comparison rules.
+**Input:** Reuse `src/types.ts` and `src/exercise/types.ts`, preserving the existing validation and comparison rules. Vector-only limits apply at the new adapter, without rewriting historical raw records: workload 0–2000 W, HR delta −300–300 bpm, resting HR >0 and ≤300 bpm. Optional completed exercise minutes ≥0 and planned minutes >0 over the trailing 24 h produce `exerciseLoadPct` 0–500; missing plan/log stays null. This contextual signal is not a sixth displayed metric.
 
 | Field | Type, unit and accepted domain | Provided by |
 | --- | --- | --- |
@@ -112,11 +112,11 @@ Do not relabel existing VO2max source records as VO2peak; retain the legacy metr
 2. **VO2peak retained:** `100 × current / baseline`, % ≥0 with positive baseline and same unit/method; decline is notable. The 80% line is the cited reference, not a diagnosis or clearance; research replay gets context only.
 3. **Borg effort:** integer 6–20, scale points; higher effort at matched workload is notable. Missing effort stays null.
 4. **Resting HR:** bpm >0 and ≤300; optional signed change vs matched resting baseline in bpm. Both upward and downward changes are shown without classification.
-5. **Missing readings:** integer ≥0, count of absent HR/RPE fields among the selected episode's expected stage readings; count each field once, excluding optional fields. Higher means less evidence, not worse physiology.
+5. **Missing readings:** integer ≥0, count of absent HR/RPE fields among the selected current session's expected stage readings; count each field once, excluding optional fields. Higher means less evidence, not worse physiology.
 
 **Evaluation output:** `{workload} W: {signedDelta} bpm vs baseline · {retained}% retained`; show each clause only if independently supported. Missing comparison: `Comparison unavailable · {missingItem}`. Preserve 41.5 bpm and 73.9% in detailed NASA replay; do not fabricate a single simultaneous session if those values come from separate source records.
 
-**Uses from astronaut vector:** personal matched exercise and VO2peak baselines, resting-HR baseline, body mass, mission phase, Food energy intake and Sleep debt as separate contextual reasons, not adjustments to measured HR/VO2peak.
+**Uses from astronaut vector:** personal matched exercise and VO2peak baselines, resting-HR baseline, body mass, mission-day exposure, Food energy intake and Sleep debt as separate contextual reasons, not adjustments to measured HR/VO2peak.
 
 **Signals emitted:** `workloadW`, `hrDeltaBpmAtWorkload`, `vo2PeakPctBaseline`, `exerciseLoadPct`, `restingHrBpm`, `borgRpe`, `missingReadingsCount`.
 
@@ -132,25 +132,25 @@ Do not relabel existing VO2max source records as VO2peak; retain the legacy metr
 
 **Owner:** Shi Wei. **NASA risk name:** Performance decrements and adverse health outcomes resulting from sleep loss, circadian desynchronization and work overload.
 
-**Input:** Morning check-in fields: sleep attempt start/end (ISO timestamps with offsets, end after start, interval ≤24 h); sleep latency and awake-after-onset (numbers ≥0 min, sum ≤time in bed); naps (timestamp pairs within the same 24 h window, non-overlapping); KSS (integer 1–9); Samn–Perelli fatigue (integer 1–7); planned sleep start/end and duty start/end (timestamp pairs). Wearable alternative: timestamped stage intervals (`awake`, `REM`, `light`, `deep`, `unknown`), imported source/device ID and timezone. Do not double-count a manual episode and its wearable copy. Imported movement is optional, number ≥0 in the device's stated unit, not a substitute for sleep stage. Medical team/vector supplies target sleep (number >0 and ≤24 h/day) and baseline main-sleep midpoint (local clock time). No default target is silently assigned.
+**Input:** Morning check-in fields: sleep attempt start/end (ISO timestamps with offsets, end after start, interval ≤24 h); sleep latency and awake-after-onset (numbers ≥0 min, sum ≤time in bed); naps (timestamp pairs within the same 24 h window, non-overlapping); KSS (integer 1–9); Samn–Perelli fatigue (integer 1–7); planned sleep start/end and duty start/end (timestamp pairs). Wearable alternative: timestamped stage intervals (`awake`, `REM`, `light`, `deep`, `unknown`), imported source/device ID and timezone. Do not double-count a manual episode and its wearable copy. Imported movement is optional, number ≥0 in the device's stated unit, not a substitute for sleep stage. The debt calculation uses the contract section's explicit eight-hour demo reference, not an astronaut prescription. Baseline main-sleep midpoint and planned schedule are local Sleep configuration; v1 has no midpoint/target fields.
 
 **Display:** Night line graph with x = clock time, y = categorical stage in the order awake/REM/light/deep; unknown spans are gaps. Wearable movement, when available, gets a separate aligned strip with its own units. Manual-only entries draw a single sleep interval, never invented stages. Toggle `Night`/`24 hours`; shade duty periods and outline planned sleep, with a legend. Tap a time span for source and duration; select previous nights without changing their dates.
 
 **Metrics 1–5:**
 
-1. **Hours slept:** 0–24 h in the selected non-overlapping 24 h window, including naps; lower than personal target is notable. Manual duration = time in bed − latency − awake-after-onset, plus naps.
-2. **Sleep efficiency:** `100 × main-episode sleep / main-episode time in bed`, 0–100%; null for zero/unknown denominator; lower vs baseline is notable. Do not include naps in this denominator.
+1. **Hours slept:** 0–24 h in the selected non-overlapping 24 h window, including naps; lower than the declared demo reference is notable. Manual duration = time in bed − latency − awake-after-onset, plus naps.
+2. **Sleep efficiency:** `100 × total sleep / total time in bed` over the same trailing 24 h, 0–100%; include nap sleep and nap time in bed consistently. Null for zero/unknown denominator; lower vs baseline is notable.
 3. **Karolinska Sleepiness Scale:** integer 1–9 points, 1 = extremely alert, 9 = very sleepy/fighting sleep; higher is notable.
 4. **Samn–Perelli fatigue:** integer 1–7 points, 1 = fully alert/wide awake, 7 = completely exhausted/unable to function effectively; higher is notable. Use the full named scale's anchors in the selector.
 5. **Body-clock shift:** signed hours in (−12, +12], shortest circular difference between scheduled main-sleep midpoint and baseline midpoint; positive = later. Larger absolute shift is notable. Label details `Sleep timing proxy`: this does not measure physiological circadian phase.
 
-**Evaluation output:** `Sleep debt {debt} h over {days} days`; debt = sum of `max(0, target − hoursSlept)` over three complete, consecutive 24 h windows. Explicit demo reference 8 h/day, totals 5.5/6/6 h gives 6.5 h debt. Do not calculate a three-day debt from two days; show `2/3 days recorded` instead. Optional second line: `↑ because {documented schedule change}`.
+**Evaluation output:** `Sleep debt {debt} h over {days} days`; debt = sum of `max(0, 8 − hoursSlept)` over three complete, consecutive 24 h windows. Explicit demo reference 8 h/day, totals 5.5/6/6 h gives 6.5 h debt. Do not calculate a three-day debt from two days; show `2/3 days recorded` instead. Optional context line: `Schedule changed`; reserve arrows for the contract section's numerical personalisation contributions.
 
-**Uses from astronaut vector:** sleep-hours baseline, chronotype, mission day and Mood workload/stress via `getSignals`; local schedule/midpoint configuration supplies the timing comparison. Shift timing is context, not proof that it caused fatigue.
+**Uses from astronaut vector:** sleep-hours baseline, chronotype, Mood workload/stress via `getSignals`; local schedule/midpoint configuration supplies the timing comparison. Shift timing is context, not proof that it caused fatigue.
 
 **Signals emitted:** `sleepHours`, `sleepEfficiencyPct`, `sleepDebtHours`, `sleepinessKarolinska`, `fatigueSamnPerelli`, `bodyClockShiftHours`.
 
-**Links to other tabs:** Cardiovascular and Balance receive sleep/fatigue context through vector; Mood can show coincident workload.
+**Links to other tabs:** Cardiovascular and Mood receive sleep/fatigue context through the vector; Balance is a navigation-only link under v1, and Mood can supply coincident workload.
 
 **Dataset + licence + demo status:** [Sleep-EDF Expanded v1.0.0](https://www.physionet.org/content/sleep-edfx/1.0.0/), Open Data Commons Attribution (ODC-By), requiring attribution. Earth sleep recordings are reference material, not crew data. Demo uses a tagged simulated night and three-day totals; no Sleep-EDF processing or wearable integration is claimed until actually implemented.
 
@@ -176,7 +176,7 @@ After preview, astronaut/medical team confirms exactly these five groups; values
 
 Medical-team/vector input: known allergy list (controlled allergen name plus confirmation status; demo has confirmed `shellfish`). Food supplies confirmed ingredients/allergen tags and actual consumed time; a meal photo guess never becomes a confirmed allergen. Distinguish `shellfish`, specific crustacean/mollusc ingredients and `fish`; do not match fish to shellfish by substring. The demo explicitly confirms a shrimp meal as shellfish.
 
-**Display:** Top: user's photo with chosen body area and time; beside it, a labelled reference-pattern tile (stack below at 320 px). Below: five compact observation rows, then one horizontal similarity bar per available reference; x = 0–100% illustrative feature agreement, y = reference-pattern name. Each bar has its numeric value and source label; tie scores remain tied, not a forced winner. Selecting a bar opens the five matched/unmatched groups. Tapping `Why this?` opens short sourced reasons and `View meal` navigates to Food at that meal's time. Do not draw inferred lesions or segmentation unless that functionality exists.
+**Display:** Top: user's photo with chosen body area and time; beside it, a labelled reference-pattern tile (stack below at 320 px). Below: five compact observation rows, then one horizontal similarity bar per available reference; x = 0–100% base reference-match fixture score, y = reference-pattern name. Each bar has its numeric value and source label; tie scores remain tied, not a forced winner. Selecting a bar opens its five recorded/unknown observation groups and score provenance; do not invent per-feature contributions. Tapping `Why this?` opens short sourced reasons and `View meal` navigates to Food at that meal's time. Do not draw inferred lesions or segmentation unless that functionality exists.
 
 **Metrics 1–5:**
 
@@ -186,13 +186,13 @@ Medical-team/vector input: known allergy list (controlled allergen name plus con
 4. **Fades within 24 h:** yes/no/unknown, no units; yes is a matching feature for the illustrative hives reference, not lower risk. Never infer this from one photo.
 5. **Spread:** integer 0–6 body areas, unit = areas, based on unique selections; increasing spread is notable. One close-up photo cannot establish this number.
 
-**Evaluation output:** `{pattern} pattern {pct}%`; separate reason line `↑ because {reason}`. For the judge fixture: base feature match `60%`, personalised by the astronaut vector to `Hives pattern 80%`, then `↑ because known shellfish allergy`, then `↑ because shellfish eaten 3 h ago`. Keep `Simulated` adjacent and show the base `60%` under `Why this?`. The percentage is neither probability of disease nor calibrated model confidence.
+**Evaluation output:** `{pattern} pattern {pct}%`; separate reason line `↑ because {reason}`. Judge fixture: `Hives pattern 80%`, `↑ because known shellfish allergy`, `↑ because shellfish eaten 3 h ago`. Keep `Simulated` and `Demo rule` adjacent. Show `Base match 60%` and `Personalised 80%` separately: the latter is an illustrative adjusted pattern score, not image similarity alone, disease probability or calibrated confidence.
 
-The deterministic base matcher is deliberately inspectable: compare the five groups to each explicit reference fixture; a group matches only on exact equality, with shape matching only when all three booleans match. An unknown group counts as unmatched. Base score = `100 × matched groups / 5`, emitted as `hivesPatternPct`. At least three groups must be recorded, otherwise no score. No partial shape credit or hidden weights in the base score. For the judge fixture, observations are wheals 2, itch 2, all three shape features yes, fade unknown, spread 2; the simulated reference has wheals 2, itch 2, all shape features yes, fade yes, spread 1. This is 3/5 matching groups, a base of 60%. The astronaut vector then applies the documented `demo-immune-v1` rule from the contract section (+10 for a matching declared allergy, +10 for that allergen eaten within 6 h), giving 80%. It is a synthetic reference example, not an evidence-based disease classifier. Other reference tiles require equally explicit fixtures and provenance; do not invent SCIN-derived classes.
+**Base score (computed from the five metrics):** compare the confirmed groups to each explicit reference fixture; a group matches only on exact equality, with shape matching only when all three booleans match. An unknown group counts as unmatched. Base = `100 × matched groups / 5`, emitted as `hivesPatternPct`. At least three groups must be recorded, otherwise show `Pattern match unavailable · {n}/5 groups recorded` and no percentage. No partial shape credit or hidden weights. Judge fixture (contract section, `demo-immune-v1`): at `2026-11-14T11:00:00.000Z`, SIM-CDR has a confirmed shellfish allergy and a reviewed shrimp meal at `08:00Z`; rash active true, wheal band 2, itch 2, raised/clear edges/pale centre true, fade unknown, body areas 2. The simulated hives reference is wheal band 2, itch 2, all shape features true, fade true, body areas 1. Matches: wheals, itch, shape = 3/5 = **60%**. This is a synthetic reference, not a validated classifier; other reference tiles need explicit fixtures and provenance, and SCIN-derived classes must not be invented.
 
-Photo upload → preview → confirmed groups → base reference bars → vector/Food personalisation and reasons is the full interaction. The UI may preload the labelled simulated observations for the judge, but must never auto-fill them from the image. Arbitrary uploads require confirmation; until at least three groups are known, show `Pattern match unavailable · {n}/5 groups recorded` and no percentage.
+Photo upload → preview → confirmed/unknown groups → base reference bars → vector/Food personalisation is the full interaction. Add `Rash present` as a boolean/null input outside the five metric groups. Never infer persistence from one photo; the fixture's fade remains unknown. `Load sample` selects the labelled simulated fixture. Arbitrary photos are scored by the same five-metric rule once enough groups are confirmed; they never auto-fill values from the image.
 
-Personalisation is separate from similarity: the vector supplies confirmed allergy, confirmed meal exposure, their source times and reasons. `3 h ago` is `(observationTime − mealConsumedTime)` in hours, displayed to one decimal unless integral; negative or unknown intervals suppress that reason. The fixed fixture uses a positive three-hour interval. Each `↑` reason is a documented, transparent adjustment from the astronaut vector (this person is more likely than another crew member to show this pattern given their declared allergy and recent exposure); it is not a diagnosis or a proven cause. Removing the allergy or meal removes its reason and its adjustment, leaving the 60% base score. “No allergy recorded” must never become “no allergy.”
+Call `personalise` once with the base evaluation; only the vector applies the joint allergy/recent-food rule: 60 + 10 + 10 = 80, with both conditions required and no stacking. Emit base `hivesPatternPct: 60`, never 80, avoiding feedback. Details show both contributions as demo assumptions. `3 h ago` is `(observationTime − eatenAt)` in hours; the trigger window is strictly newer than six hours and not in the future. With absent/unknown allergy, unmatched/stale meal, or rash false/unknown, keep the 60% base without adjustment reasons. Each `↑` means this person is more likely than another crew member to show this pattern given their declared allergy and recent exposure; it is a documented rule contribution, never a diagnosis, proven cause or medical probability. Other context has no arrows.
 
 **Uses from astronaut vector:** confirmed known shellfish allergy; Food's confirmed shellfish exposure and consumed time; previous skin observations if available; current observation time and crew identity. Only present matching-person, compatible-source records. No assumed causal link between meal and rash.
 
@@ -204,23 +204,23 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 **Already built?** No, including photo analysis, reference retrieval and vector/Food personalisation.
 
-**Demo script line:** “A skin photo and five confirmed observations show an illustrative 80% hives-pattern match, with separate reasons for the known shellfish allergy and the shrimp meal three hours earlier.”
+**Demo script line:** “The simulated skin-photo case shows five observations and a 60% base match adjusted to 80%, with reasons for the known shellfish allergy and shrimp meal three hours earlier.”
 
 ### Bone
 
 **Owner:** Shi Wei. **NASA risk name:** Bone fracture due to spaceflight-induced changes to bone. The display reports measurements and training context, not fracture probability.
 
-**Input:** Medical team enters DXA date (`YYYY-MM-DD`), anatomical site (`lumbar-spine`, `total-hip`, `femoral-neck`), areal BMD (number >0 g/cm²), scanner/protocol IDs (nonempty strings), and baseline flag (boolean); retain hip side and scan region privately in method/protocol context; never compare different sides under the same site key. Extra site enums need an agreed contract revision. Resistance log: date, exercise ID (string), prescribed sets/reps (positive integers), performed sets/reps (nonnegative integers), prescribed load (number >0 kg), actual load (number ≥0 kg), and device ID. Food/vector supplies daily calcium ≥0 mg, vitamin D ≥0 IU, sodium ≥0 mg and completeness flag; retain the date. Mission start timestamp is explicitly entered local Bone configuration; the vector exposes derived days, not a mission-start field. All unknown fields may be null; unknown planned volume cannot produce a percentage. Use separate entries for differently loaded sets; record a fixed supported machine/device protocol so “kg” is comparable.
+**Input:** Medical team enters DXA date (`YYYY-MM-DD`), anatomical site (`lumbar-spine`, `total-hip`, `femoral-neck`), areal BMD (number >0 g/cm²), scanner/protocol IDs (nonempty strings), and baseline flag (boolean); retain hip side and scan region privately in method/protocol context; never compare different sides under the same site key. Extra site enums need an agreed contract revision. Resistance log: date, exercise ID (string), prescribed sets/reps (positive integers), performed sets/reps (nonnegative integers), prescribed load (number >0 kg), actual load (number ≥0 kg), and device ID. Food/vector supplies complete trailing-24-hour calcium 0–10000 mg, vitamin D 0–100000 IU and sodium 0–30000 mg; retain source times. No completeness flag is exposed in v1, so Food emits null for an incomplete nutrient total. Mission start timestamp is explicitly entered local Bone configuration; the vector exposes derived days, not a mission-start field. All unknown fields may be null; unknown planned volume cannot produce a percentage. Use separate entries for differently loaded sets; record a fixed supported machine/device protocol so “kg” is comparable.
 
 **Display:** Front-facing skeleton with selectable hip/spine regions. Each site has a signed numeric `%/month` label plus neutral diverging fill intensity; legend explicitly says `BMD change`. Unknown sites are hatched and labelled `No DXA`. Selecting a site opens baseline/current BMD and elapsed days; x = dates and y = g/cm² in a small site-specific two-point chart. A resistance-plan progress bar accompanies the site panel; nutrient numbers remain distinct from DXA observations. No daily interpolated bone loss between scans.
 
 **Metrics 1–5:**
 
 1. **BMD change per site:** `100 × (latest/baseline − 1) / (elapsedDays/30.4375)`, signed %/month. Positive baseline, later scan and matching site/scanner/protocol required; negative is a measured decline. This is a linear interval-normalized description, not a daily model or compounded forecast.
-2. **Resistance load vs plan:** `100 × sum(actual kg × completed reps) / sum(planned kg × planned reps)` across the same seven-day scheduled exercise set, % ≥0 and may exceed 100; lower is less recorded volume than plan. Missing logs make the result incomplete, not zero adherence. This volume proxy is not an exercise prescription.
-3. **Calcium + vitamin D:** selected complete day's calcium ≥0 mg/day and vitamin D ≥0 IU/day, separately shown against personal targets; below target is notable. If input is vitamin D µg, explicitly convert 1 µg = 40 IU.
-4. **Sodium:** ≥0 mg/day for the same date; above personal target is notable if a target exists.
-5. **Days in flight:** integer ≥0 days since mission start in the mission timezone; elapsed exposure context, not a severity score. Pre-flight is labelled `Pre-flight`, not negative “days in flight.”
+2. **Resistance load vs plan:** `100 × sum(actual kg × completed reps) / sum(planned kg × planned reps)` across the same seven-day scheduled exercise set, % 0–500 and may exceed 100; lower is less recorded volume than plan. Missing logs make the result incomplete, not zero adherence. This volume proxy is not an exercise prescription.
+3. **Calcium + vitamin D:** complete trailing-24-hour calcium 0–10000 mg and vitamin D 0–100000 IU, separately shown against personal targets; below target is notable. If input is vitamin D µg, explicitly convert 1 µg = 40 IU.
+4. **Sodium:** 0–30000 mg over the same trailing 24 h; above personal target is notable if a target exists.
+5. **Days in flight:** integer 0–10000, floor of elapsed time since entered mission start divided by 24 h; elapsed exposure context, not a severity score. Pre-flight is labelled `Pre-flight`, not negative “days in flight.”
 
 **Evaluation output:** `{site} {signedChange}%/month · resistance load {pct}% of plan`. Fixture: hip 1.000 →0.988 g/cm² over 30.4375 days is −1.2%/month; actual/planned volume 700/1000 kg·reps is 70%. If using date-only scan dates, calculate from their actual whole-day interval and choose fixture BMD accordingly, rather than hard-coding −1.2%.
 
@@ -240,13 +240,13 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 **Owner:** Siang Woo. **NASA risk name:** Altered sensorimotor/vestibular function impacting critical mission tasks.
 
-**Input:** A 30 s stand test with tablet held to chest, explicitly a ground/partial-gravity demonstration rather than free-floating ISS standing. Record condition (`eyes-open`/`eyes-closed`), posture/device/protocol IDs, duration (number >0 s; complete demo =30), timestamped device pitch/roll (finite degrees −180 to180; unwrap before centring), and sensor permission/availability. Manual ratings: dizziness integer 0–10 (none to worst reported), motion sickness integer 0–20 (Fast Motion Sickness Scale, none to frank sickness), head-movement tolerance integer 0–3 (0 unable, 1 small motion, 2 slow full motion, 3 unrestricted reported motion). Abort/incomplete test is a recorded state; do not fill missing samples or ask the user to repeat an eyes-closed task to obtain a score. Sensor-unavailable desktop uses tagged replay, not fake live measurement.
+**Input:** A 30 s stand test with tablet held to chest, explicitly a ground/partial-gravity demonstration rather than free-floating ISS standing. Record condition (`eyes-open`/`eyes-closed`), posture/device/protocol IDs, duration (number >0 s; complete demo =30), timestamped device pitch/roll (finite degrees −180 to180; unwrap before centring), and sensor permission/availability. Manual ratings: dizziness integer 0–10 (none to worst reported), motion sickness integer 0–20 (Fast Motion Sickness Scale, none to frank sickness), head-movement tolerance integer 0–3 (0 unable, 1 small motion, 2 slow full motion, 3 unrestricted reported motion). Abort/incomplete test is a recorded state; do not fill missing samples or ask the user to repeat an eyes-closed task to obtain a score. Sensor-unavailable desktop uses tagged replay, not fake live measurement. Area requires a complete 30 s record with at least three finite paired samples; retain actual sampling rate and gaps, and compare only matching acquisition protocols.
 
 **Display:** Live x = centred roll (°), y = centred pitch (°) trace with equal axis scale, latest-point marker and 30 s progress. Overlay personal same-condition baseline ellipse as dashed outline, current ellipse solid, labelled independently. Toggle eyes open/closed only when those records exist; `Replay`/`Live` is explicit. Trace units are angular sway, never centimetres or force-plate centre-of-pressure.
 
 **Metrics 1–5:**
 
-1. **Eyes-open sway area:** ≥0 °²; 95% covariance ellipse area `π × 5.991 × sqrt(det(covariance(pitch,roll)))` from complete finite samples; higher than same-protocol baseline is notable.
+1. **Eyes-open sway area:** 0–32400 deg²; 95% covariance ellipse area `π × 5.991 × sqrt(det(covariance(pitch,roll)))` from complete finite samples; higher than same-protocol baseline is notable.
 2. **Eyes-closed sway area:** same definition and unit; ratio = current/baseline, dimensionless ×, only for positive baseline and comparable acquisition. No ratio across open/closed conditions or different devices.
 3. **Dizziness:** integer 0–10 points; higher is more reported dizziness.
 4. **Motion sickness:** integer 0–20 points; higher is more reported sickness.
@@ -258,7 +258,7 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 **Signals emitted:** `swayAreaEyesOpenDeg2`, `swayAreaEyesClosedDeg2`, `swayRatioEyesClosed`, `dizziness`, `motionSickness`, `headMovementTolerance`.
 
-**Links to other tabs:** Sleep for fatigue; Cardiovascular for a separately recorded dizziness event; SANS for vision context, without combining unlike metrics.
+**Links to other tabs:** Navigate to Sleep, Cardiovascular and SANS to inspect their own observations; these are navigation-only links under the v1 consumer catalogue, without copying their private records.
 
 **Dataset + licence + demo status:** [Human Balance Evaluation Database](https://registry.opendata.aws/hbedb/), Open Data Commons Attribution License v1.0 (ODC-By), confirmed on its registry page. Its force-platform standing measurements are background references, not interchangeable with tablet angular sway. Demo angular traces and baseline are `Simulated` unless acquired live; do not label synthetic tablet traces as HBEDB measurements.
 
@@ -270,7 +270,7 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 **Owner:** Siang Woo. **NASA risk name:** Adverse health effects due to alterations in host–microorganism interactions. These are gut/skin observations, not microbial sequencing or inferred microbial composition.
 
-**Input:** Daily date/time; Bristol stool type integer 1–7 or null (no stool recorded is null); bloating and abdominal pain as two separate integers 0–3 (none/mild/moderate/severe); appetite integer 0–3 (none/low/usual/high, context only); antibiotic use entries (name string, start/end dates or ongoing flag); optional local skin photo and three boolean/null signs (redness, warmth, discharge) confirmed by crew/medical team. Food supplies fibre ≥0 g/day and log completeness. “No antibiotics” requires explicit confirmation for the full last 14 days, not absence of entries.
+**Input:** Daily date/time; explicitly changed gut pattern yes/no/unknown; Bristol stool type integer 1–7 or null (no stool recorded is null); bloating and abdominal pain as two separate integers 0–3 (none/mild/moderate/severe); appetite integer 0–3 (none/low/usual/high, context only); antibiotic use entries (name string, start/end dates or ongoing flag); optional local skin photo and three boolean/null signs (redness, warmth, discharge) confirmed by crew/medical team. Food supplies fibre 0–200 g per trailing 24 h; a non-null emitted total means the producing tab completed its data checks. “No antibiotics” requires explicit confirmation for the full last 14 days, not absence of entries.
 
 **Display:** x = mission date; discrete Bristol strip at y =1–7 with one point per recorded stool event. Below it, separate aligned bloating/pain rows and antibiotic interval bands; select a day to view food fibre, appetite and attached skin observation. Missing days are blank, never drawn as type 1 or no symptoms. Bristol appearance labels help selection; do not generate an inferred microbial-species chart.
 
@@ -278,8 +278,8 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 1. **Bristol type:** ordinal integer 1–7, no physical unit; deviation from the person's usual recorded type is notable in either direction, with low/high ends showing differing stool form.
 2. **Bloating/pain:** two independently labelled ordinal 0–3 scores; higher is more symptoms, never an averaged composite.
-3. **Fibre:** ≥0 g/day from complete Food logs; below personal target is notable; partial log totals are explicitly partial.
-4. **Antibiotics in last 14 d:** yes/no/unknown; window is the preceding 14 × 24 h ending at observation time. Yes is exposure context, not automatically an adverse result.
+3. **Fibre:** 0–200 g per trailing 24 h from complete Food logs; below personal target is notable; partial log totals are explicitly partial.
+4. **Antibiotics in last 14 d:** yes/no/unknown; window is the preceding 14 ×24 h ending at observation time. Yes is exposure context, not automatically an adverse result.
 5. **Skin signs:** integer 0–3, count of confirmed redness/warmth/discharge; unknown component makes the complete count null. More signs means more observations, not a diagnosis of skin infection.
 
 **Evaluation output:** `Gut pattern changed {days} days · low fibre since day {missionDay}`. Crew explicitly confirms changed gut pattern for each daily check-in; count consecutive changed check-ins, integer 0–365 days, and make the run count null if a day is missing rather than inferring continuity from stool type. “Low fibre” requires complete daily totals below a documented target for every included day; otherwise omit the clause. No measured microbiome claim.
@@ -300,25 +300,25 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 **Owner:** Siang Woo. **NASA risk name:** Spaceflight-associated neuro-ocular syndrome (SANS).
 
-**Input:** Amsler check per eye (`left`/`right`): marked grid locations (normalized x/y 0–1), distortion rating integer 0–3 (none/mild/moderate/severe, self-report), viewing distance >0 cm, correction-used boolean and display calibration ID. Near-vision test: identified chart/protocol, smallest line read (number in 0.5-line increments, ≥0), same viewing distance/device/correction and date; half-lines require a chart/scoring protocol that supports them. Headache integer 0–10 (none to worst reported). Medical team enters OCT per eye: mean peripapillary retinal nerve fibre layer thickness >0 µm, scan date, device/protocol and baseline flag. Food provides sodium ≥0 mg/day; crew/medical telemetry provides cabin CO₂ ≥0 mmHg with timestamp. Do not combine different OCT structures under “swelling.”
+**Input:** Amsler check per eye (`left`/`right`): marked grid locations (normalized x/y 0–1), distortion category integer 0–3 (0 none, 1 one quadrant, 2 two quadrants, 3 three/four quadrants reported distorted), viewing distance >0 cm, correction-used boolean and display calibration ID. Near-vision test: identified chart/protocol, smallest line read (number in 0.5-line increments, 0–20), same viewing distance/device/correction and date; half-lines require a chart/scoring protocol that supports them. Headache integer 0–10 (none to worst reported). Medical team enters OCT per eye: mean peripapillary retinal nerve fibre layer thickness >0 µm, scan date, device/protocol and baseline flag. Food provides sodium 0–30000 mg per trailing 24 h; crew/medical telemetry provides cabin CO₂ 0–20 mmHg with timestamp. Do not combine different OCT structures under “swelling.”
 
 **Display:** Interactive Amsler grid, x/y = normalized grid location, with tapped distortion marks preserved per eye; no axes suggesting diagnostic measurements. Below it, aligned date trends for near-vision line change (lines) and OCT thickness change (µm), each on a separate labelled y-axis/panel. Choose left/right eye and tap points for test conditions. Sodium and CO₂ are small contextual readings with source times, not a combined score.
 
 **Metrics 1–5:**
 
-1. **Amsler distortion:** ordinal 0–3 self-report points; higher is more reported distortion, not calculated from count of taps.
-2. **Near-vision change:** signed −20 to 20 lines vs personal same-chart baseline; define larger line index as finer print/better performance, so negative means fewer lines resolved. No comparison if chart, distance, correction or calibration differs.
+1. **Amsler distortion:** ordinal 0–3 quadrant category using the input anchors; higher is more quadrants reported distorted, not severity or tap count. Count unique quadrants; marks on an axis require explicit crew confirmation of the affected side.
+2. **Near-vision change:** signed −20–20 lines vs personal same-chart baseline; define larger line index as finer print/better performance, so negative means fewer lines resolved. No comparison if chart, distance, correction or calibration differs.
 3. **Headache:** integer 0–10 points; higher is more reported headache.
-4. **OCT thickness change:** latest − personal matched baseline, signed µm; positive means greater measured thickness. Display `OCT change`, not confirmed swelling or SANS.
-5. **Sodium + cabin CO₂:** separately labelled ≥0 mg/day and ≥0 mmHg; show change/target comparison only when a comparable baseline or target exists. Do not add the two values or claim a causal relation to eye findings.
+4. **OCT thickness change:** latest − personal matched baseline, signed −1000–1000 µm; positive means greater measured thickness. Display `OCT change`, not confirmed swelling or SANS.
+5. **Sodium + cabin CO₂:** separately labelled 0–30000 mg per trailing 24 h and 0–20 mmHg; show change/target comparison only when a comparable baseline or target exists. Do not add the two values or claim a causal relation to eye findings.
 
 **Evaluation output:** `Near vision {signedLines} lines vs baseline`; example `Near vision −0.5 lines vs baseline`. Separate clause `OCT {signedChange} µm` only with matched medical records. In-app uncalibrated testing shows `Display calibration needed`, not an acuity claim.
 
-**Uses from astronaut vector:** per-eye vision/OCT baselines and test conditions, Food sodium, cabin CO₂; medical-team-provided one-carbon/B-vitamin genetic research flag (yes/no/unknown) as optional research context only, never inferred, a score multiplier or individual disease prediction.
+**Uses from astronaut vector:** per-eye vision/OCT baselines, Food sodium and own cabin CO₂ exposure; test conditions remain local; medical-team-provided one-carbon/B-vitamin genetic research flag (yes/no/unknown) as optional research context only, never inferred, a score multiplier or individual disease prediction.
 
 **Signals emitted:** `eye`, `amslerDistortion`, `nearVisionChangeLines`, `headache`, `octThicknessChangeUm`, `cabinCo2MmHg`.
 
-**Links to other tabs:** Food for sodium; Balance for simultaneous vision/balance observations; Sleep for separately recorded headache/sleep context, without causal claims.
+**Links to other tabs:** Food supplies sodium through the vector; Balance and Sleep are navigation-only links for inspecting their own observations, without causal claims.
 
 **Dataset + licence + demo status:** Crew OCT is not public and is not bundled. [NASA OSDR](https://osdr.nasa.gov/bio/repo/) mouse retina study is a reference candidate only; exact accession and licence are unresolved, so do not invent a dataset link or treat animal findings as a human OCT baseline. Demo OCT, vision changes and genetic flag are `Simulated`; in-app grid observations can be user-entered but are not validated diagnostic tests.
 
@@ -336,11 +336,11 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 **Metrics 1–5:**
 
-1. **Energy vs need:** `100 × summed kcal / personal daily kcal target`, % ≥0; below target over complete days is notable. One incomplete meal day cannot establish an energy deficit.
-2. **Protein:** `summed protein g / same-day body mass kg`, ≥0 g/kg/day; below personal target is notable. Unknown mass makes this metric null while raw protein remains available.
-3. **Sodium:** ≥0 mg/day; above personal target is notable; not a percentage of clinical risk.
-4. **Calcium + vitamin D:** separately ≥0 mg/day and ≥0 IU/day; below individual target is notable. Vitamin D conversion: 1 µg =40 IU.
-5. **Body-mass trend:** latest mass >0 and ≤500 kg, with signed −500 to 500 kg difference against a dated personal reference; downward change is notable in the low-energy example. State interval explicitly; no trend from one reading.
+1. **Energy vs need:** `100 × summed kcal / personal daily kcal target`, % 0–500; below target over complete days is notable. One incomplete meal day cannot establish an energy deficit.
+2. **Protein:** `summed protein g / latest measured body mass kg`, 0–20 g/kg over the preceding 24 h; below personal target is notable. Unknown mass makes this metric null while raw protein remains available.
+3. **Sodium:** 0–30000 mg per trailing 24 h; above personal target is notable; not a percentage of clinical risk.
+4. **Calcium + vitamin D:** separately 0–10000 mg and 0–100000 IU per trailing 24 h; below individual target is notable. Vitamin D conversion: 1 µg =40 IU.
+5. **Body-mass trend:** latest mass >0 and ≤500 kg, with signed −500–500 kg difference against a dated personal reference; downward change is notable in the low-energy example. State interval explicitly; no trend from one reading.
 
 **Evaluation output:** `Energy {pct}% of need for {days} days · {signedMass} kg`. For five complete days, percentage = `100 × total energy / total daily targets`, not an unweighted mean if targets vary; all five daily totals must be below target to say “for 5 days.” Mass difference uses matched endpoints of the shown interval; omit if missing. Example: 9750/12500 kcal =78%, and 70.0→68.6 kg gives −1.4 kg.
 
@@ -348,7 +348,7 @@ Personalisation is separate from similarity: the vector supplies confirmed aller
 
 **Signals emitted:** `foodsEaten`, `allergensEaten`, `energyPctOfNeed`, `proteinGPerKg`, `sodiumMg`, `calciumMg`, `vitaminDIu`, `fibreG`, `bodyMassKg`, `bodyMassChangeKg`.
 
-**Links to other tabs:** Immune receives confirmed shellfish ingredient plus consumed time; Bone receives calcium/vitamin D/sodium; SANS receives sodium; Microbiome receives fibre; Cardiovascular receives energy/protein context. Exposure remains an observation, not a diagnosed reaction.
+**Links to other tabs:** Immune receives confirmed shellfish ingredient plus consumed time; Bone receives calcium/vitamin D/sodium; SANS receives sodium; Microbiome receives fibre; Cardiovascular receives energy context. Exposure remains an observation, not a diagnosed reaction.
 
 **Dataset + licence + demo status:** [USDA FoodData Central](https://fdc.nal.usda.gov/download-datasets.html), CC0/public-domain data; cite item IDs and dataset version for traceability. Ingredient text is not a comprehensive structured allergen source. ISS menu names must be mapped explicitly rather than claimed to be a USDA ISS-menu dataset. Demo meal events, confirmed shellfish exposure and five-day intake history are simulated; nutrient values may use actual FDC records only when their IDs/source values are retained.
 
