@@ -263,7 +263,15 @@ function ImmunePanel(ctx: RiskTabProps) {
             if (photoChanged && !photo) throw new Error('Choose another photo');
             if (photo && (!draft.photoArea || !draft.photoTime))
               throw new Error('Record photo area and time');
-            saveImmune(ctx, draft);
+            // Saved observations are immutable: an edited copy of one becomes a new check-in at the current clock.
+            const earlier = immuneStore.history(ctx).find((x) => x.recordedAt === draft.recordedAt);
+            const changed = earlier && JSON.stringify(earlier) !== JSON.stringify(draft);
+            saveImmune(
+              ctx,
+              changed && person.exposures.asOf > draft.recordedAt
+                ? { ...draft, recordedAt: person.exposures.asOf }
+                : draft,
+            );
             setPhotoChanged(false);
             setError('');
             setNotice('Saved for this session');
