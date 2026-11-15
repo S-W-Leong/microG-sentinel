@@ -3,7 +3,7 @@
 Times are targets. Live demo happens on slide 4 or 5; if the app fails, stay on the slides and play the clip.
 
 **1 · Title (15 s)**
-We're SW², Siang Woo and Shi Wei. MicroG Sentinel is an offline health check-in app for astronauts on long missions.
+We're (SW)², Siang Woo and Shi Wei. MicroG Sentinel is an offline health check-in app for astronauts on long missions.
 
 **2 · Problem (25 s)**
 On the ISS, crew talk privately with their flight surgeon about once a week. NASA tracks 17 health risks of spaceflight. On the way to Mars, a message takes up to 20 minutes each way. Between those calls, astronauts need a fast way to notice change in their own body, and to know when it can't wait.

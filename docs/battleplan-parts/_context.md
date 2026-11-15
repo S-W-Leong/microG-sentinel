@@ -1,6 +1,6 @@
 # Battleplan shared context (read-only for all workers)
 
-Project: MicroG Sentinel. NASA Space Apps 2026, Kuala Lumpur local event, challenge "Create Health Monitoring Software for Astronauts on Space Missions" (health tracking). Team SW²: Siang Woo (leads) + Shi Wei.
+Project: MicroG Sentinel. NASA Space Apps 2026, Kuala Lumpur local event, challenge "Create Health Monitoring Software for Astronauts on Space Missions" (health tracking). Team (SW)²: Siang Woo (leads) + Shi Wei.
 Repo: this repo, branch `unslop/flight-deck`. Existing app: offline React 19 + TypeScript + Vite; 86 tests. Already built: Exercise check (heart rate at fixed workload vs personal baseline, "next useful observation" planner, review export, localStorage episodes), VO2 Fitness test (VO2peak % of baseline vs NASA-STD-3001 V1 4003 80% reference, trend chart, manual entry), NASA MR080G bed-rest replay (C3D-3985: VO2 73.9% then 98.0%; HR +41.5 bpm at 100 W, test stopped for dizziness), body map with 1 live region (heart & lungs) and 4 planned. See docs/brief.md, README.md, src/types.ts, src/exercise/types.ts.
 
 Now: Sat 14 Nov 2026 ~19:00 KL. Deadline Sun 15 Nov 11:59 pm KL. Target submit Sun 8 pm via `main` (one PR, Shi Wei approves).

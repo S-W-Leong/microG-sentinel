@@ -19,7 +19,7 @@ const pt = (px) => px / 2; // px → points
 const pres = new pptxgen();
 pres.layout = 'LAYOUT_WIDE';
 pres.title = 'MicroG Sentinel';
-pres.author = 'Team SW2';
+pres.author = 'Team (SW)²';
 pres.theme = { headFontFace: FONT, bodyFontFace: FONT };
 
 pres.defineSlideMaster({
@@ -49,7 +49,7 @@ const foot = (s, text) => T(s, text, 120, 1010, 1500, 36, { fontSize: pt(20), co
   T(s, 'NASA Space Apps 2026 · Kuala Lumpur', 120, 300, 820, 44, { fontSize: pt(26), color: MUTED });
   T(s, 'MicroG Sentinel', 120, 360, 900, 130, { fontSize: pt(100), bold: true });
   T(s, 'Your body changes in space.\nSee what changed for you.', 120, 520, 820, 120, { fontSize: pt(40) });
-  T(s, 'Crew health check-ins for long missions\nTeam SW² · Siang Woo & Shi Wei', 120, 700, 820, 90, { fontSize: pt(26), color: MUTED, lineSpacingMultiple: 1.3 });
+  T(s, 'Crew health check-ins for long missions\nTeam (SW)² · Siang Woo & Shi Wei', 120, 700, 820, 90, { fontSize: pt(26), color: MUTED, lineSpacingMultiple: 1.3 });
   // hero crop is 1.214:1
   shot(s, 'hero.png', 1060, 170, 740, 740 / 1.214, 'Body map with region cards and 3D astronaut');
   frame(s, 1060, 170, 740, 740 / 1.214);
@@ -216,7 +216,7 @@ const foot = (s, text) => T(s, text, 120, 1010, 1500, 36, { fontSize: pt(20), co
     T(s, h, x + 40, y + 36, 750, 48, { fontSize: pt(36), bold: true });
     T(s, p, x + 40, y + 98, 750, 90, { fontSize: pt(27), color: MUTED });
   });
-  T(s, 'SW² · Siang Woo & Shi Wei', 120, 930, 700, 50, { fontSize: pt(34) });
+  T(s, '(SW)² · Siang Woo & Shi Wei', 120, 930, 700, 50, { fontSize: pt(34) });
   T(s, 'Prototype, not for clinical use. Built with AI assistance (Claude, OpenAI Codex, DeepSeek), disclosed per Space Apps rules.', 900, 920, 900, 70, { fontSize: pt(22), color: MUTED, align: 'right' });
   s.addNotes(noteFor(7));
 }

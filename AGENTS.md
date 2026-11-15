@@ -1,6 +1,6 @@
 # AGENTS.md
 
-MicroG Sentinel: offline crew health app for NASA Space Apps 2026 (KL). Body map home → one tab per spaceflight health risk → shared astronaut vector. Team SW²: Siang Woo (leads) and Shi Wei.
+MicroG Sentinel: offline crew health app for NASA Space Apps 2026 (KL). Body map home → one tab per spaceflight health risk → shared astronaut vector. Team (SW)²: Siang Woo (leads) and Shi Wei.
 
 ## Source of truth
 

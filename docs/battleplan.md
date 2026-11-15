@@ -8,7 +8,7 @@ Sections: Header · Status · The brief · The polish bar · Risk tabs (main tab
 
 **Space Apps 2026 · KL · BATTLE PLAN v1**
 
-**MicroG Sentinel** · Team SW²: Siang Woo + Shi Wei
+**MicroG Sentinel** · Team (SW)²: Siang Woo + Shi Wei
 
 An offline crew app that helps astronauts notice changes against their own baselines, starting from an interactive body map. The demo connects existing cardiovascular tracking with an immune photo-pattern match personalised by food exposure and an astronaut vector, making the relevant observations clear without claiming a diagnosis.
 

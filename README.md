@@ -1,6 +1,6 @@
 # MicroG Sentinel
 
-An offline crew health app for astronauts, built for NASA Space Apps 2026 (Kuala Lumpur) by team SW²: Siang Woo and Shi Wei.
+An offline crew health app for astronauts, built for NASA Space Apps 2026 (Kuala Lumpur) by team (SW)²: Siang Woo and Shi Wei.
 
 > Your body changes in space. See what changed for you.
 
