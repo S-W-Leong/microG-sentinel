@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="docs/demo/MicroG-Sentinel-demo.mp4"><img alt="Demo video" src="https://img.shields.io/badge/Demo%20video-Watch%2041%20s-B9232D?style=for-the-badge"></a>
+  <a href="https://cdn.jsdelivr.net/gh/S-W-Leong/microG-sentinel@a045e81009d1/docs/demo/MicroG-Sentinel-demo.mp4"><img alt="Demo video" src="https://img.shields.io/badge/Demo%20video-Watch%2041%20s-B9232D?style=for-the-badge"></a>
   <a href="https://micro-g-sentinel.vercel.app/"><img alt="Live app" src="https://img.shields.io/badge/Live%20app-Open%20MicroG%20Sentinel-FF5A2B?style=for-the-badge"></a>
   <a href="docs/slides/MicroG-Sentinel-slides.pdf"><img alt="Slides" src="https://img.shields.io/badge/Slides-7%20slides%20(PDF)-1A1D20?style=for-the-badge"></a>
   <a href="docs/slides/MicroG-Sentinel-slides.pptx"><img alt="Slides PowerPoint" src="https://img.shields.io/badge/Slides-PowerPoint-2C3136?style=for-the-badge"></a>
@@ -25,7 +25,7 @@ Results are pattern matches or changes from a personal baseline, never diagnoses
 
 ## Watch the demo
 
-[**▶ 41-second walkthrough with voice-over**](docs/demo/MicroG-Sentinel-demo.mp4): body map, Food, Immune 80%, a red flag, and the NASA lab replay. Screen recording of the live app; simulated crew data.
+[**▶ 41-second walkthrough with voice-over**](https://cdn.jsdelivr.net/gh/S-W-Leong/microG-sentinel@a045e81009d1/docs/demo/MicroG-Sentinel-demo.mp4): body map, Food, Immune 80%, a red flag, and the NASA lab replay. Screen recording of the live app; simulated crew data.
 
 ## One meal, followed through two tabs
 
