@@ -1,0 +1,1516 @@
+{
+  "retrieved": "2026-11-15",
+  "scope": "First 100 files per hip/spine/femur catalog, plus both documentation files; not the full MR035G archive.",
+  "files": [
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_3985_1Y_RH_Bone.csv",
+      "downloadId": "ad8ebc70-7160-5102-a965-6cdacf3fb23b",
+      "sha256": "d8f384aeffd19042b9a5f89ec9aca82150c40b6531893d57c3c7b9bef35a17cf"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_8454_1Y_LH_Bone.csv",
+      "downloadId": "b21039e9-922a-58d8-917a-ce3d5ca4da25",
+      "sha256": "e00eeee44d4b0ee766976104bd6ac030c43c6ddf7f94898d2d8a7e9a1c81d430"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5814_LH_Bone.csv",
+      "downloadId": "03ecd07c-81b2-511b-a2de-7cacb09fbf36",
+      "sha256": "e0d26419e93be346c9ed930b4576f382304d2f5b5b21d75801ee5c45e66b6032"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_5705_1Y_RH_Bone.csv",
+      "downloadId": "7288196e-e09c-558d-aace-cb589166a491",
+      "sha256": "9d7b5e93f93e7e631cb9debee2dd4bed7f442d3851725781edbce2a86e7c44a3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_9846_R_Hip.csv",
+      "downloadId": "9fd56b04-60f0-517a-a855-253c5a53c6ee",
+      "sha256": "5cb42fa39023e00bfcb5a50f633c9dc65e1880a69c5b77861a3ba6a680e10fa0"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9032_LH_Bone.csv",
+      "downloadId": "88f7e020-1ae9-5d56-81f0-fdd3670a4575",
+      "sha256": "47715d45fc34a6b815d8ee41c585fc7ef3471a01f6ac69ebbee99050b00b4a1e"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_8454_R_Hip.csv",
+      "downloadId": "51e5e259-82d8-5c84-9a09-c4a3b4076e27",
+      "sha256": "6a995840e223cb886d38eccabcbb25f606870883c925161a47a0faf0610460a1"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_5683_L_Hip.csv",
+      "downloadId": "bfb0f88a-6cff-5c90-ad9e-8eb798cbd61e",
+      "sha256": "9efa485e18e5ba66c9e5834e860e9dde489b1e63e0b50dcda69592e1c31496b2"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5580_6MO_L_Hip.csv",
+      "downloadId": "fd2741d5-e4a3-5388-af75-dac93b55ebbd",
+      "sha256": "badd02a09442631bbe0b0216c272c3c3aeaaf445ac8766f50cf7f3fba18269e8"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_6858_RH_Bone.csv",
+      "downloadId": "c5e849ef-c9d4-56d5-8e2e-5adbee333b0c",
+      "sha256": "c454c270e80c4c0ae673e8438578f2bcad429fa2ff478391daaaa5b299b3fbcc"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3A_All_RH_Bone.csv",
+      "downloadId": "404e5650-5860-5530-8a30-36cffd36151e",
+      "sha256": "693a8f39facd709a632b59a486b92bee38d0f26d8ed0bcc0b21fb1a2a7ae39c3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7352_L_Hip.csv",
+      "downloadId": "9e21dc19-1020-5408-a3bb-5101915979cd",
+      "sha256": "5cf13d61696ff69115c684194a897bc4b40eb249c2161e9a93554387f7c1689a"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5580_1Y_RH_Bone.csv",
+      "downloadId": "80a3d8fd-57b8-5b04-a4c3-fc3f6c6d10b5",
+      "sha256": "9d1784626f46f9991eafefda44eecdc6946ef4e484697859f2edd16475d36366"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3E_6043_LH_Bone.csv",
+      "downloadId": "fe5f899f-17f0-5e72-9f60-ffe0f826e776",
+      "sha256": "cd9a38a73d69caed3e4f7d9515edf67469e843c46b1dfe2dfd12f6849c26f680"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_8454_1Y_R_Hip.csv",
+      "downloadId": "90c56f4e-93c0-5a02-b8ef-761ebca9406f",
+      "sha256": "d22d299ecfdac10aae7b5870dadf8073fd3b388adf5a7d4b5fe77b8bf784d758"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8615_6MO_RH_Bone.csv",
+      "downloadId": "93635ef4-cb20-509b-a051-cdc27ca8afbe",
+      "sha256": "ebe2671c72a28ded90b0521f4dad536b40aa4f6621c69bbd6a143b5bf5a66ca6"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9485_R_Hip.csv",
+      "downloadId": "e00ed402-ae2d-525b-87d8-32091500a7d8",
+      "sha256": "999aed581dd158a5d15a474933746d1b6aac31789586457786b263ae3440da5d"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9139_LH_Bone.csv",
+      "downloadId": "5f79e195-e72c-5fac-8087-ab4df5a063c3",
+      "sha256": "5bc5fb76286198dccb9585d5fca7814741e5cef25fb6550823ad152a98e84bbe"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_6858_6MO_LH_Bone.csv",
+      "downloadId": "91ac11ec-fd5e-54f6-b7d4-70499c0db91c",
+      "sha256": "02b17b33794c18f5da1b6fd5ccbaf4c984eedf72e45a1f0bf10a6170b28202ed"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_3985_R_Hip.csv",
+      "downloadId": "f45c526d-d4c5-5e7a-889f-6b203b75a498",
+      "sha256": "a08fc2527ad502e5bdd808477642e04a46eb0a1810c922a930222d9d281286fc"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3A_All_LH_Bone.csv",
+      "downloadId": "a2a52c55-21dc-547a-bd5b-41c4ace95ab9",
+      "sha256": "d8dbc8ed06b2051216b455a3334795c8a75f4fb744337e06097ac3053125d7d2"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7352_1Y_R_Hip.csv",
+      "downloadId": "fe5ac772-2396-5c9d-8d84-12d81ac7d961",
+      "sha256": "fd5105eb40c4f4f611a80c6d07dd064046c58edabd070f606a92a927ba673a85"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8881_1Y_LH_Bone.csv",
+      "downloadId": "b64775bb-1eaf-51f4-810e-f8d30e373e03",
+      "sha256": "540d369e6494bd3d27ee210eb682b68c5de1075f3c06b2a7cf007ef29563e9b6"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3H_5907_LH_Bone.csv",
+      "downloadId": "0173b6ed-44c2-525c-832a-f53ecfe3e1ef",
+      "sha256": "bd7fa5d24ad8017699369651557fbe0bd3b4ff56ba9b1b7411f9909660c479ca"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5814_6MO_LH_Bone.csv",
+      "downloadId": "52ecc5a7-44b6-53cc-9d3b-f882577582b7",
+      "sha256": "bb9bf5c6cf7166cafed81ef43e62ce049c8d1e2addf1b4c41113f76daa38a871"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8779_6MO_R_Hip.csv",
+      "downloadId": "a9a6d456-2866-5e85-afb3-12c81b8211c1",
+      "sha256": "bba040e627613fb1de462364d65ad7fa4f46c48ed83df4b2a2cd41cd964357d3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_8454_6MO_R_Hip.csv",
+      "downloadId": "a47931b2-a622-5cd8-bb25-61e6027cc2dd",
+      "sha256": "646a32e2b8b9002951e9ccc20c159be8c8be6df5d3a6494c39da3b1171f62b37"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7352_6MO_LH_Bone.csv",
+      "downloadId": "b724cb58-fabb-59c8-8e6c-bd24f57e81b4",
+      "sha256": "6abc8bef977fbf04e705d8f131919d27c127f08902546ce6a4858d6bf3b66623"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_6858_6MO_L_Hip.csv",
+      "downloadId": "6f7c43d2-e32e-5033-b100-27736597885f",
+      "sha256": "401e5e09b127a06ad9aaa72c13f1d7fd9ec109d7a0784924d4186a5fffe325fc"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_9016_6MO_LH_Bone.csv",
+      "downloadId": "72bb665c-bc1a-555a-818c-a2523433e992",
+      "sha256": "98fabc1aad97a1a112857c4236f444dea24332e474304eea02a22456e834c4ba"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_9947_L_Hip.csv",
+      "downloadId": "2ebf90d9-230e-59a7-940d-6bbf2a4badbf",
+      "sha256": "b9451fb7bd5dcaf2c869aae76142f5637be8347e002daa1c45bf742d20cb0c2f"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3E_6043_6MO_R_Hip.csv",
+      "downloadId": "b9f7e3e3-47ab-5e75-a237-13b2d64ce1b7",
+      "sha256": "15344f01f9604c4a371144eae3f6ac1e0d382f45deaebcee27c5e9b1df2098ee"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8779_1Y_R_Hip.csv",
+      "downloadId": "78ab7726-285d-56c0-9a5c-0823083a7df5",
+      "sha256": "cd053397141dc9ff01dd847e40ad45a254145a8495e0a394687a47171b6463ac"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3H_5907_1Y_LH_Bone.csv",
+      "downloadId": "d3ca9b6a-a902-57ba-8493-53add6e1227f",
+      "sha256": "3bd3d1bceb14b27d893854a0c7fe02dadf5f11d95c5eeb1b5fbf85cad8f2f44b"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9314_L_Hip.csv",
+      "downloadId": "08f7eb2b-f546-50b1-b791-54672f2273c1",
+      "sha256": "3f69719d574396c56e1a40e3c36ab23eb414a680f219bcf67281a95fba7163a8"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_5165_6MO_L_Hip.csv",
+      "downloadId": "9fdfab0d-8261-5adc-ab2b-3a35cce4707c",
+      "sha256": "1bde414382b986758ae24d2be9d9bcaf124e5dd8b517012e04a9dea71f8afaf6"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7984_1Y_RH_Bone.csv",
+      "downloadId": "cf876bd8-eba0-58fb-9747-deda4afa0ca7",
+      "sha256": "e63de56ec38bd04a28acb300f74e8a05f9f8dc7d750be75c0b2e30b9a603c865"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9485_6MO_RH_Bone.csv",
+      "downloadId": "7fd36f3f-515a-5a9e-85be-507d44dcf5df",
+      "sha256": "1e9834d7657126a97783c1fb2a10850f84eb62f55f553a0d9e90ad98effd695d"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7352_1Y_RH_Bone.csv",
+      "downloadId": "62fdb76d-94d2-5286-bf5f-c440431b8293",
+      "sha256": "bdfbffd07de7f50b3c96dbcb7e005afa8aeb67403d19fee4b5315a35ee7f29c5"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_9947_RH_Bone.csv",
+      "downloadId": "b9d7a4b5-2eea-5702-8b62-8e0b40fa2815",
+      "sha256": "532ae5ea3d86e586eb2006086c0db938b06a5ceb93d929746f7c71719eba80a0"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5814_R_Hip.csv",
+      "downloadId": "f24985ff-3e1a-5c58-8028-63b8d43303cb",
+      "sha256": "fe87e7b75b8c561dfc2b26f31dc2008068ecf4382272afa24d02578b1bf38762"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7961_R_Hip.csv",
+      "downloadId": "e0403de6-2a51-587d-b52b-710b106c748a",
+      "sha256": "b3e848e5e2f7fa3f1a9881e9148820c81522b3fca7582c57580c6a4b739d780c"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_5705_6MO_RH_Bone.csv",
+      "downloadId": "3ebcdc77-9d97-5537-a57e-f6449bb9aca4",
+      "sha256": "64016b7164f80f65d4381358503e0c8ad5d0a52d16e5bf9d393e2ea8b95813c6"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_5165_L_Hip.csv",
+      "downloadId": "08426aac-3bdf-5080-8ca6-f15ea7cc985e",
+      "sha256": "f820486e5a1796215e540202fc6e1f247742ba646c93ae7d59972abba28fe9c8"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9314_6MO_L_Hip.csv",
+      "downloadId": "de267df6-880e-57ae-b1f3-41e024b4cc29",
+      "sha256": "e23d3124a3dc28043111dd0cb0577379a49e07224a856c300a6434af03c73b2f"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_3985_1Y_LH_Bone.csv",
+      "downloadId": "f1df6cd4-4575-52a0-9d28-2514cca2d963",
+      "sha256": "75ccafb8b919330084c26be681be925a12fc429adc7ac95bfab94175ae09ef43"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9032_L_Hip.csv",
+      "downloadId": "20f7142a-da64-559a-b917-64b41baf4747",
+      "sha256": "faa8bb8119ba5a7020a4fc5361e2c5b1579770e56ef65054a20c0c0a79c50012"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7984_6MO_R_Hip.csv",
+      "downloadId": "29426996-d9a8-5fb0-9cf9-cdd793eb6d98",
+      "sha256": "dcc508d6cd640487ce0ac2169cfb8511ab537b92af4ec54dceed1e2e3a157cf7"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8779_1Y_LH_Bone.csv",
+      "downloadId": "f87e793c-bcdf-5ff8-945e-afd9311e0e12",
+      "sha256": "86f8c152d9efa34cdeb3b504d0afb8e45b14137f640db4579067f0e926e57d7e"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_9016_1Y_R_Hip.csv",
+      "downloadId": "4333c164-bda7-52a9-8dbb-495c271090f5",
+      "sha256": "24db2dae82d9e0f956e7d4c7a80909bf25820f4e3440f88838584440df126ec3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8615_6MO_R_Hip.csv",
+      "downloadId": "4cd535ca-1107-5815-9e1d-7446ddefc117",
+      "sha256": "a81beb1cc157ff4add35c2301a4417fdc9ec7b7ebacb0b5545abd193898f61a3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_5705_R_Hip.csv",
+      "downloadId": "d139229a-d0a7-5c47-927a-35eab9beb365",
+      "sha256": "decef34b3c78586757cc19f12a2886eb085adf44e09a6f15e55c7a8e98a518ca"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_5683_R_Hip.csv",
+      "downloadId": "785b35a5-10dc-5c31-a122-ec6191343d1f",
+      "sha256": "cc801fe4f32ac6d64a544fe01135eb7aac9ba6a004fa449d318ad3fbe82bea09"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7961_1Y_R_Hip.csv",
+      "downloadId": "db694b1e-53bd-5577-a5e3-9723c7bea15c",
+      "sha256": "0ba76e99a631fe9449319191c8603943bc5f3a6ae4cb8f6594c8ac03091774a3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8615_L_Hip.csv",
+      "downloadId": "75805bf0-7072-5633-9d8b-5ea4ede76cd0",
+      "sha256": "38de77f4214fc81e2015d437d5fd6c6da23c4ab94ead8258b58a2b8116f01b09"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5580_6MO_R_Hip.csv",
+      "downloadId": "90c38166-a75c-5e59-9604-060a2c7ac7af",
+      "sha256": "cfdc98de9a86bb42b2a888609086b20c8bab375998cef7ad8b933208614f1fe3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8881_6MO_L_Hip.csv",
+      "downloadId": "fb9479f7-d601-5180-b6f0-c97f56939bd2",
+      "sha256": "e26827fb9cdba6148b1f9b5474c32208da72b37e2a43b4b637bbf232df7e64ec"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3E_6043_1Y_R_Hip.csv",
+      "downloadId": "64299c7e-6911-5ea8-adc3-384e0e2e4b43",
+      "sha256": "2b0d9b2860b5d37d3ee0421bc873ef99ea51bfbdad78f15cf0b523cdc1aead93"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7772_R_Hip.csv",
+      "downloadId": "2252b8be-cbf6-5c5a-b600-05d6807d19c5",
+      "sha256": "12030801e859c9ee8e8f0d7d0d29a8a3569bb5d7250623070a58d498cc15f6f6"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7961_1Y_LH_Bone.csv",
+      "downloadId": "aa762602-9132-5139-bda2-63db5bc3e805",
+      "sha256": "9c078700adfd992c9677570c9e4d95e0dc9c7e71c4aa295a91960186601cbfd3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8881_1Y_RH_Bone.csv",
+      "downloadId": "160f5aa1-7a15-5616-ad6f-fe5e5ecc722c",
+      "sha256": "9c2f0dbdcf1c9f63fb7b98cff6adf50b8c225cb2738579617cc3c35c3fac0eb6"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7961_6MO_L_Hip.csv",
+      "downloadId": "eabbe2a5-062c-5b84-a49e-3bf650db0474",
+      "sha256": "0aa3e19591cd3663ceb1e30973693fd0cf493677275e360fbeb850805eca8d2b"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9032_6MO_LH_Bone.csv",
+      "downloadId": "7e3fceb3-3dfe-5c03-a9f4-8bef4af95424",
+      "sha256": "cad997b60bc4e4ac764c22f8212bcf5c031aad476597a805338fe4cf43686012"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7984_6MO_L_Hip.csv",
+      "downloadId": "662681a0-b831-56a0-bffd-1d4a65ace21e",
+      "sha256": "151adfcd56334396deb2992abe80620a837676de36bdfa5466133cdef1a178c7"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7984_RH_Bone.csv",
+      "downloadId": "c517ccc9-039e-5a26-a78c-7636df2a3ff6",
+      "sha256": "07cbe950274e09caf42fd2485a2733d5e0f1b11f9a60d52a21b39b646ffe9939"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9032_1Y_R_Hip.csv",
+      "downloadId": "366239f3-62e6-5a89-8324-8e122e8edb11",
+      "sha256": "57c883085045d9a6b4760497885bfda2cb0a9a15b5c88c07b85a66fdb1461967"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7352_RH_Bone.csv",
+      "downloadId": "4fd0ccf3-4ad1-5bae-a022-532819ab0880",
+      "sha256": "fe214f564dbccab0415500b96fa5a3ee9deee0d94ff96b3e6742e06a64762420"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5580_6MO_RH_Bone.csv",
+      "downloadId": "c6ff11bd-047d-51ee-ab76-576264e1aeb8",
+      "sha256": "0a4dc2e20193fc30595815bd14cd423609ff9b4a36335daffc9eb5446e00149b"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5814_1Y_LH_Bone.csv",
+      "downloadId": "24d97cef-c71f-5fc3-a5fc-29b49706aee0",
+      "sha256": "484b8f94be0222b3d49415e6a104bf875b13044503a0ea2e222838ca64f5e19b"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8779_6MO_RH_Bone.csv",
+      "downloadId": "37d9e8fb-d366-581a-8475-67ba2eb124bd",
+      "sha256": "9e696f373e93035cc90095fe618497ca7f9b9ff3da1311dae8094df4e0d82195"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7961_LH_Bone.csv",
+      "downloadId": "4a9b58c8-39c3-581d-9a7e-188ee283a2c9",
+      "sha256": "17222c5ef0c30c46a8ad6d7093f588fb6c184b2d8b1feb244dc00ac9dbdd4255"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7984_6MO_RH_Bone.csv",
+      "downloadId": "2f4375f1-facd-5053-83c6-4b320db8e11b",
+      "sha256": "fa80397cd5f6d456add99b8b933b320be13aae1a52d5ae4f1fe5910e90edbde2"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7961_1Y_L_Hip.csv",
+      "downloadId": "3a974a8c-6ec6-5dff-a003-b5b7d7866675",
+      "sha256": "4304f6e1d2e51f4fd1b8a2db6acfcd026d11ccf8e686e832d085bd488d2551aa"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_5165_1Y_L_Hip.csv",
+      "downloadId": "8922e06f-c0ee-5f97-9883-1e5b51d0bddf",
+      "sha256": "17c67172c93e8f4419fb93e040152d65f203062d6f7a08c0ac00d017c23b942a"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_9032_6MO_RH_Bone.csv",
+      "downloadId": "a545e39a-1652-5d33-a931-5e13d839ee64",
+      "sha256": "12cbf92f052ad38527845b66b5a041203f02272fdb06146ff37e5328b806f859"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_5165_1Y_RH_Bone.csv",
+      "downloadId": "f8f95dc3-d6be-5f3a-a3b1-a8241ad65476",
+      "sha256": "f5e07833312578c0c3715a5307c645ab6c5e8431bfa93a3075d8de195d45b381"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3H_5907_R_Hip.csv",
+      "downloadId": "82aeecd0-4488-5b86-927a-c797b7746d25",
+      "sha256": "b6742318bbdf36c2885c5f8dbaf9fcb0531a3bf5cd4e4dbc86e3effa4c9fded3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5580_L_Hip.csv",
+      "downloadId": "68e90df4-0753-5ef2-9c82-daac03221f00",
+      "sha256": "f769391682c7f33011cd9bce7b393e27a0bdccb485d130fbc50f8f3a05f23322"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_5165_6MO_R_Hip.csv",
+      "downloadId": "c8521779-5390-53cf-91a0-2b4e85158c39",
+      "sha256": "a930dc4cf34a9c040e34ea08dfcf47ad02962e6602dcbeb8aea044bf2d821f20"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7984_1Y_R_Hip.csv",
+      "downloadId": "7745dfc2-0b4a-5e6f-a7f4-bff2aad5a16d",
+      "sha256": "5887de95f8a3aa3ba79b8794ad1b2d7422c04d2f9c126e16a3f3ec1ae1f83c76"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8881_1Y_L_Hip.csv",
+      "downloadId": "4415830a-7de0-53dc-b529-dca4ff76f8c3",
+      "sha256": "9e928b6a1b69bb56b35503870823685032e0b6163139f2cb87d812eb4d1b47c4"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_5683_LH_Bone.csv",
+      "downloadId": "f7ee160f-d27e-563a-ba90-74b462b3d53f",
+      "sha256": "68b57da4c5cd12d65c9f9e112c0ad5bd21bd166582360d0d25507df9e8913c2b"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5814_RH_Bone.csv",
+      "downloadId": "bba1aca0-e43d-5d60-a087-73378572a799",
+      "sha256": "a20161d3cea266cf576320ca4dc0d2275f8dc972b88088abd51005756147a4ba"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8881_L_Hip.csv",
+      "downloadId": "3285a9e8-ee51-50a6-9ba3-9eca9e77219b",
+      "sha256": "5b6aedd9aa16f2fcf59742a1fb4d26e67eef973fbd766ea084d139950974e6b3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7772_LH_Bone.csv",
+      "downloadId": "88e47ad5-f0ee-5d8c-a411-4d66cdb5833b",
+      "sha256": "be02c1e7345b7043fde691d3c751d42658fa85ce1185c5eb920a832cd1afc211"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3E_6043_RH_Bone.csv",
+      "downloadId": "0cef0924-8d5d-571a-8e7f-81367f78cfed",
+      "sha256": "c5128c5146df2f22643a2555983961b73a13c7079042cd3ea08e0586607c3ea3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_7984_1Y_L_Hip.csv",
+      "downloadId": "c5739e91-c403-5ba1-842e-fe56eabb79f1",
+      "sha256": "6ce20d50707459ce1ffa42013c91d015983fd8d9b985602ff9828592cab747f6"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8881_R_Hip.csv",
+      "downloadId": "222d4313-c944-541d-af00-237089062cf2",
+      "sha256": "e59f30cd762cc769cf1993c906bdfaef387f26c8a2bb5d81d585ab4ee0700dba"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8881_1Y_R_Hip.csv",
+      "downloadId": "206fbf45-cc0d-5669-89dd-3f10b77d9216",
+      "sha256": "01a173ba5baa0743f7d6890c47858874dd9f21a681908813f497ae8311bffa9e"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7352_6MO_RH_Bone.csv",
+      "downloadId": "43fed56f-fe18-5722-942a-abd803278cc1",
+      "sha256": "db626b7ec43745c48903f7078a3dc8e12d18abbe3e32fa2b7c7b07a5d454403c"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_8454_6MO_L_Hip.csv",
+      "downloadId": "a60e053d-c3fb-52b0-bf8c-a5e08905c933",
+      "sha256": "d17aecc858d65a8e6dc7d1de8e09e617476b03f569a77eed65be89dc2a5f6b2a"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_5165_LH_Bone.csv",
+      "downloadId": "d50682d3-6cc9-5b6d-87d3-1bea8dd9601c",
+      "sha256": "1e7adc7688e16d047f2fb2a9fb22edaaeb03683dd5c5562fd208ae72cca1d669"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3C_7352_LH_Bone.csv",
+      "downloadId": "ebca48e2-d269-5372-a427-7c33fef5bd73",
+      "sha256": "ddd457403c8f7933364f06a448cfbc369dfe62aa3076ab92f5044ab569255da3"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_3985_LH_Bone.csv",
+      "downloadId": "0c590271-94a0-58aa-b289-981d43e0d3f4",
+      "sha256": "e88ec5b9e9799bbf9ef1d30212209cd1a2522c860b007db10cd939abe51a68d1"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5814_6MO_R_Hip.csv",
+      "downloadId": "df99d8cb-998b-5d18-89dc-fbdbaa0ade8d",
+      "sha256": "699217ccd507cbafd8b9c40218ff1a2ff53bd73bc68219a2c9f4c1eae5dc3c7d"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3D_8615_1Y_RH_Bone.csv",
+      "downloadId": "3d518872-4b87-50d9-9b3f-a863ff4fb01a",
+      "sha256": "3b1cae0d535806e45e1ecbeadef05a4b15ead066d0e53c15965ddd8b52d67a68"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3F_5705_1Y_LH_Bone.csv",
+      "downloadId": "7adfe20a-7038-5119-9346-0f18b66334e0",
+      "sha256": "93ebd6dbcf26556e2b241a766ea3959236a284fbebb611c662e2fb124f3df85d"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3E_6043_6MO_RH_Bone.csv",
+      "downloadId": "bce5ec4e-1957-5abf-80e4-de760f497bad",
+      "sha256": "d2d0ec447c920fbd2956ab88f723b6c1562ac77d6835a8bba59a85747680d120"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5814_6MO_L_Hip.csv",
+      "downloadId": "963bf9f5-fa9e-5d8a-b2ff-b285fde4d9cc",
+      "sha256": "590a00807c8e3250a8a3ff29ceb1813973c6057ee20d51a267b2cd0b2ea85e0e"
+    },
+    {
+      "file": "hip/MR035G_Campaign_3_DXA_C3G_5580_R_Hip.csv",
+      "downloadId": "5268e169-7294-5244-a76b-f1b9e13e7645",
+      "sha256": "90a96c2160dba089f3871a95212e1f09ed560a90fa61448a122581439cbdcd49"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_9947_Spine.csv",
+      "downloadId": "79900e27-53c9-52ef-b91a-4c69e4541fda",
+      "sha256": "fd0e71816e22696c2df62c7d037955344a5d54f206805eaaea8fc3dd66dffcf1"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_8454_6MO_Spine.csv",
+      "downloadId": "a171a065-e260-5e7a-8673-9b0ac1b726e1",
+      "sha256": "e636832127b8d7d71e4a2908af75fc0a768dff0a4d74c0e5dd3fd05b9bfddc3a"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_8454_Spine.csv",
+      "downloadId": "1e52bd7b-a1ca-52cb-8f87-01a7e98e4c81",
+      "sha256": "f97fc0ea4ed3245e807b28b4962d4da38dee7cbed7da749d0788b87aa5a401e0"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7984_6MO_Spine.csv",
+      "downloadId": "ae641185-3f0d-5823-853a-e4ef9e0d2fbb",
+      "sha256": "c73863ce848292d03053e8f9c46d00e8d7df75fa127d67f1459c340106252b55"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8881_1Y_S_Bone.csv",
+      "downloadId": "d568730f-6306-5e3f-9347-c320aa22fab5",
+      "sha256": "cb670f38865bdae87bbe3c84f0e023a97f42732a16bc6ca3d726f8a53154cd92"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9314_S_Bone.csv",
+      "downloadId": "1cb6d7a0-ca0b-531d-a1ed-32bbee34c316",
+      "sha256": "b3dfb12efb72dd206ee45c074285c17fb48e18e4106c0fef60f423d849c73464"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_6858_6MO_S_Bone.csv",
+      "downloadId": "ae2520d0-23c4-5b14-8dd7-1958d0701568",
+      "sha256": "8a99b9acaa5a80d4b4ac6a6b254abc9aead9ea0e28d2550a36808f12d3967f07"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7984_1Y_S_Bone.csv",
+      "downloadId": "67d08fe6-5a7a-5411-b1de-602138f60802",
+      "sha256": "15b28c64e8b4589725a2d686d561b73113bb72afff840c14971ca8100f95b4f5"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8615_1Y_Spine.csv",
+      "downloadId": "b5263779-c302-58b1-8ab7-7388d16bf960",
+      "sha256": "6b3bdaacfd0c5274c3e6936c418485357bcd239584e9f32dda0e15db99cb71ce"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9314_1Y_S_Bone.csv",
+      "downloadId": "1c1bfd23-5110-5149-a281-81d55ef55164",
+      "sha256": "da1bdb48d66296b20735c0450e4820a7de56a29756182ff1937a4b9ed0703dba"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_9016_1Y_Spine.csv",
+      "downloadId": "53d92889-9dce-5327-897d-03f29560ad02",
+      "sha256": "291712fb78806be5af7c9095b601d139c6832e1b43abec0d738abb98931ac6c7"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8881_6MO_S_Bone.csv",
+      "downloadId": "50c21c0f-0ed3-5ce1-93cb-390b278610d9",
+      "sha256": "7228acce70054a1508e4fe319f9e49aaeefc82e83d36115b4a2fe39d8381e97a"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9139_1Y_Spine.csv",
+      "downloadId": "1a11726b-8d88-5f82-9ca2-9afc681d811a",
+      "sha256": "c02a98e107b630dc548e92d487021e005216737cc77f61a0d4f0556e74d5ddbd"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5814_1Y_S_Bone.csv",
+      "downloadId": "481736e2-01aa-548f-89f7-4d7916990e6d",
+      "sha256": "d0e14e3e529f3bc835f8c01687772bf58e7285e28db76fc6bba4b5eca5193a0b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3C_7352_6MO_Spine.csv",
+      "downloadId": "163712ac-534f-5eb4-bb4e-5ec6b6a962f8",
+      "sha256": "a66a5ea55beb05a7c35dbf03f294ce464a0125469d18892b82f10b20ba47ff60"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8615_S_Bone.csv",
+      "downloadId": "bf5023c2-d5d5-55c8-9141-8fbc5740e87c",
+      "sha256": "37ed9630d98a457a16097b3828a5feb3934bceee69fdd79ef2a91e16cf4f35e2"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9032_6MO_S_Bone.csv",
+      "downloadId": "f02edecd-9591-574d-9bb3-3b5f8d0cc747",
+      "sha256": "35f7c704d72703e68f118b3a0aba98ccb3f4e4491719af89dc94b365ab102fee"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9485_Spine.csv",
+      "downloadId": "527ad75b-04c6-5a20-b526-e0850ff3b764",
+      "sha256": "4f2b517211149ed8fd9b96d68e248ed6b4060ebb7a66c9c6c1964c37aa8e2022"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3C_7352_1Y_S_Bone.csv",
+      "downloadId": "633b36a3-e4b6-5fe6-830e-7da33a9c59ff",
+      "sha256": "5e31edf20cd879b791c60e858e86345a4c2902f5c03139619b89692c3bb542a4"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8881_6MO_Spine.csv",
+      "downloadId": "da19c62f-8277-5bf3-959c-c9cdb1117e5b",
+      "sha256": "3ea2e000408addc76c87827e23f87a96888197662952f345fe80ae1c999397f7"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3E_6043_S_Bone.csv",
+      "downloadId": "725e4479-08d7-5ab9-a80f-d3990105338d",
+      "sha256": "b068423d58aefd479fc505e6043a23b2a5d67ec286641a7424651173a8502939"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3E_6043_1Y_S_Bone.csv",
+      "downloadId": "3e308538-97aa-5a51-83db-6715d5c97b04",
+      "sha256": "9e166531fda4cdf2e9808108c9ecc188796a4d5b7f53c47464af4bc374d8ab07"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5814_Spine.csv",
+      "downloadId": "0a78ab5b-e112-5204-8db9-e00348527dc4",
+      "sha256": "768875ad6ac3d6a60413b77f4cfc508cf6817750dd934c6d1171a2d9511a27a1"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3H_5907_1Y_S_Bone.csv",
+      "downloadId": "7a68de7d-81fa-5161-9a2b-32ce2db2512e",
+      "sha256": "5c2cae3aae87f54914137bc4fc4d769b0a2bfe3526dc6ff581cf7420d58352cb"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9314_6MO_Spine.csv",
+      "downloadId": "9c4bc9ad-70cf-5f0e-b211-253762f1bfc8",
+      "sha256": "32feeeadb79ec497e705b4a030662d2d54c0e4b54325ad503af719c74d3c3f1b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8615_1Y_S_Bone.csv",
+      "downloadId": "398d6114-d99e-5e79-9b83-c9e2afe317ac",
+      "sha256": "f57aa8ae607c1b45af19e944758bf08dc88c4bb685d7752755c98e105bc33e86"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3A_All_S_Bone.csv",
+      "downloadId": "7d405c71-6711-5845-a56b-0f17db447bb1",
+      "sha256": "9f2c0885539531001ad7142406bbaf5d1a29709cbba0355987fa94dc5cd1054b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5580_Spine.csv",
+      "downloadId": "2f3112d4-5d2e-50b3-93d6-be541473f613",
+      "sha256": "b99056d62baf8413abc4c3b35aa94dbd559b179aac94ba3224f9413960170184"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7961_1Y_Spine.csv",
+      "downloadId": "8d2b80c6-0afd-5653-b886-fc0814154410",
+      "sha256": "da62c0956e2bb8ec58bfa7bea80398b7a39687c675cd9b5bf43ac89e4d902135"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_3985_1Y_S_Bone.csv",
+      "downloadId": "586388d1-9169-56f6-8708-b5b5ae8e458b",
+      "sha256": "d3708ad5dd875231117879d8d7ff9a6034c7970a1be0e5bc514bb5216d5a9a80"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9032_S_Bone.csv",
+      "downloadId": "71a61bff-3c73-5e52-82fd-a929db977574",
+      "sha256": "55e472dc02a84851c465d0e63866d1de7bf4c7a755307d6f47fb1ac5cb0ddc9f"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7984_6MO_S_Bone.csv",
+      "downloadId": "567086af-0660-59eb-99bf-649bad9bbd89",
+      "sha256": "5b3938a0a70a3f7d2c030d2d18c8f1c638875e6c05fbf9ec4db6250b3b0356c7"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8881_Spine.csv",
+      "downloadId": "6640b272-5a10-5259-a19c-8446354fd028",
+      "sha256": "c37c5d74fd672951667a79cd23487ecba85f9de47c7a3844fbaeca3d2c344c46"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_5165_6MO_S_Bone.csv",
+      "downloadId": "620fe3d0-42e4-5f89-ab06-6a253c6ba4b9",
+      "sha256": "7703dc75a61d0a57f1e5c01f8f4e8a6f004620cb4d8552ec225eec7435348080"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_6858_6MO_Spine.csv",
+      "downloadId": "e15f6bc3-f289-51da-bb43-6f7bb7dc8843",
+      "sha256": "25011b416580a23d18f9e95e03800f4729f9aa191f43f0ea388d2e91b3bd005f"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7961_6MO_S_Bone.csv",
+      "downloadId": "7694ff10-b4fc-5db6-aff0-a8bca60410f5",
+      "sha256": "6319f1b743d8cef372c307dd891d4ca2d0ce88e802cf52096f71ba15bcf5e9bf"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8615_Spine.csv",
+      "downloadId": "5c2697f2-b457-5110-b968-cb8428469652",
+      "sha256": "f545fae139954397450fb21ec7382392b903bf33648ae3aac7a1a9a0c40cbd1a"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8615_6MO_S_Bone.csv",
+      "downloadId": "06d22bfb-8acb-5af9-92ca-cdd47ed7d950",
+      "sha256": "b1923961713f2b6be391c7630324993ab2004c8163ebacf964b4ec80a8c7d676"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_8454_1Y_Spine.csv",
+      "downloadId": "b9cd19e7-f1dc-5ca5-b963-030437a77924",
+      "sha256": "711b570b81add3ade30c3cd7b266f32a1d42b17ea720f5f7af96b1b82ddafb8b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_6858_S_Bone.csv",
+      "downloadId": "565e4452-20e1-58cc-80ae-1520c486b553",
+      "sha256": "b4ae3b5df82e5eaeca46108624edba9af5ba29133cc2d5cf48fd3a5eedcb0448"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3A_All_Spine.csv",
+      "downloadId": "3f1d2ea7-7ed4-5685-803a-317c983fa155",
+      "sha256": "3d5048e1b79bccf1059c1ecf81b855e15dc97852d2c7647fbb4bb63761d36613"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8779_S_Bone.csv",
+      "downloadId": "59fa0fd1-d304-5316-b961-02058772df78",
+      "sha256": "0acb6503c827f0a47b3a761b14c647f32df74de6057d63d255181f2e4033ad13"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_5165_Spine.csv",
+      "downloadId": "9604de60-0a8e-50a8-a1a7-17fd040c144d",
+      "sha256": "637dee8efe6cf1d805f86b360a5bf46e97af49abf806a800b70db1dfddf29147"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9032_1Y_Spine.csv",
+      "downloadId": "ba8cdce4-33b0-520e-a406-02a3873c91e6",
+      "sha256": "1210d0f1cdc0e23267b51b1a9b045bd56b832d0e775dc434a17960d9482fb8da"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5814_6MO_Spine.csv",
+      "downloadId": "77d291c8-37b7-587e-b8c3-4bcceb2504d1",
+      "sha256": "2878efe0ad74fffd0874cd1643cdc7f4e18ca5677dcbb978ed54a350a9483324"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_5683_S_Bone.csv",
+      "downloadId": "60954649-e87e-50d9-a4de-480b573dc8d1",
+      "sha256": "812908cd71c92ceb8c2093b4f95a57b73464e23b2fca163e3e29cec5b89e05e0"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8779_6MO_Spine.csv",
+      "downloadId": "27f521bd-a4b4-5a42-a7cf-4adfc7c4d044",
+      "sha256": "0f673dd70b4821d8dcf3f0533629694bde01a791eb844fe3ba4200d21c10d670"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_9947_S_Bone.csv",
+      "downloadId": "660aceae-74b9-5758-a327-1feee4649d38",
+      "sha256": "73f21e89afe2269772e0d870f125e67943ddbfcfa9da3c85f36a7b6f6b332766"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7984_Spine.csv",
+      "downloadId": "9e1497cf-dc60-5119-9720-0d22770db02a",
+      "sha256": "e6a79a1150ba0542940e2da90dbd7d7400ee3f7dd39d30776b2726cb2ee3af33"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_5705_6MO_Spine.csv",
+      "downloadId": "f2d2711e-a3a4-52a4-87f4-a709d2167848",
+      "sha256": "6b67fe481e52385603f8ae921d0bfe7a0799904fe5c1d98aa2b60b38cdd75c7a"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3B_All_Spine.csv",
+      "downloadId": "f087bcca-e381-5b34-a529-79fac68b96f8",
+      "sha256": "8ce4bd34e8be8e10de3cc3560867bf3614ebfb6fc1fceef9408d9e2558920c35"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3C_7352_6MO_S_Bone.csv",
+      "downloadId": "68a0239a-9f3b-52f9-9fcb-d6d6dda89cce",
+      "sha256": "dbe5cea39e9b9d1fd276041369c29c883bcdd652c800210fdd65ceece3b0b7ff"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3C_7772_S_Bone.csv",
+      "downloadId": "2a5c6ce0-1017-5f0f-9e43-ed3c93bb75aa",
+      "sha256": "e38908fd54f2a5156cca7253b9604373aec34a1934286bff811d2ddb59b8a1c1"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8881_1Y_Spine.csv",
+      "downloadId": "08d4840e-48ce-5d40-91c2-633ee1f0b122",
+      "sha256": "63d88136ac63416c98186e152536f031c7cafb0d886a54a392f73c4b0cc9b77d"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8779_6MO_S_Bone.csv",
+      "downloadId": "f7dd0768-8000-58f2-8851-aaa8ba3fa277",
+      "sha256": "63e1736f52baf40293aee110339d3c30abbba64a64393737d44bc41cb46e3f3e"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5814_S_Bone.csv",
+      "downloadId": "e7ff74ab-98e8-518b-b0f1-b3bf623515de",
+      "sha256": "f32b1b71a6928145e35cbdbf07d8a769abe29db6e79b019c85231ab257769df8"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5580_1Y_Spine.csv",
+      "downloadId": "1afb6a8d-4dcf-5087-ac64-33dbda75bfac",
+      "sha256": "3a9cb727edc8050058596a4b914d7e41970d17c891cd707c8d3b73ed0bc2d80b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3H_5907_Spine.csv",
+      "downloadId": "15b320fe-88f7-5f79-a133-b577c9067280",
+      "sha256": "15a087c6a41bebe7c17fe47bdd6736efe3b173ac18af1e599061f29aeb5350b6"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_8881_S_Bone.csv",
+      "downloadId": "3d4b7a6d-67c4-5b61-84ac-d3fa1ddd5eda",
+      "sha256": "df286af3b17e42840a3ce7dde3df9c99b94ba5782cc7848fa776c3784a2f98d6"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9314_6MO_S_Bone.csv",
+      "downloadId": "545887b3-ac33-549b-a461-ecbdc6505066",
+      "sha256": "d05833ef6703190e7be9783650c46965e39b69edfb81c0368d876fc3ed647943"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9032_6MO_Spine.csv",
+      "downloadId": "09b64c7f-4d37-533f-a622-167f7ec6ede2",
+      "sha256": "fcb89c35bfcfbb979e9ecf3d90d222676fa4821b853331b72e620cc63e5d6fdc"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_9846_Spine.csv",
+      "downloadId": "9d4fbd1b-f0f2-57aa-9958-3a44b2ef9618",
+      "sha256": "8d5a2168072ef2f2ec69d66bdb2366edde643887274550c3270cb5a316565cd0"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5814_6MO_S_Bone.csv",
+      "downloadId": "0a762144-f8cb-5494-b799-7779c43f2e09",
+      "sha256": "0f6217c7712863ad599dab5df798145470c2e5aff50f9a1df4e86c73251c0892"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5580_S_Bone.csv",
+      "downloadId": "fc79717b-4311-5753-b074-0113236c5749",
+      "sha256": "509b3526ad600015f3a4bfc6eb11c012d6f6de3230209df35b489915fb655b75"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_5165_1Y_S_Bone.csv",
+      "downloadId": "0ec49a4a-8015-5939-89df-a899577c28ce",
+      "sha256": "e9c5d396ca7178ab3f969d19ed1fde928fcec560c2260b07a3106864e80a854b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_5705_Spine.csv",
+      "downloadId": "d72507d5-5bcb-5613-ab39-5ebf195f3c32",
+      "sha256": "26032d514cfa56d6b696fa3516db5b2914bccab895498f965fcabaf6bbe78be9"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_3985_S_Bone.csv",
+      "downloadId": "80b84e9a-87ba-512a-ab65-bbfa40ea9304",
+      "sha256": "4492525aaa6e0aa2475fda049f52f77eb972ae191bd3baa3de85a32d8002a3d2"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_3985_Spine.csv",
+      "downloadId": "65ab2d39-fc18-53db-9fe0-41af95272e25",
+      "sha256": "7aa6903c62434644e0cb2f6a9218b0bab04b78853283c07790696be45790101b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_8454_6MO_S_Bone.csv",
+      "downloadId": "ea91f5c3-991c-5bf1-8849-7b2e9d97ccda",
+      "sha256": "29c914b8cebd6cbe880e4a407a841f45939de313fd685d34ef92f1c82725fe53"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9314_Spine.csv",
+      "downloadId": "de621bb7-c2fd-5384-a95b-b15fc3750e62",
+      "sha256": "87e8be19d6e1ce729ee4740ce5b913c3451cab54aa226b1322feede38a308d37"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3C_7352_S_Bone.csv",
+      "downloadId": "eeef09f3-95e4-52a2-9f5b-030d11c16d8a",
+      "sha256": "63072ec0acb959c385f84f021f0339bcaf6ce4468f3599cfc087a54be5b5a464"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5580_6MO_Spine.csv",
+      "downloadId": "062146ff-f3c9-5cad-91a9-e2e5dd04f4ef",
+      "sha256": "a27bdc369f17c2b56b901cfd8f6e76745b535010cd5abda1a61c7a57aecb2586"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3E_6043_Spine.csv",
+      "downloadId": "87bf0bf1-a264-5ffd-802d-c287ea9256f7",
+      "sha256": "efc5b8be40399a436ea7c4cfbd7018b253c07f95db8c232c7521b75d1dd2e0f7"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9139_Spine.csv",
+      "downloadId": "72a91bb1-6c4e-5c33-b959-edc4031dfdeb",
+      "sha256": "ae8317c275292fb018e0082b3427353d12172085206d3837ce42a13c1d89afbe"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9139_1Y_S_Bone.csv",
+      "downloadId": "d3b29c13-ad72-5e4a-8da3-5425d1b1ca82",
+      "sha256": "e568a2e157f0d19fa6dab2700fee02f9c56ce7f5b0bfa8007bb687b4ad59f3a8"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7984_1Y_Spine.csv",
+      "downloadId": "99995419-46de-51a9-8828-ae2ac6afd605",
+      "sha256": "9e7a62bd3d31b26a05f2b7aa9ec6698f86ef81be072206f299b75de59ea5c73c"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3C_7352_Spine.csv",
+      "downloadId": "dccf6e42-e466-5b3f-9f65-217e4b2deb14",
+      "sha256": "e9d82453d8340ca251e9e0052ea3fd2af371eb007b9d8eb8406bd535d21f7244"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3E_6043_1Y_Spine.csv",
+      "downloadId": "3260b98c-39ef-554d-b563-01616656343c",
+      "sha256": "29e7dad8b61e785f5e6afe644c0e724deecf57bc83e5ac43f422cad895e4c70f"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_6858_Spine.csv",
+      "downloadId": "56c1f5c2-3c34-5030-9f92-8f5d9628c397",
+      "sha256": "aefdd67800cf7d81316450649931bcb2b1a493351e60fa12d617670edf5e92e0"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_9016_S_Bone.csv",
+      "downloadId": "dcebbc96-cd8c-5339-afc9-5ec9c659035e",
+      "sha256": "baca174abba594136b1c59fb0211ed9f8eda806a59ed43a1423d77081b639b86"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_9846_S_Bone.csv",
+      "downloadId": "3da2c977-f26a-56fb-9671-7a731d743d88",
+      "sha256": "028f288ba531362b2c27cb8ed149fe45eedb71f9a961b2a723259d5f80daa9e2"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3E_6043_6MO_S_Bone.csv",
+      "downloadId": "464a5779-3bb7-5ec4-b38a-217fbaaaefa8",
+      "sha256": "f9f0f8f80f0b8497fb845b381774ec79afa9d48422190445e41dff5e942453ab"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7961_S_Bone.csv",
+      "downloadId": "16f57aa9-e1bb-5008-85eb-6a5d8da53535",
+      "sha256": "0e17bd347fe9580da2863ac676abea2bb7019c14dc45c25738af06243a21763e"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_5165_S_Bone.csv",
+      "downloadId": "dec7da91-1fc2-5e00-aaf2-3ff42b31a26a",
+      "sha256": "5321bbb4b53af22c3a4c3df9db4759e72e94aef3cd7779a9f494b48f3d215aa4"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3H_5907_S_Bone.csv",
+      "downloadId": "8fceff16-d171-5d2a-b1e1-c8876266dd70",
+      "sha256": "6c1eab7d96478504127d12e243e976e5a28f379a86cbdcfe8b5f4d0ab4b543d7"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_8454_S_Bone.csv",
+      "downloadId": "d7e15c41-9171-5137-aa76-13843cec7cb6",
+      "sha256": "a0d73856e852c0ee8d7ccc575af2603ec96724d4bc01437d448caf33d1be0098"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_8454_1Y_S_Bone.csv",
+      "downloadId": "623a7b8b-af19-541e-b4b4-de7d130855d1",
+      "sha256": "34cdd3c4aa66e2504b2358e610afff5ee6b2e46631098cdd01c9def7da86393c"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9485_S_Bone.csv",
+      "downloadId": "15e0649a-7d25-5c77-a13a-7d38f0bcab04",
+      "sha256": "56eae10edef0d55991d479efc3f9643602ab144619434e82b2d07633288ed32f"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_5705_6MO_S_Bone.csv",
+      "downloadId": "e460f8bd-ac2b-5380-a3ca-b94dc1daffa8",
+      "sha256": "6dbbdf8682af198cb67a0b785e82ead2a71371f31f5224d9dbf0aa64901b23b2"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3E_6043_6MO_Spine.csv",
+      "downloadId": "75a8183f-9167-54cf-bc29-0ba347349892",
+      "sha256": "f40fae16db6465ccbafcb887cd9f936ed792d2bbdeb5abe7238edadaffba9a6f"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3H_5907_1Y_Spine.csv",
+      "downloadId": "c5d31fc1-df11-5fcf-a2f9-68bfc1d1e3fd",
+      "sha256": "5af71bab29c9e870852f047ba3a3ff55075b05d2164ccfd18d6f29b300f1f73b"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7984_S_Bone.csv",
+      "downloadId": "2774889b-a533-5b2e-b3d4-03fd7b101fd8",
+      "sha256": "25bd2d1463e344ee74bc7b48befe5e6f3a7d6fda62fa4eed43f3ecb946feda40"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_9139_S_Bone.csv",
+      "downloadId": "ec2c11a9-f20e-5e33-b543-39331f716c85",
+      "sha256": "c35f743c979eca8a56d1a66f0aa836abd9bcc53b2134f0c4d7ff25e4b0aebd95"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7961_Spine.csv",
+      "downloadId": "31b1cf34-96c6-5b97-83b0-433aef07ed8d",
+      "sha256": "e6e4bf704a6b71d2c81085fa02fdf5b13f91a40fac5bff065fe3970ad5df2ba4"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5814_1Y_Spine.csv",
+      "downloadId": "0e57bb34-650a-54c2-93ff-195d9b37e313",
+      "sha256": "059856a95850258ef22074c841fdb8d09eb110fcfda791b70017bbf9067218cb"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_5705_1Y_Spine.csv",
+      "downloadId": "ce7b62c7-19f3-57f0-83e1-8eac5be815d9",
+      "sha256": "9f3eb48f43d45c7b8ffc2a981f51389faed0c8f79eeefd8230237d6ad9e2a56c"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3G_5580_6MO_S_Bone.csv",
+      "downloadId": "fcb795ff-f7e9-56b8-84d3-df8ea73cfa99",
+      "sha256": "3a906110d02cb91c75a1e663a22550c5ac7a945fb7066bd6fc9a19e3255c69da"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3C_7772_Spine.csv",
+      "downloadId": "d97ce467-91ed-598f-ac91-e9db38438af2",
+      "sha256": "0dfa8bde961dc03b6a99ce306b95c2f3aff0eb2e19b24827494cba791fdd08d7"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3F_5705_S_Bone.csv",
+      "downloadId": "b6348c9d-3673-5c84-b383-6cd1b4f5e896",
+      "sha256": "f1a35b6d50abdc2ab16f072269f8bf97cf23a0d88d1ecac8e9e0ea789a495b4c"
+    },
+    {
+      "file": "spine/MR035G_Campaign_3_DXA_C3D_7961_1Y_S_Bone.csv",
+      "downloadId": "8626534b-ac3d-56d9-8364-5b4a8f02aec2",
+      "sha256": "b9ac77c5976be6bb70ebc01ca35701544e5caeda798e56a49531daf806d12b1e"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9314_6MO_F_Bone.csv",
+      "downloadId": "f57a42d0-7969-5aab-a779-b3f7ade52458",
+      "sha256": "5e696982805879d2ea45cf67dab03dbfa79f8765e064cd0b0a73e9035a133acd"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3B_All_SR_Bone.csv",
+      "downloadId": "8a6b5020-2dfb-563b-a9e0-d8fa10e3c6db",
+      "sha256": "6b3c3b39e7b63cc6e8c349ae4b7d44200c4a0f7a1f6d57e128773fdb43ef3e4e"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_9016_6MO_F_Bone.csv",
+      "downloadId": "2bb5ff4f-efc8-582a-8384-2453b7066758",
+      "sha256": "71b8dac5fea138027c23161432865b44b65109386f0ed918bfd3776b90096034"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_8454_6MO_SR_Bone.csv",
+      "downloadId": "bb0d1898-6355-5c90-856a-1fd0f0c80202",
+      "sha256": "63c6c00d1d7ed7ea31262017eafa66f7ebd1c0185f5d795add8e31b1005b901d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9032_F_Bone.csv",
+      "downloadId": "e891f58b-ba30-5bf0-a0e6-ecd34b6625f7",
+      "sha256": "0992bda95a3d5aae487de2fb52fbeb74489d22ce5e857f29dbf3124d5e637eb0"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7984_1Y_SR_Bone.csv",
+      "downloadId": "9e3467f8-c310-50a9-b38a-efc3a71bfdb3",
+      "sha256": "945e7388f76c71eecb9835c806bccaf681597a02ba38308fddf2d36bbbcff06d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9314_1Y_SR_Bone.csv",
+      "downloadId": "8d90a9bc-0486-5c5c-a533-b3a390ebce42",
+      "sha256": "32bc05eda6dd126b0cc66f176066436636fc7fe3a8e19a3de934834de40108d4"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9139_F_Bone.csv",
+      "downloadId": "53aa8fee-26c0-5b7c-ac84-817e349e519e",
+      "sha256": "1157a4a6308bc5f165ca605c0591661b9943c80c1e7173764d1f2463225322fa"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7984_6MO_SR_Bone.csv",
+      "downloadId": "7582579e-2048-55a9-8b2d-54fc287300b7",
+      "sha256": "292a17e2734ee63e23c528e88f81c9e9b6beb1e3e4402da70765e83c3a84deb5"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3H_5907_1Y_SR_Bone.csv",
+      "downloadId": "e557a98c-4c63-5cd5-81cb-380b63e7c203",
+      "sha256": "feb1b87350bbff9c6f0211258cb3d6c934c98c3019487b981acef4d792a52a42"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8615_SR_Bone.csv",
+      "downloadId": "73d51a46-3f73-51f0-b034-ca4591650d44",
+      "sha256": "a5c1d19f3a4fc675ae9b368679945baaaba6f0df4c94696290d10bc951341d3b"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_5165_6MO_SR_Bone.csv",
+      "downloadId": "de908d61-60c8-5a6b-a997-dd209b5f22a8",
+      "sha256": "28183fa3fd47594a245173ef164b8c0fc5c888a6ece35d40de65033bcf2aa9dc"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5580_6MO_SR_Bone.csv",
+      "downloadId": "5bb0894c-c25e-564a-b8cf-233e42a4c821",
+      "sha256": "6204c2000f94b769362070ad2b6b47bea46f0a6b6d1608f3f24114ada7b2596c"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5580_6MO_F_Bone.csv",
+      "downloadId": "7e22037e-72ce-5899-bfb2-efc5a2374c98",
+      "sha256": "55c442f9a8d45ad4b49526f1b263a6efd315d1ca85952400cfe106820a84825d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8779_6MO_F_Bone.csv",
+      "downloadId": "bddb6051-4601-5ae6-9567-8d71d53679f6",
+      "sha256": "3f949483bfb4caaeeee1dce77038f6f6b7a85619dfd7de6fbf2e4c18fb5f4f41"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7984_1Y_F_Bone.csv",
+      "downloadId": "b7c855a3-9580-522c-a59e-ef9dfb77c86f",
+      "sha256": "34ec9005de25a02ee78e928717d17b93142f416d89aab6970e16926e52862923"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_9016_6MO_SR_Bone.csv",
+      "downloadId": "c533b628-9d7e-56bd-8ca4-81b349e1bf99",
+      "sha256": "08b60a7b9698e877cac11c5383877a023d3f53914f9906027702f963bc998063"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8881_1Y_F_Bone.csv",
+      "downloadId": "f9926ada-cb1a-50c2-8ca4-be9122110193",
+      "sha256": "7b76af97c1ffcbf1820380e9fef8e2aa836f3ccfe2847bed80615d4daf7c8996"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_3985_SR_Bone.csv",
+      "downloadId": "b1d4fef8-df7d-5984-9a64-04128f1aa25f",
+      "sha256": "14cf6a8501fcd6ebb1ad358cb1b0ae2db97cc24499b2d24d0836a4b4128c5aad"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5580_1Y_F_Bone.csv",
+      "downloadId": "c1236cfb-31c8-5d40-a6d2-068c59830783",
+      "sha256": "4db7cc8a866fb34548fa1e1cdb25d235a3fb448a8c011dead5910440518daebd"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_9947_SR_Bone.csv",
+      "downloadId": "d9fbeb87-f86b-5c34-970a-4bf96afe7b3f",
+      "sha256": "2d3ae0beefbad33395e4e5a4686a27318e81ff3421fabd497cff7034a06d6b62"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5705_1Y_SR_Bone.csv",
+      "downloadId": "bb9d856f-0725-53bf-b439-54b196de7262",
+      "sha256": "0e0a16ba2f7d029020016292900862b86335a26c7fe9ae60cd09e399f813d416"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_6858_F_Bone.csv",
+      "downloadId": "c1edf520-22dd-51ba-89f3-33f71ac6d542",
+      "sha256": "0773a8dceb4f66cffab7b744eaf195878c33c13ce9fdf283c8fa1be320a240ff"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3C_7352_6MO_F_Bone.csv",
+      "downloadId": "596a92a7-fc82-5108-a61f-362242b83e32",
+      "sha256": "e849481c88f4be26b6eca671bcde1d093f108b10c4bd2f95d3b10c285a6bd5a0"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3C_7352_SR_Bone.csv",
+      "downloadId": "b4784d89-bcd9-5585-8ce6-f8c85d3a3443",
+      "sha256": "7d8381550a99d152d1ee7dec2c55975d2152de683ed61a416e904bdf96144415"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5705_6MO_F_Bone.csv",
+      "downloadId": "97ea9721-7734-59c6-9e1e-72d76b734772",
+      "sha256": "3e54800279eb82b89eea33bdd71d3578677a52d51b41d9ab1db63845ab0e7b38"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8779_SR_Bone.csv",
+      "downloadId": "79330360-9b2c-52fb-abd2-8b5a536a3306",
+      "sha256": "2f9a0c50e838f7c09dbe449b558a1f73012e587187891bae52ed2f54f14cb788"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8615_F_Bone.csv",
+      "downloadId": "32c95430-bce8-5a05-81e7-99c408007999",
+      "sha256": "0324e52f97848c317339f1aa510a541a4f8d8a09dd658b388b68dbb683f5a3f0"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_6858_6MO_SR_Bone.csv",
+      "downloadId": "19fe13b3-fe5f-5ef5-8fc5-de5794f2eab0",
+      "sha256": "0162f3a540751fc1cdcaa84a31b9d6e7ce87ef0dc9b38c1c1667cbe7bc4d3d1d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3H_5907_SR_Bone.csv",
+      "downloadId": "8da46f8b-ab49-5613-b99c-0852adda3df4",
+      "sha256": "f3964a9106a6ca00cd11da38978b919ee2688db8565b4cb087502cfafb65b0e9"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8779_6MO_SR_Bone.csv",
+      "downloadId": "5043fcb9-4707-5f2c-a896-5685dc1c6d12",
+      "sha256": "3c2a313295283b1e08fd8799e9598ff6229da4445302f9ce3426f26568d8dbf2"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9314_6MO_SR_Bone.csv",
+      "downloadId": "6e203493-8f5d-51ac-a435-57d75fb2eb58",
+      "sha256": "edd54992a0eed5e0c4f621dfb9a0fb5ce8138b897842c694297073397c789c0d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3C_7352_6MO_SR_Bone.csv",
+      "downloadId": "88bcdfa1-01ae-50f5-b958-845aaa754395",
+      "sha256": "e22d2935a8b4954d71a498498e36140e30937d1964ca1acae064c9916d365ef4"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3E_6043_1Y_F_Bone.csv",
+      "downloadId": "99f9d32a-6e8b-53c2-a025-0a28cd6580f4",
+      "sha256": "73e1a53bfbb1a687524eff7f96308057d6e4e5f68b015c5a799682a0216cf8d6"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3C_7772_F_Bone.csv",
+      "downloadId": "74f9ae44-173f-51c4-b25d-16727f2a0480",
+      "sha256": "d0ad5e863d6f7fbfdd95417c8a67d711921c89d1c8d7d6d615523bc5fd5b64c9"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_5165_1Y_SR_Bone.csv",
+      "downloadId": "b93ad1ae-1e3c-59a3-ad52-2d12e9e7cded",
+      "sha256": "18b9dbc1d6156d4283cdd9beef96b3f96d9d522828ff905723fbb52922ef80e3"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5814_6MO_F_Bone.csv",
+      "downloadId": "dfabb8f4-c56a-508b-884e-5ec562d5e510",
+      "sha256": "069c31c34f3846436922a737827594325c842f8c5629922b319f07442b17e092"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8881_6MO_F_Bone.csv",
+      "downloadId": "af9638d8-661d-5f84-8309-db01da1bb6f2",
+      "sha256": "1d22202ae2687f8c36b40b3c7fe86dd1a3e39bafa95956d75b9192d592b24ad1"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_5165_6MO_F_Bone.csv",
+      "downloadId": "8085fa43-0d97-541c-8c88-ea7c1566bbac",
+      "sha256": "27ae65fd7adc36d4ec168fdf545e836028d355e65e5b1a2182910f2f94c39871"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_8454_SR_Bone.csv",
+      "downloadId": "ee3cba10-98ca-5d53-ac35-5c7d2108408b",
+      "sha256": "c72bb5f35df15c32eb2a8e3dbbf9e1b01f9a511e7b95601920f53b1e52894641"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_9016_1Y_F_Bone.csv",
+      "downloadId": "844e3346-e84f-5f61-9772-b75cf5eb3193",
+      "sha256": "642d032bb6dfd94be0bde98326610343995129ec7ab09da4b5a54045249fb861"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_9016_SR_Bone.csv",
+      "downloadId": "a39046d4-b4c5-5509-b879-ab695eb3b306",
+      "sha256": "6d6eee09e9f464eceb9a8208d62b8d7a4fdcb297c9564e02ecdd8f8439a2074e"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7984_SR_Bone.csv",
+      "downloadId": "c34b29c5-c6da-5741-8e25-b2a2e94e5aa6",
+      "sha256": "548ea8ca33e4f172c31138efabca5cab9a3c2c5b77db8101453a8d1b35c61fa1"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3E_6043_6MO_F_Bone.csv",
+      "downloadId": "a44eb400-a495-5c5c-a8cb-f72d9dbfcac4",
+      "sha256": "800a23289c2e78995411527026e1f4a379a077e845ee123bb7f9c20c15520c2a"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7961_6MO_F_Bone.csv",
+      "downloadId": "cb01db75-8102-5ae8-8e1d-fae9a29bff01",
+      "sha256": "aa69e6680d10ea64d2ee836fd5a0d1da7fc24f94684a0ad02a55f9de4b8feb0a"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5814_6MO_SR_Bone.csv",
+      "downloadId": "98ac3bfb-1803-5dc8-99fb-e3b9f011ab6c",
+      "sha256": "d89d9f5cfcc1a9689d729b4dc4781af1f130e1d36664b3a537eeaf7b1cb18f91"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_9846_SR_Bone.csv",
+      "downloadId": "d8830954-2ca7-5fd3-aee9-77b5b4086e62",
+      "sha256": "d5808eca445a8fffe16ca287c049943207dcd7b212c94621968ec8b3c86a810a"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9485_6MO_SR_Bone.csv",
+      "downloadId": "aa155c69-6c46-5555-9af3-46843c0695fb",
+      "sha256": "cb8e4263e295d6cd68d433c7bbc9975929fb4d8b011b18db710e683c09097f29"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_3985_F_Bone.csv",
+      "downloadId": "596819f4-fc12-543d-b067-03733178be38",
+      "sha256": "265d0b508fca8fd75c48ec86281e6e1b7b7f39de763370feff4e6b77803f53cc"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3E_6043_F_Bone.csv",
+      "downloadId": "3d9b7eca-7fcc-5d95-981e-c189cf7b0fd9",
+      "sha256": "68ac74ce28813006972ead82d78820de6753140c3564664973484a77be449eab"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8615_1Y_F_Bone.csv",
+      "downloadId": "ede510a0-def8-5d21-b071-0df463e401ab",
+      "sha256": "05290c19a6c5db0c85e51e3920a3f83f7aa67bed96531cc3eebbe044d75a2ecc"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8881_SR_Bone.csv",
+      "downloadId": "5c992626-23f8-5b11-81d2-758ced9efdf2",
+      "sha256": "2af1018103a488ef4d85f118224129da4b696cf12919446dccf6ba5200bc37a8"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9314_1Y_F_Bone.csv",
+      "downloadId": "424bf9f9-39cd-50e6-8cab-09337613e17f",
+      "sha256": "4ada98279a4271f2224c4fdb34caed40409603abedfa8878ca12a5795ed7d8c6"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9032_6MO_SR_Bone.csv",
+      "downloadId": "3cffbd6a-fa84-51f8-b77b-3fc8eb483336",
+      "sha256": "8781bcd6e784c9a327e6f21394af9d3e57c1751b45fc925b78c578c43c0af438"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9032_SR_Bone.csv",
+      "downloadId": "e8fee8ad-db19-5e50-b47c-2dc8f6f45fc1",
+      "sha256": "89b9c362d137c9cce7cf7b641b783b59554fb48fed4861777b59e63994fe3fdb"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8615_6MO_SR_Bone.csv",
+      "downloadId": "f628559b-9c84-5bef-a0e4-4ab7e3f23180",
+      "sha256": "3e25cc004ebd3e5594bd5f522c4bdf8aedd8173685e98d7b49cc9ef2574a537b"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7961_6MO_SR_Bone.csv",
+      "downloadId": "90481174-237a-53df-a035-998f745b8151",
+      "sha256": "a6f3d26d2e4db4af041a5c4fb084a28efee3e08f00b9f42cc9a942eb5ec25e3c"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8779_1Y_SR_Bone.csv",
+      "downloadId": "d4bde888-d03f-5bb1-8c69-1db373e177a0",
+      "sha256": "672760be9a626d95fa4dccc596be3afd073ae17f368a1393087a69b4caadef91"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5580_1Y_SR_Bone.csv",
+      "downloadId": "288638da-2047-52eb-846f-bad3c7873bc7",
+      "sha256": "7a367d232aee275858cb9b2625e1dc011c1abe9cbff8bce000563bab60efd91d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5814_1Y_SR_Bone.csv",
+      "downloadId": "ef4dbf15-d616-5129-89f6-0a50dd06f0fc",
+      "sha256": "13cd5ac09f392a68d336ea1a370f3730d6abf1b385efff084632f2da150208fb"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_3985_1Y_F_Bone.csv",
+      "downloadId": "bf2045f7-1123-53a7-9ba5-9abefe222f84",
+      "sha256": "4331949cff734ca81fac9fc9e9f141b6a20555d5bd0f0649639a0579081b6913"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9032_1Y_F_Bone.csv",
+      "downloadId": "3d750cfb-bba6-5990-8ff2-b05fbce50d0b",
+      "sha256": "e2864f5f7228b96f6acf760cae9f34979a7b13cea5aa648cde0c335c369e297c"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3C_7772_SR_Bone.csv",
+      "downloadId": "fdbe48b6-b0ac-5e99-b43a-697b6b03fcf3",
+      "sha256": "a7c9709537b075b29e9eb470205734f7ac1400f654ca081959e619959f0c6860"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3H_5907_1Y_F_Bone.csv",
+      "downloadId": "eda8be13-853e-5447-9eac-90e78cd37a7a",
+      "sha256": "e6a14209c651b4e96104fd3046550e5773e323d404466b4d143a89eaa9fdff68"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3C_7352_1Y_SR_Bone.csv",
+      "downloadId": "1a81235b-9381-5a46-8374-3f440293ea9f",
+      "sha256": "bf30c9db86ee387a58f5b8cc30b71d15a968fc3d129d348cf46ac09ca9639b48"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5814_F_Bone.csv",
+      "downloadId": "27103e8f-756e-560a-aa7c-5a427ec5a035",
+      "sha256": "a35d5d48970dacfa24ec776217557899751baeec1403e0e461cc79fc616fcfcf"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_9016_1Y_SR_Bone.csv",
+      "downloadId": "d8debb12-9357-5450-8758-bc851e63fccd",
+      "sha256": "9fc5474e3939c1492ce009a4dd0825c2b5437998fb555b4859feb639f1306411"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5814_1Y_F_Bone.csv",
+      "downloadId": "1eff6020-9244-5a6c-8ff2-dd7eed0d1cac",
+      "sha256": "0acb691b60c37cacf8ddef432ae9752d0d785c5c16e7a03d6421fab5430e1907"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5683_F_Bone.csv",
+      "downloadId": "65da69e6-9667-57a4-88fe-3f01d1159e0f",
+      "sha256": "b7340de1ee0e57e66292e4f9cb2e05eb2cd05842d18f8cb6e2e77a7d1fcc9641"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5705_F_Bone.csv",
+      "downloadId": "5f1ebb4f-9b8e-5d3b-9e73-b76f9d2656ce",
+      "sha256": "7bca1488c5b65255491cacfb1baecd025ad87de006b1aa9b0169900ca67a8bc4"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_3985_1Y_SR_Bone.csv",
+      "downloadId": "836fab50-6cf6-51de-8089-7b8b086cf3e8",
+      "sha256": "e287eba7039df7892ecba578835e4fed02f8af8e3c54f819ae363956452480e3"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7961_F_Bone.csv",
+      "downloadId": "afea04b3-61e0-52d5-8729-16aae087867e",
+      "sha256": "d366fb65f6e0f10ca69b36da2dc70dc6ce4e9a99b9116ac8689cf0ce194be383"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7984_F_Bone.csv",
+      "downloadId": "8d703869-fe63-50b4-9532-a5ee5c47e6ce",
+      "sha256": "766e6a0731055ac29200dfd02681edfde863be7bf7d10727600039eb4d626db9"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_5165_SR_Bone.csv",
+      "downloadId": "1b5b3843-01cd-5b55-8b6e-0cfec9ba646e",
+      "sha256": "039b2c2ce2bd5728dd7354d159d940eb9e431af35be73af935417c1fac92e113"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8881_1Y_SR_Bone.csv",
+      "downloadId": "03c53fdf-6af0-5092-a232-c74f0ea269af",
+      "sha256": "6fe411100ff34d903a53026fe0e32016a1804692f058c2133273d6fbdd471542"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9485_6MO_F_Bone.csv",
+      "downloadId": "6c6f92e0-e230-5b38-bf83-a198539b8696",
+      "sha256": "a7a040b3cc5782c4b74bb09386a31757734f710689f9bdc8951943810f6f1c6c"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9485_SR_Bone.csv",
+      "downloadId": "da1ce2e8-ad8d-56c4-9ca2-5989a19ea555",
+      "sha256": "5b32d5e4bcbc41155d4fd8463a0069879258fa6e6c37d264b4991ae98ee97142"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8615_6MO_F_Bone.csv",
+      "downloadId": "87a09ed1-5be8-5466-a68c-a9246b0c7c1f",
+      "sha256": "fc19233e3334a98d18b30b95706c5940abb8aeb4841d45b604b24b31e954aaa7"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_8454_1Y_F_Bone.csv",
+      "downloadId": "b1a802f4-3bec-536f-9a51-9ad97fab68bc",
+      "sha256": "5cc4ad9a3e6d2b2dfea95e05cb6803f2354ee1c8c19ae54da786b2e31f42d144"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3B_All_F_Bone.csv",
+      "downloadId": "43274d85-5dfe-5c36-8ba1-4ba9d28eed53",
+      "sha256": "ac0ac689c327f6676d825c02c0b1f6cb86d3afd91979f1250c7ef87db982f768"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9485_F_Bone.csv",
+      "downloadId": "81898c69-02ee-58a2-920a-aa380241db04",
+      "sha256": "8ac42e9efac196abf43e315261b1549ecd075d9d7f252ffd9183c7e04ede91d9"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5580_SR_Bone.csv",
+      "downloadId": "18b3a5b6-6470-540d-a3dc-d4ef8a79597b",
+      "sha256": "33a566a54444b1161b401aa0098a2507973c750b87c7c50e89c7aabad508a2fe"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7961_1Y_F_Bone.csv",
+      "downloadId": "8a2965ed-a417-5ca2-94f1-933120e6008e",
+      "sha256": "d2a98720948ddb67739ae773496583332192b94ebfff191d798b2f7adee0edb1"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_6858_6MO_F_Bone.csv",
+      "downloadId": "9b2b6f06-59e5-50fd-8f75-157cb459df0a",
+      "sha256": "74360db9acdb71880f688095a488a69d8741dcdaa46aa806023d3d1e5713dec1"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9139_1Y_SR_Bone.csv",
+      "downloadId": "b047cf61-b7c6-5014-a1d0-0e1ef313556c",
+      "sha256": "400527a90185f6ba3467f86e5002a94d6836e73df25730c6bc12da2a5a3de5f5"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8779_F_Bone.csv",
+      "downloadId": "adc57c1f-613a-5839-b8bf-fd3464112c5f",
+      "sha256": "f9adcdce80a8e1f6119f53d0fe7aaf1eefb392dbe39fb662170f52d2dc367c5d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3H_5907_F_Bone.csv",
+      "downloadId": "af351d2c-6adb-5ffa-9a92-e9f304c002cc",
+      "sha256": "5d188eb3a7a4468e317a00186e57793547288ea96f996b7f83b1d9f07b2a0ac3"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8615_1Y_SR_Bone.csv",
+      "downloadId": "6ab72550-0481-557a-9dce-7a6168b54164",
+      "sha256": "c0391e21a70e0e95b745b9f2b069bd670e24b7e8b8a86cdca60b7a54cec4c5e7"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5705_6MO_SR_Bone.csv",
+      "downloadId": "0e5b02c6-35e3-560a-8713-631916ae69a5",
+      "sha256": "a0dc5adafd11787026408a3cdda1de06f26d44b95a6d2492c6a5925cabd510bd"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9139_1Y_F_Bone.csv",
+      "downloadId": "79b5d93b-0f3e-57f4-ac7b-a7132497b5cf",
+      "sha256": "76d9615d1dbb727ab569a388f0f2a4eb7b10fbcff164dd384b9b641df5ac6f93"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5705_SR_Bone.csv",
+      "downloadId": "a21cf19c-4279-57cf-8504-130e4d6c9a7a",
+      "sha256": "aeaf86bad364bfdeffe76ac4f6c730cf71a162e891c77bba98efb59ff37458f9"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_7984_6MO_F_Bone.csv",
+      "downloadId": "9ba0dc41-6cc7-5a56-b6ab-e43438bed7c5",
+      "sha256": "efa72d4a5b241155261a69611fdb2ba21afc17e8f95910717184a4b7e62c96be"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9139_SR_Bone.csv",
+      "downloadId": "b6a7280f-7d36-5489-9d60-40a9fc53d1db",
+      "sha256": "915b1433fd82d3cdf9ac6134710092c95491a57107c0d65404e8a7837829a02d"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_5580_F_Bone.csv",
+      "downloadId": "1e4cf060-234d-5832-b784-bd47a157b6a0",
+      "sha256": "2dd8e30ba7d9fe6561a95afbfea0a16debada06a7b0f22679b687a9c5ff48b70"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5705_1Y_F_Bone.csv",
+      "downloadId": "efb33612-63f4-529f-b05d-e59b893003c8",
+      "sha256": "02a963b7115c3bcc446b418f5bfcf0be969cd6167fcb63d7ef30369f02d1f06e"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3C_7352_F_Bone.csv",
+      "downloadId": "dcd94e41-29d6-53f9-a996-f15af13c7066",
+      "sha256": "a5e5764f0ae2d0e018faf950cba2514d7ce9fd20b85b3bc2fc928e3683e6d752"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3D_8779_1Y_F_Bone.csv",
+      "downloadId": "216620df-87e6-5b72-b1fb-e45fd7f05b20",
+      "sha256": "3fe26f37c8dead5d18f92eb2b49472c6086c858c54f7aee821799fa80cd3dcf4"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_5683_SR_Bone.csv",
+      "downloadId": "7e102916-80fc-58f4-8fd7-cc11411a0656",
+      "sha256": "0333ef39cd741eecd049fe548a99c9324200a624da09ae37877fad81c12144a2"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3G_9314_SR_Bone.csv",
+      "downloadId": "388ba14f-9032-543f-a36e-5cfb8d1fe07b",
+      "sha256": "13c862ede3a28b974615c1b3354fefff19f75f7653531235304cf8350defa4f5"
+    },
+    {
+      "file": "femur/MR035G_Campaign_3_DXA_C3F_8454_6MO_F_Bone.csv",
+      "downloadId": "295fa57e-c27e-5608-a13c-123cb9b17d90",
+      "sha256": "e989a9c0d64336cb46e3dae65d774755f09af6544812f8173fcf52c09083d26e"
+    },
+    {
+      "file": "readme/MR035G_Campaign_3_DXA_C3C_7772_ReadMe.txt",
+      "downloadId": "50ac6ec3-0ae3-5ea0-8bef-abc2f861eba3",
+      "sha256": "e256f1e7cc87a559e2c06c5359a9aae7b51a990e9d88836f5557664185ebd0cb"
+    },
+    {
+      "file": "readme/MR035G_Campaign_3_DXA_C3C_7352_ReadMe.txt",
+      "downloadId": "8cd903d7-c769-5eca-940e-3fd6e109c873",
+      "sha256": "e256f1e7cc87a559e2c06c5359a9aae7b51a990e9d88836f5557664185ebd0cb"
+    }
+  ]
+}
