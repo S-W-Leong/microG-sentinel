@@ -20,6 +20,17 @@ export const riskTabs: Partial<Record<RiskId, RiskTab>> = {
   microbiome,
   mood,
 };
+// A change from baseline gets an explicit sign, so "-5" on a 0–10 scale is not read as a score.
+export function formatValue(value: number, unit: string, kind: string) {
+  const rounded = Math.round(value * 10) / 10;
+  if (unit === 'ratio') return rounded + '×';
+  const number =
+    kind === 'change-vs-baseline'
+      ? (rounded > 0 ? '+' : rounded < 0 ? '−' : '±') + Math.abs(rounded)
+      : String(rounded);
+  return number + ' ' + (unit === 'score/10' ? 'pts' : unit);
+}
+
 export function tabStatus(risk: RiskId, context: RiskEvaluationContext) {
   const tab = riskTabs[risk];
   if (!tab) return { text: 'Planned', evaluation: null };
@@ -36,7 +47,7 @@ export function tabStatus(risk: RiskId, context: RiskEvaluationContext) {
           ? `${gutDays} changed days`
           : evaluation.value === null
             ? 'No data'
-            : String(Math.round(evaluation.value * 10) / 10) + ' ' + evaluation.unit,
+            : formatValue(evaluation.value, evaluation.unit, evaluation.kind),
       evaluation,
     };
   } catch {

@@ -25,7 +25,7 @@ try {
       JSON.stringify(rows),
     );
     assert(await page.getByText('Simulated', { exact: true }).count());
-    assert(await page.getByText('Mission day 100', { exact: true }).count());
+    assert(await page.getByText('Mission day 100').count());
     assert.equal(await page.getByText('Demo path', { exact: true }).count(), 0);
   }
   assert.notDeepEqual(summaries['SIM-CDR'], summaries['SIM-PLT']);

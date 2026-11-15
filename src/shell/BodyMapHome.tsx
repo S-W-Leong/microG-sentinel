@@ -135,7 +135,6 @@ export default function BodyMapHome({
     >
       <p className="body-simulation">Simulated</p>
       <h1 id="body-title">Body map</h1>
-      <p className="body-caption">Mission day 100</p>
       <div className="body-board" ref={board}>
         <svg className="body-leaders" aria-hidden="true">
           {regions.map((item) => (
