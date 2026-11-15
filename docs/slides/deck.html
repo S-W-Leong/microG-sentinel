@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MicroG Sentinel</title>
+<style>
+@font-face { font-family: Plex; src: url(fonts/ibm-plex-sans-latin-400-normal.woff2); font-weight: 400; }
+@font-face { font-family: Plex; src: url(fonts/ibm-plex-sans-latin-600-normal.woff2); font-weight: 600; }
+@font-face { font-family: Plex; src: url(fonts/ibm-plex-sans-latin-700-normal.woff2); font-weight: 700; }
+@font-face { font-family: PlexMono; src: url(fonts/ibm-plex-mono-latin-400-normal.woff2); }
+:root {
+  --bg: #111315; --panel: #1a1d20; --line: #2c3136; --text: #f2efe9; --muted: #a3a8ad;
+  --accent: #ff5a2b; --soft: #ffa66b;
+}
+@page { size: 1920px 1080px; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #000; }
+body { font-family: Plex, Arial, sans-serif; color: var(--text); }
+.slide {
+  width: 1920px; height: 1080px; background: var(--bg); position: relative; overflow: hidden;
+  padding: 96px 120px; page-break-after: always; break-after: page;
+}
+.kicker { font-size: 26px; color: var(--muted); letter-spacing: .02em; margin-bottom: 18px; }
+h1 { font-size: 72px; font-weight: 700; line-height: 1.05; letter-spacing: -.01em; }
+h2 { font-size: 58px; font-weight: 700; line-height: 1.1; letter-spacing: -.01em; max-width: 1500px; }
+p, li { font-size: 30px; line-height: 1.45; }
+.muted { color: var(--muted); }
+.mono { font-family: PlexMono, monospace; }
+.accent { color: var(--accent); }
+.foot { position: absolute; left: 120px; right: 120px; bottom: 44px; display: flex; justify-content: space-between; font-size: 20px; color: var(--muted); }
+.shot { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #000; }
+.shot img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tag { display: inline-block; font-size: 22px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 18px; color: var(--muted); }
+
+/* 1 title */
+.s1 { display: grid; grid-template-columns: 820px 1fr; gap: 64px; align-items: center; padding-right: 0; }
+.s1 h1 { font-size: 104px; }
+.s1 .tagline { font-size: 40px; margin-top: 30px; line-height: 1.3; }
+.s1 .meta { margin-top: 60px; font-size: 26px; color: var(--muted); line-height: 1.6; }
+.s1 .shot { height: 860px; border-radius: 18px 0 0 18px; border-right: 0; }
+.s1 .shot img { object-position: 30% 40%; }
+
+/* 2 problem */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 110px; }
+.stat .big { font-size: 128px; font-weight: 700; line-height: 1; }
+.stat .big small { font-size: 52px; font-weight: 600; }
+.stat p { margin-top: 22px; color: var(--muted); font-size: 30px; max-width: 470px; }
+.s2 .close { margin-top: 110px; font-size: 38px; max-width: 1500px; }
+
+/* 3 hazards */
+.hz { margin-top: 64px; display: grid; gap: 22px; }
+.hz .row { display: grid; grid-template-columns: 560px 60px 1fr; align-items: center; background: var(--panel); border-radius: 16px; padding: 26px 36px; }
+.hz .name { font-size: 34px; font-weight: 600; }
+.hz .arrow { font-size: 34px; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 14px; }
+.chip { font-size: 28px; border: 1px solid var(--line); border-radius: 999px; padding: 6px 22px; }
+.chip.ctx { color: var(--muted); border-style: dashed; }
+
+/* 4 flow */
+.flow { margin-top: 64px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.step { background: var(--panel); border-radius: 18px; padding: 34px 32px; position: relative; }
+.step .n { font-family: PlexMono, monospace; font-size: 24px; color: var(--muted); }
+.step h3 { font-size: 36px; margin: 10px 0 12px; }
+.step p { font-size: 26px; color: var(--muted); line-height: 1.4; }
+.s4 .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px; height: 400px; }
+.s4 .a img { transform: scale(1.3); transform-origin: 50% 80%; }
+.s4 .b img { transform: scale(1.5); transform-origin: 45% 92%; }
+
+/* 5 story */
+.s5 { display: grid; grid-template-columns: 860px 1fr; gap: 64px; }
+.calc { margin-top: 56px; display: grid; gap: 18px; }
+.calc .line { display: grid; grid-template-columns: 170px 1fr; align-items: baseline; font-size: 30px; }
+.calc .v { font-family: PlexMono, monospace; font-size: 46px; }
+.calc .total { grid-template-columns: 260px 1fr; border-top: 1px solid var(--line); padding-top: 22px; margin-top: 8px; }
+.calc .total .v { font-size: 88px; color: var(--accent); font-family: Plex, sans-serif; font-weight: 700; }
+.s5 .note { margin-top: 44px; font-size: 26px; color: var(--muted); }
+.s5 .right { display: grid; grid-template-rows: 1fr 1fr; gap: 28px; height: 888px; }
+.s5 .r1 img { transform: scale(1.9); transform-origin: 14% 52%; }
+.s5 .r2 img { transform: scale(1.9); transform-origin: 14% 64%; }
+
+/* 6 data */
+.s6 { display: grid; grid-template-columns: 1000px 1fr; gap: 64px; }
+.ds { margin-top: 48px; display: grid; gap: 16px; }
+.ds .row { display: grid; grid-template-columns: 170px 1fr; gap: 24px; background: var(--panel); border-radius: 16px; padding: 22px 30px; align-items: baseline; }
+.ds .tab { font-size: 30px; font-weight: 600; }
+.ds .src { font-size: 25px; line-height: 1.4; }
+.ds .src span { color: var(--muted); }
+.s6 .rules { margin-top: 34px; font-size: 25px; color: var(--muted); line-height: 1.55; }
+.s6 .shot { height: 888px; }
+.s6 .shot img { object-position: 20% 40%; }
+
+/* 7 next */
+.next { margin-top: 64px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.card { background: var(--panel); border-radius: 18px; padding: 36px 40px; }
+.card h3 { font-size: 36px; margin-bottom: 12px; }
+.card p { font-size: 27px; color: var(--muted); line-height: 1.45; }
+.team { position: absolute; left: 120px; right: 120px; bottom: 80px; display: flex; justify-content: space-between; align-items: end; }
+.team .who { font-size: 34px; }
+.team .ai { font-size: 22px; color: var(--muted); max-width: 900px; text-align: right; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide s1">
+  <div>
+    <p class="kicker">NASA Space Apps 2026 · Kuala Lumpur</p>
+    <h1>MicroG Sentinel</h1>
+    <p class="tagline">Your body changes in space.<br>See what changed for you.</p>
+    <p class="meta">Crew health check-ins for long missions<br>Team (SW)² · Siang Woo &amp; Shi Wei</p>
+  </div>
+  <div class="shot"><img src="shots/home.png" alt="Body map home screen"></div>
+</section>
+
+<!-- 2 -->
+<section class="slide s2">
+  <p class="kicker">The problem</p>
+  <h2>Between doctor calls, the crew is on its own</h2>
+  <div class="stats">
+    <div class="stat"><div class="big">Weekly</div><p>private medical conference with the flight surgeon on the ISS</p></div>
+    <div class="stat"><div class="big">17</div><p>NASA human spaceflight health risks, each with its own signs</p></div>
+    <div class="stat"><div class="big">20<small> min</small></div><p>one-way signal delay from Mars, so help is never instant</p></div>
+  </div>
+  <p class="close">Astronauts need a quick way to notice change in their own body, and to know when it cannot wait.</p>
+  <div class="foot"><span>Sources: NASA Human Research Program · 5 Hazards and Risks of Human Spaceflight</span><span>2</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide s3">
+  <p class="kicker">NASA's 5 hazards → our tabs</p>
+  <h2>8 personal risks, one body map</h2>
+  <div class="hz">
+    <div class="row"><span class="name">Altered gravity</span><span class="arrow">→</span><div class="chips"><span class="chip">Cardio</span><span class="chip">Bone</span><span class="chip">Balance</span><span class="chip">SANS (eyes)</span></div></div>
+    <div class="row"><span class="name">Isolation &amp; confinement</span><span class="arrow">→</span><div class="chips"><span class="chip">Sleep</span><span class="chip">Mood</span></div></div>
+    <div class="row"><span class="name">Hostile, closed environment</span><span class="arrow">→</span><div class="chips"><span class="chip">Immune</span><span class="chip">Microbiome</span><span class="chip">Food</span></div></div>
+    <div class="row"><span class="name">Radiation</span><span class="arrow">→</span><div class="chips"><span class="chip ctx">Dose card · context only</span></div></div>
+    <div class="row"><span class="name">Distance from Earth</span><span class="arrow">→</span><div class="chips"><span class="chip">Every red flag → flight surgeon</span></div></div>
+  </div>
+  <div class="foot"><span>Left out on purpose: risks that are not personal readings (e.g. decompression sickness, landing injury)</span><span>3</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide s4">
+  <p class="kicker">How it works</p>
+  <h2>Tap, check in, connect, escalate</h2>
+  <div class="flow">
+    <div class="step"><span class="n">01</span><h3>Body map</h3><p>Tap the region that feels different</p></div>
+    <div class="step"><span class="n">02</span><h3>Risk tab</h3><p>Its own quick input and the right chart</p></div>
+    <div class="step"><span class="n">03</span><h3>Astronaut vector</h3><p>Traits, baselines and exposures link the tabs</p></div>
+    <div class="step"><span class="n">04</span><h3>Flight surgeon</h3><p>Red flag: contact now. Unclear: next conference</p></div>
+  </div>
+  <div class="shots">
+    <div class="shot a"><img src="shots/home.png" alt="Body map with region cards"></div>
+    <div class="shot b"><img src="shots/profile.png" alt="Crew profile connections"></div>
+  </div>
+  <div class="foot"><span>Offline · no backend · simulated crew always labelled</span><span>4</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide s5">
+  <div>
+    <p class="kicker">One story, two tabs</p>
+    <h2>Shrimp at breakfast, hives by eleven</h2>
+    <div class="calc">
+      <div class="line"><span class="v">60%</span><span>photo matches 3 of 5 hives signs</span></div>
+      <div class="line"><span class="v">+10</span><span>known shellfish allergy <span class="muted">(vector)</span></span></div>
+      <div class="line"><span class="v">+10</span><span>shellfish eaten 3 h ago <span class="muted">(Food tab)</span></span></div>
+      <div class="line total"><span class="v">80%</span><span>hives pattern, every reason shown</span></div>
+    </div>
+    <p class="note">A pattern match, never a diagnosis. Any "yes" to breathing, throat, swelling or fainting hides the score and says <span class="accent">Contact the flight surgeon now</span>.</p>
+  </div>
+  <div class="right">
+    <div class="shot r1"><img src="shots/immune.png" alt="Immune tab showing 80% hives pattern"></div>
+    <div class="shot r2"><img src="shots/urgent.png" alt="Contact the flight surgeon now"></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide s6">
+  <div>
+    <p class="kicker">Real NASA data, kept separate</p>
+    <h2>Four tabs replay a NASA study</h2>
+    <div class="ds">
+      <div class="row"><span class="tab">Cardio</span><span class="src">MR080G bed-rest cycle tests <span>· NASA LSDA</span></span></div>
+      <div class="row"><span class="tab">Sleep</span><span class="src">BRSMAct wrist actigraphy, UTMB Campaign 1 <span>· NASA LSDA</span></span></div>
+      <div class="row"><span class="tab">Immune</span><span class="src">OSD-575 Inspiration4 cytokine panel <span>· NASA OSDR</span></span></div>
+      <div class="row"><span class="tab">Bone</span><span class="src">MR035G DXA hip and spine scans <span>· NASA LSDA</span></span></div>
+    </div>
+    <p class="rules">Replays are read-only and never mix with crew data.<br>Screening cut-offs (UAS7, PSQI, PHQ-9, MUST) come from Earth populations.<br>Crew data in the demo is simulated and labelled.</p>
+  </div>
+  <div class="shot"><img src="shots/sleep-replay.png" alt="Sleep NASA replay"></div>
+</section>
+
+<!-- 7 -->
+<section class="slide s7">
+  <p class="kicker">What's next</p>
+  <h2>From prototype to crew tool</h2>
+  <div class="next">
+    <div class="card"><h3>Onboard assistant</h3><p>An offline model that reads the astronaut vector and drafts questions for the next medical conference</p></div>
+    <div class="card"><h3>Sensor feeds</h3><p>Wearable sleep and heart data in place of manual entry, using the same signal contract</p></div>
+    <div class="card"><h3>Validate with flight surgeons</h3><p>Replace Earth-population cut-offs and demo weights with crew-specific evidence</p></div>
+    <div class="card"><h3>Built for delay</h3><p>Queue reports for Moon and Mars links where a live call is minutes away</p></div>
+  </div>
+  <div class="team">
+    <span class="who">(SW)² · Siang Woo &amp; Shi Wei</span>
+    <span class="ai">Prototype, not for clinical use. AI-assisted research, data curation, code and writing (Claude, OpenAI Codex, DeepSeek), disclosed per Space Apps rules.</span>
+  </div>
+</section>
+
+</body>
+</html>

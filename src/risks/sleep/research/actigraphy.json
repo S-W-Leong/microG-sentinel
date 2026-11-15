@@ -1,0 +1,5783 @@
+{
+  "files": [
+    {
+      "name": "BRSMACT_Campagin_1_Actigraphy.csv",
+      "sha256": "2fa3efeb9e6388e8de50f4e2eefc9e6de8740993f1c27ab7ef3282e59398923b"
+    },
+    {
+      "name": "BRSMACT_Campagin_1_Actigraphy_Query_Result.csv",
+      "sha256": "d3932c0f1a72b68dc6d0ba01346d3052040b48616b79380e4892cf47dafea5f2"
+    },
+    {
+      "name": "BRSMACT_Campaign_1_Actigraphy_ReadMe.txt",
+      "sha256": "eae6b6c30671582cb31b50d4b9f3360e2185c4cea2a4ea8264ebfb7b6ee8389e"
+    }
+  ],
+  "main": [
+    {
+      "row": {
+        "ID": "1",
+        "Subject": "C1G0001",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "2",
+        "Date": "9/7/2004",
+        "Sleep Latency (hours)": "0:14",
+        "Sleep Duration (hours)": "7:44:00",
+        "Sleep Efficiency (%)": "92.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 2
+    },
+    {
+      "row": {
+        "ID": "2",
+        "Subject": "C1G0001",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "1",
+        "Date": "9/8/2004",
+        "Sleep Latency (hours)": "0:06",
+        "Sleep Duration (hours)": "7:50:00",
+        "Sleep Efficiency (%)": "95.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 3
+    },
+    {
+      "row": {
+        "ID": "3",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "1",
+        "Date": "9/9/2004",
+        "Sleep Latency (hours)": "0:00",
+        "Sleep Duration (hours)": "7:52:00",
+        "Sleep Efficiency (%)": "90.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 4
+    },
+    {
+      "row": {
+        "ID": "4",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "2",
+        "Date": "9/10/2004",
+        "Sleep Latency (hours)": "0:12",
+        "Sleep Duration (hours)": "7:42:00",
+        "Sleep Efficiency (%)": "91.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 5
+    },
+    {
+      "row": {
+        "ID": "5",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "3",
+        "Date": "9/11/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "94.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 6
+    },
+    {
+      "row": {
+        "ID": "6",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "4",
+        "Date": "9/12/2004",
+        "Sleep Latency (hours)": "0:12",
+        "Sleep Duration (hours)": "7:46:00",
+        "Sleep Efficiency (%)": "95.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 7
+    },
+    {
+      "row": {
+        "ID": "7",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "5",
+        "Date": "9/13/2004",
+        "Sleep Latency (hours)": "0:10",
+        "Sleep Duration (hours)": "7:48:00",
+        "Sleep Efficiency (%)": "96.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 8
+    },
+    {
+      "row": {
+        "ID": "8",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "6",
+        "Date": "9/14/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:34:00",
+        "Sleep Efficiency (%)": "93.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 9
+    },
+    {
+      "row": {
+        "ID": "9",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "7",
+        "Date": "9/15/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "95.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 10
+    },
+    {
+      "row": {
+        "ID": "10",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "8",
+        "Date": "9/16/2004",
+        "Sleep Latency (hours)": "0:08",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "90.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 11
+    },
+    {
+      "row": {
+        "ID": "11",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "9",
+        "Date": "9/17/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "91.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 12
+    },
+    {
+      "row": {
+        "ID": "12",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "10",
+        "Date": "9/18/2004",
+        "Sleep Latency (hours)": "0:16",
+        "Sleep Duration (hours)": "7:42:00",
+        "Sleep Efficiency (%)": "95.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 13
+    },
+    {
+      "row": {
+        "ID": "13",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "11",
+        "Date": "9/19/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "89.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 14
+    },
+    {
+      "row": {
+        "ID": "14",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "12",
+        "Date": "9/20/2004",
+        "Sleep Latency (hours)": "0:56",
+        "Sleep Duration (hours)": "7:02:00",
+        "Sleep Efficiency (%)": "85.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 15
+    },
+    {
+      "row": {
+        "ID": "15",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "13",
+        "Date": "9/21/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "7:22:00",
+        "Sleep Efficiency (%)": "90.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 16
+    },
+    {
+      "row": {
+        "ID": "16",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "14",
+        "Date": "9/22/2004",
+        "Sleep Latency (hours)": "0:24",
+        "Sleep Duration (hours)": "7:34:00",
+        "Sleep Efficiency (%)": "92.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 17
+    },
+    {
+      "row": {
+        "ID": "17",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "15",
+        "Date": "9/23/2004",
+        "Sleep Latency (hours)": "0:44",
+        "Sleep Duration (hours)": "7:14:00",
+        "Sleep Efficiency (%)": "88.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 18
+    },
+    {
+      "row": {
+        "ID": "18",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "16",
+        "Date": "9/24/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "93.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 19
+    },
+    {
+      "row": {
+        "ID": "19",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "17",
+        "Date": "9/25/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "93.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 20
+    },
+    {
+      "row": {
+        "ID": "20",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "18",
+        "Date": "9/26/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "7:22:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 21
+    },
+    {
+      "row": {
+        "ID": "21",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "19",
+        "Date": "9/27/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "7:22:00",
+        "Sleep Efficiency (%)": "91.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 22
+    },
+    {
+      "row": {
+        "ID": "22",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "20",
+        "Date": "9/28/2004",
+        "Sleep Latency (hours)": "0:48",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "84.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 23
+    },
+    {
+      "row": {
+        "ID": "23",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "21",
+        "Date": "9/29/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "88.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 24
+    },
+    {
+      "row": {
+        "ID": "24",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "22",
+        "Date": "9/30/2004",
+        "Sleep Latency (hours)": "0:42",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "85",
+        "Notes": "NA"
+      },
+      "sourceRow": 25
+    },
+    {
+      "row": {
+        "ID": "25",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "23",
+        "Date": "10/1/2004",
+        "Sleep Latency (hours)": "0:14",
+        "Sleep Duration (hours)": "7:44:00",
+        "Sleep Efficiency (%)": "94.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 26
+    },
+    {
+      "row": {
+        "ID": "26",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "24",
+        "Date": "10/2/2004",
+        "Sleep Latency (hours)": "0:24",
+        "Sleep Duration (hours)": "7:34:00",
+        "Sleep Efficiency (%)": "91.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 27
+    },
+    {
+      "row": {
+        "ID": "27",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "25",
+        "Date": "10/3/2004",
+        "Sleep Latency (hours)": "0:26",
+        "Sleep Duration (hours)": "7:32:00",
+        "Sleep Efficiency (%)": "91.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 28
+    },
+    {
+      "row": {
+        "ID": "28",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "26",
+        "Date": "10/4/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "85.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 29
+    },
+    {
+      "row": {
+        "ID": "29",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "27",
+        "Date": "10/5/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "87.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 30
+    },
+    {
+      "row": {
+        "ID": "30",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "28",
+        "Date": "10/6/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "89.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 31
+    },
+    {
+      "row": {
+        "ID": "31",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "29",
+        "Date": "10/7/2004",
+        "Sleep Latency (hours)": "0:26",
+        "Sleep Duration (hours)": "7:32:00",
+        "Sleep Efficiency (%)": "92.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 32
+    },
+    {
+      "row": {
+        "ID": "32",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "30",
+        "Date": "10/8/2004",
+        "Sleep Latency (hours)": "0:48",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "87.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 33
+    },
+    {
+      "row": {
+        "ID": "33",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "31",
+        "Date": "10/9/2004",
+        "Sleep Latency (hours)": "1:02",
+        "Sleep Duration (hours)": "6:56:00",
+        "Sleep Efficiency (%)": "84.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 34
+    },
+    {
+      "row": {
+        "ID": "34",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "32",
+        "Date": "10/10/2004",
+        "Sleep Latency (hours)": "0:42",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "88.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 35
+    },
+    {
+      "row": {
+        "ID": "35",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "33",
+        "Date": "10/11/2004",
+        "Sleep Latency (hours)": "0:50",
+        "Sleep Duration (hours)": "7:08:00",
+        "Sleep Efficiency (%)": "87.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 36
+    },
+    {
+      "row": {
+        "ID": "36",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "34",
+        "Date": "10/12/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "91.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 37
+    },
+    {
+      "row": {
+        "ID": "37",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "35",
+        "Date": "10/13/2004",
+        "Sleep Latency (hours)": "1:10",
+        "Sleep Duration (hours)": "6:48:00",
+        "Sleep Efficiency (%)": "82.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 38
+    },
+    {
+      "row": {
+        "ID": "38",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "36",
+        "Date": "10/14/2004",
+        "Sleep Latency (hours)": "1:12",
+        "Sleep Duration (hours)": "6:46:00",
+        "Sleep Efficiency (%)": "79.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 39
+    },
+    {
+      "row": {
+        "ID": "39",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "37",
+        "Date": "10/15/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "94.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 40
+    },
+    {
+      "row": {
+        "ID": "40",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "38",
+        "Date": "10/16/2004",
+        "Sleep Latency (hours)": "0:26",
+        "Sleep Duration (hours)": "7:32:00",
+        "Sleep Efficiency (%)": "90.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 41
+    },
+    {
+      "row": {
+        "ID": "41",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "39",
+        "Date": "10/17/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "90.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 42
+    },
+    {
+      "row": {
+        "ID": "42",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "40",
+        "Date": "10/18/2004",
+        "Sleep Latency (hours)": "0:58",
+        "Sleep Duration (hours)": "7:00:00",
+        "Sleep Efficiency (%)": "85.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 43
+    },
+    {
+      "row": {
+        "ID": "43",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "41",
+        "Date": "10/19/2004",
+        "Sleep Latency (hours)": "0:42",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "89.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 44
+    },
+    {
+      "row": {
+        "ID": "44",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "42",
+        "Date": "10/20/2004",
+        "Sleep Latency (hours)": "0:32",
+        "Sleep Duration (hours)": "7:26:00",
+        "Sleep Efficiency (%)": "92.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 45
+    },
+    {
+      "row": {
+        "ID": "45",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "43",
+        "Date": "10/21/2004",
+        "Sleep Latency (hours)": "0:46",
+        "Sleep Duration (hours)": "7:08:00",
+        "Sleep Efficiency (%)": "88.3",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 46
+    },
+    {
+      "row": {
+        "ID": "46",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "44",
+        "Date": "10/22/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "7:12:00",
+        "Sleep Efficiency (%)": "87.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 47
+    },
+    {
+      "row": {
+        "ID": "47",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "45",
+        "Date": "10/23/2004",
+        "Sleep Latency (hours)": "0:24",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "92.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 48
+    },
+    {
+      "row": {
+        "ID": "48",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "46",
+        "Date": "10/24/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "91.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 49
+    },
+    {
+      "row": {
+        "ID": "49",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "47",
+        "Date": "10/25/2004",
+        "Sleep Latency (hours)": "1:14",
+        "Sleep Duration (hours)": "6:44:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 50
+    },
+    {
+      "row": {
+        "ID": "50",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "48",
+        "Date": "10/26/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "90.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 51
+    },
+    {
+      "row": {
+        "ID": "51",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "49",
+        "Date": "10/27/2004",
+        "Sleep Latency (hours)": "0:42",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "90.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 52
+    },
+    {
+      "row": {
+        "ID": "52",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "50",
+        "Date": "10/28/2004",
+        "Sleep Latency (hours)": "0:56",
+        "Sleep Duration (hours)": "7:02:00",
+        "Sleep Efficiency (%)": "87.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 53
+    },
+    {
+      "row": {
+        "ID": "53",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "51",
+        "Date": "10/29/2004",
+        "Sleep Latency (hours)": "0:32",
+        "Sleep Duration (hours)": "7:26:00",
+        "Sleep Efficiency (%)": "92.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 54
+    },
+    {
+      "row": {
+        "ID": "54",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "52",
+        "Date": "10/30/2004",
+        "Sleep Latency (hours)": "0:00",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "85",
+        "Notes": "NA"
+      },
+      "sourceRow": 55
+    },
+    {
+      "row": {
+        "ID": "55",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "53",
+        "Date": "10/31/2004",
+        "Sleep Latency (hours)": "2:34",
+        "Sleep Duration (hours)": "5:24:00",
+        "Sleep Efficiency (%)": "65.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 56
+    },
+    {
+      "row": {
+        "ID": "56",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "54",
+        "Date": "11/1/2004",
+        "Sleep Latency (hours)": "2:22",
+        "Sleep Duration (hours)": "5:36:00",
+        "Sleep Efficiency (%)": "68.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 57
+    },
+    {
+      "row": {
+        "ID": "57",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "55",
+        "Date": "11/2/2004",
+        "Sleep Latency (hours)": "2:56",
+        "Sleep Duration (hours)": "5:02:00",
+        "Sleep Efficiency (%)": "62.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 58
+    },
+    {
+      "row": {
+        "ID": "58",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "56",
+        "Date": "11/3/2004",
+        "Sleep Latency (hours)": "1:54",
+        "Sleep Duration (hours)": "6:04:00",
+        "Sleep Efficiency (%)": "74.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 59
+    },
+    {
+      "row": {
+        "ID": "59",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "57",
+        "Date": "11/4/2004",
+        "Sleep Latency (hours)": "2:00",
+        "Sleep Duration (hours)": "5:58:00",
+        "Sleep Efficiency (%)": "72.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 60
+    },
+    {
+      "row": {
+        "ID": "60",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "58",
+        "Date": "11/5/2004",
+        "Sleep Latency (hours)": "0:56",
+        "Sleep Duration (hours)": "7:02:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 61
+    },
+    {
+      "row": {
+        "ID": "61",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "59",
+        "Date": "11/6/2004",
+        "Sleep Latency (hours)": "0:46",
+        "Sleep Duration (hours)": "7:12:00",
+        "Sleep Efficiency (%)": "86.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 62
+    },
+    {
+      "row": {
+        "ID": "62",
+        "Subject": "C1G0001",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "60",
+        "Date": "11/7/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "92.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 63
+    },
+    {
+      "row": {
+        "ID": "63",
+        "Subject": "C1G0001",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "0",
+        "Date": "11/8/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "87.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 64
+    },
+    {
+      "row": {
+        "ID": "64",
+        "Subject": "C1G0001",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "1",
+        "Date": "11/9/2004",
+        "Sleep Latency (hours)": "0",
+        "Sleep Duration (hours)": "7:58:00",
+        "Sleep Efficiency (%)": "90.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 65
+    },
+    {
+      "row": {
+        "ID": "65",
+        "Subject": "C1G0001",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "2",
+        "Date": "11/10/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "89.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 66
+    },
+    {
+      "row": {
+        "ID": "66",
+        "Subject": "C1G0001",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "3",
+        "Date": "11/11/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "87.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 67
+    },
+    {
+      "row": {
+        "ID": "67",
+        "Subject": "C1G0001",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "4",
+        "Date": "11/12/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "90.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 68
+    },
+    {
+      "row": {
+        "ID": "68",
+        "Subject": "C1G0001",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "5",
+        "Date": "11/13/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "89.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 69
+    },
+    {
+      "row": {
+        "ID": "69",
+        "Subject": "C1G0001",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "6",
+        "Date": "11/14/2004",
+        "Sleep Latency (hours)": "0:40",
+        "Sleep Duration (hours)": "7:18:00",
+        "Sleep Efficiency (%)": "90.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 70
+    },
+    {
+      "row": {
+        "ID": "70",
+        "Subject": "C1G0002",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "2",
+        "Date": "9/7/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 71
+    },
+    {
+      "row": {
+        "ID": "71",
+        "Subject": "C1G0002",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "1",
+        "Date": "9/8/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 72
+    },
+    {
+      "row": {
+        "ID": "72",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "1",
+        "Date": "9/9/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 73
+    },
+    {
+      "row": {
+        "ID": "73",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "2",
+        "Date": "9/10/2004",
+        "Sleep Latency (hours)": "0:04",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "79.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 74
+    },
+    {
+      "row": {
+        "ID": "74",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "3",
+        "Date": "9/11/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 75
+    },
+    {
+      "row": {
+        "ID": "75",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "4",
+        "Date": "9/12/2004",
+        "Sleep Latency (hours)": "0:10",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "74.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 76
+    },
+    {
+      "row": {
+        "ID": "76",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "5",
+        "Date": "9/13/2004",
+        "Sleep Latency (hours)": "0:04",
+        "Sleep Duration (hours)": "7:08:00",
+        "Sleep Efficiency (%)": "74.6",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 77
+    },
+    {
+      "row": {
+        "ID": "77",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "6",
+        "Date": "9/14/2004",
+        "Sleep Latency (hours)": "1:40",
+        "Sleep Duration (hours)": "6:04:00",
+        "Sleep Efficiency (%)": "52.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 78
+    },
+    {
+      "row": {
+        "ID": "78",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "7",
+        "Date": "9/15/2004",
+        "Sleep Latency (hours)": "0",
+        "Sleep Duration (hours)": "7:54:00",
+        "Sleep Efficiency (%)": "84.6",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 79
+    },
+    {
+      "row": {
+        "ID": "79",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "8",
+        "Date": "9/16/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "79.2",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 80
+    },
+    {
+      "row": {
+        "ID": "80",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "9",
+        "Date": "9/17/2004",
+        "Sleep Latency (hours)": "0:16",
+        "Sleep Duration (hours)": "7:42:00",
+        "Sleep Efficiency (%)": "81.3",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 81
+    },
+    {
+      "row": {
+        "ID": "81",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "10",
+        "Date": "9/18/2004",
+        "Sleep Latency (hours)": "0:48",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "68.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 82
+    },
+    {
+      "row": {
+        "ID": "82",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "11",
+        "Date": "9/19/2004",
+        "Sleep Latency (hours)": "0:32",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "79.2",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 83
+    },
+    {
+      "row": {
+        "ID": "83",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "12",
+        "Date": "9/20/2004",
+        "Sleep Latency (hours)": "1:00",
+        "Sleep Duration (hours)": "6:58:00",
+        "Sleep Efficiency (%)": "72.1",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 84
+    },
+    {
+      "row": {
+        "ID": "84",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "13",
+        "Date": "9/21/2004",
+        "Sleep Latency (hours)": "0:14",
+        "Sleep Duration (hours)": "7:44:00",
+        "Sleep Efficiency (%)": "75.4",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 85
+    },
+    {
+      "row": {
+        "ID": "85",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "14",
+        "Date": "9/22/2004",
+        "Sleep Latency (hours)": "1:08",
+        "Sleep Duration (hours)": "6:50:00",
+        "Sleep Efficiency (%)": "68.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 86
+    },
+    {
+      "row": {
+        "ID": "86",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "15",
+        "Date": "9/23/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 87
+    },
+    {
+      "row": {
+        "ID": "87",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "16",
+        "Date": "9/24/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "81.3",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 88
+    },
+    {
+      "row": {
+        "ID": "88",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "17",
+        "Date": "9/25/2004",
+        "Sleep Latency (hours)": "0:16",
+        "Sleep Duration (hours)": "7:42:00",
+        "Sleep Efficiency (%)": "82.5",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 89
+    },
+    {
+      "row": {
+        "ID": "89",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "18",
+        "Date": "9/26/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "79.2",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 90
+    },
+    {
+      "row": {
+        "ID": "90",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "19",
+        "Date": "9/27/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "83.8",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 91
+    },
+    {
+      "row": {
+        "ID": "91",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "20",
+        "Date": "9/28/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "6:46:00",
+        "Sleep Efficiency (%)": "75.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 92
+    },
+    {
+      "row": {
+        "ID": "92",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "21",
+        "Date": "9/29/2004",
+        "Sleep Latency (hours)": "0:16",
+        "Sleep Duration (hours)": "7:42:00",
+        "Sleep Efficiency (%)": "87.1",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 93
+    },
+    {
+      "row": {
+        "ID": "93",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "22",
+        "Date": "9/30/2004",
+        "Sleep Latency (hours)": "1:20",
+        "Sleep Duration (hours)": "6:38:00",
+        "Sleep Efficiency (%)": "67.5",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 94
+    },
+    {
+      "row": {
+        "ID": "94",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "23",
+        "Date": "10/1/2004",
+        "Sleep Latency (hours)": "0:14",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 95
+    },
+    {
+      "row": {
+        "ID": "95",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "24",
+        "Date": "10/2/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "83.3",
+        "Notes": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 96
+    },
+    {
+      "row": {
+        "ID": "96",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "25",
+        "Date": "10/3/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "75.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 97
+    },
+    {
+      "row": {
+        "ID": "97",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "26",
+        "Date": "10/4/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 98
+    },
+    {
+      "row": {
+        "ID": "98",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "27",
+        "Date": "10/5/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 99
+    },
+    {
+      "row": {
+        "ID": "99",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "28",
+        "Date": "10/6/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 100
+    },
+    {
+      "row": {
+        "ID": "100",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "29",
+        "Date": "10/7/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 101
+    },
+    {
+      "row": {
+        "ID": "101",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "30",
+        "Date": "10/8/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "7:18:00",
+        "Sleep Efficiency (%)": "82.5",
+        "Notes": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 102
+    },
+    {
+      "row": {
+        "ID": "102",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "31",
+        "Date": "10/9/2004",
+        "Sleep Latency (hours)": "0:36",
+        "Sleep Duration (hours)": "6:52:00",
+        "Sleep Efficiency (%)": "77.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 103
+    },
+    {
+      "row": {
+        "ID": "103",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "32",
+        "Date": "10/10/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:14:00",
+        "Sleep Efficiency (%)": "84.2",
+        "Notes": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 104
+    },
+    {
+      "row": {
+        "ID": "104",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "33",
+        "Date": "10/11/2004",
+        "Sleep Latency (hours)": "1:02",
+        "Sleep Duration (hours)": "6:56:00",
+        "Sleep Efficiency (%)": "76.7",
+        "Notes": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 105
+    },
+    {
+      "row": {
+        "ID": "105",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "34",
+        "Date": "10/12/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "70.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 106
+    },
+    {
+      "row": {
+        "ID": "106",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "35",
+        "Date": "10/13/2004",
+        "Sleep Latency (hours)": "0:16",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "84.2",
+        "Notes": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 107
+    },
+    {
+      "row": {
+        "ID": "107",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "36",
+        "Date": "10/14/2004",
+        "Sleep Latency (hours)": "0:26",
+        "Sleep Duration (hours)": "7:18:00",
+        "Sleep Efficiency (%)": "74.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 108
+    },
+    {
+      "row": {
+        "ID": "108",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "37",
+        "Date": "10/15/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "78.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 109
+    },
+    {
+      "row": {
+        "ID": "109",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "38",
+        "Date": "10/16/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "81.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 110
+    },
+    {
+      "row": {
+        "ID": "110",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "39",
+        "Date": "10/17/2004",
+        "Sleep Latency (hours)": "0:32",
+        "Sleep Duration (hours)": "7:26:00",
+        "Sleep Efficiency (%)": "74.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 111
+    },
+    {
+      "row": {
+        "ID": "111",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "40",
+        "Date": "10/18/2004",
+        "Sleep Latency (hours)": "1:12",
+        "Sleep Duration (hours)": "6:46:00",
+        "Sleep Efficiency (%)": "70.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 112
+    },
+    {
+      "row": {
+        "ID": "112",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "41",
+        "Date": "10/19/2004",
+        "Sleep Latency (hours)": "2:20",
+        "Sleep Duration (hours)": "5:38:00",
+        "Sleep Efficiency (%)": "62.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 113
+    },
+    {
+      "row": {
+        "ID": "113",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "42",
+        "Date": "10/20/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "77.5",
+        "Notes": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 114
+    },
+    {
+      "row": {
+        "ID": "114",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "43",
+        "Date": "10/21/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "77.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 115
+    },
+    {
+      "row": {
+        "ID": "115",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "44",
+        "Date": "10/22/2004",
+        "Sleep Latency (hours)": "0:40",
+        "Sleep Duration (hours)": "7:18:00",
+        "Sleep Efficiency (%)": "80",
+        "Notes": "NA"
+      },
+      "sourceRow": 116
+    },
+    {
+      "row": {
+        "ID": "116",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "45",
+        "Date": "10/23/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "80",
+        "Notes": "NA"
+      },
+      "sourceRow": 117
+    },
+    {
+      "row": {
+        "ID": "117",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "46",
+        "Date": "10/24/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "81.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 118
+    },
+    {
+      "row": {
+        "ID": "118",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "47",
+        "Date": "10/25/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "87.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 119
+    },
+    {
+      "row": {
+        "ID": "119",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "48",
+        "Date": "10/26/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "81.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 120
+    },
+    {
+      "row": {
+        "ID": "120",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "49",
+        "Date": "10/27/2004",
+        "Sleep Latency (hours)": "1:04",
+        "Sleep Duration (hours)": "6:42:00",
+        "Sleep Efficiency (%)": "75",
+        "Notes": "NA"
+      },
+      "sourceRow": 121
+    },
+    {
+      "row": {
+        "ID": "121",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "50",
+        "Date": "10/28/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "80.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 122
+    },
+    {
+      "row": {
+        "ID": "122",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "51",
+        "Date": "10/29/2004",
+        "Sleep Latency (hours)": "0:24",
+        "Sleep Duration (hours)": "7:26:00",
+        "Sleep Efficiency (%)": "81.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 123
+    },
+    {
+      "row": {
+        "ID": "123",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "52",
+        "Date": "10/30/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 124
+    },
+    {
+      "row": {
+        "ID": "124",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "53",
+        "Date": "10/31/2004",
+        "Sleep Latency (hours)": "1:24",
+        "Sleep Duration (hours)": "6:26:00",
+        "Sleep Efficiency (%)": "67.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 125
+    },
+    {
+      "row": {
+        "ID": "125",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "54",
+        "Date": "11/1/2004",
+        "Sleep Latency (hours)": "1:28",
+        "Sleep Duration (hours)": "6:10:00",
+        "Sleep Efficiency (%)": "66.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 126
+    },
+    {
+      "row": {
+        "ID": "126",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "55",
+        "Date": "11/2/2004",
+        "Sleep Latency (hours)": "1:14",
+        "Sleep Duration (hours)": "6:44:00",
+        "Sleep Efficiency (%)": "77.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 127
+    },
+    {
+      "row": {
+        "ID": "127",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "56",
+        "Date": "11/3/2004",
+        "Sleep Latency (hours)": "1:18",
+        "Sleep Duration (hours)": "6:40:00",
+        "Sleep Efficiency (%)": "72.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 128
+    },
+    {
+      "row": {
+        "ID": "128",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "57",
+        "Date": "11/4/2004",
+        "Sleep Latency (hours)": "1:30",
+        "Sleep Duration (hours)": "6:28:00",
+        "Sleep Efficiency (%)": "67.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 129
+    },
+    {
+      "row": {
+        "ID": "129",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "58",
+        "Date": "11/5/2004",
+        "Sleep Latency (hours)": "0:32",
+        "Sleep Duration (hours)": "7:02:00",
+        "Sleep Efficiency (%)": "77.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 130
+    },
+    {
+      "row": {
+        "ID": "130",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "59",
+        "Date": "11/6/2004",
+        "Sleep Latency (hours)": "1:32",
+        "Sleep Duration (hours)": "6:26:00",
+        "Sleep Efficiency (%)": "69.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 131
+    },
+    {
+      "row": {
+        "ID": "131",
+        "Subject": "C1G0002",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "60",
+        "Date": "11/7/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 132
+    },
+    {
+      "row": {
+        "ID": "132",
+        "Subject": "C1G0002",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "0",
+        "Date": "11/8/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 133
+    },
+    {
+      "row": {
+        "ID": "133",
+        "Subject": "C1G0002",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "1",
+        "Date": "11/9/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "83.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 134
+    },
+    {
+      "row": {
+        "ID": "134",
+        "Subject": "C1G0002",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "2",
+        "Date": "11/10/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "77.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 135
+    },
+    {
+      "row": {
+        "ID": "135",
+        "Subject": "C1G0002",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "3",
+        "Date": "11/11/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "7:26:00",
+        "Sleep Efficiency (%)": "82.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 136
+    },
+    {
+      "row": {
+        "ID": "136",
+        "Subject": "C1G0002",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "4",
+        "Date": "11/12/2004",
+        "Sleep Latency (hours)": "0:40",
+        "Sleep Duration (hours)": "7:18:00",
+        "Sleep Efficiency (%)": "79.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 137
+    },
+    {
+      "row": {
+        "ID": "137",
+        "Subject": "C1G0002",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "5",
+        "Date": "11/13/2004",
+        "Sleep Latency (hours)": "1:48",
+        "Sleep Duration (hours)": "6:10:00",
+        "Sleep Efficiency (%)": "70.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 138
+    },
+    {
+      "row": {
+        "ID": "138",
+        "Subject": "C1G0002",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "6",
+        "Date": "11/14/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "73.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 139
+    },
+    {
+      "row": {
+        "ID": "139",
+        "Subject": "C1G0003",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "2",
+        "Date": "9/7/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 140
+    },
+    {
+      "row": {
+        "ID": "140",
+        "Subject": "C1G0003",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "1",
+        "Date": "9/8/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 141
+    },
+    {
+      "row": {
+        "ID": "141",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "1",
+        "Date": "9/9/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 142
+    },
+    {
+      "row": {
+        "ID": "142",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "2",
+        "Date": "9/10/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 143
+    },
+    {
+      "row": {
+        "ID": "143",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "3",
+        "Date": "9/11/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 144
+    },
+    {
+      "row": {
+        "ID": "144",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "4",
+        "Date": "9/12/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 145
+    },
+    {
+      "row": {
+        "ID": "145",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "5",
+        "Date": "9/13/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 146
+    },
+    {
+      "row": {
+        "ID": "146",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "6",
+        "Date": "9/14/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 147
+    },
+    {
+      "row": {
+        "ID": "147",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "7",
+        "Date": "9/15/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 148
+    },
+    {
+      "row": {
+        "ID": "148",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "8",
+        "Date": "9/16/2004",
+        "Sleep Latency (hours)": "NA",
+        "Sleep Duration (hours)": "NA",
+        "Sleep Efficiency (%)": "NA",
+        "Notes": "No Data"
+      },
+      "sourceRow": 149
+    },
+    {
+      "row": {
+        "ID": "149",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "9",
+        "Date": "9/17/2004",
+        "Sleep Latency (hours)": "0:16",
+        "Sleep Duration (hours)": "7:34:00",
+        "Sleep Efficiency (%)": "77.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 150
+    },
+    {
+      "row": {
+        "ID": "150",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "10",
+        "Date": "9/18/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "87.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 151
+    },
+    {
+      "row": {
+        "ID": "151",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "11",
+        "Date": "9/19/2004",
+        "Sleep Latency (hours)": "0:26",
+        "Sleep Duration (hours)": "7:32:00",
+        "Sleep Efficiency (%)": "77.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 152
+    },
+    {
+      "row": {
+        "ID": "152",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "12",
+        "Date": "9/20/2004",
+        "Sleep Latency (hours)": "0:48",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "77.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 153
+    },
+    {
+      "row": {
+        "ID": "153",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "13",
+        "Date": "9/21/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "75",
+        "Notes": "NA"
+      },
+      "sourceRow": 154
+    },
+    {
+      "row": {
+        "ID": "154",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "14",
+        "Date": "9/22/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "70.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 155
+    },
+    {
+      "row": {
+        "ID": "155",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "15",
+        "Date": "9/23/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:40:00",
+        "Sleep Efficiency (%)": "79.2",
+        "Notes": "NA"
+      },
+      "sourceRow": 156
+    },
+    {
+      "row": {
+        "ID": "156",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "16",
+        "Date": "9/24/2004",
+        "Sleep Latency (hours)": "0:32",
+        "Sleep Duration (hours)": "7:26:00",
+        "Sleep Efficiency (%)": "72.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 157
+    },
+    {
+      "row": {
+        "ID": "157",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "17",
+        "Date": "9/25/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "75.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 158
+    },
+    {
+      "row": {
+        "ID": "158",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "18",
+        "Date": "9/26/2004",
+        "Sleep Latency (hours)": "0:16",
+        "Sleep Duration (hours)": "7:42:00",
+        "Sleep Efficiency (%)": "83.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 159
+    },
+    {
+      "row": {
+        "ID": "159",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "19",
+        "Date": "9/27/2004",
+        "Sleep Latency (hours)": "1:02",
+        "Sleep Duration (hours)": "6:34:00",
+        "Sleep Efficiency (%)": "70",
+        "Notes": "NA"
+      },
+      "sourceRow": 160
+    },
+    {
+      "row": {
+        "ID": "160",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "20",
+        "Date": "9/28/2004",
+        "Sleep Latency (hours)": "1:10",
+        "Sleep Duration (hours)": "6:48:00",
+        "Sleep Efficiency (%)": "64.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 161
+    },
+    {
+      "row": {
+        "ID": "161",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "21",
+        "Date": "9/29/2004",
+        "Sleep Latency (hours)": "0:24",
+        "Sleep Duration (hours)": "7:34:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 162
+    },
+    {
+      "row": {
+        "ID": "162",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "22",
+        "Date": "9/30/2004",
+        "Sleep Latency (hours)": "0:40",
+        "Sleep Duration (hours)": "6:54:00",
+        "Sleep Efficiency (%)": "81.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 163
+    },
+    {
+      "row": {
+        "ID": "163",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "23",
+        "Date": "10/1/2004",
+        "Sleep Latency (hours)": "0:28",
+        "Sleep Duration (hours)": "7:30:00",
+        "Sleep Efficiency (%)": "93.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 164
+    },
+    {
+      "row": {
+        "ID": "164",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "24",
+        "Date": "10/2/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "90.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 165
+    },
+    {
+      "row": {
+        "ID": "165",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "25",
+        "Date": "10/3/2004",
+        "Sleep Latency (hours)": "0:50",
+        "Sleep Duration (hours)": "7:08:00",
+        "Sleep Efficiency (%)": "84.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 166
+    },
+    {
+      "row": {
+        "ID": "166",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "26",
+        "Date": "10/4/2004",
+        "Sleep Latency (hours)": "1:06",
+        "Sleep Duration (hours)": "6:52:00",
+        "Sleep Efficiency (%)": "74.6",
+        "Notes": "Ambien 5mg"
+      },
+      "sourceRow": 167
+    },
+    {
+      "row": {
+        "ID": "167",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "27",
+        "Date": "10/5/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "86.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 168
+    },
+    {
+      "row": {
+        "ID": "168",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "28",
+        "Date": "10/6/2004",
+        "Sleep Latency (hours)": "0:24",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "86.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 169
+    },
+    {
+      "row": {
+        "ID": "169",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "29",
+        "Date": "10/7/2004",
+        "Sleep Latency (hours)": "1:08",
+        "Sleep Duration (hours)": "6:50:00",
+        "Sleep Efficiency (%)": "77.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 170
+    },
+    {
+      "row": {
+        "ID": "170",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "30",
+        "Date": "10/8/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "87.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 171
+    },
+    {
+      "row": {
+        "ID": "171",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "31",
+        "Date": "10/9/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "85",
+        "Notes": "NA"
+      },
+      "sourceRow": 172
+    },
+    {
+      "row": {
+        "ID": "172",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "32",
+        "Date": "10/10/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:22:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 173
+    },
+    {
+      "row": {
+        "ID": "173",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "33",
+        "Date": "10/11/2004",
+        "Sleep Latency (hours)": "0:32",
+        "Sleep Duration (hours)": "7:26:00",
+        "Sleep Efficiency (%)": "87.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 174
+    },
+    {
+      "row": {
+        "ID": "174",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "34",
+        "Date": "10/12/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:14:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 175
+    },
+    {
+      "row": {
+        "ID": "175",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "35",
+        "Date": "10/13/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "86.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 176
+    },
+    {
+      "row": {
+        "ID": "176",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "36",
+        "Date": "10/14/2004",
+        "Sleep Latency (hours)": "1:12",
+        "Sleep Duration (hours)": "6:46:00",
+        "Sleep Efficiency (%)": "75.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 177
+    },
+    {
+      "row": {
+        "ID": "177",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "37",
+        "Date": "10/15/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "84.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 178
+    },
+    {
+      "row": {
+        "ID": "178",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "38",
+        "Date": "10/16/2004",
+        "Sleep Latency (hours)": "0:44",
+        "Sleep Duration (hours)": "7:14:00",
+        "Sleep Efficiency (%)": "82.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 179
+    },
+    {
+      "row": {
+        "ID": "179",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "39",
+        "Date": "10/17/2004",
+        "Sleep Latency (hours)": "0:20",
+        "Sleep Duration (hours)": "7:38:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 180
+    },
+    {
+      "row": {
+        "ID": "180",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "40",
+        "Date": "10/18/2004",
+        "Sleep Latency (hours)": "0:42",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "81.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 181
+    },
+    {
+      "row": {
+        "ID": "181",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "41",
+        "Date": "10/19/2004",
+        "Sleep Latency (hours)": "1:12",
+        "Sleep Duration (hours)": "6:44:00",
+        "Sleep Efficiency (%)": "70.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 182
+    },
+    {
+      "row": {
+        "ID": "182",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "42",
+        "Date": "10/20/2004",
+        "Sleep Latency (hours)": "0:34",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "82.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 183
+    },
+    {
+      "row": {
+        "ID": "183",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "43",
+        "Date": "10/21/2004",
+        "Sleep Latency (hours)": "1:16",
+        "Sleep Duration (hours)": "6:42:00",
+        "Sleep Efficiency (%)": "77.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 184
+    },
+    {
+      "row": {
+        "ID": "184",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "44",
+        "Date": "10/22/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:20:00",
+        "Sleep Efficiency (%)": "83.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 185
+    },
+    {
+      "row": {
+        "ID": "185",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "45",
+        "Date": "10/23/2004",
+        "Sleep Latency (hours)": "0:50",
+        "Sleep Duration (hours)": "7:08:00",
+        "Sleep Efficiency (%)": "77.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 186
+    },
+    {
+      "row": {
+        "ID": "186",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "46",
+        "Date": "10/24/2004",
+        "Sleep Latency (hours)": "0:42",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "80",
+        "Notes": "NA"
+      },
+      "sourceRow": 187
+    },
+    {
+      "row": {
+        "ID": "187",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "47",
+        "Date": "10/25/2004",
+        "Sleep Latency (hours)": "0:42",
+        "Sleep Duration (hours)": "7:16:00",
+        "Sleep Efficiency (%)": "77.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 188
+    },
+    {
+      "row": {
+        "ID": "188",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "48",
+        "Date": "10/26/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:22:00",
+        "Sleep Efficiency (%)": "82.9",
+        "Notes": "NA"
+      },
+      "sourceRow": 189
+    },
+    {
+      "row": {
+        "ID": "189",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "49",
+        "Date": "10/27/2004",
+        "Sleep Latency (hours)": "0:48",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "82.1",
+        "Notes": "NA"
+      },
+      "sourceRow": 190
+    },
+    {
+      "row": {
+        "ID": "190",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "50",
+        "Date": "10/28/2004",
+        "Sleep Latency (hours)": "0:46",
+        "Sleep Duration (hours)": "7:12:00",
+        "Sleep Efficiency (%)": "80.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 191
+    },
+    {
+      "row": {
+        "ID": "191",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "51",
+        "Date": "10/29/2004",
+        "Sleep Latency (hours)": "0:26",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "83.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 192
+    },
+    {
+      "row": {
+        "ID": "192",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "52",
+        "Date": "10/30/2004",
+        "Sleep Latency (hours)": "0:24",
+        "Sleep Duration (hours)": "7:34:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 193
+    },
+    {
+      "row": {
+        "ID": "193",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "53",
+        "Date": "10/31/2004",
+        "Sleep Latency (hours)": "1:36",
+        "Sleep Duration (hours)": "6:16:00",
+        "Sleep Efficiency (%)": "71.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 194
+    },
+    {
+      "row": {
+        "ID": "194",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "54",
+        "Date": "11/1/2004",
+        "Sleep Latency (hours)": "1:42",
+        "Sleep Duration (hours)": "6:16:00",
+        "Sleep Efficiency (%)": "65.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 195
+    },
+    {
+      "row": {
+        "ID": "195",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "55",
+        "Date": "11/2/2004",
+        "Sleep Latency (hours)": "2:06",
+        "Sleep Duration (hours)": "5:52:00",
+        "Sleep Efficiency (%)": "64.6",
+        "Notes": "NA"
+      },
+      "sourceRow": 196
+    },
+    {
+      "row": {
+        "ID": "196",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "56",
+        "Date": "11/3/2004",
+        "Sleep Latency (hours)": "2:46",
+        "Sleep Duration (hours)": "5:12:00",
+        "Sleep Efficiency (%)": "58.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 197
+    },
+    {
+      "row": {
+        "ID": "197",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "57",
+        "Date": "11/4/2004",
+        "Sleep Latency (hours)": "2:00",
+        "Sleep Duration (hours)": "5:54:00",
+        "Sleep Efficiency (%)": "65.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 198
+    },
+    {
+      "row": {
+        "ID": "198",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "58",
+        "Date": "11/5/2004",
+        "Sleep Latency (hours)": "1:24",
+        "Sleep Duration (hours)": "6:34:00",
+        "Sleep Efficiency (%)": "75.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 199
+    },
+    {
+      "row": {
+        "ID": "199",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "59",
+        "Date": "11/6/2004",
+        "Sleep Latency (hours)": "1:14",
+        "Sleep Duration (hours)": "6:38:00",
+        "Sleep Efficiency (%)": "75.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 200
+    },
+    {
+      "row": {
+        "ID": "200",
+        "Subject": "C1G0003",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "60",
+        "Date": "11/7/2004",
+        "Sleep Latency (hours)": "0:30",
+        "Sleep Duration (hours)": "7:28:00",
+        "Sleep Efficiency (%)": "82.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 201
+    },
+    {
+      "row": {
+        "ID": "201",
+        "Subject": "C1G0003",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "0",
+        "Date": "11/8/2004",
+        "Sleep Latency (hours)": "0",
+        "Sleep Duration (hours)": "7:58:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 202
+    },
+    {
+      "row": {
+        "ID": "202",
+        "Subject": "C1G0003",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "1",
+        "Date": "11/9/2004",
+        "Sleep Latency (hours)": "0:22",
+        "Sleep Duration (hours)": "7:36:00",
+        "Sleep Efficiency (%)": "81.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 203
+    },
+    {
+      "row": {
+        "ID": "203",
+        "Subject": "C1G0003",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "2",
+        "Date": "11/10/2004",
+        "Sleep Latency (hours)": "0:38",
+        "Sleep Duration (hours)": "7:10:00",
+        "Sleep Efficiency (%)": "80.8",
+        "Notes": "NA"
+      },
+      "sourceRow": 204
+    },
+    {
+      "row": {
+        "ID": "204",
+        "Subject": "C1G0003",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "3",
+        "Date": "11/11/2004",
+        "Sleep Latency (hours)": "0:54",
+        "Sleep Duration (hours)": "7:04:00",
+        "Sleep Efficiency (%)": "76.3",
+        "Notes": "NA"
+      },
+      "sourceRow": 205
+    },
+    {
+      "row": {
+        "ID": "205",
+        "Subject": "C1G0003",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "4",
+        "Date": "11/12/2004",
+        "Sleep Latency (hours)": "0:12",
+        "Sleep Duration (hours)": "7:46:00",
+        "Sleep Efficiency (%)": "86.7",
+        "Notes": "NA"
+      },
+      "sourceRow": 206
+    },
+    {
+      "row": {
+        "ID": "206",
+        "Subject": "C1G0003",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "5",
+        "Date": "11/13/2004",
+        "Sleep Latency (hours)": "1:18",
+        "Sleep Duration (hours)": "6:40:00",
+        "Sleep Efficiency (%)": "77.5",
+        "Notes": "NA"
+      },
+      "sourceRow": 207
+    },
+    {
+      "row": {
+        "ID": "207",
+        "Subject": "C1G0003",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "6",
+        "Date": "11/14/2004",
+        "Sleep Latency (hours)": "0:18",
+        "Sleep Duration (hours)": "7:24:00",
+        "Sleep Efficiency (%)": "85.4",
+        "Notes": "NA"
+      },
+      "sourceRow": 208
+    }
+  ],
+  "query": [
+    {
+      "row": {
+        "ID": "1",
+        "Subject": "C1G0002",
+        "Date": "11/9/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "1",
+        "Record Number": "4180",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "83.8",
+        "Comments": ""
+      },
+      "sourceRow": 2
+    },
+    {
+      "row": {
+        "ID": "2",
+        "Subject": "C1G0002",
+        "Date": "11/10/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "2",
+        "Record Number": "4181",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "77.5",
+        "Comments": ""
+      },
+      "sourceRow": 3
+    },
+    {
+      "row": {
+        "ID": "3",
+        "Subject": "C1G0002",
+        "Date": "11/11/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "3",
+        "Record Number": "4183",
+        "Sleep latency": "0:28",
+        "Sleep duration": "7:26",
+        "Sleep efficiency": "82.5",
+        "Comments": ""
+      },
+      "sourceRow": 4
+    },
+    {
+      "row": {
+        "ID": "4",
+        "Subject": "C1G0002",
+        "Date": "11/12/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "4",
+        "Record Number": "4185",
+        "Sleep latency": "0:40",
+        "Sleep duration": "7:18",
+        "Sleep efficiency": "79.2",
+        "Comments": ""
+      },
+      "sourceRow": 5
+    },
+    {
+      "row": {
+        "ID": "5",
+        "Subject": "C1G0002",
+        "Date": "11/13/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "5",
+        "Record Number": "4187",
+        "Sleep latency": "1:48",
+        "Sleep duration": "6:10",
+        "Sleep efficiency": "70.8",
+        "Comments": ""
+      },
+      "sourceRow": 6
+    },
+    {
+      "row": {
+        "ID": "6",
+        "Subject": "C1G0002",
+        "Date": "11/14/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "6",
+        "Record Number": "4189",
+        "Sleep latency": "0:28",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "73.8",
+        "Comments": ""
+      },
+      "sourceRow": 7
+    },
+    {
+      "row": {
+        "ID": "7",
+        "Subject": "C1G0003",
+        "Date": "9/7/2004",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "2",
+        "Record Number": "4019",
+        "Sleep latency": "0:14",
+        "Sleep duration": "7:44",
+        "Sleep efficiency": "92.1",
+        "Comments": ""
+      },
+      "sourceRow": 8
+    },
+    {
+      "row": {
+        "ID": "8",
+        "Subject": "C1G0003",
+        "Date": "9/8/2004",
+        "Test_Phase": "PRE_TEST",
+        "BR_Day": "1",
+        "Record Number": "4021",
+        "Sleep latency": "0:06",
+        "Sleep duration": "7:50",
+        "Sleep efficiency": "95.8",
+        "Comments": ""
+      },
+      "sourceRow": 9
+    },
+    {
+      "row": {
+        "ID": "9",
+        "Subject": "C1G0003",
+        "Date": "9/9/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "1",
+        "Record Number": "4022",
+        "Sleep latency": "0:00",
+        "Sleep duration": "7:52",
+        "Sleep efficiency": "90.8",
+        "Comments": ""
+      },
+      "sourceRow": 10
+    },
+    {
+      "row": {
+        "ID": "10",
+        "Subject": "C1G0003",
+        "Date": "9/10/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "2",
+        "Record Number": "4093",
+        "Sleep latency": "0:04",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "79.2",
+        "Comments": ""
+      },
+      "sourceRow": 11
+    },
+    {
+      "row": {
+        "ID": "11",
+        "Subject": "C1G0003",
+        "Date": "9/10/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "2",
+        "Record Number": "4023",
+        "Sleep latency": "0:12",
+        "Sleep duration": "7:42",
+        "Sleep efficiency": "91.7",
+        "Comments": ""
+      },
+      "sourceRow": 12
+    },
+    {
+      "row": {
+        "ID": "12",
+        "Subject": "C1G0003",
+        "Date": "9/11/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "3",
+        "Record Number": "4024",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "94.2",
+        "Comments": ""
+      },
+      "sourceRow": 13
+    },
+    {
+      "row": {
+        "ID": "13",
+        "Subject": "C1G0003",
+        "Date": "9/11/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "3",
+        "Record Number": "4094",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "82.9",
+        "Comments": ""
+      },
+      "sourceRow": 14
+    },
+    {
+      "row": {
+        "ID": "14",
+        "Subject": "C1G0003",
+        "Date": "9/12/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "4",
+        "Record Number": "4095",
+        "Sleep latency": "0:10",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "74.2",
+        "Comments": ""
+      },
+      "sourceRow": 15
+    },
+    {
+      "row": {
+        "ID": "15",
+        "Subject": "C1G0003",
+        "Date": "9/12/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "4",
+        "Record Number": "4025",
+        "Sleep latency": "0:12",
+        "Sleep duration": "7:46",
+        "Sleep efficiency": "95.4",
+        "Comments": ""
+      },
+      "sourceRow": 16
+    },
+    {
+      "row": {
+        "ID": "16",
+        "Subject": "C1G0003",
+        "Date": "9/13/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "5",
+        "Record Number": "4026",
+        "Sleep latency": "0:10",
+        "Sleep duration": "7:48",
+        "Sleep efficiency": "96.7",
+        "Comments": ""
+      },
+      "sourceRow": 17
+    },
+    {
+      "row": {
+        "ID": "17",
+        "Subject": "C1G0003",
+        "Date": "9/13/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "5",
+        "Record Number": "4096",
+        "Sleep latency": "0:04",
+        "Sleep duration": "7:08",
+        "Sleep efficiency": "74.6",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 18
+    },
+    {
+      "row": {
+        "ID": "18",
+        "Subject": "C1G0003",
+        "Date": "9/14/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "6",
+        "Record Number": "4097",
+        "Sleep latency": "1:40",
+        "Sleep duration": "6:04",
+        "Sleep efficiency": "52.5",
+        "Comments": ""
+      },
+      "sourceRow": 19
+    },
+    {
+      "row": {
+        "ID": "19",
+        "Subject": "C1G0003",
+        "Date": "9/14/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "6",
+        "Record Number": "4027",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:34",
+        "Sleep efficiency": "93.8",
+        "Comments": ""
+      },
+      "sourceRow": 20
+    },
+    {
+      "row": {
+        "ID": "20",
+        "Subject": "C1G0003",
+        "Date": "9/15/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "7",
+        "Record Number": "4028",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "95.4",
+        "Comments": ""
+      },
+      "sourceRow": 21
+    },
+    {
+      "row": {
+        "ID": "21",
+        "Subject": "C1G0003",
+        "Date": "9/15/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "7",
+        "Record Number": "4098",
+        "Sleep latency": "0",
+        "Sleep duration": "7:54",
+        "Sleep efficiency": "84.6",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 22
+    },
+    {
+      "row": {
+        "ID": "22",
+        "Subject": "C1G0003",
+        "Date": "9/16/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "8",
+        "Record Number": "4099",
+        "Sleep latency": "0:36",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "79.2",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 23
+    },
+    {
+      "row": {
+        "ID": "23",
+        "Subject": "C1G0003",
+        "Date": "9/16/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "8",
+        "Record Number": "4029",
+        "Sleep latency": "0:08",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "90.8",
+        "Comments": ""
+      },
+      "sourceRow": 24
+    },
+    {
+      "row": {
+        "ID": "24",
+        "Subject": "C1G0003",
+        "Date": "9/17/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "9",
+        "Record Number": "4208",
+        "Sleep latency": "0:16",
+        "Sleep duration": "7:34",
+        "Sleep efficiency": "77.5",
+        "Comments": ""
+      },
+      "sourceRow": 25
+    },
+    {
+      "row": {
+        "ID": "25",
+        "Subject": "C1G0003",
+        "Date": "9/17/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "9",
+        "Record Number": "4030",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "91.3",
+        "Comments": ""
+      },
+      "sourceRow": 26
+    },
+    {
+      "row": {
+        "ID": "26",
+        "Subject": "C1G0003",
+        "Date": "9/17/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "9",
+        "Record Number": "4100",
+        "Sleep latency": "0:16",
+        "Sleep duration": "7:42",
+        "Sleep efficiency": "81.3",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 27
+    },
+    {
+      "row": {
+        "ID": "27",
+        "Subject": "C1G0003",
+        "Date": "9/18/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "10",
+        "Record Number": "4101",
+        "Sleep latency": "0:48",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "68.8",
+        "Comments": ""
+      },
+      "sourceRow": 28
+    },
+    {
+      "row": {
+        "ID": "28",
+        "Subject": "C1G0003",
+        "Date": "9/18/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "10",
+        "Record Number": "4031",
+        "Sleep latency": "0:16",
+        "Sleep duration": "7:42",
+        "Sleep efficiency": "95.4",
+        "Comments": ""
+      },
+      "sourceRow": 29
+    },
+    {
+      "row": {
+        "ID": "29",
+        "Subject": "C1G0003",
+        "Date": "9/18/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "10",
+        "Record Number": "4209",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "87.1",
+        "Comments": ""
+      },
+      "sourceRow": 30
+    },
+    {
+      "row": {
+        "ID": "30",
+        "Subject": "C1G0003",
+        "Date": "9/19/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "11",
+        "Record Number": "4210",
+        "Sleep latency": "0:26",
+        "Sleep duration": "7:32",
+        "Sleep efficiency": "77.1",
+        "Comments": ""
+      },
+      "sourceRow": 31
+    },
+    {
+      "row": {
+        "ID": "31",
+        "Subject": "C1G0003",
+        "Date": "9/19/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "11",
+        "Record Number": "4032",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "89.6",
+        "Comments": ""
+      },
+      "sourceRow": 32
+    },
+    {
+      "row": {
+        "ID": "32",
+        "Subject": "C1G0003",
+        "Date": "9/19/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "11",
+        "Record Number": "4102",
+        "Sleep latency": "0:32",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "79.2",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 33
+    },
+    {
+      "row": {
+        "ID": "33",
+        "Subject": "C1G0003",
+        "Date": "9/20/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "12",
+        "Record Number": "4103",
+        "Sleep latency": "1:00",
+        "Sleep duration": "6:58",
+        "Sleep efficiency": "72.1",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 34
+    },
+    {
+      "row": {
+        "ID": "34",
+        "Subject": "C1G0003",
+        "Date": "9/20/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "12",
+        "Record Number": "4033",
+        "Sleep latency": "0:56",
+        "Sleep duration": "7:02",
+        "Sleep efficiency": "85.8",
+        "Comments": ""
+      },
+      "sourceRow": 35
+    },
+    {
+      "row": {
+        "ID": "35",
+        "Subject": "C1G0003",
+        "Date": "9/20/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "12",
+        "Record Number": "4211",
+        "Sleep latency": "0:48",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "77.5",
+        "Comments": ""
+      },
+      "sourceRow": 36
+    },
+    {
+      "row": {
+        "ID": "36",
+        "Subject": "C1G0003",
+        "Date": "9/21/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "13",
+        "Record Number": "4268",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "75",
+        "Comments": ""
+      },
+      "sourceRow": 37
+    },
+    {
+      "row": {
+        "ID": "37",
+        "Subject": "C1G0003",
+        "Date": "9/21/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "13",
+        "Record Number": "4034",
+        "Sleep latency": "0:36",
+        "Sleep duration": "7:22",
+        "Sleep efficiency": "90.8",
+        "Comments": ""
+      },
+      "sourceRow": 38
+    },
+    {
+      "row": {
+        "ID": "38",
+        "Subject": "C1G0003",
+        "Date": "9/21/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "13",
+        "Record Number": "4104",
+        "Sleep latency": "0:14",
+        "Sleep duration": "7:44",
+        "Sleep efficiency": "75.4",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 39
+    },
+    {
+      "row": {
+        "ID": "39",
+        "Subject": "C1G0003",
+        "Date": "9/22/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "14",
+        "Record Number": "4105",
+        "Sleep latency": "1:08",
+        "Sleep duration": "6:50",
+        "Sleep efficiency": "68.8",
+        "Comments": ""
+      },
+      "sourceRow": 40
+    },
+    {
+      "row": {
+        "ID": "40",
+        "Subject": "C1G0003",
+        "Date": "9/22/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "14",
+        "Record Number": "4035",
+        "Sleep latency": "0:24",
+        "Sleep duration": "7:34",
+        "Sleep efficiency": "92.5",
+        "Comments": ""
+      },
+      "sourceRow": 41
+    },
+    {
+      "row": {
+        "ID": "41",
+        "Subject": "C1G0003",
+        "Date": "9/22/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "14",
+        "Record Number": "4270",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "70.4",
+        "Comments": ""
+      },
+      "sourceRow": 42
+    },
+    {
+      "row": {
+        "ID": "42",
+        "Subject": "C1G0003",
+        "Date": "9/23/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "15",
+        "Record Number": "4271",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "79.2",
+        "Comments": ""
+      },
+      "sourceRow": 43
+    },
+    {
+      "row": {
+        "ID": "43",
+        "Subject": "C1G0003",
+        "Date": "9/23/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "15",
+        "Record Number": "4036",
+        "Sleep latency": "0:44",
+        "Sleep duration": "7:14",
+        "Sleep efficiency": "88.3",
+        "Comments": ""
+      },
+      "sourceRow": 44
+    },
+    {
+      "row": {
+        "ID": "44",
+        "Subject": "C1G0003",
+        "Date": "9/23/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "15",
+        "Record Number": "4106",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "85.4",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 45
+    },
+    {
+      "row": {
+        "ID": "45",
+        "Subject": "C1G0003",
+        "Date": "9/24/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "16",
+        "Record Number": "4107",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "81.3",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 46
+    },
+    {
+      "row": {
+        "ID": "46",
+        "Subject": "C1G0003",
+        "Date": "9/24/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "16",
+        "Record Number": "4037",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "93.3",
+        "Comments": ""
+      },
+      "sourceRow": 47
+    },
+    {
+      "row": {
+        "ID": "47",
+        "Subject": "C1G0003",
+        "Date": "9/24/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "16",
+        "Record Number": "4272",
+        "Sleep latency": "0:32",
+        "Sleep duration": "7:26",
+        "Sleep efficiency": "72.5",
+        "Comments": ""
+      },
+      "sourceRow": 48
+    },
+    {
+      "row": {
+        "ID": "48",
+        "Subject": "C1G0003",
+        "Date": "9/25/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "17",
+        "Record Number": "4273",
+        "Sleep latency": "0:28",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "75.8",
+        "Comments": ""
+      },
+      "sourceRow": 49
+    },
+    {
+      "row": {
+        "ID": "49",
+        "Subject": "C1G0003",
+        "Date": "9/25/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "17",
+        "Record Number": "4038",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "93.3",
+        "Comments": ""
+      },
+      "sourceRow": 50
+    },
+    {
+      "row": {
+        "ID": "50",
+        "Subject": "C1G0003",
+        "Date": "9/25/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "17",
+        "Record Number": "4110",
+        "Sleep latency": "0:16",
+        "Sleep duration": "7:42",
+        "Sleep efficiency": "82.5",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 51
+    },
+    {
+      "row": {
+        "ID": "51",
+        "Subject": "C1G0003",
+        "Date": "9/26/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "18",
+        "Record Number": "4109",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "79.2",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 52
+    },
+    {
+      "row": {
+        "ID": "52",
+        "Subject": "C1G0003",
+        "Date": "9/26/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "18",
+        "Record Number": "4039",
+        "Sleep latency": "0:36",
+        "Sleep duration": "7:22",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 53
+    },
+    {
+      "row": {
+        "ID": "53",
+        "Subject": "C1G0003",
+        "Date": "9/26/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "18",
+        "Record Number": "4274",
+        "Sleep latency": "0:16",
+        "Sleep duration": "7:42",
+        "Sleep efficiency": "83.8",
+        "Comments": ""
+      },
+      "sourceRow": 54
+    },
+    {
+      "row": {
+        "ID": "54",
+        "Subject": "C1G0003",
+        "Date": "9/27/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "19",
+        "Record Number": "4275",
+        "Sleep latency": "1:02",
+        "Sleep duration": "6:34",
+        "Sleep efficiency": "70",
+        "Comments": ""
+      },
+      "sourceRow": 55
+    },
+    {
+      "row": {
+        "ID": "55",
+        "Subject": "C1G0003",
+        "Date": "9/27/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "19",
+        "Record Number": "4040",
+        "Sleep latency": "0:36",
+        "Sleep duration": "7:22",
+        "Sleep efficiency": "91.7",
+        "Comments": ""
+      },
+      "sourceRow": 56
+    },
+    {
+      "row": {
+        "ID": "56",
+        "Subject": "C1G0003",
+        "Date": "9/27/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "19",
+        "Record Number": "4111",
+        "Sleep latency": "0:28",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "83.8",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 57
+    },
+    {
+      "row": {
+        "ID": "57",
+        "Subject": "C1G0003",
+        "Date": "9/28/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "20",
+        "Record Number": "4112",
+        "Sleep latency": "0:28",
+        "Sleep duration": "6:46",
+        "Sleep efficiency": "75.4",
+        "Comments": ""
+      },
+      "sourceRow": 58
+    },
+    {
+      "row": {
+        "ID": "58",
+        "Subject": "C1G0003",
+        "Date": "9/28/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "20",
+        "Record Number": "4041",
+        "Sleep latency": "0:48",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "84.6",
+        "Comments": ""
+      },
+      "sourceRow": 59
+    },
+    {
+      "row": {
+        "ID": "59",
+        "Subject": "C1G0003",
+        "Date": "9/28/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "20",
+        "Record Number": "4276",
+        "Sleep latency": "1:10",
+        "Sleep duration": "6:48",
+        "Sleep efficiency": "64.6",
+        "Comments": ""
+      },
+      "sourceRow": 60
+    },
+    {
+      "row": {
+        "ID": "60",
+        "Subject": "C1G0003",
+        "Date": "9/29/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "21",
+        "Record Number": "4277",
+        "Sleep latency": "0:24",
+        "Sleep duration": "7:34",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 61
+    },
+    {
+      "row": {
+        "ID": "61",
+        "Subject": "C1G0003",
+        "Date": "9/29/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "21",
+        "Record Number": "4042",
+        "Sleep latency": "0:28",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "88.3",
+        "Comments": ""
+      },
+      "sourceRow": 62
+    },
+    {
+      "row": {
+        "ID": "62",
+        "Subject": "C1G0003",
+        "Date": "9/29/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "21",
+        "Record Number": "4113",
+        "Sleep latency": "0:16",
+        "Sleep duration": "7:42",
+        "Sleep efficiency": "87.1",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 63
+    },
+    {
+      "row": {
+        "ID": "63",
+        "Subject": "C1G0003",
+        "Date": "9/30/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "22",
+        "Record Number": "4114",
+        "Sleep latency": "1:20",
+        "Sleep duration": "6:38",
+        "Sleep efficiency": "67.5",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 64
+    },
+    {
+      "row": {
+        "ID": "64",
+        "Subject": "C1G0003",
+        "Date": "9/30/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "22",
+        "Record Number": "4043",
+        "Sleep latency": "0:42",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "85",
+        "Comments": ""
+      },
+      "sourceRow": 65
+    },
+    {
+      "row": {
+        "ID": "65",
+        "Subject": "C1G0003",
+        "Date": "9/30/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "22",
+        "Record Number": "4278",
+        "Sleep latency": "0:40",
+        "Sleep duration": "6:54",
+        "Sleep efficiency": "81.7",
+        "Comments": ""
+      },
+      "sourceRow": 66
+    },
+    {
+      "row": {
+        "ID": "66",
+        "Subject": "C1G0003",
+        "Date": "10/1/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "23",
+        "Record Number": "4279",
+        "Sleep latency": "0:28",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "93.3",
+        "Comments": ""
+      },
+      "sourceRow": 67
+    },
+    {
+      "row": {
+        "ID": "67",
+        "Subject": "C1G0003",
+        "Date": "10/1/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "23",
+        "Record Number": "4044",
+        "Sleep latency": "0:14",
+        "Sleep duration": "7:44",
+        "Sleep efficiency": "94.6",
+        "Comments": ""
+      },
+      "sourceRow": 68
+    },
+    {
+      "row": {
+        "ID": "68",
+        "Subject": "C1G0003",
+        "Date": "10/1/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "23",
+        "Record Number": "4115",
+        "Sleep latency": "0:14",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "82.9",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 69
+    },
+    {
+      "row": {
+        "ID": "69",
+        "Subject": "C1G0003",
+        "Date": "10/2/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "24",
+        "Record Number": "4116",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "83.3",
+        "Comments": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 70
+    },
+    {
+      "row": {
+        "ID": "70",
+        "Subject": "C1G0003",
+        "Date": "10/2/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "24",
+        "Record Number": "4045",
+        "Sleep latency": "0:24",
+        "Sleep duration": "7:34",
+        "Sleep efficiency": "91.7",
+        "Comments": ""
+      },
+      "sourceRow": 71
+    },
+    {
+      "row": {
+        "ID": "71",
+        "Subject": "C1G0003",
+        "Date": "10/2/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "24",
+        "Record Number": "4280",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "90.8",
+        "Comments": ""
+      },
+      "sourceRow": 72
+    },
+    {
+      "row": {
+        "ID": "72",
+        "Subject": "C1G0003",
+        "Date": "10/3/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "25",
+        "Record Number": "4281",
+        "Sleep latency": "0:50",
+        "Sleep duration": "7:08",
+        "Sleep efficiency": "84.6",
+        "Comments": ""
+      },
+      "sourceRow": 73
+    },
+    {
+      "row": {
+        "ID": "73",
+        "Subject": "C1G0003",
+        "Date": "10/3/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "25",
+        "Record Number": "4046",
+        "Sleep latency": "0:26",
+        "Sleep duration": "7:32",
+        "Sleep efficiency": "91.7",
+        "Comments": ""
+      },
+      "sourceRow": 74
+    },
+    {
+      "row": {
+        "ID": "74",
+        "Subject": "C1G0003",
+        "Date": "10/3/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "25",
+        "Record Number": "4117",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "75.8",
+        "Comments": ""
+      },
+      "sourceRow": 75
+    },
+    {
+      "row": {
+        "ID": "75",
+        "Subject": "C1G0003",
+        "Date": "10/4/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "26",
+        "Record Number": "4047",
+        "Sleep latency": "0:36",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "85.8",
+        "Comments": ""
+      },
+      "sourceRow": 76
+    },
+    {
+      "row": {
+        "ID": "76",
+        "Subject": "C1G0003",
+        "Date": "10/4/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "26",
+        "Record Number": "4282",
+        "Sleep latency": "1:06",
+        "Sleep duration": "6:52",
+        "Sleep efficiency": "74.6",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 77
+    },
+    {
+      "row": {
+        "ID": "77",
+        "Subject": "C1G0003",
+        "Date": "10/5/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "27",
+        "Record Number": "4283",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "86.7",
+        "Comments": ""
+      },
+      "sourceRow": 78
+    },
+    {
+      "row": {
+        "ID": "78",
+        "Subject": "C1G0003",
+        "Date": "10/5/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "27",
+        "Record Number": "4048",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "87.1",
+        "Comments": ""
+      },
+      "sourceRow": 79
+    },
+    {
+      "row": {
+        "ID": "79",
+        "Subject": "C1G0003",
+        "Date": "10/6/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "28",
+        "Record Number": "4049",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "89.6",
+        "Comments": ""
+      },
+      "sourceRow": 80
+    },
+    {
+      "row": {
+        "ID": "80",
+        "Subject": "C1G0003",
+        "Date": "10/6/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "28",
+        "Record Number": "4284",
+        "Sleep latency": "0:24",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "86.3",
+        "Comments": ""
+      },
+      "sourceRow": 81
+    },
+    {
+      "row": {
+        "ID": "81",
+        "Subject": "C1G0003",
+        "Date": "10/7/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "29",
+        "Record Number": "4285",
+        "Sleep latency": "1:08",
+        "Sleep duration": "6:50",
+        "Sleep efficiency": "77.9",
+        "Comments": ""
+      },
+      "sourceRow": 82
+    },
+    {
+      "row": {
+        "ID": "82",
+        "Subject": "C1G0003",
+        "Date": "10/7/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "29",
+        "Record Number": "4050",
+        "Sleep latency": "0:26",
+        "Sleep duration": "7:32",
+        "Sleep efficiency": "92.5",
+        "Comments": ""
+      },
+      "sourceRow": 83
+    },
+    {
+      "row": {
+        "ID": "83",
+        "Subject": "C1G0003",
+        "Date": "10/8/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "30",
+        "Record Number": "4122",
+        "Sleep latency": "0:36",
+        "Sleep duration": "7:18",
+        "Sleep efficiency": "82.5",
+        "Comments": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 84
+    },
+    {
+      "row": {
+        "ID": "84",
+        "Subject": "C1G0003",
+        "Date": "10/8/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "30",
+        "Record Number": "4051",
+        "Sleep latency": "0:48",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "87.1",
+        "Comments": ""
+      },
+      "sourceRow": 85
+    },
+    {
+      "row": {
+        "ID": "85",
+        "Subject": "C1G0003",
+        "Date": "10/8/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "30",
+        "Record Number": "4286",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "87.9",
+        "Comments": ""
+      },
+      "sourceRow": 86
+    },
+    {
+      "row": {
+        "ID": "86",
+        "Subject": "C1G0003",
+        "Date": "10/9/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "31",
+        "Record Number": "4287",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "85",
+        "Comments": ""
+      },
+      "sourceRow": 87
+    },
+    {
+      "row": {
+        "ID": "87",
+        "Subject": "C1G0003",
+        "Date": "10/9/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "31",
+        "Record Number": "4052",
+        "Sleep latency": "1:02",
+        "Sleep duration": "6.56",
+        "Sleep efficiency": "84.2",
+        "Comments": ""
+      },
+      "sourceRow": 88
+    },
+    {
+      "row": {
+        "ID": "88",
+        "Subject": "C1G0003",
+        "Date": "10/9/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "31",
+        "Record Number": "4123",
+        "Sleep latency": "0:36",
+        "Sleep duration": "6:52",
+        "Sleep efficiency": "77.1",
+        "Comments": ""
+      },
+      "sourceRow": 89
+    },
+    {
+      "row": {
+        "ID": "89",
+        "Subject": "C1G0003",
+        "Date": "10/10/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "32",
+        "Record Number": "4124",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:14",
+        "Sleep efficiency": "84.2",
+        "Comments": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 90
+    },
+    {
+      "row": {
+        "ID": "90",
+        "Subject": "C1G0003",
+        "Date": "10/10/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "32",
+        "Record Number": "4053",
+        "Sleep latency": "0:42",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "88.8",
+        "Comments": ""
+      },
+      "sourceRow": 91
+    },
+    {
+      "row": {
+        "ID": "91",
+        "Subject": "C1G0003",
+        "Date": "10/10/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "32",
+        "Record Number": "4288",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:22",
+        "Sleep efficiency": "82.9",
+        "Comments": ""
+      },
+      "sourceRow": 92
+    },
+    {
+      "row": {
+        "ID": "92",
+        "Subject": "C1G0003",
+        "Date": "10/11/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "33",
+        "Record Number": "4289",
+        "Sleep latency": "0:32",
+        "Sleep duration": "7:26",
+        "Sleep efficiency": "87.5",
+        "Comments": ""
+      },
+      "sourceRow": 93
+    },
+    {
+      "row": {
+        "ID": "93",
+        "Subject": "C1G0003",
+        "Date": "10/11/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "33",
+        "Record Number": "4054",
+        "Sleep latency": "0:50",
+        "Sleep duration": "7:08",
+        "Sleep efficiency": "87.5",
+        "Comments": ""
+      },
+      "sourceRow": 94
+    },
+    {
+      "row": {
+        "ID": "94",
+        "Subject": "C1G0003",
+        "Date": "10/11/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "33",
+        "Record Number": "4125",
+        "Sleep latency": "1:02",
+        "Sleep duration": "6:56",
+        "Sleep efficiency": "76.7",
+        "Comments": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 95
+    },
+    {
+      "row": {
+        "ID": "95",
+        "Subject": "C1G0003",
+        "Date": "10/12/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "34",
+        "Record Number": "4126",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "70.8",
+        "Comments": ""
+      },
+      "sourceRow": 96
+    },
+    {
+      "row": {
+        "ID": "96",
+        "Subject": "C1G0003",
+        "Date": "10/12/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "34",
+        "Record Number": "4055",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "91.7",
+        "Comments": ""
+      },
+      "sourceRow": 97
+    },
+    {
+      "row": {
+        "ID": "97",
+        "Subject": "C1G0003",
+        "Date": "10/12/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "34",
+        "Record Number": "4290",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:14",
+        "Sleep efficiency": "82.9",
+        "Comments": ""
+      },
+      "sourceRow": 98
+    },
+    {
+      "row": {
+        "ID": "98",
+        "Subject": "C1G0003",
+        "Date": "10/13/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "35",
+        "Record Number": "4291",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "86.7",
+        "Comments": ""
+      },
+      "sourceRow": 99
+    },
+    {
+      "row": {
+        "ID": "99",
+        "Subject": "C1G0003",
+        "Date": "10/13/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "35",
+        "Record Number": "4056",
+        "Sleep latency": "1:10",
+        "Sleep duration": "6:48",
+        "Sleep efficiency": "82.1",
+        "Comments": ""
+      },
+      "sourceRow": 100
+    },
+    {
+      "row": {
+        "ID": "100",
+        "Subject": "C1G0003",
+        "Date": "10/13/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "35",
+        "Record Number": "4127",
+        "Sleep latency": "0:16",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "84.2",
+        "Comments": "Diphenhydramine 25mg"
+      },
+      "sourceRow": 101
+    },
+    {
+      "row": {
+        "ID": "101",
+        "Subject": "C1G0003",
+        "Date": "10/14/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "36",
+        "Record Number": "4136",
+        "Sleep latency": "0:26",
+        "Sleep duration": "7:18",
+        "Sleep efficiency": "74.2",
+        "Comments": ""
+      },
+      "sourceRow": 102
+    },
+    {
+      "row": {
+        "ID": "102",
+        "Subject": "C1G0003",
+        "Date": "10/14/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "36",
+        "Record Number": "4057",
+        "Sleep latency": "1:12",
+        "Sleep duration": "6:46",
+        "Sleep efficiency": "79.2",
+        "Comments": ""
+      },
+      "sourceRow": 103
+    },
+    {
+      "row": {
+        "ID": "103",
+        "Subject": "C1G0003",
+        "Date": "10/14/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "36",
+        "Record Number": "4292",
+        "Sleep latency": "1:12",
+        "Sleep duration": "6:46",
+        "Sleep efficiency": "75.4",
+        "Comments": ""
+      },
+      "sourceRow": 104
+    },
+    {
+      "row": {
+        "ID": "104",
+        "Subject": "C1G0003",
+        "Date": "10/15/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "37",
+        "Record Number": "4293",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "84.6",
+        "Comments": ""
+      },
+      "sourceRow": 105
+    },
+    {
+      "row": {
+        "ID": "105",
+        "Subject": "C1G0003",
+        "Date": "10/15/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "37",
+        "Record Number": "4058",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "94.2",
+        "Comments": ""
+      },
+      "sourceRow": 106
+    },
+    {
+      "row": {
+        "ID": "106",
+        "Subject": "C1G0003",
+        "Date": "10/15/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "37",
+        "Record Number": "4137",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "78.8",
+        "Comments": ""
+      },
+      "sourceRow": 107
+    },
+    {
+      "row": {
+        "ID": "107",
+        "Subject": "C1G0003",
+        "Date": "10/16/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "38",
+        "Record Number": "4140",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "81.3",
+        "Comments": ""
+      },
+      "sourceRow": 108
+    },
+    {
+      "row": {
+        "ID": "108",
+        "Subject": "C1G0003",
+        "Date": "10/16/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "38",
+        "Record Number": "4059",
+        "Sleep latency": "0:26",
+        "Sleep duration": "7:32",
+        "Sleep efficiency": "90.8",
+        "Comments": ""
+      },
+      "sourceRow": 109
+    },
+    {
+      "row": {
+        "ID": "109",
+        "Subject": "C1G0003",
+        "Date": "10/16/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "38",
+        "Record Number": "4294",
+        "Sleep latency": "0:44",
+        "Sleep duration": "7:14",
+        "Sleep efficiency": "82.5",
+        "Comments": ""
+      },
+      "sourceRow": 110
+    },
+    {
+      "row": {
+        "ID": "110",
+        "Subject": "C1G0003",
+        "Date": "10/17/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "39",
+        "Record Number": "4295",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 111
+    },
+    {
+      "row": {
+        "ID": "111",
+        "Subject": "C1G0003",
+        "Date": "10/17/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "39",
+        "Record Number": "4060",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "90.4",
+        "Comments": ""
+      },
+      "sourceRow": 112
+    },
+    {
+      "row": {
+        "ID": "112",
+        "Subject": "C1G0003",
+        "Date": "10/17/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "39",
+        "Record Number": "4141",
+        "Sleep latency": "0:32",
+        "Sleep duration": "7:26",
+        "Sleep efficiency": "74.6",
+        "Comments": ""
+      },
+      "sourceRow": 113
+    },
+    {
+      "row": {
+        "ID": "113",
+        "Subject": "C1G0003",
+        "Date": "10/18/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "40",
+        "Record Number": "4144",
+        "Sleep latency": "1:12",
+        "Sleep duration": "6:46",
+        "Sleep efficiency": "70.4",
+        "Comments": ""
+      },
+      "sourceRow": 114
+    },
+    {
+      "row": {
+        "ID": "114",
+        "Subject": "C1G0003",
+        "Date": "10/18/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "40",
+        "Record Number": "4061",
+        "Sleep latency": "0:58",
+        "Sleep duration": "7:00",
+        "Sleep efficiency": "85.8",
+        "Comments": ""
+      },
+      "sourceRow": 115
+    },
+    {
+      "row": {
+        "ID": "115",
+        "Subject": "C1G0003",
+        "Date": "10/18/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "40",
+        "Record Number": "4296",
+        "Sleep latency": "0:42",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "81.3",
+        "Comments": ""
+      },
+      "sourceRow": 116
+    },
+    {
+      "row": {
+        "ID": "116",
+        "Subject": "C1G0003",
+        "Date": "10/19/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "41",
+        "Record Number": "4298",
+        "Sleep latency": "1:12",
+        "Sleep duration": "6:44",
+        "Sleep efficiency": "70.8",
+        "Comments": ""
+      },
+      "sourceRow": 117
+    },
+    {
+      "row": {
+        "ID": "117",
+        "Subject": "C1G0003",
+        "Date": "10/19/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "41",
+        "Record Number": "4062",
+        "Sleep latency": "0:42",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "89.6",
+        "Comments": ""
+      },
+      "sourceRow": 118
+    },
+    {
+      "row": {
+        "ID": "118",
+        "Subject": "C1G0003",
+        "Date": "10/19/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "41",
+        "Record Number": "4146",
+        "Sleep latency": "2:20",
+        "Sleep duration": "5:38",
+        "Sleep efficiency": "62.5",
+        "Comments": ""
+      },
+      "sourceRow": 119
+    },
+    {
+      "row": {
+        "ID": "119",
+        "Subject": "C1G0003",
+        "Date": "10/20/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "42",
+        "Record Number": "4148",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "77.5",
+        "Comments": "Diphenhydramine 50mg"
+      },
+      "sourceRow": 120
+    },
+    {
+      "row": {
+        "ID": "120",
+        "Subject": "C1G0003",
+        "Date": "10/20/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "42",
+        "Record Number": "4063",
+        "Sleep latency": "0:32",
+        "Sleep duration": "7:26",
+        "Sleep efficiency": "92.1",
+        "Comments": ""
+      },
+      "sourceRow": 121
+    },
+    {
+      "row": {
+        "ID": "121",
+        "Subject": "C1G0003",
+        "Date": "10/20/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "42",
+        "Record Number": "4299",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "82.1",
+        "Comments": ""
+      },
+      "sourceRow": 122
+    },
+    {
+      "row": {
+        "ID": "122",
+        "Subject": "C1G0003",
+        "Date": "10/21/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "43",
+        "Record Number": "4300",
+        "Sleep latency": "1:16",
+        "Sleep duration": "6:42",
+        "Sleep efficiency": "77.1",
+        "Comments": ""
+      },
+      "sourceRow": 123
+    },
+    {
+      "row": {
+        "ID": "123",
+        "Subject": "C1G0003",
+        "Date": "10/21/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "43",
+        "Record Number": "4064",
+        "Sleep latency": "0:46",
+        "Sleep duration": "7:08",
+        "Sleep efficiency": "88.3",
+        "Comments": "Ambien 5mg"
+      },
+      "sourceRow": 124
+    },
+    {
+      "row": {
+        "ID": "124",
+        "Subject": "C1G0003",
+        "Date": "10/21/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "43",
+        "Record Number": "4149",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "77.9",
+        "Comments": ""
+      },
+      "sourceRow": 125
+    },
+    {
+      "row": {
+        "ID": "125",
+        "Subject": "C1G0003",
+        "Date": "10/22/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "44",
+        "Record Number": "4151",
+        "Sleep latency": "0:40",
+        "Sleep duration": "7:18",
+        "Sleep efficiency": "80",
+        "Comments": ""
+      },
+      "sourceRow": 126
+    },
+    {
+      "row": {
+        "ID": "126",
+        "Subject": "C1G0003",
+        "Date": "10/22/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "44",
+        "Record Number": "4065",
+        "Sleep latency": "0:36",
+        "Sleep duration": "7:12",
+        "Sleep efficiency": "87.5",
+        "Comments": ""
+      },
+      "sourceRow": 127
+    },
+    {
+      "row": {
+        "ID": "127",
+        "Subject": "C1G0003",
+        "Date": "10/22/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "44",
+        "Record Number": "4301",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "83.3",
+        "Comments": ""
+      },
+      "sourceRow": 128
+    },
+    {
+      "row": {
+        "ID": "128",
+        "Subject": "C1G0003",
+        "Date": "10/23/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "45",
+        "Record Number": "4302",
+        "Sleep latency": "0:50",
+        "Sleep duration": "7:08",
+        "Sleep efficiency": "77.1",
+        "Comments": ""
+      },
+      "sourceRow": 129
+    },
+    {
+      "row": {
+        "ID": "129",
+        "Subject": "C1G0003",
+        "Date": "10/23/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "45",
+        "Record Number": "4066",
+        "Sleep latency": "0:24",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "92.5",
+        "Comments": ""
+      },
+      "sourceRow": 130
+    },
+    {
+      "row": {
+        "ID": "130",
+        "Subject": "C1G0003",
+        "Date": "10/23/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "45",
+        "Record Number": "4153",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:20",
+        "Sleep efficiency": "80",
+        "Comments": ""
+      },
+      "sourceRow": 131
+    },
+    {
+      "row": {
+        "ID": "131",
+        "Subject": "C1G0003",
+        "Date": "10/24/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "46",
+        "Record Number": "4154",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "81.7",
+        "Comments": ""
+      },
+      "sourceRow": 132
+    },
+    {
+      "row": {
+        "ID": "132",
+        "Subject": "C1G0003",
+        "Date": "10/24/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "46",
+        "Record Number": "4067",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "91.3",
+        "Comments": ""
+      },
+      "sourceRow": 133
+    },
+    {
+      "row": {
+        "ID": "133",
+        "Subject": "C1G0003",
+        "Date": "10/24/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "46",
+        "Record Number": "4303",
+        "Sleep latency": "0:42",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "80",
+        "Comments": ""
+      },
+      "sourceRow": 134
+    },
+    {
+      "row": {
+        "ID": "134",
+        "Subject": "C1G0003",
+        "Date": "10/25/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "47",
+        "Record Number": "4304",
+        "Sleep latency": "0:42",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "77.5",
+        "Comments": ""
+      },
+      "sourceRow": 135
+    },
+    {
+      "row": {
+        "ID": "135",
+        "Subject": "C1G0003",
+        "Date": "10/25/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "47",
+        "Record Number": "4068",
+        "Sleep latency": "1:14",
+        "Sleep duration": "6:44",
+        "Sleep efficiency": "82.9",
+        "Comments": ""
+      },
+      "sourceRow": 136
+    },
+    {
+      "row": {
+        "ID": "136",
+        "Subject": "C1G0003",
+        "Date": "10/25/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "47",
+        "Record Number": "4156",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "87.1",
+        "Comments": ""
+      },
+      "sourceRow": 137
+    },
+    {
+      "row": {
+        "ID": "137",
+        "Subject": "C1G0003",
+        "Date": "10/26/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "48",
+        "Record Number": "4157",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "81.3",
+        "Comments": ""
+      },
+      "sourceRow": 138
+    },
+    {
+      "row": {
+        "ID": "138",
+        "Subject": "C1G0003",
+        "Date": "10/26/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "48",
+        "Record Number": "4069",
+        "Sleep latency": "0:34",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "90.4",
+        "Comments": ""
+      },
+      "sourceRow": 139
+    },
+    {
+      "row": {
+        "ID": "139",
+        "Subject": "C1G0003",
+        "Date": "10/26/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "48",
+        "Record Number": "4305",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:22",
+        "Sleep efficiency": "82.9",
+        "Comments": ""
+      },
+      "sourceRow": 140
+    },
+    {
+      "row": {
+        "ID": "140",
+        "Subject": "C1G0003",
+        "Date": "10/27/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "49",
+        "Record Number": "4306",
+        "Sleep latency": "0:48",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "82.1",
+        "Comments": ""
+      },
+      "sourceRow": 141
+    },
+    {
+      "row": {
+        "ID": "141",
+        "Subject": "C1G0003",
+        "Date": "10/27/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "49",
+        "Record Number": "4070",
+        "Sleep latency": "0:42",
+        "Sleep duration": "7:16",
+        "Sleep efficiency": "90.4",
+        "Comments": ""
+      },
+      "sourceRow": 142
+    },
+    {
+      "row": {
+        "ID": "142",
+        "Subject": "C1G0003",
+        "Date": "10/27/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "49",
+        "Record Number": "4158",
+        "Sleep latency": "1:04",
+        "Sleep duration": "6:42",
+        "Sleep efficiency": "75",
+        "Comments": ""
+      },
+      "sourceRow": 143
+    },
+    {
+      "row": {
+        "ID": "143",
+        "Subject": "C1G0003",
+        "Date": "10/28/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "50",
+        "Record Number": "4159",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "80.8",
+        "Comments": ""
+      },
+      "sourceRow": 144
+    },
+    {
+      "row": {
+        "ID": "144",
+        "Subject": "C1G0003",
+        "Date": "10/28/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "50",
+        "Record Number": "4071",
+        "Sleep latency": "0:56",
+        "Sleep duration": "7:02",
+        "Sleep efficiency": "87.5",
+        "Comments": ""
+      },
+      "sourceRow": 145
+    },
+    {
+      "row": {
+        "ID": "145",
+        "Subject": "C1G0003",
+        "Date": "10/28/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "50",
+        "Record Number": "4307",
+        "Sleep latency": "0:46",
+        "Sleep duration": "7:12",
+        "Sleep efficiency": "80.8",
+        "Comments": ""
+      },
+      "sourceRow": 146
+    },
+    {
+      "row": {
+        "ID": "146",
+        "Subject": "C1G0003",
+        "Date": "10/29/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "51",
+        "Record Number": "4308",
+        "Sleep latency": "0:26",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "83.3",
+        "Comments": ""
+      },
+      "sourceRow": 147
+    },
+    {
+      "row": {
+        "ID": "147",
+        "Subject": "C1G0003",
+        "Date": "10/29/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "51",
+        "Record Number": "4072",
+        "Sleep latency": "0:32",
+        "Sleep duration": "7:26",
+        "Sleep efficiency": "92.1",
+        "Comments": ""
+      },
+      "sourceRow": 148
+    },
+    {
+      "row": {
+        "ID": "148",
+        "Subject": "C1G0003",
+        "Date": "10/29/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "51",
+        "Record Number": "4161",
+        "Sleep latency": "0:24",
+        "Sleep duration": "7:26",
+        "Sleep efficiency": "81.7",
+        "Comments": ""
+      },
+      "sourceRow": 149
+    },
+    {
+      "row": {
+        "ID": "149",
+        "Subject": "C1G0003",
+        "Date": "10/30/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "52",
+        "Record Number": "4163",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:40",
+        "Sleep efficiency": "82.9",
+        "Comments": ""
+      },
+      "sourceRow": 150
+    },
+    {
+      "row": {
+        "ID": "150",
+        "Subject": "C1G0003",
+        "Date": "10/30/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "52",
+        "Record Number": "4073",
+        "Sleep latency": "0:00",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "85",
+        "Comments": ""
+      },
+      "sourceRow": 151
+    },
+    {
+      "row": {
+        "ID": "151",
+        "Subject": "C1G0003",
+        "Date": "10/30/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "52",
+        "Record Number": "4309",
+        "Sleep latency": "0:24",
+        "Sleep duration": "7:34",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 152
+    },
+    {
+      "row": {
+        "ID": "152",
+        "Subject": "C1G0003",
+        "Date": "10/31/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "53",
+        "Record Number": "4310",
+        "Sleep latency": "1:36",
+        "Sleep duration": "6:16",
+        "Sleep efficiency": "71.3",
+        "Comments": ""
+      },
+      "sourceRow": 153
+    },
+    {
+      "row": {
+        "ID": "153",
+        "Subject": "C1G0003",
+        "Date": "10/31/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "53",
+        "Record Number": "4074",
+        "Sleep latency": "2:34",
+        "Sleep duration": "5:24",
+        "Sleep efficiency": "65.4",
+        "Comments": ""
+      },
+      "sourceRow": 154
+    },
+    {
+      "row": {
+        "ID": "154",
+        "Subject": "C1G0003",
+        "Date": "10/31/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "53",
+        "Record Number": "4164",
+        "Sleep latency": "1:24",
+        "Sleep duration": "6:26",
+        "Sleep efficiency": "67.1",
+        "Comments": ""
+      },
+      "sourceRow": 155
+    },
+    {
+      "row": {
+        "ID": "155",
+        "Subject": "C1G0003",
+        "Date": "11/1/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "54",
+        "Record Number": "4168",
+        "Sleep latency": "1:28",
+        "Sleep duration": "6:10",
+        "Sleep efficiency": "66.7",
+        "Comments": ""
+      },
+      "sourceRow": 156
+    },
+    {
+      "row": {
+        "ID": "156",
+        "Subject": "C1G0003",
+        "Date": "11/1/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "54",
+        "Record Number": "4075",
+        "Sleep latency": "2:22",
+        "Sleep duration": "5:36",
+        "Sleep efficiency": "68.3",
+        "Comments": ""
+      },
+      "sourceRow": 157
+    },
+    {
+      "row": {
+        "ID": "157",
+        "Subject": "C1G0003",
+        "Date": "11/1/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "54",
+        "Record Number": "4311",
+        "Sleep latency": "1:42",
+        "Sleep duration": "6:16",
+        "Sleep efficiency": "65.8",
+        "Comments": ""
+      },
+      "sourceRow": 158
+    },
+    {
+      "row": {
+        "ID": "158",
+        "Subject": "C1G0003",
+        "Date": "11/2/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "55",
+        "Record Number": "4312",
+        "Sleep latency": "2:06",
+        "Sleep duration": "5:52",
+        "Sleep efficiency": "64.6",
+        "Comments": ""
+      },
+      "sourceRow": 159
+    },
+    {
+      "row": {
+        "ID": "159",
+        "Subject": "C1G0003",
+        "Date": "11/2/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "55",
+        "Record Number": "4076",
+        "Sleep latency": "2:56",
+        "Sleep duration": "5:02",
+        "Sleep efficiency": "62.5",
+        "Comments": ""
+      },
+      "sourceRow": 160
+    },
+    {
+      "row": {
+        "ID": "160",
+        "Subject": "C1G0003",
+        "Date": "11/2/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "55",
+        "Record Number": "4169",
+        "Sleep latency": "1:14",
+        "Sleep duration": "6:44",
+        "Sleep efficiency": "77.5",
+        "Comments": ""
+      },
+      "sourceRow": 161
+    },
+    {
+      "row": {
+        "ID": "161",
+        "Subject": "C1G0003",
+        "Date": "11/3/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "56",
+        "Record Number": "4171",
+        "Sleep latency": "1:18",
+        "Sleep duration": "6:40",
+        "Sleep efficiency": "72.9",
+        "Comments": ""
+      },
+      "sourceRow": 162
+    },
+    {
+      "row": {
+        "ID": "162",
+        "Subject": "C1G0003",
+        "Date": "11/3/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "56",
+        "Record Number": "4077",
+        "Sleep latency": "1:54",
+        "Sleep duration": "6:04",
+        "Sleep efficiency": "74.6",
+        "Comments": ""
+      },
+      "sourceRow": 163
+    },
+    {
+      "row": {
+        "ID": "163",
+        "Subject": "C1G0003",
+        "Date": "11/3/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "56",
+        "Record Number": "4078",
+        "Sleep latency": "1:54",
+        "Sleep duration": "6:04",
+        "Sleep efficiency": "74.6",
+        "Comments": ""
+      },
+      "sourceRow": 164
+    },
+    {
+      "row": {
+        "ID": "164",
+        "Subject": "C1G0003",
+        "Date": "11/3/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "56",
+        "Record Number": "4313",
+        "Sleep latency": "2:46",
+        "Sleep duration": "5:12",
+        "Sleep efficiency": "58.8",
+        "Comments": ""
+      },
+      "sourceRow": 165
+    },
+    {
+      "row": {
+        "ID": "165",
+        "Subject": "C1G0003",
+        "Date": "11/4/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "57",
+        "Record Number": "4314",
+        "Sleep latency": "2:00",
+        "Sleep duration": "5:54",
+        "Sleep efficiency": "65.4",
+        "Comments": ""
+      },
+      "sourceRow": 166
+    },
+    {
+      "row": {
+        "ID": "166",
+        "Subject": "C1G0003",
+        "Date": "11/4/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "57",
+        "Record Number": "4079",
+        "Sleep latency": "2:00",
+        "Sleep duration": "5:58",
+        "Sleep efficiency": "72.9",
+        "Comments": ""
+      },
+      "sourceRow": 167
+    },
+    {
+      "row": {
+        "ID": "167",
+        "Subject": "C1G0003",
+        "Date": "11/4/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "57",
+        "Record Number": "4172",
+        "Sleep latency": "1:30",
+        "Sleep duration": "6:28",
+        "Sleep efficiency": "67.1",
+        "Comments": ""
+      },
+      "sourceRow": 168
+    },
+    {
+      "row": {
+        "ID": "168",
+        "Subject": "C1G0003",
+        "Date": "11/5/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "58",
+        "Record Number": "4175",
+        "Sleep latency": "0:32",
+        "Sleep duration": "7:02",
+        "Sleep efficiency": "77.1",
+        "Comments": ""
+      },
+      "sourceRow": 169
+    },
+    {
+      "row": {
+        "ID": "169",
+        "Subject": "C1G0003",
+        "Date": "11/5/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "58",
+        "Record Number": "4080",
+        "Sleep latency": "0:56",
+        "Sleep duration": "7:02",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 170
+    },
+    {
+      "row": {
+        "ID": "170",
+        "Subject": "C1G0003",
+        "Date": "11/5/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "58",
+        "Record Number": "4315",
+        "Sleep latency": "1:24",
+        "Sleep duration": "6:34",
+        "Sleep efficiency": "75.8",
+        "Comments": ""
+      },
+      "sourceRow": 171
+    },
+    {
+      "row": {
+        "ID": "171",
+        "Subject": "C1G0003",
+        "Date": "11/6/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "59",
+        "Record Number": "4316",
+        "Sleep latency": "1:14",
+        "Sleep duration": "6:38",
+        "Sleep efficiency": "75.8",
+        "Comments": ""
+      },
+      "sourceRow": 172
+    },
+    {
+      "row": {
+        "ID": "172",
+        "Subject": "C1G0003",
+        "Date": "11/6/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "59",
+        "Record Number": "4081",
+        "Sleep latency": "0:46",
+        "Sleep duration": "7:12",
+        "Sleep efficiency": "86.3",
+        "Comments": ""
+      },
+      "sourceRow": 173
+    },
+    {
+      "row": {
+        "ID": "173",
+        "Subject": "C1G0003",
+        "Date": "11/6/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "59",
+        "Record Number": "4176",
+        "Sleep latency": "1:32",
+        "Sleep duration": "6:26",
+        "Sleep efficiency": "69.2",
+        "Comments": ""
+      },
+      "sourceRow": 174
+    },
+    {
+      "row": {
+        "ID": "174",
+        "Subject": "C1G0003",
+        "Date": "11/7/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "60",
+        "Record Number": "4177",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 175
+    },
+    {
+      "row": {
+        "ID": "175",
+        "Subject": "C1G0003",
+        "Date": "11/7/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "60",
+        "Record Number": "4082",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "92.5",
+        "Comments": ""
+      },
+      "sourceRow": 176
+    },
+    {
+      "row": {
+        "ID": "176",
+        "Subject": "C1G0003",
+        "Date": "11/7/2004",
+        "Test_Phase": "IN_TEST",
+        "BR_Day": "60",
+        "Record Number": "4317",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "82.5",
+        "Comments": ""
+      },
+      "sourceRow": 177
+    },
+    {
+      "row": {
+        "ID": "177",
+        "Subject": "C1G0003",
+        "Date": "11/8/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "0",
+        "Record Number": "4318",
+        "Sleep latency": "0",
+        "Sleep duration": "7:58",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 178
+    },
+    {
+      "row": {
+        "ID": "178",
+        "Subject": "C1G0003",
+        "Date": "11/8/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "0",
+        "Record Number": "4083",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "87.5",
+        "Comments": ""
+      },
+      "sourceRow": 179
+    },
+    {
+      "row": {
+        "ID": "179",
+        "Subject": "C1G0003",
+        "Date": "11/8/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "0",
+        "Record Number": "4179",
+        "Sleep latency": "0:28",
+        "Sleep duration": "7:30",
+        "Sleep efficiency": "82.9",
+        "Comments": ""
+      },
+      "sourceRow": 180
+    },
+    {
+      "row": {
+        "ID": "180",
+        "Subject": "C1G0003",
+        "Date": "11/9/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "1",
+        "Record Number": "4084",
+        "Sleep latency": "0",
+        "Sleep duration": "7:58",
+        "Sleep efficiency": "90.4",
+        "Comments": ""
+      },
+      "sourceRow": 181
+    },
+    {
+      "row": {
+        "ID": "181",
+        "Subject": "C1G0003",
+        "Date": "11/9/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "1",
+        "Record Number": "4319",
+        "Sleep latency": "0:22",
+        "Sleep duration": "7:36",
+        "Sleep efficiency": "81.3",
+        "Comments": ""
+      },
+      "sourceRow": 182
+    },
+    {
+      "row": {
+        "ID": "182",
+        "Subject": "C1G0003",
+        "Date": "11/10/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "2",
+        "Record Number": "4320",
+        "Sleep latency": "0:38",
+        "Sleep duration": "7:10",
+        "Sleep efficiency": "80.8",
+        "Comments": ""
+      },
+      "sourceRow": 183
+    },
+    {
+      "row": {
+        "ID": "183",
+        "Subject": "C1G0003",
+        "Date": "11/10/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "2",
+        "Record Number": "4085",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "89.2",
+        "Comments": ""
+      },
+      "sourceRow": 184
+    },
+    {
+      "row": {
+        "ID": "184",
+        "Subject": "C1G0003",
+        "Date": "11/11/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "3",
+        "Record Number": "4086",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "87.1",
+        "Comments": ""
+      },
+      "sourceRow": 185
+    },
+    {
+      "row": {
+        "ID": "185",
+        "Subject": "C1G0003",
+        "Date": "11/11/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "3",
+        "Record Number": "4321",
+        "Sleep latency": "0:54",
+        "Sleep duration": "7:04",
+        "Sleep efficiency": "76.3",
+        "Comments": ""
+      },
+      "sourceRow": 186
+    },
+    {
+      "row": {
+        "ID": "186",
+        "Subject": "C1G0003",
+        "Date": "11/12/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "4",
+        "Record Number": "4322",
+        "Sleep latency": "0:12",
+        "Sleep duration": "7:46",
+        "Sleep efficiency": "86.7",
+        "Comments": ""
+      },
+      "sourceRow": 187
+    },
+    {
+      "row": {
+        "ID": "187",
+        "Subject": "C1G0003",
+        "Date": "11/12/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "4",
+        "Record Number": "4087",
+        "Sleep latency": "0:20",
+        "Sleep duration": "7:38",
+        "Sleep efficiency": "90.4",
+        "Comments": ""
+      },
+      "sourceRow": 188
+    },
+    {
+      "row": {
+        "ID": "188",
+        "Subject": "C1G0003",
+        "Date": "11/13/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "5",
+        "Record Number": "4088",
+        "Sleep latency": "0:30",
+        "Sleep duration": "7:28",
+        "Sleep efficiency": "89.2",
+        "Comments": ""
+      },
+      "sourceRow": 189
+    },
+    {
+      "row": {
+        "ID": "189",
+        "Subject": "C1G0003",
+        "Date": "11/13/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "5",
+        "Record Number": "4323",
+        "Sleep latency": "1:18",
+        "Sleep duration": "6:40",
+        "Sleep efficiency": "77.5",
+        "Comments": ""
+      },
+      "sourceRow": 190
+    },
+    {
+      "row": {
+        "ID": "190",
+        "Subject": "C1G0003",
+        "Date": "11/14/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "6",
+        "Record Number": "4324",
+        "Sleep latency": "0:18",
+        "Sleep duration": "7:24",
+        "Sleep efficiency": "85.4",
+        "Comments": ""
+      },
+      "sourceRow": 191
+    },
+    {
+      "row": {
+        "ID": "191",
+        "Subject": "C1G0003",
+        "Date": "11/14/2004",
+        "Test_Phase": "POST_TEST",
+        "BR_Day": "6",
+        "Record Number": "4089",
+        "Sleep latency": "0:40",
+        "Sleep duration": "7:18",
+        "Sleep efficiency": "90.8",
+        "Comments": ""
+      },
+      "sourceRow": 192
+    }
+  ]
+}

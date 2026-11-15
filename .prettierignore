@@ -1,0 +1,4 @@
+# Preserve the shared contract and Developer A-owned logic and data.
+src/types.ts
+src/logic/
+src/data/

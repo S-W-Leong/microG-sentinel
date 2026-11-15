@@ -1,3 +1,5 @@
+> The active pivot is the approved [adaptive exercise design](superpowers/specs/2026-11-14-adaptive-exercise-monitoring-design.md). The earlier brief below records the legacy assessment workflow. See [implementation progress](adaptive-implementation-progress.md).
+
 **MicroG Sentinel — Revised project brief and 48-hour build plan**
 
 MicroG Sentinel helps an astronaut review an existing aerobic fitness assessment, understand changes from their personal baseline, and identify what evidence or specialist review is needed next.

@@ -1,0 +1,297 @@
+﻿/* Assessment routes share the Flight Deck tokens without styling the exercise workspace. */
+.legacy-screen {
+  max-width: 1120px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.legacy-screen :is(h1, h2, h3, button, summary, .button, .eyebrow) {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.legacy-screen h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.025em;
+}
+.legacy-screen h2 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+.legacy-screen h3 {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.legacy-screen .eyebrow {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.legacy-screen :is(p, li) {
+  max-width: 80ch;
+}
+.legacy-screen .page-heading {
+  margin-bottom: 28px;
+}
+.legacy-screen .panel {
+  margin-bottom: 12px;
+  padding: 28px 0;
+}
+.legacy-screen .status {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.95rem;
+  align-items: baseline;
+}
+.legacy-screen .status > span {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.legacy-screen .status.neutral {
+  color: var(--text);
+}
+.legacy-screen .status.muted {
+  color: var(--grey-text);
+}
+.legacy-screen .status.amber {
+  color: var(--amber);
+}
+.legacy-screen .assessment > h2 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+.legacy-screen .assessment-date,
+.legacy-screen .metrics dd,
+.legacy-screen .steps strong {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+.legacy-screen .assessment section {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  column-gap: 28px;
+  row-gap: 12px;
+  padding: 24px 0;
+}
+.legacy-screen .assessment section > h3 {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 3px 0 0;
+  color: var(--subtle);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.legacy-screen .assessment section > :not(h3) {
+  grid-column: 2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.legacy-screen .finding {
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  line-height: 1.4;
+  font-weight: 500;
+}
+.legacy-screen .metrics {
+  display: block;
+  margin: 0;
+  max-width: 620px;
+}
+.legacy-screen .metrics > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 9px 0;
+  border: 0;
+}
+.legacy-screen .metrics dt {
+  color: var(--subtle);
+  font-size: 0.95rem;
+}
+.legacy-screen .metrics dd {
+  margin: 0;
+  font-size: 1.35rem;
+  text-align: right;
+}
+.legacy-screen .metrics .retained-reading {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  padding-top: 16px;
+}
+.legacy-screen .retained-reading dt {
+  color: var(--text);
+}
+.legacy-screen .retained-reading dd {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+.legacy-screen .metrics small {
+  font-size: 1.1rem;
+  margin-left: 3px;
+}
+.legacy-screen .assessment .actions {
+  margin-top: 12px;
+}
+.legacy-screen .assessment-entry {
+  padding: 16px 0;
+}
+.legacy-screen .assessment-entry summary {
+  min-height: 44px;
+  align-content: center;
+}
+.legacy-screen .assessment-entry form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 28px;
+  max-width: 900px;
+  padding: 12px 0;
+}
+.legacy-screen .assessment-entry form label {
+  margin: 0;
+  min-width: 0;
+}
+.legacy-screen .assessment-entry form > :is(p, button) {
+  grid-column: 1 / -1;
+}
+.legacy-screen .assessment-entry form > button {
+  justify-self: start;
+}
+.legacy-screen .assessment-entry :is(input, select, textarea) {
+  min-width: 0;
+}
+.legacy-screen .detail-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+.legacy-screen .facts > div {
+  grid-template-columns: minmax(100px, 0.7fr) minmax(0, 1.3fr);
+}
+.legacy-screen .facts dt,
+.legacy-screen .facts dd {
+  font-size: 0.95rem;
+}
+.legacy-screen .steps strong {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.legacy-screen .trend-viewport {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.legacy-screen .trend svg {
+  min-width: 560px;
+}
+.legacy-screen .trend-line {
+  stroke: var(--text);
+}
+.legacy-screen .chart-point {
+  fill: var(--text);
+  stroke: var(--bg);
+}
+.legacy-screen .chart-point.hollow {
+  fill: var(--bg);
+  stroke: var(--grey-text);
+}
+.legacy-screen .trend svg text {
+  font-size: 13px;
+}
+.legacy-screen .chart-legend {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+.legacy-screen .timeline li > div {
+  min-width: 0;
+}
+.legacy-screen .timeline time {
+  font-size: 0.9rem;
+}
+.legacy-screen .body-layout {
+  padding: 0;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+.legacy-screen .body-figure {
+  background: transparent;
+}
+.legacy-screen .body-modules {
+  min-width: 0;
+  padding: 28px 0 0 32px;
+}
+.legacy-screen .live-region rect {
+  fill: var(--grey);
+  stroke: var(--text);
+}
+.legacy-screen .live-region path {
+  fill: var(--text);
+}
+.legacy-screen .live-region:hover rect {
+  stroke: var(--focus);
+}
+.legacy-screen .body-region:focus-visible :is(circle, rect) {
+  stroke: var(--focus);
+  stroke-width: 4;
+}
+.legacy-screen .planned-button {
+  margin: 0;
+  padding: 14px 10px;
+}
+.legacy-screen .planned-button.selected {
+  color: var(--text);
+  background: var(--grey);
+  box-shadow: inset 2px 0 var(--subtle);
+}
+.legacy-screen .planned-button small {
+  font-size: 0.85rem;
+}
+.legacy-screen .figure-caption {
+  font-size: 15px;
+}
+@media (max-width: 760px) {
+  .legacy-screen .body-layout,
+  .legacy-screen .detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .legacy-screen .detail-grid {
+    gap: 0;
+  }
+  .legacy-screen .body-modules {
+    padding: 24px 0 0;
+  }
+  .legacy-screen .assessment section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .legacy-screen .assessment section > h3 {
+    grid-row: auto;
+    margin: 0;
+  }
+  .legacy-screen .assessment section > :not(h3) {
+    grid-column: 1;
+  }
+}
+@media (max-width: 520px) {
+  .legacy-screen .assessment-entry form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .legacy-screen .facts > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .legacy-screen .button {
+    max-width: 100%;
+    white-space: normal;
+  }
+  .legacy-screen .metrics > div {
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .legacy-screen *,
+  .legacy-screen *::before,
+  .legacy-screen *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,47 @@
+.sans-amsler {
+  max-width: 390px;
+  margin: 16px auto;
+}
+.sans-amsler svg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  cursor: crosshair;
+  touch-action: manipulation;
+}
+.sans-amsler svg:not(:focus) .sans-cursor {
+  display: none;
+}
+.sans-trends {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 18px;
+}
+.sans-trends section {
+  border-bottom: 1px solid var(--risk-line);
+  padding-bottom: 12px;
+}
+.sans-trends svg {
+  width: 100%;
+  color: #b4dfed;
+}
+.sans-trends text {
+  font:
+    10px 'IBM Plex Mono',
+    monospace;
+  fill: currentColor;
+}
+.sans-trends details button {
+  display: block;
+  margin-block: 8px;
+}
+.sans-context {
+  font-size: 12px;
+  color: var(--risk-muted);
+}
+.sans-trends circle[role='button'] {
+  cursor: pointer;
+}
+.sans-point-details {
+  grid-column: 1 / -1;
+}

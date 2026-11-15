@@ -1,0 +1,36 @@
+.bone-research-chart {
+  display: block;
+  width: 100%;
+  min-width: 540px;
+  height: auto;
+  fill: #afbdc2;
+  font:
+    14px 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+}
+.bone-research pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.bone-research-regions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bone-research-skeleton {
+  width: 130px;
+  flex: 0 1 130px;
+  height: 240px;
+}
+.bone-research-skeleton [role='button'] {
+  cursor: pointer;
+}
+.bone-research-skeleton [role='button']:focus {
+  stroke: white;
+  stroke-width: 3px;
+  outline: none;
+}
+.bone-view-switch {
+  margin-bottom: 16px;
+}

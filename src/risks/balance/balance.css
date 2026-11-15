@@ -1,0 +1,52 @@
+.balance-trace {
+  margin: 16px 0;
+}
+.balance-trace svg {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  aspect-ratio: 1;
+}
+.balance-trace text {
+  fill: #afbdc2;
+  font:
+    11px 'IBM Plex Mono',
+    monospace;
+}
+.balance-axis {
+  stroke: #52636b;
+  fill: none;
+}
+.balance-baseline,
+.balance-current,
+.balance-path {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+.balance-baseline {
+  stroke: #bbc4cb;
+  stroke-dasharray: 6 4;
+  stroke-width: 2;
+}
+.balance-current {
+  stroke: #9cd9ce;
+  stroke-width: 2;
+}
+.balance-path {
+  stroke: #edc982;
+  stroke-width: 1;
+}
+.balance-dot {
+  fill: #fff;
+}
+.balance-trace figcaption {
+  font-size: 13px;
+  color: #afbdc2;
+}
+@media (prefers-reduced-motion: reduce) {
+  .balance-trace * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

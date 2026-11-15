@@ -1,0 +1,500 @@
+.crew-profile {
+  --profile-recorded: #b4c9d2;
+  color: var(--text);
+}
+.crew-profile a {
+  color: inherit;
+}
+.crew-profile a:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+}
+body:has(.crew-profile) {
+  --focus: var(--text);
+}
+body:has(.crew-profile) .shell-header a:hover {
+  color: var(--text);
+}
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  padding: 12px 0 30px;
+}
+.profile-header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 12px;
+  letter-spacing: -0.04em;
+}
+.profile-eyebrow,
+.profile-muted,
+.profile-section-head p,
+.profile-footnote {
+  color: var(--subtle);
+}
+.profile-eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+}
+.profile-identity {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.profile-value,
+.profile-number,
+.profile-clock time,
+.profile-meals time {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+.profile-clock {
+  text-align: right;
+  font-size: 0.85rem;
+}
+.profile-clock p {
+  margin: 12px 0 4px;
+}
+.profile-clock time {
+  font-size: 0.75rem;
+  color: var(--subtle);
+}
+.profile-tag,
+.profile-chips > span {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+.profile-section {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 32px;
+}
+.profile-section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 18px;
+}
+.profile-section h3 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+.profile-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.profile-section-head p {
+  margin: -8px 0 12px;
+  font-size: 0.85rem;
+}
+.profile-section-head > span {
+  font-size: 0.8rem;
+  color: var(--subtle);
+}
+.profile-traits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr 1.3fr;
+  gap: 24px;
+  margin: 0;
+}
+.profile-traits dt {
+  color: var(--subtle);
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+.profile-traits dd {
+  margin: 0;
+  font-size: 0.95rem;
+}
+.profile-traits small {
+  display: block;
+  color: var(--subtle);
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+.profile-capital::first-letter {
+  text-transform: capitalize;
+}
+.profile-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.profile-chips > span {
+  overflow-wrap: anywhere;
+}
+.profile-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.75rem;
+  color: var(--subtle);
+}
+.profile-changed {
+  color: var(--accent);
+}
+.profile-trace {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+.profile-trace select {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 8px;
+  min-height: 44px;
+}
+.profile-path.unselected {
+  opacity: 0.3;
+}
+.profile-path.unselected.changed {
+  opacity: 1;
+}
+.profile-path.unselected:hover,
+.profile-path.unselected:focus {
+  opacity: 1;
+}
+.profile-annotation rect {
+  fill: var(--bg);
+  stroke: var(--line);
+}
+.profile-annotation text {
+  fill: var(--text);
+  font-size: 13px;
+}
+.profile-annotation .profile-annotation-value {
+  font-size: 11px;
+  fill: var(--subtle);
+}
+.profile-annotation.changed rect {
+  stroke: var(--accent);
+}
+.profile-annotation.changed > text:first-of-type,
+.profile-annotation .profile-annotation-reason {
+  fill: var(--accent);
+}
+.profile-annotation .profile-annotation-reason {
+  font-size: 11px;
+}
+.profile-graph {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0 0;
+}
+.profile-region {
+  fill: #14181b;
+  stroke: var(--line);
+}
+.profile-node rect {
+  fill: var(--panel);
+  stroke: #75838a;
+}
+.profile-node text {
+  text-anchor: middle;
+  fill: var(--text);
+  font-size: 16px;
+}
+.profile-node .profile-node-region {
+  fill: var(--subtle);
+  font-size: 11px;
+}
+.profile-node:hover rect,
+.profile-node:focus rect {
+  stroke: var(--text);
+  stroke-width: 2;
+}
+.profile-path-line {
+  fill: none;
+  stroke: var(--profile-recorded);
+  stroke-width: 1.7;
+}
+.profile-path-hit {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 14;
+}
+.profile-path.missing .profile-path-line {
+  stroke: #576068;
+  stroke-dasharray: 4 6;
+  opacity: 0.5;
+}
+.profile-path.changed .profile-path-line {
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+.profile-arrow.active {
+  fill: var(--profile-recorded);
+}
+.profile-arrow.missing {
+  fill: #576068;
+}
+.profile-arrow.changed {
+  fill: var(--accent);
+}
+.profile-edge-number {
+  font-family: var(--mono);
+  font-size: 12px;
+  fill: var(--text);
+  paint-order: stroke;
+  stroke: #101214;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+.profile-path.changed text {
+  fill: var(--accent);
+}
+.profile-path:hover .profile-path-line,
+.profile-path:focus .profile-path-line {
+  stroke-width: 4;
+  opacity: 1;
+}
+.profile-graph-key {
+  margin: 4px 0 20px;
+  font-size: 0.75rem;
+  color: var(--subtle);
+}
+.profile-mobile-nodes {
+  display: none;
+}
+.profile-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 32px;
+}
+.profile-link-group h3 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.profile-link-group h3 a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 0;
+}
+.profile-number {
+  color: var(--subtle);
+  font-size: 0.75rem;
+  margin-right: 6px;
+}
+.profile-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 10px;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #23282c;
+}
+.profile-link-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--subtle);
+}
+.profile-link.active .profile-link-label {
+  color: var(--profile-recorded);
+}
+.profile-link.changed,
+.profile-link.changed .profile-link-label {
+  color: var(--accent);
+}
+.profile-link small {
+  width: 100%;
+  line-height: 1.5;
+}
+.profile-link:hover {
+  text-decoration: underline;
+}
+.profile-exposures {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px 32px;
+}
+.profile-exposure {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.profile-exposure strong {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.profile-exposure strong.profile-empty {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--subtle);
+}
+.profile-exposure strong small {
+  font-size: 0.75rem;
+}
+.profile-exposure > span {
+  font-size: 0.85rem;
+}
+.profile-exposure a {
+  color: var(--subtle);
+  font-size: 0.75rem;
+  min-height: 28px;
+}
+.profile-meals {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.profile-meals > a {
+  font-size: 0.75rem;
+  color: var(--subtle);
+}
+.profile-meals ul {
+  list-style: none;
+  padding: 0;
+}
+.profile-meals li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+.profile-meals time {
+  font-size: 0.8rem;
+}
+.profile-baselines {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.profile-baselines th,
+.profile-baselines td {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.profile-baselines thead th {
+  color: var(--subtle);
+  font-weight: 400;
+}
+.profile-baselines tbody th {
+  font-weight: 500;
+}
+.profile-baselines small {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--subtle);
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+.profile-footnote {
+  font-size: 0.8rem;
+  margin: 0;
+}
+body:has(.crew-profile) .shell-header nav > a[aria-current='page'] {
+  color: var(--text);
+}
+body:has(.crew-profile) .shell-header nav > a[aria-current='page']::after {
+  background: var(--text);
+}
+@media (max-width: 760px) {
+  .profile-traits,
+  .profile-exposures,
+  .profile-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .profile-header {
+    align-items: flex-start;
+  }
+  .profile-graph,
+  .profile-graph-key,
+  .profile-trace {
+    display: none;
+  }
+  .profile-mobile-nodes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 16px 0 24px;
+  }
+  .profile-mobile-nodes a {
+    padding: 10px 6px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .profile-mobile-nodes small {
+    display: block;
+    color: var(--subtle);
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 480px) {
+  .profile-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .profile-clock {
+    text-align: left;
+  }
+  .profile-traits {
+    gap: 24px 18px;
+  }
+  .profile-traits dd {
+    font-size: 0.85rem;
+  }
+  .profile-links {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .profile-link {
+    min-height: 44px;
+  }
+  .profile-exposures {
+    gap: 24px 12px;
+  }
+  .profile-baselines thead {
+    display: none;
+  }
+  .profile-baselines tr {
+    display: block;
+    border-bottom: 1px solid var(--line);
+    padding: 8px 0;
+  }
+  .profile-baselines td,
+  .profile-baselines th {
+    display: block;
+    border: 0;
+    padding: 6px 0;
+  }
+  .profile-baselines td[data-label] {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .profile-baselines td::before {
+    content: attr(data-label);
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--subtle);
+  }
+  body:has(.crew-profile) .shell-header > nav {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crew-profile *,
+  .crew-profile *::before,
+  .crew-profile *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

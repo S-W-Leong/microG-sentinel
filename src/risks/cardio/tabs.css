@@ -1,0 +1,362 @@
+.risk-tab.cardio-source {
+  margin-bottom: 16px;
+}
+.cardio-research .trend-viewport {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.cardio-research .trend svg {
+  min-width: 690px;
+}
+.cardio-research .trend-line {
+  stroke: #b4dfed;
+}
+.cardio-research .chart-point {
+  fill: #f2f4f0;
+  stroke: #b4dfed;
+}
+.cardio-research .chart-point.hollow {
+  fill: #131c22;
+}
+.risk-tab {
+  --risk-line: #3c4a50;
+  --risk-muted: #afbdc2;
+  color: #f2f4f0;
+  background: #131c22;
+  border: 1px solid var(--risk-line);
+  border-radius: 20px;
+  padding: clamp(12px, 3vw, 28px);
+  max-width: 1080px;
+  margin: 0 auto;
+  font:
+    16px/1.5 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+  overflow-wrap: anywhere;
+}
+.risk-tab * {
+  box-sizing: border-box;
+  min-width: 0;
+}
+.risk-tab h1 {
+  font:
+    600 clamp(28px, 5vw, 40px)/1.15 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+  margin: 6px 0 18px;
+  letter-spacing: -0.03em;
+}
+.risk-tab h2 {
+  font:
+    600 22px/1.3 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+  margin: 18px 0 12px;
+}
+.risk-tab h3 {
+  font:
+    600 17px/1.3 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+}
+.risk-tab p {
+  margin: 8px 0;
+}
+.risk-tab button,
+.risk-tab input,
+.risk-tab select,
+.risk-tab textarea {
+  font: inherit;
+  color: inherit;
+  max-width: 100%;
+  border: 1px solid #667a83;
+  border-radius: 8px;
+  background: #1a2932;
+  padding: 10px 12px;
+  min-height: 44px;
+}
+.risk-tab input,
+.risk-tab select,
+.risk-tab textarea {
+  width: 100%;
+}
+.risk-tab button {
+  cursor: pointer;
+}
+.risk-tab button:hover {
+  background: #2b424d;
+}
+.risk-tab .risk-primary:hover,
+.risk-tab button[aria-pressed='true']:hover {
+  background: #ffb578;
+  color: #191c20;
+}
+.risk-tab button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.risk-tab .risk-primary,
+.risk-tab button[aria-pressed='true'] {
+  background: #f5a35c;
+  color: #191c20;
+  border-color: #f5a35c;
+}
+.risk-tab :focus-visible {
+  outline: 3px solid #b1e0f2;
+  outline-offset: 3px;
+}
+.risk-tab a {
+  color: #b4dfed;
+  text-underline-offset: 4px;
+}
+.risk-heading,
+.risk-actions,
+.risk-badges,
+.risk-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.risk-heading {
+  justify-content: space-between;
+}
+.risk-kicker {
+  font:
+    14px 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+  color: var(--risk-muted);
+}
+.risk-id,
+.risk-tab time {
+  font:
+    14px 'IBM Plex Mono',
+    monospace;
+}
+.risk-badges {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.risk-badges span,
+.risk-badges strong {
+  border: 1px solid #718891;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.risk-result {
+  display: grid;
+  gap: 5px;
+  padding: 18px 0;
+  border-block: 1px solid var(--risk-line);
+}
+.risk-result > strong {
+  font-size: clamp(22px, 4vw, 32px);
+  line-height: 1.2;
+}
+.risk-result > span:last-child {
+  color: var(--risk-muted);
+  font-size: 14px;
+}
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+.risk-field {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  font:
+    14px/1.5 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+}
+.risk-field > span {
+  color: #d6e0e2;
+}
+.risk-field:has(input[type='checkbox']) {
+  display: flex;
+  align-items: center;
+}
+.risk-field input[type='checkbox'] {
+  width: 20px;
+  flex: 0 0 20px;
+}
+.risk-tab fieldset {
+  border: 1px solid var(--risk-line);
+  padding: 12px;
+  border-radius: 12px;
+  margin: 18px 0;
+}
+.risk-tab legend {
+  padding: 0 8px;
+  font-weight: 600;
+}
+.risk-flags > div {
+  display: grid;
+  grid-template-columns: 1fr minmax(92px, 130px);
+  gap: 12px;
+  align-items: center;
+  margin: 10px 0;
+}
+.risk-tab .risk-alert {
+  padding: 16px;
+  margin: 16px 0;
+  border: 2px solid #c5cfd3;
+  border-radius: 12px;
+  background: #273740;
+}
+.risk-alert strong {
+  display: block;
+  font-size: 20px;
+}
+.risk-error {
+  border-left: 3px solid #e0c6ce;
+  padding: 10px;
+}
+.risk-tab dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 14px;
+}
+.risk-metric {
+  padding: 12px;
+  background: #1c2b34;
+  border-radius: 10px;
+}
+.risk-metric dt {
+  font-size: 14px;
+  color: #b8c7cc;
+}
+.risk-metric dd {
+  margin: 7px 0 0;
+  font-size: 21px;
+}
+.risk-tab details {
+  margin: 16px 0;
+  border-top: 1px solid var(--risk-line);
+  padding-top: 12px;
+}
+.risk-tab summary {
+  cursor: pointer;
+  min-height: 38px;
+}
+.risk-tab pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font:
+    14px/1.5 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+}
+.risk-chart {
+  width: 100%;
+  display: block;
+  margin: 14px 0;
+}
+.risk-chart text {
+  fill: #d2dfe2;
+  font:
+    13px 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+}
+.risk-chart-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+.risk-chart-scroll .risk-chart {
+  width: 100%;
+  min-width: 600px;
+}
+.risk-chart-scroll[aria-label='Scrollable DXA chart'] .risk-chart {
+  min-width: 460px;
+}
+.risk-chart .risk-numeric {
+  font:
+    12px 'IBM Plex Mono',
+    monospace;
+}
+.risk-chart line,
+.risk-chart path {
+  vector-effect: non-scaling-stroke;
+}
+.risk-photo {
+  width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #22333e;
+}
+.risk-photo-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  border: 1px dashed #8dabb8;
+  border-radius: 12px;
+  color: #bed0d7;
+  padding: 20px;
+  text-align: center;
+}
+.risk-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 18px 0;
+}
+.risk-match {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--risk-line);
+  border-radius: 12px;
+  text-align: left;
+  width: 100%;
+}
+.risk-tab progress {
+  width: 100%;
+  accent-color: #b0d6df;
+  height: 12px;
+}
+.risk-contact,
+.risk-tab footer {
+  border-top: 1px solid var(--risk-line);
+  margin-top: 24px;
+  padding-top: 16px;
+}
+.risk-contact p,
+.risk-tab footer {
+  font-size: 13px;
+  color: var(--risk-muted);
+}
+.risk-packet {
+  border: 1px solid #94aeb7;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 18px;
+}
+.risk-packet button {
+  margin: 5px;
+}
+.risk-skeleton {
+  max-height: 480px;
+}
+.risk-sites {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+@media (max-width: 600px) {
+  .risk-pair {
+    grid-template-columns: 1fr;
+  }
+  .risk-flags > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .risk-tab {
+    border-radius: 12px;
+  }
+}

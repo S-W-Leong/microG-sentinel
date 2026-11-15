@@ -1,0 +1,493 @@
+{
+  "sessions": [
+    {
+      "id": "MR080G-C3D-3985-070122",
+      "scope": {
+        "source": "nasa-research-replay",
+        "subjectId": "C3D-3985",
+        "seriesId": "MR080G-C3D-3985"
+      },
+      "date": "2007-01-22",
+      "isBaseline": true,
+      "researchBasisId": "MR080G-C3D-3985-graded-cycle",
+      "symptoms": [],
+      "notes": [
+        "Device, exercise posture and named protocol not established by this curation."
+      ],
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070122_summary.csv",
+          "locator": "Date and Subject fields",
+          "note": "Formal bed-rest analog test; not routine crew exercise"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070127",
+      "scope": {
+        "source": "nasa-research-replay",
+        "subjectId": "C3D-3985",
+        "seriesId": "MR080G-C3D-3985"
+      },
+      "date": "2007-01-27",
+      "isBaseline": true,
+      "researchBasisId": "MR080G-C3D-3985-graded-cycle",
+      "symptoms": [],
+      "notes": [
+        "Device, exercise posture and named protocol not established by this curation."
+      ],
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070127_summary.csv",
+          "locator": "Date and Subject fields",
+          "note": "Formal bed-rest analog test; not routine crew exercise"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070506",
+      "scope": {
+        "source": "nasa-research-replay",
+        "subjectId": "C3D-3985",
+        "seriesId": "MR080G-C3D-3985"
+      },
+      "date": "2007-05-06",
+      "isBaseline": false,
+      "researchBasisId": "MR080G-C3D-3985-graded-cycle",
+      "symptoms": [
+        "Test termination: a little dizziness and breathing"
+      ],
+      "notes": [
+        "Device, exercise posture and named protocol not established by this curation."
+      ],
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070506_summary.csv",
+          "locator": "Date and Subject fields",
+          "note": "Formal bed-rest analog test; not routine crew exercise"
+        },
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_ReadMe/MR080G_Campaign_3_C3D_3985_070506_summary_readme.txt",
+          "locator": "Test Terminated Due to",
+          "note": "Original source of the recorded dizziness and breathing termination context"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070517",
+      "scope": {
+        "source": "nasa-research-replay",
+        "subjectId": "C3D-3985",
+        "seriesId": "MR080G-C3D-3985"
+      },
+      "date": "2007-05-17",
+      "isBaseline": false,
+      "researchBasisId": "MR080G-C3D-3985-graded-cycle",
+      "symptoms": [],
+      "notes": [
+        "Device, exercise posture and named protocol not established by this curation."
+      ],
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070517_summary.csv",
+          "locator": "Date and Subject fields",
+          "note": "Formal bed-rest analog test; not routine crew exercise"
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "MR080G-C3D-3985-070122-S1",
+      "sessionId": "MR080G-C3D-3985-070122",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 1,
+        "workloadW": 50.0,
+        "durationSec": 180.0,
+        "precedingStages": []
+      },
+      "hrBpm": 107.0,
+      "rpe": 7.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070122_summary.csv",
+          "locator": "physical row 2",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070122-S2",
+      "sessionId": "MR080G-C3D-3985-070122",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 2,
+        "workloadW": 100.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 125.0,
+      "rpe": 11.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070122_summary.csv",
+          "locator": "physical row 3",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070122-S3",
+      "sessionId": "MR080G-C3D-3985-070122",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 3,
+        "workloadW": 150.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          },
+          {
+            "workloadW": 100.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 149.0,
+      "rpe": 15.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070122_summary.csv",
+          "locator": "physical row 4",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070127-S1",
+      "sessionId": "MR080G-C3D-3985-070127",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 1,
+        "workloadW": 50.0,
+        "durationSec": 180.0,
+        "precedingStages": []
+      },
+      "hrBpm": 102.0,
+      "rpe": 6.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070127_summary.csv",
+          "locator": "physical row 2",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070127-S2",
+      "sessionId": "MR080G-C3D-3985-070127",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 2,
+        "workloadW": 100.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 124.0,
+      "rpe": 11.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070127_summary.csv",
+          "locator": "physical row 3",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070127-S3",
+      "sessionId": "MR080G-C3D-3985-070127",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 3,
+        "workloadW": 150.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          },
+          {
+            "workloadW": 100.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 159.0,
+      "rpe": 12.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070127_summary.csv",
+          "locator": "physical row 4",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070506-S1",
+      "sessionId": "MR080G-C3D-3985-070506",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 1,
+        "workloadW": 50.0,
+        "durationSec": 180.0,
+        "precedingStages": []
+      },
+      "hrBpm": 142.0,
+      "rpe": 8.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070506_summary.csv",
+          "locator": "physical row 2",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070506-S2",
+      "sessionId": "MR080G-C3D-3985-070506",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 2,
+        "workloadW": 100.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 166.0,
+      "rpe": 11.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070506_summary.csv",
+          "locator": "physical row 3",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070506-S3",
+      "sessionId": "MR080G-C3D-3985-070506",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 3,
+        "workloadW": 150.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          },
+          {
+            "workloadW": 100.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 179.0,
+      "rpe": 17.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070506_summary.csv",
+          "locator": "physical row 4",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070517-S1",
+      "sessionId": "MR080G-C3D-3985-070517",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 1,
+        "workloadW": 50.0,
+        "durationSec": 180.0,
+        "precedingStages": []
+      },
+      "hrBpm": 114.0,
+      "rpe": 7.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070517_summary.csv",
+          "locator": "physical row 2",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070517-S2",
+      "sessionId": "MR080G-C3D-3985-070517",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 2,
+        "workloadW": 100.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 139.0,
+      "rpe": 9.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070517_summary.csv",
+          "locator": "physical row 3",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    },
+    {
+      "id": "MR080G-C3D-3985-070517-S3",
+      "sessionId": "MR080G-C3D-3985-070517",
+      "context": {
+        "deviceId": null,
+        "protocolId": null,
+        "posture": null,
+        "stageIndex": 3,
+        "workloadW": 150.0,
+        "durationSec": 180.0,
+        "precedingStages": [
+          {
+            "workloadW": 50.0,
+            "durationSec": 180.0
+          },
+          {
+            "workloadW": 100.0,
+            "durationSec": 180.0
+          }
+        ]
+      },
+      "hrBpm": 162.0,
+      "rpe": 11.0,
+      "rpeScale": "borg-6-20",
+      "quality": {
+        "state": "unknown",
+        "basis": "Source stage average; signal quality not established"
+      },
+      "duplicateOf": null,
+      "sourceRefs": [
+        {
+          "path": "data/raw/MR080G_Campaign_3_Aerobic_Capacity_Summary/MR080G_Campaign_3_C3D_3985_Peak_070517_summary.csv",
+          "locator": "physical row 4",
+          "note": "Stage average, not an independent session"
+        }
+      ]
+    }
+  ]
+}
