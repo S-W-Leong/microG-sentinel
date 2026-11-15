@@ -1,0 +1,19 @@
+.sleep-research-chart {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+  color: #afbdc2;
+  fill: currentColor;
+  font:
+    14px 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+}
+.sleep-research pre {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.sleep-view-switch {
+  margin-bottom: 16px;
+}

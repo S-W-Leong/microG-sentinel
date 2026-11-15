@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ResearchReplay from './research/ResearchReplay';
 import type { RiskTabProps } from '../types';
 import {
   ContextLink,
@@ -533,10 +534,31 @@ function SleepPanel(ctx: RiskTabProps) {
     </TabFrame>
   );
 }
+function SleepViews(ctx: RiskTabProps) {
+  const [research, setResearch] = useState(false);
+  return (
+    <>
+      <nav className="risk-tab sleep-view-switch" aria-label="Sleep data source">
+        <div className="risk-actions">
+          <button type="button" aria-pressed={!research} onClick={() => setResearch(false)}>
+            Crew check-in
+          </button>
+          <button type="button" aria-pressed={research} onClick={() => setResearch(true)}>
+            NASA replay
+          </button>
+        </div>
+      </nav>
+      <div hidden={research}>
+        <SleepPanel {...ctx} />
+      </div>
+      {research && <ResearchReplay />}
+    </>
+  );
+}
 export default function SleepTab(ctx: RiskTabProps) {
   return (
     <Registered {...ctx}>
-      <SleepPanel key={scopeKey(ctx)} {...ctx} />
+      <SleepViews key={scopeKey(ctx)} {...ctx} />
     </Registered>
   );
 }
