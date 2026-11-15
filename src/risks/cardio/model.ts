@@ -73,6 +73,12 @@ export function cardioIdentity(
   if (scope.source === 'nasa-research-replay')
     return `RESEARCH:MR080G:${scope.subjectId}:${scope.seriesId}`;
   if (scope.source === 'user-entered') return `USER:${scope.subjectId}:${scope.seriesId}`;
+  if (
+    scope.source === 'simulated-crew' &&
+    ['SIM-CDR', 'SIM-PLT', 'SIM-MS1'].includes(scope.subjectId) &&
+    scope.seriesId === `${scope.subjectId}-MISSION-01`
+  )
+    return scope.subjectId;
   return `${scope.subjectId.startsWith('SIM-') ? scope.subjectId : `SIM-${scope.subjectId}`}:${scope.seriesId}`;
 }
 export function adaptExercise(workspace: ExerciseWorkspace, stageId: string) {
