@@ -1,0 +1,531 @@
+{
+  "dataset": {
+    "id": "OSD-574",
+    "title": "SpaceX Inspiration4 Deltoid Skin and Microbiome Data: Spatial Transcriptomics (NanoString GeoMx), Metageomics, and Metatranscriptomics",
+    "url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-574",
+    "doi": "10.26030/hn08-ja66",
+    "downloadDate": "2026-11-15"
+  },
+  "table": "GLDS-566_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv",
+  "metadata": "OSD-574_metadata_OSD-574-ISA.zip",
+  "metadataMember": "s_OSD-574.txt",
+  "database": "mpa_vJan21_CHOCOPhlAnSGB_202103",
+  "genusCount": 58,
+  "selection": "Six genera with highest mean supplied abundance across all eight samples; no renormalization.",
+  "files": [
+    {
+      "name": "file-catalog.txt",
+      "url": "https://osdr.nasa.gov/osdr/data/osd/files/574",
+      "bytes": 76705,
+      "sha256": "eaf2e0ab0e6ed9ad7b2573159736bce00416853d5495e9719d077232720d0b65"
+    },
+    {
+      "name": "GLDS-566_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-574/download?source=datamanager&file=GLDS-566_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv",
+      "bytes": 67940,
+      "sha256": "4629935b15179824fa4730422ef5f223b63ab8b348ba6dc73669ac2156ec9a93"
+    },
+    {
+      "name": "GLDS-566_GMetagenomics_README.txt",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-574/download?source=datamanager&file=GLDS-566_GMetagenomics_README.txt",
+      "bytes": 7276,
+      "sha256": "25b8596d925a38afcbf48c33b80f16fd7bcf9c9bb23f6d74330ce7e045f331de"
+    },
+    {
+      "name": "OSD-574_metadata_OSD-574-ISA.zip",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-574/download?source=datamanager&file=OSD-574_metadata_OSD-574-ISA.zip",
+      "bytes": 179646,
+      "sha256": "8f698162f0243c88a5ed46cc53f60c20e85b6e20980c73e55bc93802e2633f99"
+    }
+  ],
+  "samples": [
+    {
+      "id": "C001_L-44_DEL",
+      "participant": "C001",
+      "sampleName": "C001_Swab_L-44_DEL",
+      "timepoint": "L-44",
+      "phase": "pre-flight",
+      "timeLabel": "Launch minus 44",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 2,
+      "metadataRow": 2,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "88.24965757185652",
+          "valuePct": 88.24965757185652
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "0.9976024848638342",
+          "valuePct": 0.9976024848638342
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "0.5437149684046318",
+          "valuePct": 0.5437149684046318
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "5.919286171010258",
+          "valuePct": 5.919286171010258
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "0.5549057572703325",
+          "valuePct": 0.5549057572703325
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "0.1328809035537503",
+          "valuePct": 0.1328809035537503
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "2.85774",
+        "valuePct": 2.85774
+      }
+    },
+    {
+      "id": "C001_R+1_DEL",
+      "participant": "C001",
+      "sampleName": "C001_Swab_R+1_DEL",
+      "timepoint": "R+1",
+      "phase": "post-flight",
+      "timeLabel": "Return plus 1",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 3,
+      "metadataRow": 3,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "69.00715656421609",
+          "valuePct": 69.00715656421609
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "7.4254039814734",
+          "valuePct": 7.4254039814734
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "10.192200126056038",
+          "valuePct": 10.192200126056038
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "6.853584295514462",
+          "valuePct": 6.853584295514462
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "1.9841236063836327",
+          "valuePct": 1.9841236063836327
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "0.0",
+          "valuePct": 0.0
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "3.71137",
+        "valuePct": 3.71137
+      }
+    },
+    {
+      "id": "C002_L-44_DEL",
+      "participant": "C002",
+      "sampleName": "C002_Swab_L-44_DEL",
+      "timepoint": "L-44",
+      "phase": "pre-flight",
+      "timeLabel": "Launch minus 44",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 4,
+      "metadataRow": 4,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "35.18622473435118",
+          "valuePct": 35.18622473435118
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "10.139627591182196",
+          "valuePct": 10.139627591182196
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "9.84906724594128",
+          "valuePct": 9.84906724594128
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "10.598287246103292",
+          "valuePct": 10.598287246103292
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "0.3731753905877842",
+          "valuePct": 0.3731753905877842
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "0.0665843419480935",
+          "valuePct": 0.0665843419480935
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "23.07724",
+        "valuePct": 23.07724
+      }
+    },
+    {
+      "id": "C002_R+1_DEL",
+      "participant": "C002",
+      "sampleName": "C002_Swab_R+1_DEL",
+      "timepoint": "R+1",
+      "phase": "post-flight",
+      "timeLabel": "Return plus 1",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 5,
+      "metadataRow": 5,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "37.03244918660032",
+          "valuePct": 37.03244918660032
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "2.859922740975237",
+          "valuePct": 2.859922740975237
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "0.0",
+          "valuePct": 0.0
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "3.9877694102574543",
+          "valuePct": 3.9877694102574543
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "0.0",
+          "valuePct": 0.0
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "15.244650520892414",
+          "valuePct": 15.244650520892414
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "7.27843",
+        "valuePct": 7.27843
+      }
+    },
+    {
+      "id": "C003_L-44_DEL",
+      "participant": "C003",
+      "sampleName": "C003_Swab_L-44_DEL",
+      "timepoint": "L-44",
+      "phase": "pre-flight",
+      "timeLabel": "Launch minus 44",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 6,
+      "metadataRow": 6,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "88.11744724907224",
+          "valuePct": 88.11744724907224
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "0.4813235545679964",
+          "valuePct": 0.4813235545679964
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "0.2486061335120481",
+          "valuePct": 0.2486061335120481
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "0.9364922743711106",
+          "valuePct": 0.9364922743711106
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "0.7168196354314084",
+          "valuePct": 0.7168196354314084
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "0.0139865426550173",
+          "valuePct": 0.0139865426550173
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "6.75638",
+        "valuePct": 6.75638
+      }
+    },
+    {
+      "id": "C003_R+1_DEL",
+      "participant": "C003",
+      "sampleName": "C003_Swab_R+1_DEL",
+      "timepoint": "R+1",
+      "phase": "post-flight",
+      "timeLabel": "Return plus 1",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 7,
+      "metadataRow": 7,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "90.42959830896916",
+          "valuePct": 90.42959830896916
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "0.5060360796472386",
+          "valuePct": 0.5060360796472386
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "1.2410251203028686",
+          "valuePct": 1.2410251203028686
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "1.77167843184272",
+          "valuePct": 1.77167843184272
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "2.043406154261976",
+          "valuePct": 2.043406154261976
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "0.4437942575257411",
+          "valuePct": 0.4437942575257411
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "2.27379",
+        "valuePct": 2.27379
+      }
+    },
+    {
+      "id": "C004_L-44_DEL",
+      "participant": "C004",
+      "sampleName": "C004_Swab_L-44_DEL",
+      "timepoint": "L-44",
+      "phase": "pre-flight",
+      "timeLabel": "Launch minus 44",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 8,
+      "metadataRow": 8,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "61.93755311386728",
+          "valuePct": 61.93755311386728
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "6.820916669702813",
+          "valuePct": 6.820916669702813
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "5.570826427328923",
+          "valuePct": 5.570826427328923
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "1.0257920708609434",
+          "valuePct": 1.0257920708609434
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "10.259545865670209",
+          "valuePct": 10.259545865670209
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "0.0847819707955415",
+          "valuePct": 0.0847819707955415
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "11.67625",
+        "valuePct": 11.67625
+      }
+    },
+    {
+      "id": "C004_R+1_DEL",
+      "participant": "C004",
+      "sampleName": "C004_Swab_R+1_DEL",
+      "timepoint": "R+1",
+      "phase": "post-flight",
+      "timeLabel": "Return plus 1",
+      "site": "Deltoid skin",
+      "material": "Swab",
+      "sourceColumn": 9,
+      "metadataRow": 9,
+      "genera": [
+        {
+          "name": "Cutibacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Propionibacteriales|f__Propionibacteriaceae|g__Cutibacterium",
+          "sourceRow": 50,
+          "raw": "52.99606941966724",
+          "valuePct": 52.99606941966724
+        },
+        {
+          "name": "Corynebacterium",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Corynebacteriaceae|g__Corynebacterium",
+          "sourceRow": 52,
+          "raw": "7.867981551471733",
+          "valuePct": 7.867981551471733
+        },
+        {
+          "name": "Malassezia",
+          "clade": "k__Eukaryota|p__Basidiomycota|c__Malasseziomycetes|o__Malasseziales|f__Malasseziaceae|g__Malassezia",
+          "sourceRow": 54,
+          "raw": "7.47644167165032",
+          "valuePct": 7.47644167165032
+        },
+        {
+          "name": "Staphylococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Bacillales|f__Staphylococcaceae|g__Staphylococcus",
+          "sourceRow": 51,
+          "raw": "1.783263149225787",
+          "valuePct": 1.783263149225787
+        },
+        {
+          "name": "GGB2722",
+          "clade": "k__Bacteria|p__Actinobacteria|c__Actinobacteria|o__Corynebacteriales|f__Lawsonellaceae|g__GGB2722",
+          "sourceRow": 53,
+          "raw": "11.08011859125471",
+          "valuePct": 11.08011859125471
+        },
+        {
+          "name": "Streptococcus",
+          "clade": "k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Streptococcaceae|g__Streptococcus",
+          "sourceRow": 56,
+          "raw": "0.1248604209808492",
+          "valuePct": 0.1248604209808492
+        }
+      ],
+      "unclassified": {
+        "sourceRow": 3,
+        "raw": "16.66527",
+        "valuePct": 16.66527
+      }
+    }
+  ]
+}

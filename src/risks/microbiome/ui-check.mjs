@@ -43,16 +43,14 @@ try {
   await page.getByLabel('Gut pattern changed', { exact: true }).selectOption('false');
   await page.getByRole('radio', { name: '4 Smooth sausage' }).check();
   await page.getByText('Skin observation', { exact: true }).click();
-  await page
-    .getByLabel('Local skin photo')
-    .setInputFiles({
-      name: 'local.png',
-      mimeType: 'image/png',
-      buffer: Buffer.from(
-        'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aY1cAAAAASUVORK5CYII=',
-        'base64',
-      ),
-    });
+  await page.getByLabel('Local skin photo').setInputFiles({
+    name: 'local.png',
+    mimeType: 'image/png',
+    buffer: Buffer.from(
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aY1cAAAAASUVORK5CYII=',
+      'base64',
+    ),
+  });
   await page.getByAltText('Local skin observation preview').waitFor();
   await page.getByLabel('Redness', { exact: true }).selectOption('true');
   await page.getByRole('button', { name: 'Save check-in', exact: true }).click();

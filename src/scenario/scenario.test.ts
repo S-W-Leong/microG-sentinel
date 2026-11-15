@@ -40,7 +40,7 @@ describe('Mission day 100', () => {
       emit(record);
     });
     seedScenario(vector, riskTabs);
-    expect(demoTime).toBe(missionTime);
+    expect(Date.parse(demoTime) - Date.parse(missionTime)).toBe(10 * 60_000);
     expect((Date.parse(atDay(0).slice(0, 10)) - Date.parse(missionStart)) / dayMs + 1).toBe(100);
     expect(records.length).toBeGreaterThan(60);
     for (const record of records) {

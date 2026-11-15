@@ -4,8 +4,7 @@ import type { ComponentType } from 'react';
 import type { DataSource, EvidenceStatus } from '../types';
 
 export type RiskId =
-  | 'cardio' | 'sleep' | 'immune' | 'bone' | 'balance'
-  | 'microbiome' | 'sans' | 'food' | 'mood';
+  'cardio' | 'sleep' | 'immune' | 'bone' | 'balance' | 'microbiome' | 'sans' | 'food' | 'mood';
 export type CrewId = string;
 export type ISODateTime = string;
 export type Rating03 = 0 | 1 | 2 | 3;
@@ -48,7 +47,7 @@ export interface BaselineValue<M extends BaselineMetric> {
   evidence: EvidenceStatus;
 }
 export type BaselineEntry = {
-  [M in BaselineMetric]: BaselineValue<M>
+  [M in BaselineMetric]: BaselineValue<M>;
 }[BaselineMetric];
 export interface CrewBaselines {
   entries: BaselineEntry[];
@@ -198,10 +197,10 @@ export interface RiskSignalRecord<R extends RiskId = RiskId> {
   signals: RiskSignalsMap[R];
 }
 export type AnyRiskSignalRecord = {
-  [R in RiskId]: RiskSignalRecord<R>
+  [R in RiskId]: RiskSignalRecord<R>;
 }[RiskId];
 export type SignalPath = {
-  [R in RiskId]: `${R}.${Extract<keyof RiskSignalsMap[R], string>}`
+  [R in RiskId]: `${R}.${Extract<keyof RiskSignalsMap[R], string>}`;
 }[RiskId];
 export type TraitPath = `traits.${keyof CrewTraits}`;
 export interface Reason {
@@ -219,15 +218,15 @@ export interface VectorApi {
   getVector(crewId: CrewId): CrewVector | null;
   getExposures(crewId: CrewId, sinceHours: number): CrewExposures | null;
   getSignals<R extends RiskId>(
-    risk: R, crewId: CrewId, sinceHours: number
+    risk: R,
+    crewId: CrewId,
+    sinceHours: number,
   ): RiskSignalRecord<R> | null;
-  personalise(
-    risk: RiskId, crewId: CrewId, baseEvaluation: RiskEvaluation
-  ): PersonalisationResult;
+  personalise(risk: RiskId, crewId: CrewId, baseEvaluation: RiskEvaluation): PersonalisationResult;
   subscribe(crewId: CrewId, listener: () => void): () => void;
 }
-export type EvaluationUnit = '%' | 'bpm' | 'h' | '%/month'
-  | 'ratio' | 'lines' | 'µm' | 'kg' | 'score/10';
+export type EvaluationUnit =
+  '%' | 'bpm' | 'h' | '%/month' | 'ratio' | 'lines' | 'µm' | 'kg' | 'score/10';
 export interface RiskEvaluation {
   risk: RiskId;
   crewId: CrewId;
@@ -242,7 +241,13 @@ export interface RiskEvaluation {
 }
 export interface Escalation {
   level: 'urgent' | 'next-pmc';
-  trigger: 'red-flag' | 'no-pattern' | 'conflicting' | 'persistent-change' | 'something-else' | 'indicative-score';
+  trigger:
+    | 'red-flag'
+    | 'no-pattern'
+    | 'conflicting'
+    | 'persistent-change'
+    | 'something-else'
+    | 'indicative-score';
   text: string; // observed fact, 1–12 words, no suspected condition
 }
 export interface RiskRegionMap {

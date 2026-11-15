@@ -1,0 +1,62 @@
+.balance-view-switch {
+  margin-bottom: 16px;
+}
+.balance-research {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.balance-research-selectors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.balance-research select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.balance-research pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.balance-research-trials {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.balance-research-trials caption {
+  text-align: left;
+  color: #afbdc2;
+  margin-bottom: 12px;
+}
+.balance-research-trials th,
+.balance-research-trials td {
+  padding: 10px 4px;
+  text-align: left;
+  border-bottom: 1px solid #3c505b;
+}
+.balance-research-trials td:nth-child(3) {
+  width: 42%;
+}
+.balance-research-trials td,
+.balance-research-trials tbody th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: normal;
+}
+.balance-research-bar {
+  display: block;
+  height: 4px;
+  margin-top: 6px;
+  background: #26353d;
+}
+.balance-research-bar > span {
+  display: block;
+  height: 100%;
+  background: #b6e2e6;
+}
+@media (max-width: 480px) {
+  .balance-research-selectors {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

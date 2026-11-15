@@ -1,0 +1,6 @@
+# Preserve downloaded bytes for the NASA source-integrity hashes.
+src/risks/balance/research/raw/** -text
+src/risks/food/research/raw/** -text
+src/risks/microbiome/research/raw/** -text
+src/risks/mood/research/raw/** -text
+src/risks/sans/research/raw/** -text

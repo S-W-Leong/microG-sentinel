@@ -1,0 +1,1065 @@
+{
+  "dataset": "OSD-679",
+  "downloaded": "2026-11-15",
+  "files": [
+    {
+      "name": "OSD-679_metadata_OSD-679-ISA.zip",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-679/download?source=datamanager&file=OSD-679_metadata_OSD-679-ISA.zip",
+      "sha256": "7130f0d9a1a72ead2fe6f53c04a03d9b031c49f682f44dbb03cce6bf88721fda"
+    },
+    {
+      "name": "OSD-679_sup_Fuller_DataDictionary.xlsx",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-679/download?source=datamanager&file=OSD-679_sup_Fuller_DataDictionary.xlsx",
+      "sha256": "f6630ef62057872e7e71c16a3a071bba4ce807a76dd6867df4e5db9c7841be5f"
+    },
+    {
+      "name": "OSD-679_sup_DSA SANS ReadMe.pdf",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-679/download?source=datamanager&file=OSD-679_sup_DSA+SANS+ReadMe.pdf",
+      "sha256": "b1f0b9c873dc43f4db61be284b7eba85d1246d442bd6b3223d461269f60d132e"
+    },
+    {
+      "name": "LSDS-81_Ophthalmologic Diagnostic Technique_Fuller_OCT_TRANSFORMED.csv",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-679/download?source=datamanager&file=LSDS-81_Ophthalmologic+Diagnostic+Technique_Fuller_OCT_TRANSFORMED.csv",
+      "sha256": "ab807171bf8bde9365960e2a52e56d2bfd6111c9392deab4ab8ffd2fa454fcef"
+    },
+    {
+      "name": "LSDS-81_tonometry_Fuller_TonometryIOP_TRANSFORMED.csv",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-679/download?source=datamanager&file=LSDS-81_tonometry_Fuller_TonometryIOP_TRANSFORMED.csv",
+      "sha256": "7b37297dfdea71fb1cc91be740cd6946151a561c8260e44b228f7dfe36e8245c"
+    }
+  ],
+  "records": [
+    {
+      "sample": "MT51_OS",
+      "participant": "MT51",
+      "eye": "Left Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "7",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 17,
+      "metadataRow": 516,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.219,
+              "Choroidal": 0.068
+            },
+            "Temporal": {
+              "Total_Retinal": 0.214,
+              "Choroidal": 0.064
+            },
+            "Linear": {
+              "Total_Retinal": 0.193,
+              "Choroidal": 0.069
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.22,
+              "Choroidal": 0.06
+            },
+            "Temporal": {
+              "Total_Retinal": 0.227,
+              "Choroidal": 0.058
+            },
+            "Linear": {
+              "Total_Retinal": 0.208,
+              "Choroidal": 0.061
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT51_OS",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.219",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.068",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.22",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.06",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.214",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.064",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.227",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.058",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.193",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.069",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.208",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.061",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT51_OD",
+      "participant": "MT51",
+      "eye": "Right Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "7",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 14,
+      "metadataRow": 514,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.231,
+              "Choroidal": 0.054
+            },
+            "Temporal": {
+              "Total_Retinal": 0.226,
+              "Choroidal": 0.053
+            },
+            "Linear": {
+              "Total_Retinal": 0.201,
+              "Choroidal": 0.063
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.228,
+              "Choroidal": 0.052
+            },
+            "Temporal": {
+              "Total_Retinal": 0.226,
+              "Choroidal": 0.051
+            },
+            "Linear": {
+              "Total_Retinal": 0.209,
+              "Choroidal": 0.056
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT51_OD",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.231",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.054",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.228",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.052",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.226",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.053",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.226",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.051",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.201",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.063",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.209",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT66_OS",
+      "participant": "MT66",
+      "eye": "Left Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "14",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 26,
+      "metadataRow": 510,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.209,
+              "Choroidal": 0.042
+            },
+            "Temporal": {
+              "Total_Retinal": 0.214,
+              "Choroidal": 0.046
+            },
+            "Linear": {
+              "Total_Retinal": 0.217,
+              "Choroidal": 0.056
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.2,
+              "Choroidal": 0.043
+            },
+            "Temporal": {
+              "Total_Retinal": 0.21,
+              "Choroidal": 0.048
+            },
+            "Linear": {
+              "Total_Retinal": 0.219,
+              "Choroidal": 0.055
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT66_OS",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.209",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.042",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.2",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.043",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.214",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.046",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.21",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.048",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.217",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.219",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.055",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT66_OD",
+      "participant": "MT66",
+      "eye": "Right Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "14",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 20,
+      "metadataRow": 254,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.213,
+              "Choroidal": 0.053
+            },
+            "Temporal": {
+              "Total_Retinal": 0.209,
+              "Choroidal": 0.051
+            },
+            "Linear": {
+              "Total_Retinal": 0.204,
+              "Choroidal": 0.052
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.21,
+              "Choroidal": 0.056
+            },
+            "Temporal": {
+              "Total_Retinal": 0.207,
+              "Choroidal": 0.05
+            },
+            "Linear": {
+              "Total_Retinal": 0.208,
+              "Choroidal": 0.055
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT66_OD",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.213",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.053",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.21",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.209",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.051",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.207",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.05",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.204",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.052",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.208",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.055",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT01_OS",
+      "participant": "MT01",
+      "eye": "Left Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "28",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 50,
+      "metadataRow": 258,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.216,
+              "Choroidal": 0.046
+            },
+            "Temporal": {
+              "Total_Retinal": 0.223,
+              "Choroidal": 0.048
+            },
+            "Linear": {
+              "Total_Retinal": 0.215,
+              "Choroidal": 0.05
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT01_OS",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.216",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.046",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.223",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.048",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.215",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.05",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT01_OD",
+      "participant": "MT01",
+      "eye": "Right Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "28",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 47,
+      "metadataRow": 2,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": 0.047
+            },
+            "Temporal": {
+              "Total_Retinal": 0.231,
+              "Choroidal": 0.05
+            },
+            "Linear": {
+              "Total_Retinal": 0.219,
+              "Choroidal": 0.052
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.219,
+              "Choroidal": 0.049
+            },
+            "Temporal": {
+              "Total_Retinal": 0.218,
+              "Choroidal": 0.054
+            },
+            "Linear": {
+              "Total_Retinal": 0.213,
+              "Choroidal": 0.053
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT01_OD",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.047",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.219",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.049",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.231",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.05",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.218",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.054",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.219",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.052",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.213",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.053",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT08_OS",
+      "participant": "MT08",
+      "eye": "Left Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Normally Loaded Control",
+      "unloadingDays": "Not Applicable",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 55,
+      "metadataRow": 263,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.22,
+              "Choroidal": 0.05
+            },
+            "Temporal": {
+              "Total_Retinal": 0.218,
+              "Choroidal": 0.053
+            },
+            "Linear": {
+              "Total_Retinal": 0.214,
+              "Choroidal": 0.053
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.215,
+              "Choroidal": 0.056
+            },
+            "Temporal": {
+              "Total_Retinal": 0.211,
+              "Choroidal": 0.048
+            },
+            "Linear": {
+              "Total_Retinal": 0.215,
+              "Choroidal": 0.058
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT08_OS",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.22",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.05",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.215",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.218",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.053",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.211",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.048",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.214",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.053",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.215",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.058",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT08_OD",
+      "participant": "MT08",
+      "eye": "Right Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Normally Loaded Control",
+      "unloadingDays": "Not Applicable",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 52,
+      "metadataRow": 7,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.221,
+              "Choroidal": 0.048
+            },
+            "Temporal": {
+              "Total_Retinal": 0.2,
+              "Choroidal": 0.05
+            },
+            "Linear": {
+              "Total_Retinal": 0.215,
+              "Choroidal": 0.054
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.219,
+              "Choroidal": 0.052
+            },
+            "Temporal": {
+              "Total_Retinal": 0.2,
+              "Choroidal": 0.053
+            },
+            "Linear": {
+              "Total_Retinal": 0.215,
+              "Choroidal": 0.059
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT08_OD",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.221",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.048",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.219",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.052",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.2",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.05",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.2",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.053",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.215",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.054",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.215",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.059",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT07_OS",
+      "participant": "MT07",
+      "eye": "Left Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "90",
+      "reloadingDays": "28",
+      "sourceRow": 131,
+      "metadataRow": 262,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.21,
+              "Choroidal": 0.05
+            },
+            "Temporal": {
+              "Total_Retinal": 0.21,
+              "Choroidal": 0.05
+            },
+            "Linear": {
+              "Total_Retinal": 0.214,
+              "Choroidal": 0.052
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.102,
+              "Choroidal": 0.039
+            },
+            "Temporal": {
+              "Total_Retinal": 0.084,
+              "Choroidal": 0.041
+            },
+            "Linear": {
+              "Total_Retinal": 0.082,
+              "Choroidal": 0.043
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.084,
+              "Choroidal": 0.036
+            },
+            "Temporal": {
+              "Total_Retinal": 0.088,
+              "Choroidal": 0.046
+            },
+            "Linear": {
+              "Total_Retinal": 0.072,
+              "Choroidal": 0.05
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT07_OS",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.21",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.05",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.102",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.039",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "0.084",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "0.036",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.21",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.05",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.084",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.041",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "0.088",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "0.046",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.214",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.052",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.082",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.043",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "0.072",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": "0.05"
+      }
+    },
+    {
+      "sample": "MT07_OD",
+      "participant": "MT07",
+      "eye": "Right Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Hindlimb Unloaded",
+      "unloadingDays": "90",
+      "reloadingDays": "28",
+      "sourceRow": 128,
+      "metadataRow": 6,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.208,
+              "Choroidal": 0.059
+            },
+            "Temporal": {
+              "Total_Retinal": 0.208,
+              "Choroidal": 0.056
+            },
+            "Linear": {
+              "Total_Retinal": 0.207,
+              "Choroidal": 0.058
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.21,
+              "Choroidal": 0.047
+            },
+            "Temporal": {
+              "Total_Retinal": 0.206,
+              "Choroidal": 0.041
+            },
+            "Linear": {
+              "Total_Retinal": 0.203,
+              "Choroidal": 0.051
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.209,
+              "Choroidal": 0.054
+            },
+            "Temporal": {
+              "Total_Retinal": 0.195,
+              "Choroidal": 0.047
+            },
+            "Linear": {
+              "Total_Retinal": 0.202,
+              "Choroidal": 0.052
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT07_OD",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.208",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.059",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "0.21",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "0.047",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "0.209",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "0.054",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.208",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "0.206",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "0.041",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "0.195",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "0.047",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.207",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.058",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "0.203",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "0.051",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "0.202",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": "0.052"
+      }
+    },
+    {
+      "sample": "MT305_OS",
+      "participant": "MT305",
+      "eye": "Left Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Baseline",
+      "unloadingDays": "Not Applicable",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 8,
+      "metadataRow": 329,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.182,
+              "Choroidal": 0.056
+            },
+            "Temporal": {
+              "Total_Retinal": 0.185,
+              "Choroidal": 0.067
+            },
+            "Linear": {
+              "Total_Retinal": 0.18,
+              "Choroidal": 0.056
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT305_OS",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.182",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.185",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.067",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.18",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    },
+    {
+      "sample": "MT305_OD",
+      "participant": "MT305",
+      "eye": "Right Eye",
+      "species": "Rattus norvegicus",
+      "cohort": "Young Male",
+      "group": "Baseline",
+      "unloadingDays": "Not Applicable",
+      "reloadingDays": "Not Applicable",
+      "sourceRow": 2,
+      "metadataRow": 73,
+      "visits": [
+        {
+          "phase": "Baseline",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": 0.185,
+              "Choroidal": 0.052
+            },
+            "Temporal": {
+              "Total_Retinal": 0.176,
+              "Choroidal": 0.055
+            },
+            "Linear": {
+              "Total_Retinal": 0.179,
+              "Choroidal": 0.056
+            }
+          }
+        },
+        {
+          "phase": "End_of_Hindlimb_Unloading",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        },
+        {
+          "phase": "End_of_Recovery",
+          "values": {
+            "Nasal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Temporal": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            },
+            "Linear": {
+              "Total_Retinal": null,
+              "Choroidal": null
+            }
+          }
+        }
+      ],
+      "raw": {
+        "Sample Name": "MT305_OD",
+        "Baseline _Nasal_Total_Retinal_Thickness_millimeter": "0.185",
+        "Baseline _Nasal_Choroidal_Thickness_millimeter": "0.052",
+        "End_of_Hindlimb_Unloading_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Nasal_Choroidal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Nasal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Temporal_Total_Retinal_Thickness_millimeter": "0.176",
+        "Baseline _Temporal_Choroidal_Thickness_millimeter": "0.055",
+        "End_of_Hindlimb_Unloading_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Temporal_Choroidal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Temporal_Choroidal_Thickness_millimeter": "",
+        "Baseline _Linear_Total_Retinal_Thickness_millimeter": "0.179",
+        "Baseline _Linear_Choroidal_Thickness_millimeter": "0.056",
+        "End_of_Hindlimb_Unloading_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Hindlimb_Unloading_Linear_Choroidal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Total_Retinal_Thickness_millimeter": "",
+        "End_of_Recovery_Linear_Choroidal_Thickness_millimeter": ""
+      }
+    }
+  ]
+}

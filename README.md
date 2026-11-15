@@ -27,7 +27,7 @@ Results are pattern matches or changes from a personal baseline, never diagnoses
 ## One meal, followed through two tabs
 
 > **The Commander has a shellfish allergy. They had shrimp rice at 08:00.**
-> At 11:00 they photograph a rash. The photo matches **3 of 5** hives signs, a **60%** base match. The astronaut vector adds **+10** for the declared allergy and **+10** because the allergen was eaten within six hours: **80%**, with both reasons listed under the score.
+> At 11:00 they photograph a rash and manually confirm the observations. **3 of 5** confirmed hives signs match, a **60%** base match. The astronaut vector adds **+10** for the declared allergy and **+10** because the allergen was eaten within six hours: **80%**, with both reasons listed under the score.
 >
 > Then they answer **Yes** to *trouble breathing*. The score disappears. The app says one thing: **Contact the flight surgeon now.**
 
@@ -51,7 +51,7 @@ Results are pattern matches or changes from a personal baseline, never diagnoses
   </tr>
   <tr>
     <td><img src="docs/readme/profile.jpg" alt="Crew profile connections diagram, Food to Immune highlighted"><br><b>5 · See the connections.</b> The crew profile shows the astronaut vector and which tab changed which result.</td>
-    <td><img src="docs/readme/replay.jpg" alt="Sleep tab NASA research replay"><br><b>6 · Check against NASA data.</b> Four tabs include a read-only replay of a real NASA study, kept apart from crew data.</td>
+    <td><img src="docs/readme/replay.jpg" alt="Sleep tab NASA research replay"><br><b>6 · Check against NASA data.</b> All nine tabs include a read-only replay of a real NASA study, kept apart from crew data.</td>
   </tr>
 </table>
 
@@ -105,8 +105,13 @@ Scores are worded as "matches the pattern for follow-up", never "you have X". Th
 | Sleep | BRSMAct wrist actigraphy, UTMB Campaign 1 | [NASA Life Sciences Portal](https://nlsp.nasa.gov/search/data/details/e26501eb-7d7a-5012-8c8e-c5bdb3eecaf6?dataType=DATASETS) |
 | Immune | OSD-575 Inspiration4 serum metabolic panel and cytokine arrays | [NASA OSDR](https://osdr.nasa.gov/bio/repo/data/studies/OSD-575) |
 | Bone | MR035G DXA hip, spine and femur scans | [NASA Life Sciences Portal](https://nlsp.nasa.gov/search/data/details/96121725-e9bf-5084-82f9-9efd4696ae65?dataType=DATASETS) |
+| Microbiome | OSD-574 Inspiration4 skin microbiome | [NASA OSDR](https://osdr.nasa.gov/bio/repo/data/studies/OSD-574) |
+| SANS | OSD-679 / LSDS-81 head-down-tilt eye OCT, rats | [NASA OSDR](https://osdr.nasa.gov/bio/repo/data/studies/OSD-679) |
+| Balance | BRSMFMT Functional Mobility Test, UTMB Campaign 1 | [NASA Life Sciences Portal](https://nlsp.nasa.gov/search/data/details/5fca791c-e1b8-5ee8-aba0-c6220789547e?dataType=DATASETS) |
+| Mood | AD ASTRA CFT70, UTMB Campaign 11 | [NASA Life Sciences Portal](https://nlsp.nasa.gov/search/data/details/046fc310-ee58-5463-a2bf-3e8c1df7cb18?dataType=DATASETS) |
+| Food | MR016G Dietary Intake, UTMB Campaign 3 | [NASA Life Sciences Portal](https://nlsp.nasa.gov/search/data/details/4d613f00-9304-5d1b-8d30-836bb2023079?dataType=DATASETS) |
 
-Each replay is read-only: it never saves crew inputs, emits vector signals or invents timestamps. Raw downloads sit next to each replay's curation script, so every number can be traced to its source file. Research participants are not astronauts. Curation notes: [`data/curated/`](data/curated/README.md) and each tab's `research/README.md`.
+Each replay is read-only: it never saves crew inputs, emits vector signals or invents timestamps. Raw downloads sit next to each replay's curation script, so every number can be traced to its source file. Research participants are kept separate from the app's crew. SANS uses rat ground-analog data because the human eye scans checked require a data request; these animal measurements are not human SANS findings. Curation notes: [`data/curated/`](data/curated/README.md) and each tab's research documentation.
 
 Reference datasets cited in the tabs but not analysed in the demo: [Google SCIN](https://github.com/google-research-datasets/scin), [PhysioNet Sleep-EDF](https://www.physionet.org/content/sleep-edfx/1.0.0/), [USDA FoodData Central](https://fdc.nal.usda.gov/download-datasets.html), [CDC NHANES DXA](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DXXSPN_H.htm).
 
@@ -127,7 +132,7 @@ On Windows with Smart App Control, also run `npm install --no-save "rollup@npm:@
 
 | Check | Command |
 |---|---|
-| Unit tests (459) | `npm test` |
+| Unit tests | `npm test` |
 | Types · lint · build | `npx tsc -b --noEmit` · `npm run lint` · `npm run build` |
 | Browser tests | `npx playwright install chromium`, then `npm run test:e2e` |
 
@@ -148,7 +153,7 @@ React 19, TypeScript and Vite, with three.js for the body map and Observable Plo
 | Path | What it is |
 |---|---|
 | `src/shell/` | Body map home, 3D astronaut, crew profile, radiation card, routing (`#/risk/<risk>?crewId=`) |
-| `src/risks/<risk>/` | One folder per risk tab; each exports a `riskTab` descriptor, and four include a `research/` replay |
+| `src/risks/<risk>/` | One folder per risk tab; each exports a `riskTab` descriptor, and all nine include a NASA replay |
 | `src/risks/types.ts` | Shared contract: signals, vector API, evaluation, escalation |
 | `src/vector/` | Astronaut vector: crew registry, signal store, exposures, personalisation |
 | `src/scenario/` | Mission day 100 simulated crew stories |

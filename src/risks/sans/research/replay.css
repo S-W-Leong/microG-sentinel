@@ -1,0 +1,43 @@
+.sans-view-switch {
+  margin-bottom: 16px;
+}
+.sans-research {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.sans-research-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 12px;
+}
+.sans-research select {
+  width: 100%;
+  min-width: 0;
+}
+.sans-research pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.sans-research-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-block: 20px;
+  font-size: 14px;
+}
+.sans-research-table caption {
+  text-align: left;
+  padding-bottom: 10px;
+}
+.sans-research-table th,
+.sans-research-table td {
+  padding: 10px 6px;
+  border-bottom: 1px solid var(--risk-line);
+  text-align: left;
+}
+.sans-research-table td {
+  font-variant-numeric: tabular-nums;
+}
+.sans-research-selected th {
+  border-left: 3px solid currentColor;
+}

@@ -1,0 +1,6428 @@
+{
+  "dataset": "UTMB Bedrest Campaign 3 Dietary Intake",
+  "catalogId": "MR016G_Campaign_3_Dietary_Intake",
+  "datasetId": "4d613f00-9304-5d1b-8d30-836bb2023079",
+  "url": "https://nlsp.nasa.gov/search/data/details/4d613f00-9304-5d1b-8d30-836bb2023079?dataType=DATASETS",
+  "downloadDate": "2026-11-15",
+  "catalogSha256": "9251e7fa67f4bea5b02bcf37e142291ada4615fa28877132a40f14417e85780c",
+  "measures": {
+    "energy": {
+      "label": "Energy",
+      "unit": "kcal",
+      "sourceColumn": "Energy (kcal)"
+    },
+    "protein": {
+      "label": "Protein",
+      "unit": "g",
+      "sourceColumn": "Total Protein (g)"
+    },
+    "sodium": {
+      "label": "Sodium",
+      "unit": "mg",
+      "sourceColumn": "Sodium (mg)"
+    },
+    "calcium": {
+      "label": "Calcium",
+      "unit": "mg",
+      "sourceColumn": "Calcium (mg)"
+    },
+    "vitaminD": {
+      "label": "Vitamin D",
+      "unit": "mcg",
+      "sourceColumn": "Vitamin D (calciferol) (mcg)"
+    },
+    "fibre": {
+      "label": "Fibre",
+      "unit": "g",
+      "sourceColumn": "Total Dietary Fiber (g)"
+    }
+  },
+  "files": [
+    {
+      "name": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "downloadId": "6c82c3f2-52f4-505c-9f9c-eabc0cad3544",
+      "url": "https://nlsp.nasa.gov/api/v1/files/6c82c3f2-52f4-505c-9f9c-eabc0cad3544/download",
+      "sha256": "b3304f5ba2e80a6dcf35190cbc2895044e9d77a6ccc45fb07171e4bd6d0306af"
+    },
+    {
+      "name": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "downloadId": "da78b1ab-dda3-5d05-8f5e-0b0159213c3c",
+      "url": "https://nlsp.nasa.gov/api/v1/files/da78b1ab-dda3-5d05-8f5e-0b0159213c3c/download",
+      "sha256": "caf73d1128a71c168d4c79e485a6796e3a8525fd5e8fa33ddae08d852c7252eb"
+    }
+  ],
+  "observations": [
+    {
+      "id": "C3C-7352:1",
+      "participant": "C3C-7352",
+      "date": "2006-04-03",
+      "sourceDate": "4/3/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -15,
+      "sourceId": "1",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 2,
+      "values": {
+        "energy": 2306.75,
+        "protein": 88.29,
+        "sodium": 2434.52,
+        "calcium": 1076.88,
+        "vitaminD": 6.15,
+        "fibre": 24.71
+      },
+      "rawValues": {
+        "energy": "2306.75",
+        "protein": "88.29",
+        "sodium": "2434.52",
+        "calcium": "1076.88",
+        "vitaminD": "6.15",
+        "fibre": "24.71"
+      }
+    },
+    {
+      "id": "C3C-7352:2",
+      "participant": "C3C-7352",
+      "date": "2006-04-04",
+      "sourceDate": "4/4/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -14,
+      "sourceId": "2",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 3,
+      "values": {
+        "energy": 2289.15,
+        "protein": 88.24,
+        "sodium": 2741.96,
+        "calcium": 1091.26,
+        "vitaminD": 5.8,
+        "fibre": 24.41
+      },
+      "rawValues": {
+        "energy": "2289.15",
+        "protein": "88.24",
+        "sodium": "2741.96",
+        "calcium": "1091.26",
+        "vitaminD": "5.8",
+        "fibre": "24.41"
+      }
+    },
+    {
+      "id": "C3C-7352:3",
+      "participant": "C3C-7352",
+      "date": "2006-04-05",
+      "sourceDate": "4/5/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -13,
+      "sourceId": "3",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 4,
+      "values": {
+        "energy": 2316.61,
+        "protein": 87.04,
+        "sodium": 2997.31,
+        "calcium": 1077.5,
+        "vitaminD": 9.72,
+        "fibre": 16.13
+      },
+      "rawValues": {
+        "energy": "2316.61",
+        "protein": "87.04",
+        "sodium": "2997.31",
+        "calcium": "1077.5",
+        "vitaminD": "9.72",
+        "fibre": "16.13"
+      }
+    },
+    {
+      "id": "C3C-7352:4",
+      "participant": "C3C-7352",
+      "date": "2006-04-06",
+      "sourceDate": "4/6/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -12,
+      "sourceId": "4",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 5,
+      "values": {
+        "energy": 2302.92,
+        "protein": 89.43,
+        "sodium": 2796.86,
+        "calcium": 1264.3,
+        "vitaminD": 7.35,
+        "fibre": 26.14
+      },
+      "rawValues": {
+        "energy": "2302.92",
+        "protein": "89.43",
+        "sodium": "2796.86",
+        "calcium": "1264.3",
+        "vitaminD": "7.35",
+        "fibre": "26.14"
+      }
+    },
+    {
+      "id": "C3C-7352:5",
+      "participant": "C3C-7352",
+      "date": "2006-04-07",
+      "sourceDate": "4/7/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -11,
+      "sourceId": "5",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 6,
+      "values": {
+        "energy": 2309.8,
+        "protein": 88.65,
+        "sodium": 2614.49,
+        "calcium": 1192.04,
+        "vitaminD": 7.79,
+        "fibre": 20.79
+      },
+      "rawValues": {
+        "energy": "2309.8",
+        "protein": "88.65",
+        "sodium": "2614.49",
+        "calcium": "1192.04",
+        "vitaminD": "7.79",
+        "fibre": "20.79"
+      }
+    },
+    {
+      "id": "C3C-7352:6",
+      "participant": "C3C-7352",
+      "date": "2006-04-08",
+      "sourceDate": "4/8/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -10,
+      "sourceId": "6",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 7,
+      "values": {
+        "energy": 2263.11,
+        "protein": 86.79,
+        "sodium": 2632.24,
+        "calcium": 1219.84,
+        "vitaminD": 18.69,
+        "fibre": 26.39
+      },
+      "rawValues": {
+        "energy": "2263.11",
+        "protein": "86.79",
+        "sodium": "2632.24",
+        "calcium": "1219.84",
+        "vitaminD": "18.69",
+        "fibre": "26.39"
+      }
+    },
+    {
+      "id": "C3C-7352:7",
+      "participant": "C3C-7352",
+      "date": "2006-04-09",
+      "sourceDate": "4/9/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -9,
+      "sourceId": "7",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 8,
+      "values": {
+        "energy": 2333.81,
+        "protein": 92.99,
+        "sodium": 2814.75,
+        "calcium": 1066.01,
+        "vitaminD": 8.43,
+        "fibre": 20.21
+      },
+      "rawValues": {
+        "energy": "2333.81",
+        "protein": "92.99",
+        "sodium": "2814.75",
+        "calcium": "1066.01",
+        "vitaminD": "8.43",
+        "fibre": "20.21"
+      }
+    },
+    {
+      "id": "C3C-7352:8",
+      "participant": "C3C-7352",
+      "date": "2006-04-10",
+      "sourceDate": "4/10/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -8,
+      "sourceId": "8",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 9,
+      "values": {
+        "energy": 2307.84,
+        "protein": 88.31,
+        "sodium": 2436.72,
+        "calcium": 1081.07,
+        "vitaminD": 6.15,
+        "fibre": 24.73
+      },
+      "rawValues": {
+        "energy": "2307.84",
+        "protein": "88.31",
+        "sodium": "2436.72",
+        "calcium": "1081.07",
+        "vitaminD": "6.15",
+        "fibre": "24.73"
+      }
+    },
+    {
+      "id": "C3C-7352:9",
+      "participant": "C3C-7352",
+      "date": "2006-04-11",
+      "sourceDate": "4/11/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -7,
+      "sourceId": "9",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 10,
+      "values": {
+        "energy": 2291.35,
+        "protein": 87.51,
+        "sodium": 2738.94,
+        "calcium": 1078.0,
+        "vitaminD": 5.8,
+        "fibre": 24.9
+      },
+      "rawValues": {
+        "energy": "2291.35",
+        "protein": "87.51",
+        "sodium": "2738.94",
+        "calcium": "1078",
+        "vitaminD": "5.8",
+        "fibre": "24.9"
+      }
+    },
+    {
+      "id": "C3C-7352:10",
+      "participant": "C3C-7352",
+      "date": "2006-04-12",
+      "sourceDate": "4/12/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -6,
+      "sourceId": "10",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 11,
+      "values": {
+        "energy": 2302.92,
+        "protein": 89.43,
+        "sodium": 2803.37,
+        "calcium": 1285.57,
+        "vitaminD": 7.35,
+        "fibre": 26.14
+      },
+      "rawValues": {
+        "energy": "2302.92",
+        "protein": "89.43",
+        "sodium": "2803.37",
+        "calcium": "1285.57",
+        "vitaminD": "7.35",
+        "fibre": "26.14"
+      }
+    },
+    {
+      "id": "C3C-7352:11",
+      "participant": "C3C-7352",
+      "date": "2006-04-13",
+      "sourceDate": "4/13/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -5,
+      "sourceId": "11",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 12,
+      "values": {
+        "energy": 2316.61,
+        "protein": 87.04,
+        "sodium": 2995.06,
+        "calcium": 1070.15,
+        "vitaminD": 9.72,
+        "fibre": 16.13
+      },
+      "rawValues": {
+        "energy": "2316.61",
+        "protein": "87.04",
+        "sodium": "2995.06",
+        "calcium": "1070.15",
+        "vitaminD": "9.72",
+        "fibre": "16.13"
+      }
+    },
+    {
+      "id": "C3C-7352:12",
+      "participant": "C3C-7352",
+      "date": "2006-04-14",
+      "sourceDate": "4/14/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -4,
+      "sourceId": "12",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 13,
+      "values": {
+        "energy": 2309.8,
+        "protein": 88.65,
+        "sodium": 2614.45,
+        "calcium": 1191.92,
+        "vitaminD": 7.78,
+        "fibre": 20.79
+      },
+      "rawValues": {
+        "energy": "2309.8",
+        "protein": "88.65",
+        "sodium": "2614.45",
+        "calcium": "1191.92",
+        "vitaminD": "7.78",
+        "fibre": "20.79"
+      }
+    },
+    {
+      "id": "C3C-7352:13",
+      "participant": "C3C-7352",
+      "date": "2006-04-15",
+      "sourceDate": "4/15/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -3,
+      "sourceId": "13",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 14,
+      "values": {
+        "energy": 2274.29,
+        "protein": 87.9,
+        "sodium": 2636.95,
+        "calcium": 1226.6,
+        "vitaminD": 18.71,
+        "fibre": 26.39
+      },
+      "rawValues": {
+        "energy": "2274.29",
+        "protein": "87.9",
+        "sodium": "2636.95",
+        "calcium": "1226.6",
+        "vitaminD": "18.71",
+        "fibre": "26.39"
+      }
+    },
+    {
+      "id": "C3C-7352:14",
+      "participant": "C3C-7352",
+      "date": "2006-04-16",
+      "sourceDate": "4/16/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -2,
+      "sourceId": "14",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 15,
+      "values": {
+        "energy": 2298.48,
+        "protein": 88.37,
+        "sodium": 2800.38,
+        "calcium": 1047.26,
+        "vitaminD": 8.29,
+        "fibre": 20.2
+      },
+      "rawValues": {
+        "energy": "2298.48",
+        "protein": "88.37",
+        "sodium": "2800.38",
+        "calcium": "1047.26",
+        "vitaminD": "8.29",
+        "fibre": "20.2"
+      }
+    },
+    {
+      "id": "C3C-7352:15",
+      "participant": "C3C-7352",
+      "date": "2006-04-17",
+      "sourceDate": "4/17/2006",
+      "phase": "PRE_TEST",
+      "studyDay": -1,
+      "sourceId": "15",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 16,
+      "values": {
+        "energy": 2306.75,
+        "protein": 88.29,
+        "sodium": 2437.07,
+        "calcium": 1085.23,
+        "vitaminD": 6.15,
+        "fibre": 24.71
+      },
+      "rawValues": {
+        "energy": "2306.75",
+        "protein": "88.29",
+        "sodium": "2437.07",
+        "calcium": "1085.23",
+        "vitaminD": "6.15",
+        "fibre": "24.71"
+      }
+    },
+    {
+      "id": "C3C-7352:16",
+      "participant": "C3C-7352",
+      "date": "2006-04-18",
+      "sourceDate": "4/18/2006",
+      "phase": "IN_TEST",
+      "studyDay": 1,
+      "sourceId": "16",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 17,
+      "values": {
+        "energy": 1856.73,
+        "protein": 71.09,
+        "sodium": 2225.29,
+        "calcium": 901.98,
+        "vitaminD": 5.01,
+        "fibre": 20.31
+      },
+      "rawValues": {
+        "energy": "1856.73",
+        "protein": "71.09",
+        "sodium": "2225.29",
+        "calcium": "901.98",
+        "vitaminD": "5.01",
+        "fibre": "20.31"
+      }
+    },
+    {
+      "id": "C3C-7352:17",
+      "participant": "C3C-7352",
+      "date": "2006-04-19",
+      "sourceDate": "4/19/2006",
+      "phase": "IN_TEST",
+      "studyDay": 2,
+      "sourceId": "17",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 18,
+      "values": {
+        "energy": 1882.81,
+        "protein": 70.7,
+        "sodium": 2433.54,
+        "calcium": 864.01,
+        "vitaminD": 7.93,
+        "fibre": 13.06
+      },
+      "rawValues": {
+        "energy": "1882.81",
+        "protein": "70.7",
+        "sodium": "2433.54",
+        "calcium": "864.01",
+        "vitaminD": "7.93",
+        "fibre": "13.06"
+      }
+    },
+    {
+      "id": "C3C-7352:18",
+      "participant": "C3C-7352",
+      "date": "2006-04-20",
+      "sourceDate": "4/20/2006",
+      "phase": "IN_TEST",
+      "studyDay": 3,
+      "sourceId": "18",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 19,
+      "values": {
+        "energy": 1857.55,
+        "protein": 71.71,
+        "sodium": 2186.74,
+        "calcium": 1092.42,
+        "vitaminD": 6.28,
+        "fibre": 23.93
+      },
+      "rawValues": {
+        "energy": "1857.55",
+        "protein": "71.71",
+        "sodium": "2186.74",
+        "calcium": "1092.42",
+        "vitaminD": "6.28",
+        "fibre": "23.93"
+      }
+    },
+    {
+      "id": "C3C-7352:19",
+      "participant": "C3C-7352",
+      "date": "2006-04-21",
+      "sourceDate": "4/21/2006",
+      "phase": "IN_TEST",
+      "studyDay": 4,
+      "sourceId": "19",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 20,
+      "values": {
+        "energy": 1873.45,
+        "protein": 71.78,
+        "sodium": 2092.84,
+        "calcium": 1033.61,
+        "vitaminD": 6.72,
+        "fibre": 16.93
+      },
+      "rawValues": {
+        "energy": "1873.45",
+        "protein": "71.78",
+        "sodium": "2092.84",
+        "calcium": "1033.61",
+        "vitaminD": "6.72",
+        "fibre": "16.93"
+      }
+    },
+    {
+      "id": "C3C-7352:20",
+      "participant": "C3C-7352",
+      "date": "2006-04-22",
+      "sourceDate": "4/22/2006",
+      "phase": "IN_TEST",
+      "studyDay": 5,
+      "sourceId": "20",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 21,
+      "values": {
+        "energy": 1842.19,
+        "protein": 71.54,
+        "sodium": 2180.74,
+        "calcium": 1074.85,
+        "vitaminD": 15.5,
+        "fibre": 21.88
+      },
+      "rawValues": {
+        "energy": "1842.19",
+        "protein": "71.54",
+        "sodium": "2180.74",
+        "calcium": "1074.85",
+        "vitaminD": "15.5",
+        "fibre": "21.88"
+      }
+    },
+    {
+      "id": "C3C-7352:21",
+      "participant": "C3C-7352",
+      "date": "2006-04-23",
+      "sourceDate": "4/23/2006",
+      "phase": "IN_TEST",
+      "studyDay": 6,
+      "sourceId": "21",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 22,
+      "values": {
+        "energy": 1870.73,
+        "protein": 71.62,
+        "sodium": 2225.0,
+        "calcium": 903.88,
+        "vitaminD": 7.06,
+        "fibre": 16.27
+      },
+      "rawValues": {
+        "energy": "1870.73",
+        "protein": "71.62",
+        "sodium": "2225",
+        "calcium": "903.88",
+        "vitaminD": "7.06",
+        "fibre": "16.27"
+      }
+    },
+    {
+      "id": "C3C-7352:22",
+      "participant": "C3C-7352",
+      "date": "2006-04-24",
+      "sourceDate": "4/24/2006",
+      "phase": "IN_TEST",
+      "studyDay": 7,
+      "sourceId": "22",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 23,
+      "values": {
+        "energy": 1868.08,
+        "protein": 71.59,
+        "sodium": 1951.66,
+        "calcium": 918.27,
+        "vitaminD": 5.33,
+        "fibre": 20.1
+      },
+      "rawValues": {
+        "energy": "1868.08",
+        "protein": "71.59",
+        "sodium": "1951.66",
+        "calcium": "918.27",
+        "vitaminD": "5.33",
+        "fibre": "20.1"
+      }
+    },
+    {
+      "id": "C3C-7352:23",
+      "participant": "C3C-7352",
+      "date": "2006-04-25",
+      "sourceDate": "4/25/2006",
+      "phase": "IN_TEST",
+      "studyDay": 8,
+      "sourceId": "23",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 24,
+      "values": {
+        "energy": 1856.73,
+        "protein": 71.09,
+        "sodium": 2229.48,
+        "calcium": 915.66,
+        "vitaminD": 5.01,
+        "fibre": 20.31
+      },
+      "rawValues": {
+        "energy": "1856.73",
+        "protein": "71.09",
+        "sodium": "2229.48",
+        "calcium": "915.66",
+        "vitaminD": "5.01",
+        "fibre": "20.31"
+      }
+    },
+    {
+      "id": "C3C-7352:24",
+      "participant": "C3C-7352",
+      "date": "2006-04-26",
+      "sourceDate": "4/26/2006",
+      "phase": "IN_TEST",
+      "studyDay": 9,
+      "sourceId": "24",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 25,
+      "values": {
+        "energy": 1855.91,
+        "protein": 71.67,
+        "sodium": 2185.7,
+        "calcium": 1093.5,
+        "vitaminD": 6.28,
+        "fibre": 23.9
+      },
+      "rawValues": {
+        "energy": "1855.91",
+        "protein": "71.67",
+        "sodium": "2185.7",
+        "calcium": "1093.5",
+        "vitaminD": "6.28",
+        "fibre": "23.9"
+      }
+    },
+    {
+      "id": "C3C-7352:25",
+      "participant": "C3C-7352",
+      "date": "2006-04-27",
+      "sourceDate": "4/27/2006",
+      "phase": "IN_TEST",
+      "studyDay": 10,
+      "sourceId": "25",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 26,
+      "values": {
+        "energy": 1887.11,
+        "protein": 71.41,
+        "sodium": 1926.89,
+        "calcium": 1144.8,
+        "vitaminD": 9.11,
+        "fibre": 15.56
+      },
+      "rawValues": {
+        "energy": "1887.11",
+        "protein": "71.41",
+        "sodium": "1926.89",
+        "calcium": "1144.8",
+        "vitaminD": "9.11",
+        "fibre": "15.56"
+      }
+    },
+    {
+      "id": "C3C-7352:26",
+      "participant": "C3C-7352",
+      "date": "2006-04-28",
+      "sourceDate": "4/28/2006",
+      "phase": "IN_TEST",
+      "studyDay": 11,
+      "sourceId": "26",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 27,
+      "values": {
+        "energy": 1873.45,
+        "protein": 71.78,
+        "sodium": 2095.11,
+        "calcium": 1041.02,
+        "vitaminD": 6.72,
+        "fibre": 16.93
+      },
+      "rawValues": {
+        "energy": "1873.45",
+        "protein": "71.78",
+        "sodium": "2095.11",
+        "calcium": "1041.02",
+        "vitaminD": "6.72",
+        "fibre": "16.93"
+      }
+    },
+    {
+      "id": "C3C-7352:27",
+      "participant": "C3C-7352",
+      "date": "2006-04-29",
+      "sourceDate": "4/29/2006",
+      "phase": "IN_TEST",
+      "studyDay": 12,
+      "sourceId": "27",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 28,
+      "values": {
+        "energy": 1834.98,
+        "protein": 71.0,
+        "sodium": 2174.31,
+        "calcium": 1063.74,
+        "vitaminD": 15.49,
+        "fibre": 21.84
+      },
+      "rawValues": {
+        "energy": "1834.98",
+        "protein": "71",
+        "sodium": "2174.31",
+        "calcium": "1063.74",
+        "vitaminD": "15.49",
+        "fibre": "21.84"
+      }
+    },
+    {
+      "id": "C3C-7352:28",
+      "participant": "C3C-7352",
+      "date": "2006-04-30",
+      "sourceDate": "4/30/2006",
+      "phase": "IN_TEST",
+      "studyDay": 13,
+      "sourceId": "28",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 29,
+      "values": {
+        "energy": 1869.09,
+        "protein": 71.59,
+        "sodium": 2222.42,
+        "calcium": 899.97,
+        "vitaminD": 7.06,
+        "fibre": 16.24
+      },
+      "rawValues": {
+        "energy": "1869.09",
+        "protein": "71.59",
+        "sodium": "2222.42",
+        "calcium": "899.97",
+        "vitaminD": "7.06",
+        "fibre": "16.24"
+      }
+    },
+    {
+      "id": "C3C-7352:29",
+      "participant": "C3C-7352",
+      "date": "2006-05-01",
+      "sourceDate": "5/1/2006",
+      "phase": "IN_TEST",
+      "studyDay": 14,
+      "sourceId": "29",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 30,
+      "values": {
+        "energy": 1688.83,
+        "protein": 71.41,
+        "sodium": 1952.25,
+        "calcium": 906.42,
+        "vitaminD": 5.35,
+        "fibre": 15.3
+      },
+      "rawValues": {
+        "energy": "1688.83",
+        "protein": "71.41",
+        "sodium": "1952.25",
+        "calcium": "906.42",
+        "vitaminD": "5.35",
+        "fibre": "15.3"
+      }
+    },
+    {
+      "id": "C3C-7352:30",
+      "participant": "C3C-7352",
+      "date": "2006-05-02",
+      "sourceDate": "5/2/2006",
+      "phase": "IN_TEST",
+      "studyDay": 15,
+      "sourceId": "30",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 31,
+      "values": {
+        "energy": 1856.73,
+        "protein": 71.09,
+        "sodium": 2230.13,
+        "calcium": 917.8,
+        "vitaminD": 5.01,
+        "fibre": 20.31
+      },
+      "rawValues": {
+        "energy": "1856.73",
+        "protein": "71.09",
+        "sodium": "2230.13",
+        "calcium": "917.8",
+        "vitaminD": "5.01",
+        "fibre": "20.31"
+      }
+    },
+    {
+      "id": "C3C-7352:31",
+      "participant": "C3C-7352",
+      "date": "2006-05-03",
+      "sourceDate": "5/3/2006",
+      "phase": "IN_TEST",
+      "studyDay": 16,
+      "sourceId": "31",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 32,
+      "values": {
+        "energy": 1855.91,
+        "protein": 71.67,
+        "sodium": 2183.93,
+        "calcium": 1087.72,
+        "vitaminD": 6.28,
+        "fibre": 23.9
+      },
+      "rawValues": {
+        "energy": "1855.91",
+        "protein": "71.67",
+        "sodium": "2183.93",
+        "calcium": "1087.72",
+        "vitaminD": "6.28",
+        "fibre": "23.9"
+      }
+    },
+    {
+      "id": "C3C-7352:32",
+      "participant": "C3C-7352",
+      "date": "2006-05-04",
+      "sourceDate": "5/4/2006",
+      "phase": "IN_TEST",
+      "studyDay": 17,
+      "sourceId": "32",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 33,
+      "values": {
+        "energy": 1887.11,
+        "protein": 71.41,
+        "sodium": 1924.47,
+        "calcium": 1136.9,
+        "vitaminD": 9.11,
+        "fibre": 15.56
+      },
+      "rawValues": {
+        "energy": "1887.11",
+        "protein": "71.41",
+        "sodium": "1924.47",
+        "calcium": "1136.9",
+        "vitaminD": "9.11",
+        "fibre": "15.56"
+      }
+    },
+    {
+      "id": "C3C-7352:33",
+      "participant": "C3C-7352",
+      "date": "2006-05-05",
+      "sourceDate": "5/5/2006",
+      "phase": "IN_TEST",
+      "studyDay": 18,
+      "sourceId": "33",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 34,
+      "values": {
+        "energy": 1873.45,
+        "protein": 71.78,
+        "sodium": 2092.82,
+        "calcium": 1033.55,
+        "vitaminD": 6.72,
+        "fibre": 16.93
+      },
+      "rawValues": {
+        "energy": "1873.45",
+        "protein": "71.78",
+        "sodium": "2092.82",
+        "calcium": "1033.55",
+        "vitaminD": "6.72",
+        "fibre": "16.93"
+      }
+    },
+    {
+      "id": "C3C-7352:34",
+      "participant": "C3C-7352",
+      "date": "2006-05-06",
+      "sourceDate": "5/6/2006",
+      "phase": "IN_TEST",
+      "studyDay": 19,
+      "sourceId": "34",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 35,
+      "values": {
+        "energy": 1850.53,
+        "protein": 72.55,
+        "sodium": 2180.84,
+        "calcium": 1073.09,
+        "vitaminD": 15.52,
+        "fibre": 21.84
+      },
+      "rawValues": {
+        "energy": "1850.53",
+        "protein": "72.55",
+        "sodium": "2180.84",
+        "calcium": "1073.09",
+        "vitaminD": "15.52",
+        "fibre": "21.84"
+      }
+    },
+    {
+      "id": "C3C-7352:35",
+      "participant": "C3C-7352",
+      "date": "2006-05-07",
+      "sourceDate": "5/7/2006",
+      "phase": "IN_TEST",
+      "studyDay": 20,
+      "sourceId": "35",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 36,
+      "values": {
+        "energy": 1869.09,
+        "protein": 71.59,
+        "sodium": 2222.7,
+        "calcium": 900.87,
+        "vitaminD": 7.06,
+        "fibre": 16.24
+      },
+      "rawValues": {
+        "energy": "1869.09",
+        "protein": "71.59",
+        "sodium": "2222.7",
+        "calcium": "900.87",
+        "vitaminD": "7.06",
+        "fibre": "16.24"
+      }
+    },
+    {
+      "id": "C3C-7352:36",
+      "participant": "C3C-7352",
+      "date": "2006-05-08",
+      "sourceDate": "5/8/2006",
+      "phase": "IN_TEST",
+      "studyDay": 21,
+      "sourceId": "36",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 37,
+      "values": {
+        "energy": 1787.81,
+        "protein": 71.56,
+        "sodium": 1951.35,
+        "calcium": 921.32,
+        "vitaminD": 5.33,
+        "fibre": 20.01
+      },
+      "rawValues": {
+        "energy": "1787.81",
+        "protein": "71.56",
+        "sodium": "1951.35",
+        "calcium": "921.32",
+        "vitaminD": "5.33",
+        "fibre": "20.01"
+      }
+    },
+    {
+      "id": "C3C-7352:37",
+      "participant": "C3C-7352",
+      "date": "2006-05-09",
+      "sourceDate": "5/9/2006",
+      "phase": "IN_TEST",
+      "studyDay": 22,
+      "sourceId": "37",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 38,
+      "values": {
+        "energy": 1886.09,
+        "protein": 70.76,
+        "sodium": 2442.67,
+        "calcium": 884.84,
+        "vitaminD": 7.93,
+        "fibre": 13.12
+      },
+      "rawValues": {
+        "energy": "1886.09",
+        "protein": "70.76",
+        "sodium": "2442.67",
+        "calcium": "884.84",
+        "vitaminD": "7.93",
+        "fibre": "13.12"
+      }
+    },
+    {
+      "id": "C3C-7352:38",
+      "participant": "C3C-7352",
+      "date": "2006-05-10",
+      "sourceDate": "5/10/2006",
+      "phase": "IN_TEST",
+      "studyDay": 23,
+      "sourceId": "38",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 39,
+      "values": {
+        "energy": 1857.55,
+        "protein": 71.71,
+        "sodium": 2186.41,
+        "calcium": 1091.33,
+        "vitaminD": 6.28,
+        "fibre": 23.93
+      },
+      "rawValues": {
+        "energy": "1857.55",
+        "protein": "71.71",
+        "sodium": "2186.41",
+        "calcium": "1091.33",
+        "vitaminD": "6.28",
+        "fibre": "23.93"
+      }
+    },
+    {
+      "id": "C3C-7352:39",
+      "participant": "C3C-7352",
+      "date": "2006-05-11",
+      "sourceDate": "5/11/2006",
+      "phase": "IN_TEST",
+      "studyDay": 24,
+      "sourceId": "39",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 40,
+      "values": {
+        "energy": 1887.11,
+        "protein": 71.41,
+        "sodium": 1924.62,
+        "calcium": 1137.37,
+        "vitaminD": 9.11,
+        "fibre": 15.56
+      },
+      "rawValues": {
+        "energy": "1887.11",
+        "protein": "71.41",
+        "sodium": "1924.62",
+        "calcium": "1137.37",
+        "vitaminD": "9.11",
+        "fibre": "15.56"
+      }
+    },
+    {
+      "id": "C3C-7352:40",
+      "participant": "C3C-7352",
+      "date": "2006-05-12",
+      "sourceDate": "5/12/2006",
+      "phase": "IN_TEST",
+      "studyDay": 25,
+      "sourceId": "40",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 41,
+      "values": {
+        "energy": 2092.77,
+        "protein": 71.94,
+        "sodium": 2138.67,
+        "calcium": 1079.65,
+        "vitaminD": 7.08,
+        "fibre": 17.46
+      },
+      "rawValues": {
+        "energy": "2092.77",
+        "protein": "71.94",
+        "sodium": "2138.67",
+        "calcium": "1079.65",
+        "vitaminD": "7.08",
+        "fibre": "17.46"
+      }
+    },
+    {
+      "id": "C3C-7352:41",
+      "participant": "C3C-7352",
+      "date": "2006-05-13",
+      "sourceDate": "5/13/2006",
+      "phase": "IN_TEST",
+      "studyDay": 26,
+      "sourceId": "41",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 42,
+      "values": {
+        "energy": 2063.55,
+        "protein": 69.3,
+        "sodium": 2126.37,
+        "calcium": 1078.07,
+        "vitaminD": 14.16,
+        "fibre": 22.31
+      },
+      "rawValues": {
+        "energy": "2063.55",
+        "protein": "69.3",
+        "sodium": "2126.37",
+        "calcium": "1078.07",
+        "vitaminD": "14.16",
+        "fibre": "22.31"
+      }
+    },
+    {
+      "id": "C3C-7352:42",
+      "participant": "C3C-7352",
+      "date": "2006-05-14",
+      "sourceDate": "5/14/2006",
+      "phase": "IN_TEST",
+      "studyDay": 27,
+      "sourceId": "42",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 43,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.27,
+        "sodium": 2022.79,
+        "calcium": 1167.39,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.27",
+        "sodium": "2022.79",
+        "calcium": "1167.39",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:43",
+      "participant": "C3C-7352",
+      "date": "2006-05-15",
+      "sourceDate": "5/15/2006",
+      "phase": "IN_TEST",
+      "studyDay": 28,
+      "sourceId": "43",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 44,
+      "values": {
+        "energy": 2008.69,
+        "protein": 71.98,
+        "sodium": 1959.98,
+        "calcium": 990.12,
+        "vitaminD": 5.91,
+        "fibre": 20.32
+      },
+      "rawValues": {
+        "energy": "2008.69",
+        "protein": "71.98",
+        "sodium": "1959.98",
+        "calcium": "990.12",
+        "vitaminD": "5.91",
+        "fibre": "20.32"
+      }
+    },
+    {
+      "id": "C3C-7352:44",
+      "participant": "C3C-7352",
+      "date": "2006-05-16",
+      "sourceDate": "5/16/2006",
+      "phase": "IN_TEST",
+      "studyDay": 29,
+      "sourceId": "44",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 45,
+      "values": {
+        "energy": 1856.73,
+        "protein": 71.09,
+        "sodium": 2231.22,
+        "calcium": 921.36,
+        "vitaminD": 5.01,
+        "fibre": 20.31
+      },
+      "rawValues": {
+        "energy": "1856.73",
+        "protein": "71.09",
+        "sodium": "2231.22",
+        "calcium": "921.36",
+        "vitaminD": "5.01",
+        "fibre": "20.31"
+      }
+    },
+    {
+      "id": "C3C-7352:45",
+      "participant": "C3C-7352",
+      "date": "2006-05-17",
+      "sourceDate": "5/17/2006",
+      "phase": "IN_TEST",
+      "studyDay": 30,
+      "sourceId": "45",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 46,
+      "values": {
+        "energy": 1903.72,
+        "protein": 71.77,
+        "sodium": 2200.58,
+        "calcium": 1040.7,
+        "vitaminD": 5.98,
+        "fibre": 21.41
+      },
+      "rawValues": {
+        "energy": "1903.72",
+        "protein": "71.77",
+        "sodium": "2200.58",
+        "calcium": "1040.7",
+        "vitaminD": "5.98",
+        "fibre": "21.41"
+      }
+    },
+    {
+      "id": "C3C-7352:46",
+      "participant": "C3C-7352",
+      "date": "2006-05-18",
+      "sourceDate": "5/18/2006",
+      "phase": "IN_TEST",
+      "studyDay": 31,
+      "sourceId": "46",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 47,
+      "values": {
+        "energy": 1887.11,
+        "protein": 71.41,
+        "sodium": 1921.35,
+        "calcium": 1126.7,
+        "vitaminD": 9.11,
+        "fibre": 15.56
+      },
+      "rawValues": {
+        "energy": "1887.11",
+        "protein": "71.41",
+        "sodium": "1921.35",
+        "calcium": "1126.7",
+        "vitaminD": "9.11",
+        "fibre": "15.56"
+      }
+    },
+    {
+      "id": "C3C-7352:47",
+      "participant": "C3C-7352",
+      "date": "2006-05-19",
+      "sourceDate": "5/19/2006",
+      "phase": "IN_TEST",
+      "studyDay": 32,
+      "sourceId": "47",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 48,
+      "values": {
+        "energy": 2025.89,
+        "protein": 71.69,
+        "sodium": 2178.96,
+        "calcium": 1063.99,
+        "vitaminD": 7.07,
+        "fibre": 17.57
+      },
+      "rawValues": {
+        "energy": "2025.89",
+        "protein": "71.69",
+        "sodium": "2178.96",
+        "calcium": "1063.99",
+        "vitaminD": "7.07",
+        "fibre": "17.57"
+      }
+    },
+    {
+      "id": "C3C-7352:48",
+      "participant": "C3C-7352",
+      "date": "2006-05-20",
+      "sourceDate": "5/20/2006",
+      "phase": "IN_TEST",
+      "studyDay": 33,
+      "sourceId": "48",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 49,
+      "values": {
+        "energy": 2131.11,
+        "protein": 76.03,
+        "sodium": 2140.58,
+        "calcium": 1073.08,
+        "vitaminD": 14.27,
+        "fibre": 22.42
+      },
+      "rawValues": {
+        "energy": "2131.11",
+        "protein": "76.03",
+        "sodium": "2140.58",
+        "calcium": "1073.08",
+        "vitaminD": "14.27",
+        "fibre": "22.42"
+      }
+    },
+    {
+      "id": "C3C-7352:49",
+      "participant": "C3C-7352",
+      "date": "2006-05-21",
+      "sourceDate": "5/21/2006",
+      "phase": "IN_TEST",
+      "studyDay": 34,
+      "sourceId": "49",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 50,
+      "values": {
+        "energy": 2070.24,
+        "protein": 70.71,
+        "sodium": 2351.15,
+        "calcium": 950.83,
+        "vitaminD": 8.44,
+        "fibre": 13.12
+      },
+      "rawValues": {
+        "energy": "2070.24",
+        "protein": "70.71",
+        "sodium": "2351.15",
+        "calcium": "950.83",
+        "vitaminD": "8.44",
+        "fibre": "13.12"
+      }
+    },
+    {
+      "id": "C3C-7352:50",
+      "participant": "C3C-7352",
+      "date": "2006-05-22",
+      "sourceDate": "5/22/2006",
+      "phase": "IN_TEST",
+      "studyDay": 35,
+      "sourceId": "50",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 51,
+      "values": {
+        "energy": 1952.0,
+        "protein": 71.85,
+        "sodium": 2193.19,
+        "calcium": 1104.33,
+        "vitaminD": 6.31,
+        "fibre": 24.67
+      },
+      "rawValues": {
+        "energy": "1952",
+        "protein": "71.85",
+        "sodium": "2193.19",
+        "calcium": "1104.33",
+        "vitaminD": "6.31",
+        "fibre": "24.67"
+      }
+    },
+    {
+      "id": "C3C-7352:51",
+      "participant": "C3C-7352",
+      "date": "2006-05-23",
+      "sourceDate": "5/23/2006",
+      "phase": "IN_TEST",
+      "studyDay": 36,
+      "sourceId": "51",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 52,
+      "values": {
+        "energy": 2055.82,
+        "protein": 71.83,
+        "sodium": 2269.33,
+        "calcium": 1000.61,
+        "vitaminD": 5.6,
+        "fibre": 21.29
+      },
+      "rawValues": {
+        "energy": "2055.82",
+        "protein": "71.83",
+        "sodium": "2269.33",
+        "calcium": "1000.61",
+        "vitaminD": "5.6",
+        "fibre": "21.29"
+      }
+    },
+    {
+      "id": "C3C-7352:52",
+      "participant": "C3C-7352",
+      "date": "2006-05-24",
+      "sourceDate": "5/24/2006",
+      "phase": "IN_TEST",
+      "studyDay": 37,
+      "sourceId": "52",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 53,
+      "values": {
+        "energy": 2069.41,
+        "protein": 71.83,
+        "sodium": 2187.78,
+        "calcium": 1135.64,
+        "vitaminD": 6.79,
+        "fibre": 24.81
+      },
+      "rawValues": {
+        "energy": "2069.41",
+        "protein": "71.83",
+        "sodium": "2187.78",
+        "calcium": "1135.64",
+        "vitaminD": "6.79",
+        "fibre": "24.81"
+      }
+    },
+    {
+      "id": "C3C-7352:53",
+      "participant": "C3C-7352",
+      "date": "2006-05-25",
+      "sourceDate": "5/25/2006",
+      "phase": "IN_TEST",
+      "studyDay": 38,
+      "sourceId": "53",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 54,
+      "values": {
+        "energy": 2107.63,
+        "protein": 71.79,
+        "sodium": 1841.02,
+        "calcium": 1147.09,
+        "vitaminD": 9.16,
+        "fibre": 15.78
+      },
+      "rawValues": {
+        "energy": "2107.63",
+        "protein": "71.79",
+        "sodium": "1841.02",
+        "calcium": "1147.09",
+        "vitaminD": "9.16",
+        "fibre": "15.78"
+      }
+    },
+    {
+      "id": "C3C-7352:54",
+      "participant": "C3C-7352",
+      "date": "2006-05-26",
+      "sourceDate": "5/26/2006",
+      "phase": "IN_TEST",
+      "studyDay": 39,
+      "sourceId": "54",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 55,
+      "values": {
+        "energy": 2025.89,
+        "protein": 71.69,
+        "sodium": 2178.66,
+        "calcium": 1062.99,
+        "vitaminD": 7.07,
+        "fibre": 17.57
+      },
+      "rawValues": {
+        "energy": "2025.89",
+        "protein": "71.69",
+        "sodium": "2178.66",
+        "calcium": "1062.99",
+        "vitaminD": "7.07",
+        "fibre": "17.57"
+      }
+    },
+    {
+      "id": "C3C-7352:55",
+      "participant": "C3C-7352",
+      "date": "2006-05-27",
+      "sourceDate": "5/27/2006",
+      "phase": "IN_TEST",
+      "studyDay": 40,
+      "sourceId": "55",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 56,
+      "values": {
+        "energy": 2115.11,
+        "protein": 74.43,
+        "sodium": 2137.09,
+        "calcium": 1073.33,
+        "vitaminD": 14.25,
+        "fibre": 22.31
+      },
+      "rawValues": {
+        "energy": "2115.11",
+        "protein": "74.43",
+        "sodium": "2137.09",
+        "calcium": "1073.33",
+        "vitaminD": "14.25",
+        "fibre": "22.31"
+      }
+    },
+    {
+      "id": "C3C-7352:56",
+      "participant": "C3C-7352",
+      "date": "2006-05-28",
+      "sourceDate": "5/28/2006",
+      "phase": "IN_TEST",
+      "studyDay": 41,
+      "sourceId": "56",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 57,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.27,
+        "sodium": 2025.18,
+        "calcium": 1175.2,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.27",
+        "sodium": "2025.18",
+        "calcium": "1175.2",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:57",
+      "participant": "C3C-7352",
+      "date": "2006-05-29",
+      "sourceDate": "5/29/2006",
+      "phase": "IN_TEST",
+      "studyDay": 42,
+      "sourceId": "57",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 58,
+      "values": {
+        "energy": 2008.68,
+        "protein": 71.99,
+        "sodium": 1963.22,
+        "calcium": 1000.71,
+        "vitaminD": 5.91,
+        "fibre": 20.33
+      },
+      "rawValues": {
+        "energy": "2008.68",
+        "protein": "71.99",
+        "sodium": "1963.22",
+        "calcium": "1000.71",
+        "vitaminD": "5.91",
+        "fibre": "20.33"
+      }
+    },
+    {
+      "id": "C3C-7352:58",
+      "participant": "C3C-7352",
+      "date": "2006-05-30",
+      "sourceDate": "5/30/2006",
+      "phase": "IN_TEST",
+      "studyDay": 43,
+      "sourceId": "58",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 59,
+      "values": {
+        "energy": 2055.82,
+        "protein": 71.83,
+        "sodium": 2267.5,
+        "calcium": 994.64,
+        "vitaminD": 5.6,
+        "fibre": 21.29
+      },
+      "rawValues": {
+        "energy": "2055.82",
+        "protein": "71.83",
+        "sodium": "2267.5",
+        "calcium": "994.64",
+        "vitaminD": "5.6",
+        "fibre": "21.29"
+      }
+    },
+    {
+      "id": "C3C-7352:59",
+      "participant": "C3C-7352",
+      "date": "2006-05-31",
+      "sourceDate": "5/31/2006",
+      "phase": "IN_TEST",
+      "studyDay": 44,
+      "sourceId": "59",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 60,
+      "values": {
+        "energy": 2069.41,
+        "protein": 71.83,
+        "sodium": 2187.29,
+        "calcium": 1134.05,
+        "vitaminD": 6.79,
+        "fibre": 24.81
+      },
+      "rawValues": {
+        "energy": "2069.41",
+        "protein": "71.83",
+        "sodium": "2187.29",
+        "calcium": "1134.05",
+        "vitaminD": "6.79",
+        "fibre": "24.81"
+      }
+    },
+    {
+      "id": "C3C-7352:60",
+      "participant": "C3C-7352",
+      "date": "2006-06-01",
+      "sourceDate": "6/1/2006",
+      "phase": "IN_TEST",
+      "studyDay": 45,
+      "sourceId": "60",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 61,
+      "values": {
+        "energy": 2107.63,
+        "protein": 71.79,
+        "sodium": 1920.81,
+        "calcium": 1140.32,
+        "vitaminD": 9.16,
+        "fibre": 15.78
+      },
+      "rawValues": {
+        "energy": "2107.63",
+        "protein": "71.79",
+        "sodium": "1920.81",
+        "calcium": "1140.32",
+        "vitaminD": "9.16",
+        "fibre": "15.78"
+      }
+    },
+    {
+      "id": "C3C-7352:61",
+      "participant": "C3C-7352",
+      "date": "2006-06-02",
+      "sourceDate": "6/2/2006",
+      "phase": "IN_TEST",
+      "studyDay": 46,
+      "sourceId": "61",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 62,
+      "values": {
+        "energy": 2025.89,
+        "protein": 71.69,
+        "sodium": 2182.64,
+        "calcium": 1076.0,
+        "vitaminD": 7.07,
+        "fibre": 17.57
+      },
+      "rawValues": {
+        "energy": "2025.89",
+        "protein": "71.69",
+        "sodium": "2182.64",
+        "calcium": "1076",
+        "vitaminD": "7.07",
+        "fibre": "17.57"
+      }
+    },
+    {
+      "id": "C3C-7352:62",
+      "participant": "C3C-7352",
+      "date": "2006-06-03",
+      "sourceDate": "6/3/2006",
+      "phase": "IN_TEST",
+      "studyDay": 47,
+      "sourceId": "62",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 63,
+      "values": {
+        "energy": 2091.19,
+        "protein": 72.05,
+        "sodium": 2133.85,
+        "calcium": 1081.19,
+        "vitaminD": 14.21,
+        "fibre": 22.31
+      },
+      "rawValues": {
+        "energy": "2091.19",
+        "protein": "72.05",
+        "sodium": "2133.85",
+        "calcium": "1081.19",
+        "vitaminD": "14.21",
+        "fibre": "22.31"
+      }
+    },
+    {
+      "id": "C3C-7352:63",
+      "participant": "C3C-7352",
+      "date": "2006-06-04",
+      "sourceDate": "6/4/2006",
+      "phase": "IN_TEST",
+      "studyDay": 48,
+      "sourceId": "63",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 64,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.26,
+        "sodium": 2025.85,
+        "calcium": 1177.41,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.26",
+        "sodium": "2025.85",
+        "calcium": "1177.41",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:64",
+      "participant": "C3C-7352",
+      "date": "2006-06-05",
+      "sourceDate": "6/5/2006",
+      "phase": "IN_TEST",
+      "studyDay": 49,
+      "sourceId": "64",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 65,
+      "values": {
+        "energy": 2008.68,
+        "protein": 71.99,
+        "sodium": 1963.04,
+        "calcium": 1000.12,
+        "vitaminD": 5.91,
+        "fibre": 20.33
+      },
+      "rawValues": {
+        "energy": "2008.68",
+        "protein": "71.99",
+        "sodium": "1963.04",
+        "calcium": "1000.12",
+        "vitaminD": "5.91",
+        "fibre": "20.33"
+      }
+    },
+    {
+      "id": "C3C-7352:65",
+      "participant": "C3C-7352",
+      "date": "2006-06-06",
+      "sourceDate": "6/6/2006",
+      "phase": "IN_TEST",
+      "studyDay": 50,
+      "sourceId": "65",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 66,
+      "values": {
+        "energy": 2055.82,
+        "protein": 71.83,
+        "sodium": 2268.41,
+        "calcium": 997.62,
+        "vitaminD": 5.6,
+        "fibre": 21.29
+      },
+      "rawValues": {
+        "energy": "2055.82",
+        "protein": "71.83",
+        "sodium": "2268.41",
+        "calcium": "997.62",
+        "vitaminD": "5.6",
+        "fibre": "21.29"
+      }
+    },
+    {
+      "id": "C3C-7352:66",
+      "participant": "C3C-7352",
+      "date": "2006-06-07",
+      "sourceDate": "6/7/2006",
+      "phase": "IN_TEST",
+      "studyDay": 51,
+      "sourceId": "66",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 67,
+      "values": {
+        "energy": 2156.28,
+        "protein": 70.81,
+        "sodium": 2353.09,
+        "calcium": 955.71,
+        "vitaminD": 8.61,
+        "fibre": 13.12
+      },
+      "rawValues": {
+        "energy": "2156.28",
+        "protein": "70.81",
+        "sodium": "2353.09",
+        "calcium": "955.71",
+        "vitaminD": "8.61",
+        "fibre": "13.12"
+      }
+    },
+    {
+      "id": "C3C-7352:67",
+      "participant": "C3C-7352",
+      "date": "2006-06-08",
+      "sourceDate": "6/8/2006",
+      "phase": "IN_TEST",
+      "studyDay": 52,
+      "sourceId": "67",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 68,
+      "values": {
+        "energy": 2045.05,
+        "protein": 71.56,
+        "sodium": 2193.39,
+        "calcium": 1092.34,
+        "vitaminD": 6.32,
+        "fibre": 24.67
+      },
+      "rawValues": {
+        "energy": "2045.05",
+        "protein": "71.56",
+        "sodium": "2193.39",
+        "calcium": "1092.34",
+        "vitaminD": "6.32",
+        "fibre": "24.67"
+      }
+    },
+    {
+      "id": "C3C-7352:68",
+      "participant": "C3C-7352",
+      "date": "2006-06-09",
+      "sourceDate": "6/9/2006",
+      "phase": "IN_TEST",
+      "studyDay": 53,
+      "sourceId": "68",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 69,
+      "values": {
+        "energy": 2135.79,
+        "protein": 71.99,
+        "sodium": 2140.79,
+        "calcium": 1085.88,
+        "vitaminD": 7.16,
+        "fibre": 17.46
+      },
+      "rawValues": {
+        "energy": "2135.79",
+        "protein": "71.99",
+        "sodium": "2140.79",
+        "calcium": "1085.88",
+        "vitaminD": "7.16",
+        "fibre": "17.46"
+      }
+    },
+    {
+      "id": "C3C-7352:69",
+      "participant": "C3C-7352",
+      "date": "2006-06-10",
+      "sourceDate": "6/10/2006",
+      "phase": "IN_TEST",
+      "studyDay": 54,
+      "sourceId": "69",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 70,
+      "values": {
+        "energy": 2072.14,
+        "protein": 75.7,
+        "sodium": 2142.59,
+        "calcium": 1094.92,
+        "vitaminD": 14.31,
+        "fibre": 22.31
+      },
+      "rawValues": {
+        "energy": "2072.14",
+        "protein": "75.7",
+        "sodium": "2142.59",
+        "calcium": "1094.92",
+        "vitaminD": "14.31",
+        "fibre": "22.31"
+      }
+    },
+    {
+      "id": "C3C-7352:70",
+      "participant": "C3C-7352",
+      "date": "2006-06-11",
+      "sourceDate": "6/11/2006",
+      "phase": "IN_TEST",
+      "studyDay": 55,
+      "sourceId": "70",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 71,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.28,
+        "sodium": 2023.98,
+        "calcium": 1171.27,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.28",
+        "sodium": "2023.98",
+        "calcium": "1171.27",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:71",
+      "participant": "C3C-7352",
+      "date": "2006-06-12",
+      "sourceDate": "6/12/2006",
+      "phase": "IN_TEST",
+      "studyDay": 56,
+      "sourceId": "71",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 72,
+      "values": {
+        "energy": 2008.68,
+        "protein": 71.99,
+        "sodium": 1959.87,
+        "calcium": 989.77,
+        "vitaminD": 5.91,
+        "fibre": 20.33
+      },
+      "rawValues": {
+        "energy": "2008.68",
+        "protein": "71.99",
+        "sodium": "1959.87",
+        "calcium": "989.77",
+        "vitaminD": "5.91",
+        "fibre": "20.33"
+      }
+    },
+    {
+      "id": "C3C-7352:72",
+      "participant": "C3C-7352",
+      "date": "2006-06-13",
+      "sourceDate": "6/13/2006",
+      "phase": "IN_TEST",
+      "studyDay": 57,
+      "sourceId": "72",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 73,
+      "values": {
+        "energy": 2055.82,
+        "protein": 71.83,
+        "sodium": 2270.49,
+        "calcium": 1004.42,
+        "vitaminD": 5.6,
+        "fibre": 21.29
+      },
+      "rawValues": {
+        "energy": "2055.82",
+        "protein": "71.83",
+        "sodium": "2270.49",
+        "calcium": "1004.42",
+        "vitaminD": "5.6",
+        "fibre": "21.29"
+      }
+    },
+    {
+      "id": "C3C-7352:73",
+      "participant": "C3C-7352",
+      "date": "2006-06-14",
+      "sourceDate": "6/14/2006",
+      "phase": "IN_TEST",
+      "studyDay": 58,
+      "sourceId": "73",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 74,
+      "values": {
+        "energy": 2105.26,
+        "protein": 71.88,
+        "sodium": 2191.37,
+        "calcium": 1146.79,
+        "vitaminD": 6.86,
+        "fibre": 24.81
+      },
+      "rawValues": {
+        "energy": "2105.26",
+        "protein": "71.88",
+        "sodium": "2191.37",
+        "calcium": "1146.79",
+        "vitaminD": "6.86",
+        "fibre": "24.81"
+      }
+    },
+    {
+      "id": "C3C-7352:74",
+      "participant": "C3C-7352",
+      "date": "2006-06-15",
+      "sourceDate": "6/15/2006",
+      "phase": "IN_TEST",
+      "studyDay": 59,
+      "sourceId": "74",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 75,
+      "values": {
+        "energy": 1951.41,
+        "protein": 69.37,
+        "sodium": 1786.17,
+        "calcium": 1042.32,
+        "vitaminD": 8.6,
+        "fibre": 13.35
+      },
+      "rawValues": {
+        "energy": "1951.41",
+        "protein": "69.37",
+        "sodium": "1786.17",
+        "calcium": "1042.32",
+        "vitaminD": "8.6",
+        "fibre": "13.35"
+      }
+    },
+    {
+      "id": "C3C-7352:75",
+      "participant": "C3C-7352",
+      "date": "2006-06-16",
+      "sourceDate": "6/16/2006",
+      "phase": "IN_TEST",
+      "studyDay": 60,
+      "sourceId": "75",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 76,
+      "values": {
+        "energy": 1451.58,
+        "protein": 35.07,
+        "sodium": 1545.91,
+        "calcium": 707.25,
+        "vitaminD": 4.3,
+        "fibre": 10.9
+      },
+      "rawValues": {
+        "energy": "1451.58",
+        "protein": "35.07",
+        "sodium": "1545.91",
+        "calcium": "707.25",
+        "vitaminD": "4.3",
+        "fibre": "10.9"
+      }
+    },
+    {
+      "id": "C3C-7352:76",
+      "participant": "C3C-7352",
+      "date": "2006-06-17",
+      "sourceDate": "6/17/2006",
+      "phase": "IN_TEST",
+      "studyDay": 61,
+      "sourceId": "76",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 77,
+      "values": {
+        "energy": 2102.16,
+        "protein": 73.14,
+        "sodium": 2133.72,
+        "calcium": 1072.3,
+        "vitaminD": 14.23,
+        "fibre": 22.31
+      },
+      "rawValues": {
+        "energy": "2102.16",
+        "protein": "73.14",
+        "sodium": "2133.72",
+        "calcium": "1072.3",
+        "vitaminD": "14.23",
+        "fibre": "22.31"
+      }
+    },
+    {
+      "id": "C3C-7352:77",
+      "participant": "C3C-7352",
+      "date": "2006-06-18",
+      "sourceDate": "6/18/2006",
+      "phase": "IN_TEST",
+      "studyDay": 62,
+      "sourceId": "77",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 78,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.27,
+        "sodium": 2023.51,
+        "calcium": 1169.73,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.27",
+        "sodium": "2023.51",
+        "calcium": "1169.73",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:78",
+      "participant": "C3C-7352",
+      "date": "2006-06-19",
+      "sourceDate": "6/19/2006",
+      "phase": "IN_TEST",
+      "studyDay": 63,
+      "sourceId": "78",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 79,
+      "values": {
+        "energy": 2008.68,
+        "protein": 71.99,
+        "sodium": 1960.7,
+        "calcium": 992.48,
+        "vitaminD": 5.91,
+        "fibre": 20.33
+      },
+      "rawValues": {
+        "energy": "2008.68",
+        "protein": "71.99",
+        "sodium": "1960.7",
+        "calcium": "992.48",
+        "vitaminD": "5.91",
+        "fibre": "20.33"
+      }
+    },
+    {
+      "id": "C3C-7352:79",
+      "participant": "C3C-7352",
+      "date": "2006-06-20",
+      "sourceDate": "6/20/2006",
+      "phase": "IN_TEST",
+      "studyDay": 64,
+      "sourceId": "79",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 80,
+      "values": {
+        "energy": 2055.82,
+        "protein": 71.83,
+        "sodium": 2267.96,
+        "calcium": 996.15,
+        "vitaminD": 5.6,
+        "fibre": 21.29
+      },
+      "rawValues": {
+        "energy": "2055.82",
+        "protein": "71.83",
+        "sodium": "2267.96",
+        "calcium": "996.15",
+        "vitaminD": "5.6",
+        "fibre": "21.29"
+      }
+    },
+    {
+      "id": "C3C-7352:80",
+      "participant": "C3C-7352",
+      "date": "2006-06-21",
+      "sourceDate": "6/21/2006",
+      "phase": "IN_TEST",
+      "studyDay": 65,
+      "sourceId": "80",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 81,
+      "values": {
+        "energy": 2105.26,
+        "protein": 71.88,
+        "sodium": 2189.32,
+        "calcium": 1140.09,
+        "vitaminD": 6.86,
+        "fibre": 24.81
+      },
+      "rawValues": {
+        "energy": "2105.26",
+        "protein": "71.88",
+        "sodium": "2189.32",
+        "calcium": "1140.09",
+        "vitaminD": "6.86",
+        "fibre": "24.81"
+      }
+    },
+    {
+      "id": "C3C-7352:81",
+      "participant": "C3C-7352",
+      "date": "2006-06-22",
+      "sourceDate": "6/22/2006",
+      "phase": "IN_TEST",
+      "studyDay": 66,
+      "sourceId": "81",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 82,
+      "values": {
+        "energy": 2107.63,
+        "protein": 71.79,
+        "sodium": 1921.23,
+        "calcium": 1141.7,
+        "vitaminD": 9.16,
+        "fibre": 15.78
+      },
+      "rawValues": {
+        "energy": "2107.63",
+        "protein": "71.79",
+        "sodium": "1921.23",
+        "calcium": "1141.7",
+        "vitaminD": "9.16",
+        "fibre": "15.78"
+      }
+    },
+    {
+      "id": "C3C-7352:82",
+      "participant": "C3C-7352",
+      "date": "2006-06-23",
+      "sourceDate": "6/23/2006",
+      "phase": "IN_TEST",
+      "studyDay": 67,
+      "sourceId": "82",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 83,
+      "values": {
+        "energy": 2092.77,
+        "protein": 71.94,
+        "sodium": 2138.98,
+        "calcium": 1080.67,
+        "vitaminD": 7.08,
+        "fibre": 17.46
+      },
+      "rawValues": {
+        "energy": "2092.77",
+        "protein": "71.94",
+        "sodium": "2138.98",
+        "calcium": "1080.67",
+        "vitaminD": "7.08",
+        "fibre": "17.46"
+      }
+    },
+    {
+      "id": "C3C-7352:83",
+      "participant": "C3C-7352",
+      "date": "2006-06-24",
+      "sourceDate": "6/24/2006",
+      "phase": "IN_TEST",
+      "studyDay": 68,
+      "sourceId": "83",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 84,
+      "values": {
+        "energy": 2093.57,
+        "protein": 72.29,
+        "sodium": 2132.16,
+        "calcium": 1073.81,
+        "vitaminD": 14.21,
+        "fibre": 22.31
+      },
+      "rawValues": {
+        "energy": "2093.57",
+        "protein": "72.29",
+        "sodium": "2132.16",
+        "calcium": "1073.81",
+        "vitaminD": "14.21",
+        "fibre": "22.31"
+      }
+    },
+    {
+      "id": "C3C-7352:84",
+      "participant": "C3C-7352",
+      "date": "2006-06-25",
+      "sourceDate": "6/25/2006",
+      "phase": "IN_TEST",
+      "studyDay": 69,
+      "sourceId": "84",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 85,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.27,
+        "sodium": 2022.6,
+        "calcium": 1166.78,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.27",
+        "sodium": "2022.6",
+        "calcium": "1166.78",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:85",
+      "participant": "C3C-7352",
+      "date": "2006-06-26",
+      "sourceDate": "6/26/2006",
+      "phase": "IN_TEST",
+      "studyDay": 70,
+      "sourceId": "85",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 86,
+      "values": {
+        "energy": 2008.68,
+        "protein": 71.99,
+        "sodium": 1960.0,
+        "calcium": 990.2,
+        "vitaminD": 5.91,
+        "fibre": 20.33
+      },
+      "rawValues": {
+        "energy": "2008.68",
+        "protein": "71.99",
+        "sodium": "1960",
+        "calcium": "990.2",
+        "vitaminD": "5.91",
+        "fibre": "20.33"
+      }
+    },
+    {
+      "id": "C3C-7352:86",
+      "participant": "C3C-7352",
+      "date": "2006-06-27",
+      "sourceDate": "6/27/2006",
+      "phase": "IN_TEST",
+      "studyDay": 71,
+      "sourceId": "86",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 87,
+      "values": {
+        "energy": 2055.82,
+        "protein": 71.83,
+        "sodium": 2267.19,
+        "calcium": 993.64,
+        "vitaminD": 5.6,
+        "fibre": 21.29
+      },
+      "rawValues": {
+        "energy": "2055.82",
+        "protein": "71.83",
+        "sodium": "2267.19",
+        "calcium": "993.64",
+        "vitaminD": "5.6",
+        "fibre": "21.29"
+      }
+    },
+    {
+      "id": "C3C-7352:87",
+      "participant": "C3C-7352",
+      "date": "2006-06-28",
+      "sourceDate": "6/28/2006",
+      "phase": "IN_TEST",
+      "studyDay": 72,
+      "sourceId": "87",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 88,
+      "values": {
+        "energy": 2106.9,
+        "protein": 71.91,
+        "sodium": 2190.1,
+        "calcium": 1138.13,
+        "vitaminD": 6.86,
+        "fibre": 24.84
+      },
+      "rawValues": {
+        "energy": "2106.9",
+        "protein": "71.91",
+        "sodium": "2190.1",
+        "calcium": "1138.13",
+        "vitaminD": "6.86",
+        "fibre": "24.84"
+      }
+    },
+    {
+      "id": "C3C-7352:88",
+      "participant": "C3C-7352",
+      "date": "2006-06-29",
+      "sourceDate": "6/29/2006",
+      "phase": "IN_TEST",
+      "studyDay": 73,
+      "sourceId": "88",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 89,
+      "values": {
+        "energy": 2107.63,
+        "protein": 71.79,
+        "sodium": 1921.23,
+        "calcium": 1141.68,
+        "vitaminD": 9.16,
+        "fibre": 15.78
+      },
+      "rawValues": {
+        "energy": "2107.63",
+        "protein": "71.79",
+        "sodium": "1921.23",
+        "calcium": "1141.68",
+        "vitaminD": "9.16",
+        "fibre": "15.78"
+      }
+    },
+    {
+      "id": "C3C-7352:89",
+      "participant": "C3C-7352",
+      "date": "2006-06-30",
+      "sourceDate": "6/30/2006",
+      "phase": "IN_TEST",
+      "studyDay": 74,
+      "sourceId": "89",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 90,
+      "values": {
+        "energy": 2068.91,
+        "protein": 71.74,
+        "sodium": 2180.83,
+        "calcium": 1069.38,
+        "vitaminD": 7.15,
+        "fibre": 17.57
+      },
+      "rawValues": {
+        "energy": "2068.91",
+        "protein": "71.74",
+        "sodium": "2180.83",
+        "calcium": "1069.38",
+        "vitaminD": "7.15",
+        "fibre": "17.57"
+      }
+    },
+    {
+      "id": "C3C-7352:90",
+      "participant": "C3C-7352",
+      "date": "2006-07-01",
+      "sourceDate": "7/1/2006",
+      "phase": "IN_TEST",
+      "studyDay": 75,
+      "sourceId": "90",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 91,
+      "values": {
+        "energy": 2114.38,
+        "protein": 73.84,
+        "sodium": 2150.1,
+        "calcium": 1078.33,
+        "vitaminD": 14.23,
+        "fibre": 22.4
+      },
+      "rawValues": {
+        "energy": "2114.38",
+        "protein": "73.84",
+        "sodium": "2150.1",
+        "calcium": "1078.33",
+        "vitaminD": "14.23",
+        "fibre": "22.4"
+      }
+    },
+    {
+      "id": "C3C-7352:91",
+      "participant": "C3C-7352",
+      "date": "2006-07-02",
+      "sourceDate": "7/2/2006",
+      "phase": "IN_TEST",
+      "studyDay": 76,
+      "sourceId": "91",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 92,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.27,
+        "sodium": 2024.16,
+        "calcium": 1171.86,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.27",
+        "sodium": "2024.16",
+        "calcium": "1171.86",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:92",
+      "participant": "C3C-7352",
+      "date": "2006-07-03",
+      "sourceDate": "7/3/2006",
+      "phase": "IN_TEST",
+      "studyDay": 77,
+      "sourceId": "92",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 93,
+      "values": {
+        "energy": 2008.68,
+        "protein": 71.99,
+        "sodium": 1959.66,
+        "calcium": 989.09,
+        "vitaminD": 5.91,
+        "fibre": 20.33
+      },
+      "rawValues": {
+        "energy": "2008.68",
+        "protein": "71.99",
+        "sodium": "1959.66",
+        "calcium": "989.09",
+        "vitaminD": "5.91",
+        "fibre": "20.33"
+      }
+    },
+    {
+      "id": "C3C-7352:93",
+      "participant": "C3C-7352",
+      "date": "2006-07-04",
+      "sourceDate": "7/4/2006",
+      "phase": "IN_TEST",
+      "studyDay": 78,
+      "sourceId": "93",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 94,
+      "values": {
+        "energy": 2129.98,
+        "protein": 71.95,
+        "sodium": 2268.67,
+        "calcium": 995.75,
+        "vitaminD": 5.73,
+        "fibre": 21.51
+      },
+      "rawValues": {
+        "energy": "2129.98",
+        "protein": "71.95",
+        "sodium": "2268.67",
+        "calcium": "995.75",
+        "vitaminD": "5.73",
+        "fibre": "21.51"
+      }
+    },
+    {
+      "id": "C3C-7352:94",
+      "participant": "C3C-7352",
+      "date": "2006-07-05",
+      "sourceDate": "7/5/2006",
+      "phase": "IN_TEST",
+      "studyDay": 79,
+      "sourceId": "94",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 95,
+      "values": {
+        "energy": 2152.58,
+        "protein": 71.94,
+        "sodium": 2188.78,
+        "calcium": 1137.54,
+        "vitaminD": 6.95,
+        "fibre": 24.81
+      },
+      "rawValues": {
+        "energy": "2152.58",
+        "protein": "71.94",
+        "sodium": "2188.78",
+        "calcium": "1137.54",
+        "vitaminD": "6.95",
+        "fibre": "24.81"
+      }
+    },
+    {
+      "id": "C3C-7352:95",
+      "participant": "C3C-7352",
+      "date": "2006-07-06",
+      "sourceDate": "7/6/2006",
+      "phase": "IN_TEST",
+      "studyDay": 80,
+      "sourceId": "95",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 96,
+      "values": {
+        "energy": 2172.16,
+        "protein": 71.87,
+        "sodium": 1923.72,
+        "calcium": 1148.74,
+        "vitaminD": 9.28,
+        "fibre": 15.78
+      },
+      "rawValues": {
+        "energy": "2172.16",
+        "protein": "71.87",
+        "sodium": "1923.72",
+        "calcium": "1148.74",
+        "vitaminD": "9.28",
+        "fibre": "15.78"
+      }
+    },
+    {
+      "id": "C3C-7352:96",
+      "participant": "C3C-7352",
+      "date": "2006-07-07",
+      "sourceDate": "7/7/2006",
+      "phase": "IN_TEST",
+      "studyDay": 81,
+      "sourceId": "96",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 97,
+      "values": {
+        "energy": 2068.91,
+        "protein": 71.74,
+        "sodium": 2179.28,
+        "calcium": 1064.31,
+        "vitaminD": 7.15,
+        "fibre": 17.57
+      },
+      "rawValues": {
+        "energy": "2068.91",
+        "protein": "71.74",
+        "sodium": "2179.28",
+        "calcium": "1064.31",
+        "vitaminD": "7.15",
+        "fibre": "17.57"
+      }
+    },
+    {
+      "id": "C3C-7352:97",
+      "participant": "C3C-7352",
+      "date": "2006-07-08",
+      "sourceDate": "7/8/2006",
+      "phase": "IN_TEST",
+      "studyDay": 82,
+      "sourceId": "97",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 98,
+      "values": {
+        "energy": 2048.13,
+        "protein": 72.72,
+        "sodium": 2151.36,
+        "calcium": 1098.29,
+        "vitaminD": 14.26,
+        "fibre": 22.41
+      },
+      "rawValues": {
+        "energy": "2048.13",
+        "protein": "72.72",
+        "sodium": "2151.36",
+        "calcium": "1098.29",
+        "vitaminD": "14.26",
+        "fibre": "22.41"
+      }
+    },
+    {
+      "id": "C3C-7352:98",
+      "participant": "C3C-7352",
+      "date": "2006-07-09",
+      "sourceDate": "7/9/2006",
+      "phase": "IN_TEST",
+      "studyDay": 83,
+      "sourceId": "98",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 99,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.28,
+        "sodium": 2022.59,
+        "calcium": 1166.76,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.28",
+        "sodium": "2022.59",
+        "calcium": "1166.76",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:99",
+      "participant": "C3C-7352",
+      "date": "2006-07-10",
+      "sourceDate": "7/10/2006",
+      "phase": "IN_TEST",
+      "studyDay": 84,
+      "sourceId": "99",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 100,
+      "values": {
+        "energy": 2008.68,
+        "protein": 71.99,
+        "sodium": 1959.34,
+        "calcium": 988.05,
+        "vitaminD": 5.91,
+        "fibre": 20.33
+      },
+      "rawValues": {
+        "energy": "2008.68",
+        "protein": "71.99",
+        "sodium": "1959.34",
+        "calcium": "988.05",
+        "vitaminD": "5.91",
+        "fibre": "20.33"
+      }
+    },
+    {
+      "id": "C3C-7352:100",
+      "participant": "C3C-7352",
+      "date": "2006-07-11",
+      "sourceDate": "7/11/2006",
+      "phase": "IN_TEST",
+      "studyDay": 85,
+      "sourceId": "100",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 101,
+      "values": {
+        "energy": 2163.58,
+        "protein": 70.82,
+        "sodium": 2362.38,
+        "calcium": 955.07,
+        "vitaminD": 8.61,
+        "fibre": 13.12
+      },
+      "rawValues": {
+        "energy": "2163.58",
+        "protein": "70.82",
+        "sodium": "2362.38",
+        "calcium": "955.07",
+        "vitaminD": "8.61",
+        "fibre": "13.12"
+      }
+    },
+    {
+      "id": "C3C-7352:101",
+      "participant": "C3C-7352",
+      "date": "2006-07-12",
+      "sourceDate": "7/12/2006",
+      "phase": "IN_TEST",
+      "studyDay": 86,
+      "sourceId": "101",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 102,
+      "values": {
+        "energy": 2045.05,
+        "protein": 71.56,
+        "sodium": 2186.47,
+        "calcium": 1069.74,
+        "vitaminD": 6.32,
+        "fibre": 24.67
+      },
+      "rawValues": {
+        "energy": "2045.05",
+        "protein": "71.56",
+        "sodium": "2186.47",
+        "calcium": "1069.74",
+        "vitaminD": "6.32",
+        "fibre": "24.67"
+      }
+    },
+    {
+      "id": "C3C-7352:102",
+      "participant": "C3C-7352",
+      "date": "2006-07-13",
+      "sourceDate": "7/13/2006",
+      "phase": "IN_TEST",
+      "studyDay": 87,
+      "sourceId": "102",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 103,
+      "values": {
+        "energy": 2184.1,
+        "protein": 71.88,
+        "sodium": 1855.63,
+        "calcium": 1143.09,
+        "vitaminD": 9.28,
+        "fibre": 15.78
+      },
+      "rawValues": {
+        "energy": "2184.1",
+        "protein": "71.88",
+        "sodium": "1855.63",
+        "calcium": "1143.09",
+        "vitaminD": "9.28",
+        "fibre": "15.78"
+      }
+    },
+    {
+      "id": "C3C-7352:103",
+      "participant": "C3C-7352",
+      "date": "2006-07-14",
+      "sourceDate": "7/14/2006",
+      "phase": "IN_TEST",
+      "studyDay": 88,
+      "sourceId": "103",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 104,
+      "values": {
+        "energy": 2092.77,
+        "protein": 71.94,
+        "sodium": 2140.87,
+        "calcium": 1086.87,
+        "vitaminD": 7.08,
+        "fibre": 17.46
+      },
+      "rawValues": {
+        "energy": "2092.77",
+        "protein": "71.94",
+        "sodium": "2140.87",
+        "calcium": "1086.87",
+        "vitaminD": "7.08",
+        "fibre": "17.46"
+      }
+    },
+    {
+      "id": "C3C-7352:104",
+      "participant": "C3C-7352",
+      "date": "2006-07-15",
+      "sourceDate": "7/15/2006",
+      "phase": "IN_TEST",
+      "studyDay": 89,
+      "sourceId": "104",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 105,
+      "values": {
+        "energy": 2061.23,
+        "protein": 68.31,
+        "sodium": 2033.77,
+        "calcium": 1014.4,
+        "vitaminD": 14.0,
+        "fibre": 16.51
+      },
+      "rawValues": {
+        "energy": "2061.23",
+        "protein": "68.31",
+        "sodium": "2033.77",
+        "calcium": "1014.4",
+        "vitaminD": "14",
+        "fibre": "16.51"
+      }
+    },
+    {
+      "id": "C3C-7352:105",
+      "participant": "C3C-7352",
+      "date": "2006-07-16",
+      "sourceDate": "7/16/2006",
+      "phase": "IN_TEST",
+      "studyDay": 90,
+      "sourceId": "105",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 106,
+      "values": {
+        "energy": 1864.44,
+        "protein": 72.27,
+        "sodium": 2022.41,
+        "calcium": 1166.16,
+        "vitaminD": 8.93,
+        "fibre": 21.16
+      },
+      "rawValues": {
+        "energy": "1864.44",
+        "protein": "72.27",
+        "sodium": "2022.41",
+        "calcium": "1166.16",
+        "vitaminD": "8.93",
+        "fibre": "21.16"
+      }
+    },
+    {
+      "id": "C3C-7352:106",
+      "participant": "C3C-7352",
+      "date": "2006-07-17",
+      "sourceDate": "7/17/2006",
+      "phase": "POST_TEST",
+      "studyDay": 0,
+      "sourceId": "106",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 107,
+      "values": {
+        "energy": 2306.75,
+        "protein": 88.29,
+        "sodium": 2431.96,
+        "calcium": 1068.53,
+        "vitaminD": 6.15,
+        "fibre": 24.71
+      },
+      "rawValues": {
+        "energy": "2306.75",
+        "protein": "88.29",
+        "sodium": "2431.96",
+        "calcium": "1068.53",
+        "vitaminD": "6.15",
+        "fibre": "24.71"
+      }
+    },
+    {
+      "id": "C3C-7352:107",
+      "participant": "C3C-7352",
+      "date": "2006-07-18",
+      "sourceDate": "7/18/2006",
+      "phase": "POST_TEST",
+      "studyDay": 1,
+      "sourceId": "107",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 108,
+      "values": {
+        "energy": 2291.35,
+        "protein": 87.51,
+        "sodium": 2735.44,
+        "calcium": 1066.54,
+        "vitaminD": 5.8,
+        "fibre": 24.9
+      },
+      "rawValues": {
+        "energy": "2291.35",
+        "protein": "87.51",
+        "sodium": "2735.44",
+        "calcium": "1066.54",
+        "vitaminD": "5.8",
+        "fibre": "24.9"
+      }
+    },
+    {
+      "id": "C3C-7352:108",
+      "participant": "C3C-7352",
+      "date": "2006-07-19",
+      "sourceDate": "7/19/2006",
+      "phase": "POST_TEST",
+      "studyDay": 2,
+      "sourceId": "108",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 109,
+      "values": {
+        "energy": 2326.48,
+        "protein": 91.58,
+        "sodium": 2817.31,
+        "calcium": 1297.93,
+        "vitaminD": 7.34,
+        "fibre": 28.94
+      },
+      "rawValues": {
+        "energy": "2326.48",
+        "protein": "91.58",
+        "sodium": "2817.31",
+        "calcium": "1297.93",
+        "vitaminD": "7.34",
+        "fibre": "28.94"
+      }
+    },
+    {
+      "id": "C3C-7352:109",
+      "participant": "C3C-7352",
+      "date": "2006-07-20",
+      "sourceDate": "7/20/2006",
+      "phase": "POST_TEST",
+      "studyDay": 3,
+      "sourceId": "109",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 110,
+      "values": {
+        "energy": 2325.6,
+        "protein": 87.05,
+        "sodium": 3006.22,
+        "calcium": 1068.47,
+        "vitaminD": 9.72,
+        "fibre": 16.13
+      },
+      "rawValues": {
+        "energy": "2325.6",
+        "protein": "87.05",
+        "sodium": "3006.22",
+        "calcium": "1068.47",
+        "vitaminD": "9.72",
+        "fibre": "16.13"
+      }
+    },
+    {
+      "id": "C3C-7352:110",
+      "participant": "C3C-7352",
+      "date": "2006-07-21",
+      "sourceDate": "7/21/2006",
+      "phase": "POST_TEST",
+      "studyDay": 4,
+      "sourceId": "110",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 111,
+      "values": {
+        "energy": 2309.8,
+        "protein": 88.65,
+        "sodium": 2615.06,
+        "calcium": 1193.92,
+        "vitaminD": 7.78,
+        "fibre": 20.79
+      },
+      "rawValues": {
+        "energy": "2309.8",
+        "protein": "88.65",
+        "sodium": "2615.06",
+        "calcium": "1193.92",
+        "vitaminD": "7.78",
+        "fibre": "20.79"
+      }
+    },
+    {
+      "id": "C3C-7352:111",
+      "participant": "C3C-7352",
+      "date": "2006-07-22",
+      "sourceDate": "7/22/2006",
+      "phase": "POST_TEST",
+      "studyDay": 5,
+      "sourceId": "111",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 112,
+      "values": {
+        "energy": 2339.79,
+        "protein": 88.25,
+        "sodium": 2610.21,
+        "calcium": 1221.46,
+        "vitaminD": 17.03,
+        "fibre": 26.26
+      },
+      "rawValues": {
+        "energy": "2339.79",
+        "protein": "88.25",
+        "sodium": "2610.21",
+        "calcium": "1221.46",
+        "vitaminD": "17.03",
+        "fibre": "26.26"
+      }
+    },
+    {
+      "id": "C3C-7352:112",
+      "participant": "C3C-7352",
+      "date": "2006-07-23",
+      "sourceDate": "7/23/2006",
+      "phase": "POST_TEST",
+      "studyDay": 6,
+      "sourceId": "112",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 113,
+      "values": {
+        "energy": 2254.76,
+        "protein": 89.72,
+        "sodium": 2615.77,
+        "calcium": 1383.21,
+        "vitaminD": 10.5,
+        "fibre": 26.3
+      },
+      "rawValues": {
+        "energy": "2254.76",
+        "protein": "89.72",
+        "sodium": "2615.77",
+        "calcium": "1383.21",
+        "vitaminD": "10.5",
+        "fibre": "26.3"
+      }
+    },
+    {
+      "id": "C3C-7352:113",
+      "participant": "C3C-7352",
+      "date": "2006-07-24",
+      "sourceDate": "7/24/2006",
+      "phase": "POST_TEST",
+      "studyDay": 7,
+      "sourceId": "113",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 114,
+      "values": {
+        "energy": 2325.6,
+        "protein": 87.05,
+        "sodium": 3008.39,
+        "calcium": 1075.56,
+        "vitaminD": 9.72,
+        "fibre": 16.13
+      },
+      "rawValues": {
+        "energy": "2325.6",
+        "protein": "87.05",
+        "sodium": "3008.39",
+        "calcium": "1075.56",
+        "vitaminD": "9.72",
+        "fibre": "16.13"
+      }
+    },
+    {
+      "id": "C3C-7352:114",
+      "participant": "C3C-7352",
+      "date": "2006-07-25",
+      "sourceDate": "7/25/2006",
+      "phase": "POST_TEST",
+      "studyDay": 8,
+      "sourceId": "114",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 115,
+      "values": {
+        "energy": 2365.43,
+        "protein": 90.1,
+        "sodium": 2807.86,
+        "calcium": 1285.29,
+        "vitaminD": 7.34,
+        "fibre": 28.08
+      },
+      "rawValues": {
+        "energy": "2365.43",
+        "protein": "90.1",
+        "sodium": "2807.86",
+        "calcium": "1285.29",
+        "vitaminD": "7.34",
+        "fibre": "28.08"
+      }
+    },
+    {
+      "id": "C3C-7352:115",
+      "participant": "C3C-7352",
+      "date": "2006-07-26",
+      "sourceDate": "7/26/2006",
+      "phase": "POST_TEST",
+      "studyDay": 9,
+      "sourceId": "115",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 116,
+      "values": {
+        "energy": 2326.48,
+        "protein": 91.58,
+        "sodium": 2818.04,
+        "calcium": 1300.32,
+        "vitaminD": 7.34,
+        "fibre": 28.94
+      },
+      "rawValues": {
+        "energy": "2326.48",
+        "protein": "91.58",
+        "sodium": "2818.04",
+        "calcium": "1300.32",
+        "vitaminD": "7.34",
+        "fibre": "28.94"
+      }
+    },
+    {
+      "id": "C3C-7352:116",
+      "participant": "C3C-7352",
+      "date": "2006-07-27",
+      "sourceDate": "7/27/2006",
+      "phase": "POST_TEST",
+      "studyDay": 10,
+      "sourceId": "116",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 117,
+      "values": {
+        "energy": 2325.6,
+        "protein": 87.05,
+        "sodium": 3008.94,
+        "calcium": 1077.37,
+        "vitaminD": 9.72,
+        "fibre": 16.13
+      },
+      "rawValues": {
+        "energy": "2325.6",
+        "protein": "87.05",
+        "sodium": "3008.94",
+        "calcium": "1077.37",
+        "vitaminD": "9.72",
+        "fibre": "16.13"
+      }
+    },
+    {
+      "id": "C3C-7352:117",
+      "participant": "C3C-7352",
+      "date": "2006-07-28",
+      "sourceDate": "7/28/2006",
+      "phase": "POST_TEST",
+      "studyDay": 11,
+      "sourceId": "117",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 118,
+      "values": {
+        "energy": 2309.8,
+        "protein": 88.65,
+        "sodium": 2617.43,
+        "calcium": 1201.64,
+        "vitaminD": 7.78,
+        "fibre": 20.79
+      },
+      "rawValues": {
+        "energy": "2309.8",
+        "protein": "88.65",
+        "sodium": "2617.43",
+        "calcium": "1201.64",
+        "vitaminD": "7.78",
+        "fibre": "20.79"
+      }
+    },
+    {
+      "id": "C3C-7352:118",
+      "participant": "C3C-7352",
+      "date": "2006-07-29",
+      "sourceDate": "7/29/2006",
+      "phase": "POST_TEST",
+      "studyDay": 12,
+      "sourceId": "118",
+      "sourceFile": "MR016G_Campaign_3_C3C _7352_Dietary_Intake_obsv.csv",
+      "sourceRow": 119,
+      "values": {
+        "energy": 2560.38,
+        "protein": 91.52,
+        "sodium": 2520.55,
+        "calcium": 1211.17,
+        "vitaminD": 17.31,
+        "fibre": 26.28
+      },
+      "rawValues": {
+        "energy": "2560.38",
+        "protein": "91.52",
+        "sodium": "2520.55",
+        "calcium": "1211.17",
+        "vitaminD": "17.31",
+        "fibre": "26.28"
+      }
+    },
+    {
+      "id": "C3C-7772:1",
+      "participant": "C3C-7772",
+      "date": "2006-05-07",
+      "sourceDate": "5/7/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 15,
+      "sourceId": "1",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 2,
+      "values": {
+        "energy": 2116.88,
+        "protein": 83.76,
+        "sodium": 2407.01,
+        "calcium": 1100.9,
+        "vitaminD": 9.05,
+        "fibre": 17.77
+      },
+      "rawValues": {
+        "energy": "2116.88",
+        "protein": "83.76",
+        "sodium": "2407.01",
+        "calcium": "1100.9",
+        "vitaminD": "9.05",
+        "fibre": "17.77"
+      }
+    },
+    {
+      "id": "C3C-7772:2",
+      "participant": "C3C-7772",
+      "date": "2006-05-08",
+      "sourceDate": "5/8/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 14,
+      "sourceId": "2",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 3,
+      "values": {
+        "energy": 2038.59,
+        "protein": 78.13,
+        "sodium": 2162.26,
+        "calcium": 932.51,
+        "vitaminD": 5.32,
+        "fibre": 21.75
+      },
+      "rawValues": {
+        "energy": "2038.59",
+        "protein": "78.13",
+        "sodium": "2162.26",
+        "calcium": "932.51",
+        "vitaminD": "5.32",
+        "fibre": "21.75"
+      }
+    },
+    {
+      "id": "C3C-7772:3",
+      "participant": "C3C-7772",
+      "date": "2006-05-09",
+      "sourceDate": "5/9/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 13,
+      "sourceId": "3",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 4,
+      "values": {
+        "energy": 2058.28,
+        "protein": 77.15,
+        "sodium": 2730.71,
+        "calcium": 939.34,
+        "vitaminD": 8.6,
+        "fibre": 14.24
+      },
+      "rawValues": {
+        "energy": "2058.28",
+        "protein": "77.15",
+        "sodium": "2730.71",
+        "calcium": "939.34",
+        "vitaminD": "8.6",
+        "fibre": "14.24"
+      }
+    },
+    {
+      "id": "C3C-7772:4",
+      "participant": "C3C-7772",
+      "date": "2006-05-10",
+      "sourceDate": "5/10/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 12,
+      "sourceId": "4",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 5,
+      "values": {
+        "energy": 2027.58,
+        "protein": 78.31,
+        "sodium": 2391.84,
+        "calcium": 1117.46,
+        "vitaminD": 6.44,
+        "fibre": 25.27
+      },
+      "rawValues": {
+        "energy": "2027.58",
+        "protein": "78.31",
+        "sodium": "2391.84",
+        "calcium": "1117.46",
+        "vitaminD": "6.44",
+        "fibre": "25.27"
+      }
+    },
+    {
+      "id": "C3C-7772:5",
+      "participant": "C3C-7772",
+      "date": "2006-05-11",
+      "sourceDate": "5/11/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 11,
+      "sourceId": "5",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 6,
+      "values": {
+        "energy": 2050.34,
+        "protein": 77.14,
+        "sodium": 2718.49,
+        "calcium": 933.09,
+        "vitaminD": 8.6,
+        "fibre": 14.24
+      },
+      "rawValues": {
+        "energy": "2050.34",
+        "protein": "77.14",
+        "sodium": "2718.49",
+        "calcium": "933.09",
+        "vitaminD": "8.6",
+        "fibre": "14.24"
+      }
+    },
+    {
+      "id": "C3C-7772:6",
+      "participant": "C3C-7772",
+      "date": "2006-05-12",
+      "sourceDate": "5/12/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 10,
+      "sourceId": "6",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 7,
+      "values": {
+        "energy": 2193.46,
+        "protein": 78.22,
+        "sodium": 2269.54,
+        "calcium": 1030.47,
+        "vitaminD": 6.79,
+        "fibre": 14.89
+      },
+      "rawValues": {
+        "energy": "2193.46",
+        "protein": "78.22",
+        "sodium": "2269.54",
+        "calcium": "1030.47",
+        "vitaminD": "6.79",
+        "fibre": "14.89"
+      }
+    },
+    {
+      "id": "C3C-7772:7",
+      "participant": "C3C-7772",
+      "date": "2006-05-13",
+      "sourceDate": "5/13/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 9,
+      "sourceId": "7",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 8,
+      "values": {
+        "energy": 1984.23,
+        "protein": 75.37,
+        "sodium": 2315.43,
+        "calcium": 1080.03,
+        "vitaminD": 16.64,
+        "fibre": 23.34
+      },
+      "rawValues": {
+        "energy": "1984.23",
+        "protein": "75.37",
+        "sodium": "2315.43",
+        "calcium": "1080.03",
+        "vitaminD": "16.64",
+        "fibre": "23.34"
+      }
+    },
+    {
+      "id": "C3C-7772:8",
+      "participant": "C3C-7772",
+      "date": "2006-05-14",
+      "sourceDate": "5/14/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 8,
+      "sourceId": "8",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 9,
+      "values": {
+        "energy": 2120.16,
+        "protein": 83.82,
+        "sodium": 2412.44,
+        "calcium": 1109.63,
+        "vitaminD": 9.05,
+        "fibre": 17.83
+      },
+      "rawValues": {
+        "energy": "2120.16",
+        "protein": "83.82",
+        "sodium": "2412.44",
+        "calcium": "1109.63",
+        "vitaminD": "9.05",
+        "fibre": "17.83"
+      }
+    },
+    {
+      "id": "C3C-7772:9",
+      "participant": "C3C-7772",
+      "date": "2006-05-15",
+      "sourceDate": "5/15/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 7,
+      "sourceId": "9",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 10,
+      "values": {
+        "energy": 2040.23,
+        "protein": 78.16,
+        "sodium": 2162.1,
+        "calcium": 927.49,
+        "vitaminD": 5.32,
+        "fibre": 21.78
+      },
+      "rawValues": {
+        "energy": "2040.23",
+        "protein": "78.16",
+        "sodium": "2162.1",
+        "calcium": "927.49",
+        "vitaminD": "5.32",
+        "fibre": "21.78"
+      }
+    },
+    {
+      "id": "C3C-7772:10",
+      "participant": "C3C-7772",
+      "date": "2006-05-16",
+      "sourceDate": "5/16/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 6,
+      "sourceId": "10",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 11,
+      "values": {
+        "energy": 2018.24,
+        "protein": 78.2,
+        "sodium": 2417.38,
+        "calcium": 938.16,
+        "vitaminD": 5.13,
+        "fibre": 21.61
+      },
+      "rawValues": {
+        "energy": "2018.24",
+        "protein": "78.2",
+        "sodium": "2417.38",
+        "calcium": "938.16",
+        "vitaminD": "5.13",
+        "fibre": "21.61"
+      }
+    },
+    {
+      "id": "C3C-7772:11",
+      "participant": "C3C-7772",
+      "date": "2006-05-17",
+      "sourceDate": "5/17/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 5,
+      "sourceId": "11",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 12,
+      "values": {
+        "energy": 2028.22,
+        "protein": 78.26,
+        "sodium": 2393.36,
+        "calcium": 1119.31,
+        "vitaminD": 6.43,
+        "fibre": 25.19
+      },
+      "rawValues": {
+        "energy": "2028.22",
+        "protein": "78.26",
+        "sodium": "2393.36",
+        "calcium": "1119.31",
+        "vitaminD": "6.43",
+        "fibre": "25.19"
+      }
+    },
+    {
+      "id": "C3C-7772:12",
+      "participant": "C3C-7772",
+      "date": "2006-05-18",
+      "sourceDate": "5/18/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 4,
+      "sourceId": "12",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 13,
+      "values": {
+        "energy": 2051.98,
+        "protein": 77.17,
+        "sodium": 2718.68,
+        "calcium": 929.21,
+        "vitaminD": 8.6,
+        "fibre": 14.26
+      },
+      "rawValues": {
+        "energy": "2051.98",
+        "protein": "77.17",
+        "sodium": "2718.68",
+        "calcium": "929.21",
+        "vitaminD": "8.6",
+        "fibre": "14.26"
+      }
+    },
+    {
+      "id": "C3C-7772:13",
+      "participant": "C3C-7772",
+      "date": "2006-05-19",
+      "sourceDate": "5/19/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 3,
+      "sourceId": "13",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 14,
+      "values": {
+        "energy": 2051.98,
+        "protein": 78.15,
+        "sodium": 2319.79,
+        "calcium": 1039.75,
+        "vitaminD": 6.72,
+        "fibre": 18.42
+      },
+      "rawValues": {
+        "energy": "2051.98",
+        "protein": "78.15",
+        "sodium": "2319.79",
+        "calcium": "1039.75",
+        "vitaminD": "6.72",
+        "fibre": "18.42"
+      }
+    },
+    {
+      "id": "C3C-7772:14",
+      "participant": "C3C-7772",
+      "date": "2006-05-20",
+      "sourceDate": "5/20/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 2,
+      "sourceId": "14",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 15,
+      "values": {
+        "energy": 2063.85,
+        "protein": 83.15,
+        "sodium": 2337.35,
+        "calcium": 1086.99,
+        "vitaminD": 16.77,
+        "fibre": 23.37
+      },
+      "rawValues": {
+        "energy": "2063.85",
+        "protein": "83.15",
+        "sodium": "2337.35",
+        "calcium": "1086.99",
+        "vitaminD": "16.77",
+        "fibre": "23.37"
+      }
+    },
+    {
+      "id": "C3C-7772:15",
+      "participant": "C3C-7772",
+      "date": "2006-05-21",
+      "sourceDate": "5/21/2006",
+      "phase": "PRE_TEST",
+      "studyDay": 1,
+      "sourceId": "15",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 16,
+      "values": {
+        "energy": 2148.52,
+        "protein": 87.83,
+        "sodium": 2417.83,
+        "calcium": 1109.67,
+        "vitaminD": 9.16,
+        "fibre": 17.8
+      },
+      "rawValues": {
+        "energy": "2148.52",
+        "protein": "87.83",
+        "sodium": "2417.83",
+        "calcium": "1109.67",
+        "vitaminD": "9.16",
+        "fibre": "17.8"
+      }
+    },
+    {
+      "id": "C3C-7772:16",
+      "participant": "C3C-7772",
+      "date": "2006-05-22",
+      "sourceDate": "5/22/2006",
+      "phase": "IN_TEST",
+      "studyDay": 1,
+      "sourceId": "16",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 17,
+      "values": {
+        "energy": 1660.56,
+        "protein": 63.49,
+        "sodium": 1774.26,
+        "calcium": 764.45,
+        "vitaminD": 4.34,
+        "fibre": 17.25
+      },
+      "rawValues": {
+        "energy": "1660.56",
+        "protein": "63.49",
+        "sodium": "1774.26",
+        "calcium": "764.45",
+        "vitaminD": "4.34",
+        "fibre": "17.25"
+      }
+    },
+    {
+      "id": "C3C-7772:17",
+      "participant": "C3C-7772",
+      "date": "2006-05-23",
+      "sourceDate": "5/23/2006",
+      "phase": "IN_TEST",
+      "studyDay": 2,
+      "sourceId": "17",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 18,
+      "values": {
+        "energy": 1669.31,
+        "protein": 63.02,
+        "sodium": 2220.12,
+        "calcium": 771.42,
+        "vitaminD": 7.03,
+        "fibre": 11.64
+      },
+      "rawValues": {
+        "energy": "1669.31",
+        "protein": "63.02",
+        "sodium": "2220.12",
+        "calcium": "771.42",
+        "vitaminD": "7.03",
+        "fibre": "11.64"
+      }
+    },
+    {
+      "id": "C3C-7772:18",
+      "participant": "C3C-7772",
+      "date": "2006-05-24",
+      "sourceDate": "5/24/2006",
+      "phase": "IN_TEST",
+      "studyDay": 3,
+      "sourceId": "18",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 19,
+      "values": {
+        "energy": 1688.91,
+        "protein": 64.75,
+        "sodium": 2053.14,
+        "calcium": 902.62,
+        "vitaminD": 5.01,
+        "fibre": 22.67
+      },
+      "rawValues": {
+        "energy": "1688.91",
+        "protein": "64.75",
+        "sodium": "2053.14",
+        "calcium": "902.62",
+        "vitaminD": "5.01",
+        "fibre": "22.67"
+      }
+    },
+    {
+      "id": "C3C-7772:19",
+      "participant": "C3C-7772",
+      "date": "2006-05-25",
+      "sourceDate": "5/25/2006",
+      "phase": "IN_TEST",
+      "studyDay": 4,
+      "sourceId": "19",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 20,
+      "values": {
+        "energy": 1710.76,
+        "protein": 63.22,
+        "sodium": 1718.51,
+        "calcium": 950.11,
+        "vitaminD": 7.76,
+        "fibre": 13.59
+      },
+      "rawValues": {
+        "energy": "1710.76",
+        "protein": "63.22",
+        "sodium": "1718.51",
+        "calcium": "950.11",
+        "vitaminD": "7.76",
+        "fibre": "13.59"
+      }
+    },
+    {
+      "id": "C3C-7772:20",
+      "participant": "C3C-7772",
+      "date": "2006-05-26",
+      "sourceDate": "5/26/2006",
+      "phase": "IN_TEST",
+      "studyDay": 5,
+      "sourceId": "20",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 21,
+      "values": {
+        "energy": 1656.02,
+        "protein": 63.3,
+        "sodium": 2004.19,
+        "calcium": 928.6,
+        "vitaminD": 6.09,
+        "fibre": 16.68
+      },
+      "rawValues": {
+        "energy": "1656.02",
+        "protein": "63.3",
+        "sodium": "2004.19",
+        "calcium": "928.6",
+        "vitaminD": "6.09",
+        "fibre": "16.68"
+      }
+    },
+    {
+      "id": "C3C-7772:21",
+      "participant": "C3C-7772",
+      "date": "2006-05-27",
+      "sourceDate": "5/27/2006",
+      "phase": "IN_TEST",
+      "studyDay": 6,
+      "sourceId": "21",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 22,
+      "values": {
+        "energy": 1703.65,
+        "protein": 70.1,
+        "sodium": 1950.89,
+        "calcium": 894.09,
+        "vitaminD": 13.15,
+        "fibre": 19.34
+      },
+      "rawValues": {
+        "energy": "1703.65",
+        "protein": "70.1",
+        "sodium": "1950.89",
+        "calcium": "894.09",
+        "vitaminD": "13.15",
+        "fibre": "19.34"
+      }
+    },
+    {
+      "id": "C3C-7772:22",
+      "participant": "C3C-7772",
+      "date": "2006-05-28",
+      "sourceDate": "5/28/2006",
+      "phase": "IN_TEST",
+      "studyDay": 7,
+      "sourceId": "22",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 23,
+      "values": {
+        "energy": 1698.6,
+        "protein": 69.57,
+        "sodium": 1936.12,
+        "calcium": 746.06,
+        "vitaminD": 5.96,
+        "fibre": 14.52
+      },
+      "rawValues": {
+        "energy": "1698.6",
+        "protein": "69.57",
+        "sodium": "1936.12",
+        "calcium": "746.06",
+        "vitaminD": "5.96",
+        "fibre": "14.52"
+      }
+    },
+    {
+      "id": "C3C-7772:23",
+      "participant": "C3C-7772",
+      "date": "2006-05-29",
+      "sourceDate": "5/29/2006",
+      "phase": "IN_TEST",
+      "studyDay": 8,
+      "sourceId": "23",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 24,
+      "values": {
+        "energy": 1662.2,
+        "protein": 63.52,
+        "sodium": 1776.14,
+        "calcium": 766.12,
+        "vitaminD": 4.34,
+        "fibre": 17.28
+      },
+      "rawValues": {
+        "energy": "1662.2",
+        "protein": "63.52",
+        "sodium": "1776.14",
+        "calcium": "766.12",
+        "vitaminD": "4.34",
+        "fibre": "17.28"
+      }
+    },
+    {
+      "id": "C3C-7772:24",
+      "participant": "C3C-7772",
+      "date": "2006-05-30",
+      "sourceDate": "5/30/2006",
+      "phase": "IN_TEST",
+      "studyDay": 9,
+      "sourceId": "24",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 25,
+      "values": {
+        "energy": 1644.18,
+        "protein": 63.26,
+        "sodium": 1973.98,
+        "calcium": 777.75,
+        "vitaminD": 4.18,
+        "fibre": 17.52
+      },
+      "rawValues": {
+        "energy": "1644.18",
+        "protein": "63.26",
+        "sodium": "1973.98",
+        "calcium": "777.75",
+        "vitaminD": "4.18",
+        "fibre": "17.52"
+      }
+    },
+    {
+      "id": "C3C-7772:25",
+      "participant": "C3C-7772",
+      "date": "2006-05-31",
+      "sourceDate": "5/31/2006",
+      "phase": "IN_TEST",
+      "studyDay": 10,
+      "sourceId": "25",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 26,
+      "values": {
+        "energy": 1632.17,
+        "protein": 63.21,
+        "sodium": 1932.92,
+        "calcium": 907.22,
+        "vitaminD": 5.25,
+        "fibre": 22.67
+      },
+      "rawValues": {
+        "energy": "1632.17",
+        "protein": "63.21",
+        "sodium": "1932.92",
+        "calcium": "907.22",
+        "vitaminD": "5.25",
+        "fibre": "22.67"
+      }
+    },
+    {
+      "id": "C3C-7772:26",
+      "participant": "C3C-7772",
+      "date": "2006-06-01",
+      "sourceDate": "6/1/2006",
+      "phase": "IN_TEST",
+      "studyDay": 11,
+      "sourceId": "26",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 27,
+      "values": {
+        "energy": 1669.31,
+        "protein": 63.02,
+        "sodium": 2220.45,
+        "calcium": 772.5,
+        "vitaminD": 7.03,
+        "fibre": 11.64
+      },
+      "rawValues": {
+        "energy": "1669.31",
+        "protein": "63.02",
+        "sodium": "2220.45",
+        "calcium": "772.5",
+        "vitaminD": "7.03",
+        "fibre": "11.64"
+      }
+    },
+    {
+      "id": "C3C-7772:27",
+      "participant": "C3C-7772",
+      "date": "2006-06-02",
+      "sourceDate": "6/2/2006",
+      "phase": "IN_TEST",
+      "studyDay": 12,
+      "sourceId": "27",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 28,
+      "values": {
+        "energy": 1634.05,
+        "protein": 63.48,
+        "sodium": 2089.9,
+        "calcium": 963.56,
+        "vitaminD": 5.37,
+        "fibre": 22.6
+      },
+      "rawValues": {
+        "energy": "1634.05",
+        "protein": "63.48",
+        "sodium": "2089.9",
+        "calcium": "963.56",
+        "vitaminD": "5.37",
+        "fibre": "22.6"
+      }
+    },
+    {
+      "id": "C3C-7772:28",
+      "participant": "C3C-7772",
+      "date": "2006-06-03",
+      "sourceDate": "6/3/2006",
+      "phase": "IN_TEST",
+      "studyDay": 13,
+      "sourceId": "28",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 29,
+      "values": {
+        "energy": 1673.02,
+        "protein": 67.23,
+        "sodium": 1940.32,
+        "calcium": 887.51,
+        "vitaminD": 13.1,
+        "fibre": 19.3
+      },
+      "rawValues": {
+        "energy": "1673.02",
+        "protein": "67.23",
+        "sodium": "1940.32",
+        "calcium": "887.51",
+        "vitaminD": "13.1",
+        "fibre": "19.3"
+      }
+    },
+    {
+      "id": "C3C-7772:29",
+      "participant": "C3C-7772",
+      "date": "2006-06-04",
+      "sourceDate": "6/4/2006",
+      "phase": "IN_TEST",
+      "studyDay": 14,
+      "sourceId": "29",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 30,
+      "values": {
+        "energy": 1647.73,
+        "protein": 63.3,
+        "sodium": 1707.31,
+        "calcium": 718.4,
+        "vitaminD": 5.86,
+        "fibre": 11.86
+      },
+      "rawValues": {
+        "energy": "1647.73",
+        "protein": "63.3",
+        "sodium": "1707.31",
+        "calcium": "718.4",
+        "vitaminD": "5.86",
+        "fibre": "11.86"
+      }
+    },
+    {
+      "id": "C3C-7772:30",
+      "participant": "C3C-7772",
+      "date": "2006-06-05",
+      "sourceDate": "6/5/2006",
+      "phase": "IN_TEST",
+      "studyDay": 15,
+      "sourceId": "30",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 31,
+      "values": {
+        "energy": 1662.2,
+        "protein": 63.52,
+        "sodium": 1777.85,
+        "calcium": 771.68,
+        "vitaminD": 4.34,
+        "fibre": 17.28
+      },
+      "rawValues": {
+        "energy": "1662.2",
+        "protein": "63.52",
+        "sodium": "1777.85",
+        "calcium": "771.68",
+        "vitaminD": "4.34",
+        "fibre": "17.28"
+      }
+    },
+    {
+      "id": "C3C-7772:31",
+      "participant": "C3C-7772",
+      "date": "2006-06-06",
+      "sourceDate": "6/6/2006",
+      "phase": "IN_TEST",
+      "studyDay": 16,
+      "sourceId": "31",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 32,
+      "values": {
+        "energy": 1647.45,
+        "protein": 63.31,
+        "sodium": 1977.48,
+        "calcium": 780.2,
+        "vitaminD": 4.18,
+        "fibre": 17.58
+      },
+      "rawValues": {
+        "energy": "1647.45",
+        "protein": "63.31",
+        "sodium": "1977.48",
+        "calcium": "780.2",
+        "vitaminD": "4.18",
+        "fibre": "17.58"
+      }
+    },
+    {
+      "id": "C3C-7772:32",
+      "participant": "C3C-7772",
+      "date": "2006-06-07",
+      "sourceDate": "6/7/2006",
+      "phase": "IN_TEST",
+      "studyDay": 17,
+      "sourceId": "32",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 33,
+      "values": {
+        "energy": 1633.81,
+        "protein": 63.24,
+        "sodium": 1937.67,
+        "calcium": 918.25,
+        "vitaminD": 5.25,
+        "fibre": 22.7
+      },
+      "rawValues": {
+        "energy": "1633.81",
+        "protein": "63.24",
+        "sodium": "1937.67",
+        "calcium": "918.25",
+        "vitaminD": "5.25",
+        "fibre": "22.7"
+      }
+    },
+    {
+      "id": "C3C-7772:33",
+      "participant": "C3C-7772",
+      "date": "2006-06-08",
+      "sourceDate": "6/8/2006",
+      "phase": "IN_TEST",
+      "studyDay": 18,
+      "sourceId": "33",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 34,
+      "values": {
+        "energy": 1675.82,
+        "protein": 63.5,
+        "sodium": 1729.28,
+        "calcium": 984.33,
+        "vitaminD": 7.79,
+        "fibre": 13.65
+      },
+      "rawValues": {
+        "energy": "1675.82",
+        "protein": "63.5",
+        "sodium": "1729.28",
+        "calcium": "984.33",
+        "vitaminD": "7.79",
+        "fibre": "13.65"
+      }
+    },
+    {
+      "id": "C3C-7772:34",
+      "participant": "C3C-7772",
+      "date": "2006-06-09",
+      "sourceDate": "6/9/2006",
+      "phase": "IN_TEST",
+      "studyDay": 19,
+      "sourceId": "34",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 35,
+      "values": {
+        "energy": 1654.93,
+        "protein": 63.28,
+        "sodium": 2009.44,
+        "calcium": 948.76,
+        "vitaminD": 6.09,
+        "fibre": 16.66
+      },
+      "rawValues": {
+        "energy": "1654.93",
+        "protein": "63.28",
+        "sodium": "2009.44",
+        "calcium": "948.76",
+        "vitaminD": "6.09",
+        "fibre": "16.66"
+      }
+    },
+    {
+      "id": "C3C-7772:35",
+      "participant": "C3C-7772",
+      "date": "2006-06-10",
+      "sourceDate": "6/10/2006",
+      "phase": "IN_TEST",
+      "studyDay": 20,
+      "sourceId": "35",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 36,
+      "values": {
+        "energy": 1624.98,
+        "protein": 62.32,
+        "sodium": 1928.29,
+        "calcium": 881.98,
+        "vitaminD": 13.02,
+        "fibre": 19.33
+      },
+      "rawValues": {
+        "energy": "1624.98",
+        "protein": "62.32",
+        "sodium": "1928.29",
+        "calcium": "881.98",
+        "vitaminD": "13.02",
+        "fibre": "19.33"
+      }
+    },
+    {
+      "id": "C3C-7772:36",
+      "participant": "C3C-7772",
+      "date": "2006-06-11",
+      "sourceDate": "6/11/2006",
+      "phase": "IN_TEST",
+      "studyDay": 21,
+      "sourceId": "36",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 37,
+      "values": {
+        "energy": 1542.96,
+        "protein": 63.48,
+        "sodium": 1916.58,
+        "calcium": 725.25,
+        "vitaminD": 5.8,
+        "fibre": 14.37
+      },
+      "rawValues": {
+        "energy": "1542.96",
+        "protein": "63.48",
+        "sodium": "1916.58",
+        "calcium": "725.25",
+        "vitaminD": "5.8",
+        "fibre": "14.37"
+      }
+    },
+    {
+      "id": "C3C-7772:37",
+      "participant": "C3C-7772",
+      "date": "2006-06-12",
+      "sourceDate": "6/12/2006",
+      "phase": "IN_TEST",
+      "studyDay": 22,
+      "sourceId": "37",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 38,
+      "values": {
+        "energy": 1663.83,
+        "protein": 63.55,
+        "sodium": 1780.34,
+        "calcium": 775.36,
+        "vitaminD": 4.34,
+        "fibre": 17.31
+      },
+      "rawValues": {
+        "energy": "1663.83",
+        "protein": "63.55",
+        "sodium": "1780.34",
+        "calcium": "775.36",
+        "vitaminD": "4.34",
+        "fibre": "17.31"
+      }
+    },
+    {
+      "id": "C3C-7772:38",
+      "participant": "C3C-7772",
+      "date": "2006-06-13",
+      "sourceDate": "6/13/2006",
+      "phase": "IN_TEST",
+      "studyDay": 23,
+      "sourceId": "38",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 39,
+      "values": {
+        "energy": 1669.31,
+        "protein": 63.02,
+        "sodium": 2220.6,
+        "calcium": 773.01,
+        "vitaminD": 7.03,
+        "fibre": 11.64
+      },
+      "rawValues": {
+        "energy": "1669.31",
+        "protein": "63.02",
+        "sodium": "2220.6",
+        "calcium": "773.01",
+        "vitaminD": "7.03",
+        "fibre": "11.64"
+      }
+    },
+    {
+      "id": "C3C-7772:39",
+      "participant": "C3C-7772",
+      "date": "2006-06-14",
+      "sourceDate": "6/14/2006",
+      "phase": "IN_TEST",
+      "studyDay": 24,
+      "sourceId": "39",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 40,
+      "values": {
+        "energy": 1935.53,
+        "protein": 63.39,
+        "sodium": 1987.2,
+        "calcium": 947.25,
+        "vitaminD": 5.57,
+        "fibre": 21.89
+      },
+      "rawValues": {
+        "energy": "1935.53",
+        "protein": "63.39",
+        "sodium": "1987.2",
+        "calcium": "947.25",
+        "vitaminD": "5.57",
+        "fibre": "21.89"
+      }
+    },
+    {
+      "id": "C3C-7772:40",
+      "participant": "C3C-7772",
+      "date": "2006-06-15",
+      "sourceDate": "6/15/2006",
+      "phase": "IN_TEST",
+      "studyDay": 25,
+      "sourceId": "40",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 41,
+      "values": {
+        "energy": 1883.83,
+        "protein": 63.58,
+        "sodium": 1687.66,
+        "calcium": 959.91,
+        "vitaminD": 8.0,
+        "fibre": 13.53
+      },
+      "rawValues": {
+        "energy": "1883.83",
+        "protein": "63.58",
+        "sodium": "1687.66",
+        "calcium": "959.91",
+        "vitaminD": "8",
+        "fibre": "13.53"
+      }
+    },
+    {
+      "id": "C3C-7772:41",
+      "participant": "C3C-7772",
+      "date": "2006-06-16",
+      "sourceDate": "6/16/2006",
+      "phase": "IN_TEST",
+      "studyDay": 26,
+      "sourceId": "41",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 42,
+      "values": {
+        "energy": 1896.45,
+        "protein": 63.28,
+        "sodium": 2000.66,
+        "calcium": 915.48,
+        "vitaminD": 6.14,
+        "fibre": 17.14
+      },
+      "rawValues": {
+        "energy": "1896.45",
+        "protein": "63.28",
+        "sodium": "2000.66",
+        "calcium": "915.48",
+        "vitaminD": "6.14",
+        "fibre": "17.14"
+      }
+    },
+    {
+      "id": "C3C-7772:42",
+      "participant": "C3C-7772",
+      "date": "2006-06-17",
+      "sourceDate": "6/17/2006",
+      "phase": "IN_TEST",
+      "studyDay": 27,
+      "sourceId": "42",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 43,
+      "values": {
+        "energy": 1653.64,
+        "protein": 65.16,
+        "sodium": 1935.29,
+        "calcium": 882.79,
+        "vitaminD": 13.08,
+        "fibre": 19.33
+      },
+      "rawValues": {
+        "energy": "1653.64",
+        "protein": "65.16",
+        "sodium": "1935.29",
+        "calcium": "882.79",
+        "vitaminD": "13.08",
+        "fibre": "19.33"
+      }
+    },
+    {
+      "id": "C3C-7772:43",
+      "participant": "C3C-7772",
+      "date": "2006-06-18",
+      "sourceDate": "6/18/2006",
+      "phase": "IN_TEST",
+      "studyDay": 28,
+      "sourceId": "43",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 44,
+      "values": {
+        "energy": 1684.49,
+        "protein": 60.85,
+        "sodium": 1951.73,
+        "calcium": 991.32,
+        "vitaminD": 7.36,
+        "fibre": 19.3
+      },
+      "rawValues": {
+        "energy": "1684.49",
+        "protein": "60.85",
+        "sodium": "1951.73",
+        "calcium": "991.32",
+        "vitaminD": "7.36",
+        "fibre": "19.3"
+      }
+    },
+    {
+      "id": "C3C-7772:44",
+      "participant": "C3C-7772",
+      "date": "2006-06-19",
+      "sourceDate": "6/19/2006",
+      "phase": "IN_TEST",
+      "studyDay": 29,
+      "sourceId": "44",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 45,
+      "values": {
+        "energy": 1660.56,
+        "protein": 63.5,
+        "sodium": 1773.36,
+        "calcium": 761.5,
+        "vitaminD": 4.33,
+        "fibre": 17.25
+      },
+      "rawValues": {
+        "energy": "1660.56",
+        "protein": "63.5",
+        "sodium": "1773.36",
+        "calcium": "761.5",
+        "vitaminD": "4.33",
+        "fibre": "17.25"
+      }
+    },
+    {
+      "id": "C3C-7772:45",
+      "participant": "C3C-7772",
+      "date": "2006-06-20",
+      "sourceDate": "6/20/2006",
+      "phase": "IN_TEST",
+      "studyDay": 30,
+      "sourceId": "45",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 46,
+      "values": {
+        "energy": 1641.92,
+        "protein": 65.5,
+        "sodium": 2034.27,
+        "calcium": 850.73,
+        "vitaminD": 4.93,
+        "fibre": 17.63
+      },
+      "rawValues": {
+        "energy": "1641.92",
+        "protein": "65.5",
+        "sodium": "2034.27",
+        "calcium": "850.73",
+        "vitaminD": "4.93",
+        "fibre": "17.63"
+      }
+    },
+    {
+      "id": "C3C-7772:46",
+      "participant": "C3C-7772",
+      "date": "2006-06-21",
+      "sourceDate": "6/21/2006",
+      "phase": "IN_TEST",
+      "studyDay": 31,
+      "sourceId": "46",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 47,
+      "values": {
+        "energy": 1629.04,
+        "protein": 63.28,
+        "sodium": 1936.22,
+        "calcium": 920.06,
+        "vitaminD": 5.27,
+        "fibre": 22.67
+      },
+      "rawValues": {
+        "energy": "1629.04",
+        "protein": "63.28",
+        "sodium": "1936.22",
+        "calcium": "920.06",
+        "vitaminD": "5.27",
+        "fibre": "22.67"
+      }
+    },
+    {
+      "id": "C3C-7772:47",
+      "participant": "C3C-7772",
+      "date": "2006-06-22",
+      "sourceDate": "6/22/2006",
+      "phase": "IN_TEST",
+      "studyDay": 32,
+      "sourceId": "47",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 48,
+      "values": {
+        "energy": 2166.71,
+        "protein": 63.61,
+        "sodium": 1690.11,
+        "calcium": 963.42,
+        "vitaminD": 8.0,
+        "fibre": 13.56
+      },
+      "rawValues": {
+        "energy": "2166.71",
+        "protein": "63.61",
+        "sodium": "1690.11",
+        "calcium": "963.42",
+        "vitaminD": "8",
+        "fibre": "13.56"
+      }
+    },
+    {
+      "id": "C3C-7772:48",
+      "participant": "C3C-7772",
+      "date": "2006-06-23",
+      "sourceDate": "6/23/2006",
+      "phase": "IN_TEST",
+      "studyDay": 33,
+      "sourceId": "48",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 49,
+      "values": {
+        "energy": 1910.79,
+        "protein": 63.31,
+        "sodium": 2000.47,
+        "calcium": 914.63,
+        "vitaminD": 6.17,
+        "fibre": 17.14
+      },
+      "rawValues": {
+        "energy": "1910.79",
+        "protein": "63.31",
+        "sodium": "2000.47",
+        "calcium": "914.63",
+        "vitaminD": "6.17",
+        "fibre": "17.14"
+      }
+    },
+    {
+      "id": "C3C-7772:49",
+      "participant": "C3C-7772",
+      "date": "2006-06-24",
+      "sourceDate": "6/24/2006",
+      "phase": "IN_TEST",
+      "studyDay": 34,
+      "sourceId": "49",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 50,
+      "values": {
+        "energy": 1654.34,
+        "protein": 65.24,
+        "sodium": 1937.52,
+        "calcium": 889.53,
+        "vitaminD": 13.07,
+        "fibre": 19.33
+      },
+      "rawValues": {
+        "energy": "1654.34",
+        "protein": "65.24",
+        "sodium": "1937.52",
+        "calcium": "889.53",
+        "vitaminD": "13.07",
+        "fibre": "19.33"
+      }
+    },
+    {
+      "id": "C3C-7772:50",
+      "participant": "C3C-7772",
+      "date": "2006-06-25",
+      "sourceDate": "6/25/2006",
+      "phase": "IN_TEST",
+      "studyDay": 35,
+      "sourceId": "50",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 51,
+      "values": {
+        "energy": 1686.13,
+        "protein": 60.88,
+        "sodium": 1955.93,
+        "calcium": 1000.52,
+        "vitaminD": 7.36,
+        "fibre": 19.32
+      },
+      "rawValues": {
+        "energy": "1686.13",
+        "protein": "60.88",
+        "sodium": "1955.93",
+        "calcium": "1000.52",
+        "vitaminD": "7.36",
+        "fibre": "19.32"
+      }
+    },
+    {
+      "id": "C3C-7772:51",
+      "participant": "C3C-7772",
+      "date": "2006-06-26",
+      "sourceDate": "6/26/2006",
+      "phase": "IN_TEST",
+      "studyDay": 36,
+      "sourceId": "51",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 52,
+      "values": {
+        "energy": 1662.2,
+        "protein": 63.52,
+        "sodium": 1774.06,
+        "calcium": 759.32,
+        "vitaminD": 4.34,
+        "fibre": 17.28
+      },
+      "rawValues": {
+        "energy": "1662.2",
+        "protein": "63.52",
+        "sodium": "1774.06",
+        "calcium": "759.32",
+        "vitaminD": "4.34",
+        "fibre": "17.28"
+      }
+    },
+    {
+      "id": "C3C-7772:52",
+      "participant": "C3C-7772",
+      "date": "2006-06-27",
+      "sourceDate": "6/27/2006",
+      "phase": "IN_TEST",
+      "studyDay": 37,
+      "sourceId": "52",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 53,
+      "values": {
+        "energy": 1690.22,
+        "protein": 65.67,
+        "sodium": 2004.14,
+        "calcium": 858.7,
+        "vitaminD": 4.93,
+        "fibre": 17.55
+      },
+      "rawValues": {
+        "energy": "1690.22",
+        "protein": "65.67",
+        "sodium": "2004.14",
+        "calcium": "858.7",
+        "vitaminD": "4.93",
+        "fibre": "17.55"
+      }
+    },
+    {
+      "id": "C3C-7772:53",
+      "participant": "C3C-7772",
+      "date": "2006-06-28",
+      "sourceDate": "6/28/2006",
+      "phase": "IN_TEST",
+      "studyDay": 38,
+      "sourceId": "53",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 54,
+      "values": {
+        "energy": 1633.81,
+        "protein": 63.24,
+        "sodium": 1935.79,
+        "calcium": 912.1,
+        "vitaminD": 5.25,
+        "fibre": 22.7
+      },
+      "rawValues": {
+        "energy": "1633.81",
+        "protein": "63.24",
+        "sodium": "1935.79",
+        "calcium": "912.1",
+        "vitaminD": "5.25",
+        "fibre": "22.7"
+      }
+    },
+    {
+      "id": "C3C-7772:54",
+      "participant": "C3C-7772",
+      "date": "2006-06-29",
+      "sourceDate": "6/29/2006",
+      "phase": "IN_TEST",
+      "studyDay": 39,
+      "sourceId": "54",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 55,
+      "values": {
+        "energy": 1885.47,
+        "protein": 63.61,
+        "sodium": 1691.18,
+        "calcium": 966.9,
+        "vitaminD": 8.0,
+        "fibre": 13.56
+      },
+      "rawValues": {
+        "energy": "1885.47",
+        "protein": "63.61",
+        "sodium": "1691.18",
+        "calcium": "966.9",
+        "vitaminD": "8",
+        "fibre": "13.56"
+      }
+    },
+    {
+      "id": "C3C-7772:55",
+      "participant": "C3C-7772",
+      "date": "2006-06-30",
+      "sourceDate": "6/30/2006",
+      "phase": "IN_TEST",
+      "studyDay": 40,
+      "sourceId": "55",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 56,
+      "values": {
+        "energy": 1957.45,
+        "protein": 63.46,
+        "sodium": 1970.37,
+        "calcium": 927.18,
+        "vitaminD": 6.17,
+        "fibre": 17.02
+      },
+      "rawValues": {
+        "energy": "1957.45",
+        "protein": "63.46",
+        "sodium": "1970.37",
+        "calcium": "927.18",
+        "vitaminD": "6.17",
+        "fibre": "17.02"
+      }
+    },
+    {
+      "id": "C3C-7772:56",
+      "participant": "C3C-7772",
+      "date": "2006-07-01",
+      "sourceDate": "7/1/2006",
+      "phase": "IN_TEST",
+      "studyDay": 41,
+      "sourceId": "56",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 57,
+      "values": {
+        "energy": 1650.87,
+        "protein": 64.42,
+        "sodium": 1950.3,
+        "calcium": 893.37,
+        "vitaminD": 13.06,
+        "fibre": 19.4
+      },
+      "rawValues": {
+        "energy": "1650.87",
+        "protein": "64.42",
+        "sodium": "1950.3",
+        "calcium": "893.37",
+        "vitaminD": "13.06",
+        "fibre": "19.4"
+      }
+    },
+    {
+      "id": "C3C-7772:57",
+      "participant": "C3C-7772",
+      "date": "2006-07-02",
+      "sourceDate": "7/2/2006",
+      "phase": "IN_TEST",
+      "studyDay": 42,
+      "sourceId": "57",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 58,
+      "values": {
+        "energy": 1740.34,
+        "protein": 63.22,
+        "sodium": 2004.4,
+        "calcium": 1004.73,
+        "vitaminD": 7.36,
+        "fibre": 19.76
+      },
+      "rawValues": {
+        "energy": "1740.34",
+        "protein": "63.22",
+        "sodium": "2004.4",
+        "calcium": "1004.73",
+        "vitaminD": "7.36",
+        "fibre": "19.76"
+      }
+    },
+    {
+      "id": "C3C-7772:58",
+      "participant": "C3C-7772",
+      "date": "2006-07-03",
+      "sourceDate": "7/3/2006",
+      "phase": "IN_TEST",
+      "studyDay": 43,
+      "sourceId": "58",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 59,
+      "values": {
+        "energy": 1787.29,
+        "protein": 63.67,
+        "sodium": 1783.11,
+        "calcium": 774.22,
+        "vitaminD": 4.49,
+        "fibre": 17.37
+      },
+      "rawValues": {
+        "energy": "1787.29",
+        "protein": "63.67",
+        "sodium": "1783.11",
+        "calcium": "774.22",
+        "vitaminD": "4.49",
+        "fibre": "17.37"
+      }
+    },
+    {
+      "id": "C3C-7772:59",
+      "participant": "C3C-7772",
+      "date": "2006-07-04",
+      "sourceDate": "7/4/2006",
+      "phase": "IN_TEST",
+      "studyDay": 44,
+      "sourceId": "59",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 60,
+      "values": {
+        "energy": 1861.76,
+        "protein": 66.03,
+        "sodium": 2059.48,
+        "calcium": 877.17,
+        "vitaminD": 5.03,
+        "fibre": 17.91
+      },
+      "rawValues": {
+        "energy": "1861.76",
+        "protein": "66.03",
+        "sodium": "2059.48",
+        "calcium": "877.17",
+        "vitaminD": "5.03",
+        "fibre": "17.91"
+      }
+    },
+    {
+      "id": "C3C-7772:60",
+      "participant": "C3C-7772",
+      "date": "2006-07-05",
+      "sourceDate": "7/5/2006",
+      "phase": "IN_TEST",
+      "studyDay": 45,
+      "sourceId": "60",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 61,
+      "values": {
+        "energy": 1709.86,
+        "protein": 63.32,
+        "sodium": 1941.36,
+        "calcium": 924.02,
+        "vitaminD": 5.37,
+        "fibre": 22.92
+      },
+      "rawValues": {
+        "energy": "1709.86",
+        "protein": "63.32",
+        "sodium": "1941.36",
+        "calcium": "924.02",
+        "vitaminD": "5.37",
+        "fibre": "22.92"
+      }
+    },
+    {
+      "id": "C3C-7772:61",
+      "participant": "C3C-7772",
+      "date": "2006-07-06",
+      "sourceDate": "7/6/2006",
+      "phase": "IN_TEST",
+      "studyDay": 46,
+      "sourceId": "61",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 62,
+      "values": {
+        "energy": 1885.47,
+        "protein": 63.61,
+        "sodium": 1692.26,
+        "calcium": 970.43,
+        "vitaminD": 8.0,
+        "fibre": 13.56
+      },
+      "rawValues": {
+        "energy": "1885.47",
+        "protein": "63.61",
+        "sodium": "1692.26",
+        "calcium": "970.43",
+        "vitaminD": "8",
+        "fibre": "13.56"
+      }
+    },
+    {
+      "id": "C3C-7772:62",
+      "participant": "C3C-7772",
+      "date": "2006-07-07",
+      "sourceDate": "7/7/2006",
+      "phase": "IN_TEST",
+      "studyDay": 47,
+      "sourceId": "62",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 63,
+      "values": {
+        "energy": 1959.09,
+        "protein": 63.49,
+        "sodium": 1972.77,
+        "calcium": 930.53,
+        "vitaminD": 6.17,
+        "fibre": 17.05
+      },
+      "rawValues": {
+        "energy": "1959.09",
+        "protein": "63.49",
+        "sodium": "1972.77",
+        "calcium": "930.53",
+        "vitaminD": "6.17",
+        "fibre": "17.05"
+      }
+    },
+    {
+      "id": "C3C-7772:63",
+      "participant": "C3C-7772",
+      "date": "2006-07-08",
+      "sourceDate": "7/8/2006",
+      "phase": "IN_TEST",
+      "studyDay": 48,
+      "sourceId": "63",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 64,
+      "values": {
+        "energy": 1647.96,
+        "protein": 64.18,
+        "sodium": 1945.55,
+        "calcium": 890.23,
+        "vitaminD": 13.06,
+        "fibre": 19.4
+      },
+      "rawValues": {
+        "energy": "1647.96",
+        "protein": "64.18",
+        "sodium": "1945.55",
+        "calcium": "890.23",
+        "vitaminD": "13.06",
+        "fibre": "19.4"
+      }
+    },
+    {
+      "id": "C3C-7772:64",
+      "participant": "C3C-7772",
+      "date": "2006-07-09",
+      "sourceDate": "7/9/2006",
+      "phase": "IN_TEST",
+      "studyDay": 49,
+      "sourceId": "64",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 65,
+      "values": {
+        "energy": 1677.11,
+        "protein": 64.2,
+        "sodium": 1994.97,
+        "calcium": 1116.57,
+        "vitaminD": 8.31,
+        "fibre": 19.32
+      },
+      "rawValues": {
+        "energy": "1677.11",
+        "protein": "64.2",
+        "sodium": "1994.97",
+        "calcium": "1116.57",
+        "vitaminD": "8.31",
+        "fibre": "19.32"
+      }
+    },
+    {
+      "id": "C3C-7772:65",
+      "participant": "C3C-7772",
+      "date": "2006-07-10",
+      "sourceDate": "7/10/2006",
+      "phase": "IN_TEST",
+      "studyDay": 50,
+      "sourceId": "65",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 66,
+      "values": {
+        "energy": 1787.29,
+        "protein": 63.67,
+        "sodium": 1781.34,
+        "calcium": 768.43,
+        "vitaminD": 4.49,
+        "fibre": 17.37
+      },
+      "rawValues": {
+        "energy": "1787.29",
+        "protein": "63.67",
+        "sodium": "1781.34",
+        "calcium": "768.43",
+        "vitaminD": "4.49",
+        "fibre": "17.37"
+      }
+    },
+    {
+      "id": "C3C-7772:66",
+      "participant": "C3C-7772",
+      "date": "2006-07-11",
+      "sourceDate": "7/11/2006",
+      "phase": "IN_TEST",
+      "studyDay": 51,
+      "sourceId": "66",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 67,
+      "values": {
+        "energy": 1749.18,
+        "protein": 63.31,
+        "sodium": 2170.34,
+        "calcium": 784.76,
+        "vitaminD": 7.04,
+        "fibre": 11.51
+      },
+      "rawValues": {
+        "energy": "1749.18",
+        "protein": "63.31",
+        "sodium": "2170.34",
+        "calcium": "784.76",
+        "vitaminD": "7.04",
+        "fibre": "11.51"
+      }
+    },
+    {
+      "id": "C3C-7772:67",
+      "participant": "C3C-7772",
+      "date": "2006-07-12",
+      "sourceDate": "7/12/2006",
+      "phase": "IN_TEST",
+      "studyDay": 52,
+      "sourceId": "67",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 68,
+      "values": {
+        "energy": 2016.5,
+        "protein": 78.15,
+        "sodium": 2384.83,
+        "calcium": 1110.79,
+        "vitaminD": 6.43,
+        "fibre": 25.02
+      },
+      "rawValues": {
+        "energy": "2016.5",
+        "protein": "78.15",
+        "sodium": "2384.83",
+        "calcium": "1110.79",
+        "vitaminD": "6.43",
+        "fibre": "25.02"
+      }
+    },
+    {
+      "id": "C3C-7772:68",
+      "participant": "C3C-7772",
+      "date": "2006-07-13",
+      "sourceDate": "7/13/2006",
+      "phase": "IN_TEST",
+      "studyDay": 53,
+      "sourceId": "68",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 69,
+      "values": {
+        "energy": 1885.47,
+        "protein": 63.61,
+        "sodium": 1691.64,
+        "calcium": 968.41,
+        "vitaminD": 8.0,
+        "fibre": 13.56
+      },
+      "rawValues": {
+        "energy": "1885.47",
+        "protein": "63.61",
+        "sodium": "1691.64",
+        "calcium": "968.41",
+        "vitaminD": "8",
+        "fibre": "13.56"
+      }
+    },
+    {
+      "id": "C3C-7772:69",
+      "participant": "C3C-7772",
+      "date": "2006-07-14",
+      "sourceDate": "7/14/2006",
+      "phase": "IN_TEST",
+      "studyDay": 54,
+      "sourceId": "69",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 70,
+      "values": {
+        "energy": 1959.09,
+        "protein": 63.49,
+        "sodium": 1973.62,
+        "calcium": 933.31,
+        "vitaminD": 6.17,
+        "fibre": 17.05
+      },
+      "rawValues": {
+        "energy": "1959.09",
+        "protein": "63.49",
+        "sodium": "1973.62",
+        "calcium": "933.31",
+        "vitaminD": "6.17",
+        "fibre": "17.05"
+      }
+    },
+    {
+      "id": "C3C-7772:70",
+      "participant": "C3C-7772",
+      "date": "2006-07-15",
+      "sourceDate": "7/15/2006",
+      "phase": "IN_TEST",
+      "studyDay": 55,
+      "sourceId": "70",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 71,
+      "values": {
+        "energy": 1638.34,
+        "protein": 63.64,
+        "sodium": 1933.5,
+        "calcium": 888.72,
+        "vitaminD": 13.06,
+        "fibre": 19.33
+      },
+      "rawValues": {
+        "energy": "1638.34",
+        "protein": "63.64",
+        "sodium": "1933.5",
+        "calcium": "888.72",
+        "vitaminD": "13.06",
+        "fibre": "19.33"
+      }
+    },
+    {
+      "id": "C3C-7772:71",
+      "participant": "C3C-7772",
+      "date": "2006-07-16",
+      "sourceDate": "7/16/2006",
+      "phase": "IN_TEST",
+      "studyDay": 56,
+      "sourceId": "71",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 72,
+      "values": {
+        "energy": 1691.37,
+        "protein": 61.81,
+        "sodium": 1907.34,
+        "calcium": 939.78,
+        "vitaminD": 7.17,
+        "fibre": 16.24
+      },
+      "rawValues": {
+        "energy": "1691.37",
+        "protein": "61.81",
+        "sodium": "1907.34",
+        "calcium": "939.78",
+        "vitaminD": "7.17",
+        "fibre": "16.24"
+      }
+    },
+    {
+      "id": "C3C-7772:72",
+      "participant": "C3C-7772",
+      "date": "2006-07-17",
+      "sourceDate": "7/17/2006",
+      "phase": "IN_TEST",
+      "studyDay": 57,
+      "sourceId": "72",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 73,
+      "values": {
+        "energy": 1785.65,
+        "protein": 63.64,
+        "sodium": 1778.22,
+        "calcium": 762.75,
+        "vitaminD": 4.49,
+        "fibre": 17.35
+      },
+      "rawValues": {
+        "energy": "1785.65",
+        "protein": "63.64",
+        "sodium": "1778.22",
+        "calcium": "762.75",
+        "vitaminD": "4.49",
+        "fibre": "17.35"
+      }
+    },
+    {
+      "id": "C3C-7772:73",
+      "participant": "C3C-7772",
+      "date": "2006-07-18",
+      "sourceDate": "7/18/2006",
+      "phase": "IN_TEST",
+      "studyDay": 58,
+      "sourceId": "73",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 74,
+      "values": {
+        "energy": 1696.67,
+        "protein": 63.89,
+        "sodium": 1759.48,
+        "calcium": 844.71,
+        "vitaminD": 5.02,
+        "fibre": 17.54
+      },
+      "rawValues": {
+        "energy": "1696.67",
+        "protein": "63.89",
+        "sodium": "1759.48",
+        "calcium": "844.71",
+        "vitaminD": "5.02",
+        "fibre": "17.54"
+      }
+    },
+    {
+      "id": "C3C-7772:74",
+      "participant": "C3C-7772",
+      "date": "2006-07-19",
+      "sourceDate": "7/19/2006",
+      "phase": "IN_TEST",
+      "studyDay": 59,
+      "sourceId": "74",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 75,
+      "values": {
+        "energy": 1915.36,
+        "protein": 63.65,
+        "sodium": 1952.82,
+        "calcium": 924.02,
+        "vitaminD": 5.34,
+        "fibre": 23.46
+      },
+      "rawValues": {
+        "energy": "1915.36",
+        "protein": "63.65",
+        "sodium": "1952.82",
+        "calcium": "924.02",
+        "vitaminD": "5.34",
+        "fibre": "23.46"
+      }
+    },
+    {
+      "id": "C3C-7772:75",
+      "participant": "C3C-7772",
+      "date": "2006-07-20",
+      "sourceDate": "7/20/2006",
+      "phase": "IN_TEST",
+      "studyDay": 60,
+      "sourceId": "75",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 76,
+      "values": {
+        "energy": 1885.47,
+        "protein": 63.61,
+        "sodium": 1688.77,
+        "calcium": 959.04,
+        "vitaminD": 8.0,
+        "fibre": 13.56
+      },
+      "rawValues": {
+        "energy": "1885.47",
+        "protein": "63.61",
+        "sodium": "1688.77",
+        "calcium": "959.04",
+        "vitaminD": "8",
+        "fibre": "13.56"
+      }
+    },
+    {
+      "id": "C3C-7772:76",
+      "participant": "C3C-7772",
+      "date": "2006-07-21",
+      "sourceDate": "7/21/2006",
+      "phase": "IN_TEST",
+      "studyDay": 61,
+      "sourceId": "76",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 77,
+      "values": {
+        "energy": 1703.23,
+        "protein": 63.45,
+        "sodium": 1974.27,
+        "calcium": 940.24,
+        "vitaminD": 6.09,
+        "fibre": 16.58
+      },
+      "rawValues": {
+        "energy": "1703.23",
+        "protein": "63.45",
+        "sodium": "1974.27",
+        "calcium": "940.24",
+        "vitaminD": "6.09",
+        "fibre": "16.58"
+      }
+    },
+    {
+      "id": "C3C-7772:77",
+      "participant": "C3C-7772",
+      "date": "2006-07-22",
+      "sourceDate": "7/22/2006",
+      "phase": "IN_TEST",
+      "studyDay": 62,
+      "sourceId": "77",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 78,
+      "values": {
+        "energy": 1643.75,
+        "protein": 64.09,
+        "sodium": 1937.71,
+        "calcium": 896.15,
+        "vitaminD": 13.06,
+        "fibre": 19.35
+      },
+      "rawValues": {
+        "energy": "1643.75",
+        "protein": "64.09",
+        "sodium": "1937.71",
+        "calcium": "896.15",
+        "vitaminD": "13.06",
+        "fibre": "19.35"
+      }
+    },
+    {
+      "id": "C3C-7772:78",
+      "participant": "C3C-7772",
+      "date": "2006-07-23",
+      "sourceDate": "7/23/2006",
+      "phase": "IN_TEST",
+      "studyDay": 63,
+      "sourceId": "78",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 79,
+      "values": {
+        "energy": 1741.98,
+        "protein": 63.25,
+        "sodium": 2003.65,
+        "calcium": 997.82,
+        "vitaminD": 7.36,
+        "fibre": 19.79
+      },
+      "rawValues": {
+        "energy": "1741.98",
+        "protein": "63.25",
+        "sodium": "2003.65",
+        "calcium": "997.82",
+        "vitaminD": "7.36",
+        "fibre": "19.79"
+      }
+    },
+    {
+      "id": "C3C-7772:79",
+      "participant": "C3C-7772",
+      "date": "2006-07-24",
+      "sourceDate": "7/24/2006",
+      "phase": "IN_TEST",
+      "studyDay": 64,
+      "sourceId": "79",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 80,
+      "values": {
+        "energy": 1787.29,
+        "protein": 63.67,
+        "sodium": 1781.32,
+        "calcium": 768.38,
+        "vitaminD": 4.49,
+        "fibre": 17.37
+      },
+      "rawValues": {
+        "energy": "1787.29",
+        "protein": "63.67",
+        "sodium": "1781.32",
+        "calcium": "768.38",
+        "vitaminD": "4.49",
+        "fibre": "17.37"
+      }
+    },
+    {
+      "id": "C3C-7772:80",
+      "participant": "C3C-7772",
+      "date": "2006-07-25",
+      "sourceDate": "7/25/2006",
+      "phase": "IN_TEST",
+      "studyDay": 65,
+      "sourceId": "80",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 81,
+      "values": {
+        "energy": 1860.12,
+        "protein": 66.0,
+        "sodium": 2057.91,
+        "calcium": 876.54,
+        "vitaminD": 5.03,
+        "fibre": 17.88
+      },
+      "rawValues": {
+        "energy": "1860.12",
+        "protein": "66",
+        "sodium": "2057.91",
+        "calcium": "876.54",
+        "vitaminD": "5.03",
+        "fibre": "17.88"
+      }
+    },
+    {
+      "id": "C3C-7772:81",
+      "participant": "C3C-7772",
+      "date": "2006-07-26",
+      "sourceDate": "7/26/2006",
+      "phase": "IN_TEST",
+      "studyDay": 66,
+      "sourceId": "81",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 82,
+      "values": {
+        "energy": 1970.11,
+        "protein": 62.86,
+        "sodium": 1958.13,
+        "calcium": 725.44,
+        "vitaminD": 3.91,
+        "fibre": 23.13
+      },
+      "rawValues": {
+        "energy": "1970.11",
+        "protein": "62.86",
+        "sodium": "1958.13",
+        "calcium": "725.44",
+        "vitaminD": "3.91",
+        "fibre": "23.13"
+      }
+    },
+    {
+      "id": "C3C-7772:82",
+      "participant": "C3C-7772",
+      "date": "2006-07-27",
+      "sourceDate": "7/27/2006",
+      "phase": "IN_TEST",
+      "studyDay": 67,
+      "sourceId": "82",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 83,
+      "values": {
+        "energy": 1883.83,
+        "protein": 63.58,
+        "sodium": 1689.38,
+        "calcium": 965.53,
+        "vitaminD": 8.0,
+        "fibre": 13.53
+      },
+      "rawValues": {
+        "energy": "1883.83",
+        "protein": "63.58",
+        "sodium": "1689.38",
+        "calcium": "965.53",
+        "vitaminD": "8",
+        "fibre": "13.53"
+      }
+    },
+    {
+      "id": "C3C-7772:83",
+      "participant": "C3C-7772",
+      "date": "2006-07-28",
+      "sourceDate": "7/28/2006",
+      "phase": "IN_TEST",
+      "studyDay": 68,
+      "sourceId": "83",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 84,
+      "values": {
+        "energy": 1917.91,
+        "protein": 63.73,
+        "sodium": 1975.51,
+        "calcium": 948.12,
+        "vitaminD": 6.21,
+        "fibre": 17.05
+      },
+      "rawValues": {
+        "energy": "1917.91",
+        "protein": "63.73",
+        "sodium": "1975.51",
+        "calcium": "948.12",
+        "vitaminD": "6.21",
+        "fibre": "17.05"
+      }
+    },
+    {
+      "id": "C3C-7772:84",
+      "participant": "C3C-7772",
+      "date": "2006-07-29",
+      "sourceDate": "7/29/2006",
+      "phase": "IN_TEST",
+      "studyDay": 69,
+      "sourceId": "84",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 85,
+      "values": {
+        "energy": 1640.63,
+        "protein": 63.86,
+        "sodium": 1934.1,
+        "calcium": 888.93,
+        "vitaminD": 13.06,
+        "fibre": 19.33
+      },
+      "rawValues": {
+        "energy": "1640.63",
+        "protein": "63.86",
+        "sodium": "1934.1",
+        "calcium": "888.93",
+        "vitaminD": "13.06",
+        "fibre": "19.33"
+      }
+    },
+    {
+      "id": "C3C-7772:85",
+      "participant": "C3C-7772",
+      "date": "2006-07-30",
+      "sourceDate": "7/30/2006",
+      "phase": "IN_TEST",
+      "studyDay": 70,
+      "sourceId": "85",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 86,
+      "values": {
+        "energy": 1738.7,
+        "protein": 63.19,
+        "sodium": 2002.47,
+        "calcium": 1002.91,
+        "vitaminD": 7.36,
+        "fibre": 19.73
+      },
+      "rawValues": {
+        "energy": "1738.7",
+        "protein": "63.19",
+        "sodium": "2002.47",
+        "calcium": "1002.91",
+        "vitaminD": "7.36",
+        "fibre": "19.73"
+      }
+    },
+    {
+      "id": "C3C-7772:86",
+      "participant": "C3C-7772",
+      "date": "2006-07-31",
+      "sourceDate": "7/31/2006",
+      "phase": "IN_TEST",
+      "studyDay": 71,
+      "sourceId": "86",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 87,
+      "values": {
+        "energy": 1788.92,
+        "protein": 63.7,
+        "sodium": 1784.03,
+        "calcium": 772.73,
+        "vitaminD": 4.49,
+        "fibre": 17.4
+      },
+      "rawValues": {
+        "energy": "1788.92",
+        "protein": "63.7",
+        "sodium": "1784.03",
+        "calcium": "772.73",
+        "vitaminD": "4.49",
+        "fibre": "17.4"
+      }
+    },
+    {
+      "id": "C3C-7772:87",
+      "participant": "C3C-7772",
+      "date": "2006-08-01",
+      "sourceDate": "8/1/2006",
+      "phase": "IN_TEST",
+      "studyDay": 72,
+      "sourceId": "87",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 88,
+      "values": {
+        "energy": 1861.76,
+        "protein": 66.03,
+        "sodium": 2058.59,
+        "calcium": 874.27,
+        "vitaminD": 5.03,
+        "fibre": 17.91
+      },
+      "rawValues": {
+        "energy": "1861.76",
+        "protein": "66.03",
+        "sodium": "2058.59",
+        "calcium": "874.27",
+        "vitaminD": "5.03",
+        "fibre": "17.91"
+      }
+    },
+    {
+      "id": "C3C-7772:88",
+      "participant": "C3C-7772",
+      "date": "2006-08-02",
+      "sourceDate": "8/2/2006",
+      "phase": "IN_TEST",
+      "studyDay": 73,
+      "sourceId": "88",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 89,
+      "values": {
+        "energy": 1971.75,
+        "protein": 62.89,
+        "sodium": 1962.53,
+        "calcium": 735.32,
+        "vitaminD": 3.91,
+        "fibre": 23.16
+      },
+      "rawValues": {
+        "energy": "1971.75",
+        "protein": "62.89",
+        "sodium": "1962.53",
+        "calcium": "735.32",
+        "vitaminD": "3.91",
+        "fibre": "23.16"
+      }
+    },
+    {
+      "id": "C3C-7772:89",
+      "participant": "C3C-7772",
+      "date": "2006-08-03",
+      "sourceDate": "8/3/2006",
+      "phase": "IN_TEST",
+      "studyDay": 74,
+      "sourceId": "89",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 90,
+      "values": {
+        "energy": 1883.83,
+        "protein": 63.58,
+        "sodium": 1687.29,
+        "calcium": 958.69,
+        "vitaminD": 8.0,
+        "fibre": 13.53
+      },
+      "rawValues": {
+        "energy": "1883.83",
+        "protein": "63.58",
+        "sodium": "1687.29",
+        "calcium": "958.69",
+        "vitaminD": "8",
+        "fibre": "13.53"
+      }
+    },
+    {
+      "id": "C3C-7772:90",
+      "participant": "C3C-7772",
+      "date": "2006-08-04",
+      "sourceDate": "8/4/2006",
+      "phase": "IN_TEST",
+      "studyDay": 75,
+      "sourceId": "90",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 91,
+      "values": {
+        "energy": 1703.94,
+        "protein": 63.45,
+        "sodium": 1977.88,
+        "calcium": 937.23,
+        "vitaminD": 6.09,
+        "fibre": 16.55
+      },
+      "rawValues": {
+        "energy": "1703.94",
+        "protein": "63.45",
+        "sodium": "1977.88",
+        "calcium": "937.23",
+        "vitaminD": "6.09",
+        "fibre": "16.55"
+      }
+    },
+    {
+      "id": "C3C-7772:91",
+      "participant": "C3C-7772",
+      "date": "2006-08-05",
+      "sourceDate": "8/5/2006",
+      "phase": "IN_TEST",
+      "studyDay": 76,
+      "sourceId": "91",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 92,
+      "values": {
+        "energy": 1645.45,
+        "protein": 64.34,
+        "sodium": 1935.54,
+        "calcium": 889.89,
+        "vitaminD": 13.07,
+        "fibre": 19.33
+      },
+      "rawValues": {
+        "energy": "1645.45",
+        "protein": "64.34",
+        "sodium": "1935.54",
+        "calcium": "889.89",
+        "vitaminD": "13.07",
+        "fibre": "19.33"
+      }
+    },
+    {
+      "id": "C3C-7772:92",
+      "participant": "C3C-7772",
+      "date": "2006-08-06",
+      "sourceDate": "8/6/2006",
+      "phase": "IN_TEST",
+      "studyDay": 77,
+      "sourceId": "92",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 93,
+      "values": {
+        "energy": 1743.61,
+        "protein": 63.28,
+        "sodium": 2007.04,
+        "calcium": 1004.41,
+        "vitaminD": 7.36,
+        "fibre": 19.82
+      },
+      "rawValues": {
+        "energy": "1743.61",
+        "protein": "63.28",
+        "sodium": "2007.04",
+        "calcium": "1004.41",
+        "vitaminD": "7.36",
+        "fibre": "19.82"
+      }
+    },
+    {
+      "id": "C3C-7772:93",
+      "participant": "C3C-7772",
+      "date": "2006-08-07",
+      "sourceDate": "8/7/2006",
+      "phase": "IN_TEST",
+      "studyDay": 78,
+      "sourceId": "93",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 94,
+      "values": {
+        "energy": 1787.29,
+        "protein": 63.67,
+        "sodium": 1781.58,
+        "calcium": 769.22,
+        "vitaminD": 4.49,
+        "fibre": 17.37
+      },
+      "rawValues": {
+        "energy": "1787.29",
+        "protein": "63.67",
+        "sodium": "1781.58",
+        "calcium": "769.22",
+        "vitaminD": "4.49",
+        "fibre": "17.37"
+      }
+    },
+    {
+      "id": "C3C-7772:94",
+      "participant": "C3C-7772",
+      "date": "2006-08-08",
+      "sourceDate": "8/8/2006",
+      "phase": "IN_TEST",
+      "studyDay": 79,
+      "sourceId": "94",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 95,
+      "values": {
+        "energy": 1861.76,
+        "protein": 66.03,
+        "sodium": 2057.26,
+        "calcium": 869.92,
+        "vitaminD": 5.03,
+        "fibre": 17.91
+      },
+      "rawValues": {
+        "energy": "1861.76",
+        "protein": "66.03",
+        "sodium": "2057.26",
+        "calcium": "869.92",
+        "vitaminD": "5.03",
+        "fibre": "17.91"
+      }
+    },
+    {
+      "id": "C3C-7772:95",
+      "participant": "C3C-7772",
+      "date": "2006-08-09",
+      "sourceDate": "8/9/2006",
+      "phase": "IN_TEST",
+      "studyDay": 80,
+      "sourceId": "95",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 96,
+      "values": {
+        "energy": 1971.75,
+        "protein": 62.89,
+        "sodium": 1961.43,
+        "calcium": 731.71,
+        "vitaminD": 3.91,
+        "fibre": 23.16
+      },
+      "rawValues": {
+        "energy": "1971.75",
+        "protein": "62.89",
+        "sodium": "1961.43",
+        "calcium": "731.71",
+        "vitaminD": "3.91",
+        "fibre": "23.16"
+      }
+    },
+    {
+      "id": "C3C-7772:96",
+      "participant": "C3C-7772",
+      "date": "2006-08-10",
+      "sourceDate": "8/10/2006",
+      "phase": "IN_TEST",
+      "studyDay": 81,
+      "sourceId": "96",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 97,
+      "values": {
+        "energy": 1885.47,
+        "protein": 63.61,
+        "sodium": 1691.29,
+        "calcium": 967.26,
+        "vitaminD": 8.0,
+        "fibre": 13.56
+      },
+      "rawValues": {
+        "energy": "1885.47",
+        "protein": "63.61",
+        "sodium": "1691.29",
+        "calcium": "967.26",
+        "vitaminD": "8",
+        "fibre": "13.56"
+      }
+    },
+    {
+      "id": "C3C-7772:97",
+      "participant": "C3C-7772",
+      "date": "2006-08-11",
+      "sourceDate": "8/11/2006",
+      "phase": "IN_TEST",
+      "studyDay": 82,
+      "sourceId": "97",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 98,
+      "values": {
+        "energy": 1917.91,
+        "protein": 63.73,
+        "sodium": 1972.87,
+        "calcium": 939.5,
+        "vitaminD": 6.21,
+        "fibre": 17.05
+      },
+      "rawValues": {
+        "energy": "1917.91",
+        "protein": "63.73",
+        "sodium": "1972.87",
+        "calcium": "939.5",
+        "vitaminD": "6.21",
+        "fibre": "17.05"
+      }
+    },
+    {
+      "id": "C3C-7772:98",
+      "participant": "C3C-7772",
+      "date": "2006-08-12",
+      "sourceDate": "8/12/2006",
+      "phase": "IN_TEST",
+      "studyDay": 83,
+      "sourceId": "98",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 99,
+      "values": {
+        "energy": 1602.21,
+        "protein": 63.66,
+        "sodium": 1935.27,
+        "calcium": 903.13,
+        "vitaminD": 13.08,
+        "fibre": 19.33
+      },
+      "rawValues": {
+        "energy": "1602.21",
+        "protein": "63.66",
+        "sodium": "1935.27",
+        "calcium": "903.13",
+        "vitaminD": "13.08",
+        "fibre": "19.33"
+      }
+    },
+    {
+      "id": "C3C-7772:99",
+      "participant": "C3C-7772",
+      "date": "2006-08-13",
+      "sourceDate": "8/13/2006",
+      "phase": "IN_TEST",
+      "studyDay": 84,
+      "sourceId": "99",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 100,
+      "values": {
+        "energy": 1669.31,
+        "protein": 63.02,
+        "sodium": 2219.77,
+        "calcium": 770.3,
+        "vitaminD": 7.03,
+        "fibre": 11.64
+      },
+      "rawValues": {
+        "energy": "1669.31",
+        "protein": "63.02",
+        "sodium": "2219.77",
+        "calcium": "770.3",
+        "vitaminD": "7.03",
+        "fibre": "11.64"
+      }
+    },
+    {
+      "id": "C3C-7772:100",
+      "participant": "C3C-7772",
+      "date": "2006-08-14",
+      "sourceDate": "8/14/2006",
+      "phase": "IN_TEST",
+      "studyDay": 85,
+      "sourceId": "100",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 101,
+      "values": {
+        "energy": 1873.01,
+        "protein": 62.7,
+        "sodium": 2093.86,
+        "calcium": 938.51,
+        "vitaminD": 5.07,
+        "fibre": 23.14
+      },
+      "rawValues": {
+        "energy": "1873.01",
+        "protein": "62.7",
+        "sodium": "2093.86",
+        "calcium": "938.51",
+        "vitaminD": "5.07",
+        "fibre": "23.14"
+      }
+    },
+    {
+      "id": "C3C-7772:101",
+      "participant": "C3C-7772",
+      "date": "2006-08-15",
+      "sourceDate": "8/15/2006",
+      "phase": "IN_TEST",
+      "studyDay": 86,
+      "sourceId": "101",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 102,
+      "values": {
+        "energy": 1679.06,
+        "protein": 62.9,
+        "sodium": 1965.2,
+        "calcium": 761.94,
+        "vitaminD": 4.18,
+        "fibre": 16.16
+      },
+      "rawValues": {
+        "energy": "1679.06",
+        "protein": "62.9",
+        "sodium": "1965.2",
+        "calcium": "761.94",
+        "vitaminD": "4.18",
+        "fibre": "16.16"
+      }
+    },
+    {
+      "id": "C3C-7772:102",
+      "participant": "C3C-7772",
+      "date": "2006-08-16",
+      "sourceDate": "8/16/2006",
+      "phase": "IN_TEST",
+      "studyDay": 87,
+      "sourceId": "102",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 103,
+      "values": {
+        "energy": 1929.7,
+        "protein": 63.65,
+        "sodium": 1952.67,
+        "calcium": 923.31,
+        "vitaminD": 5.37,
+        "fibre": 23.46
+      },
+      "rawValues": {
+        "energy": "1929.7",
+        "protein": "63.65",
+        "sodium": "1952.67",
+        "calcium": "923.31",
+        "vitaminD": "5.37",
+        "fibre": "23.46"
+      }
+    },
+    {
+      "id": "C3C-7772:103",
+      "participant": "C3C-7772",
+      "date": "2006-08-17",
+      "sourceDate": "8/17/2006",
+      "phase": "IN_TEST",
+      "studyDay": 88,
+      "sourceId": "103",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 104,
+      "values": {
+        "energy": 1882.19,
+        "protein": 63.55,
+        "sodium": 1686.85,
+        "calcium": 961.77,
+        "vitaminD": 8.0,
+        "fibre": 13.5
+      },
+      "rawValues": {
+        "energy": "1882.19",
+        "protein": "63.55",
+        "sodium": "1686.85",
+        "calcium": "961.77",
+        "vitaminD": "8",
+        "fibre": "13.5"
+      }
+    },
+    {
+      "id": "C3C-7772:104",
+      "participant": "C3C-7772",
+      "date": "2006-08-18",
+      "sourceDate": "8/18/2006",
+      "phase": "IN_TEST",
+      "studyDay": 89,
+      "sourceId": "104",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 105,
+      "values": {
+        "energy": 1867.97,
+        "protein": 63.52,
+        "sodium": 2000.55,
+        "calcium": 928.03,
+        "vitaminD": 6.21,
+        "fibre": 17.11
+      },
+      "rawValues": {
+        "energy": "1867.97",
+        "protein": "63.52",
+        "sodium": "2000.55",
+        "calcium": "928.03",
+        "vitaminD": "6.21",
+        "fibre": "17.11"
+      }
+    },
+    {
+      "id": "C3C-7772:105",
+      "participant": "C3C-7772",
+      "date": "2006-08-19",
+      "sourceDate": "8/19/2006",
+      "phase": "IN_TEST",
+      "studyDay": 90,
+      "sourceId": "105",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 106,
+      "values": {
+        "energy": 1602.21,
+        "protein": 63.66,
+        "sodium": 1933.67,
+        "calcium": 897.93,
+        "vitaminD": 13.08,
+        "fibre": 19.32
+      },
+      "rawValues": {
+        "energy": "1602.21",
+        "protein": "63.66",
+        "sodium": "1933.67",
+        "calcium": "897.93",
+        "vitaminD": "13.08",
+        "fibre": "19.32"
+      }
+    },
+    {
+      "id": "C3C-7772:106",
+      "participant": "C3C-7772",
+      "date": "2006-08-20",
+      "sourceDate": "8/20/2006",
+      "phase": "POST_TEST",
+      "studyDay": 0,
+      "sourceId": "106",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 107,
+      "values": {
+        "energy": 2034.23,
+        "protein": 78.48,
+        "sodium": 2427.36,
+        "calcium": 1249.19,
+        "vitaminD": 9.53,
+        "fibre": 23.53
+      },
+      "rawValues": {
+        "energy": "2034.23",
+        "protein": "78.48",
+        "sodium": "2427.36",
+        "calcium": "1249.19",
+        "vitaminD": "9.53",
+        "fibre": "23.53"
+      }
+    },
+    {
+      "id": "C3C-7772:107",
+      "participant": "C3C-7772",
+      "date": "2006-08-21",
+      "sourceDate": "8/21/2006",
+      "phase": "POST_TEST",
+      "studyDay": 1,
+      "sourceId": "107",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 108,
+      "values": {
+        "energy": 2038.59,
+        "protein": 78.13,
+        "sodium": 2162.19,
+        "calcium": 932.3,
+        "vitaminD": 5.32,
+        "fibre": 21.75
+      },
+      "rawValues": {
+        "energy": "2038.59",
+        "protein": "78.13",
+        "sodium": "2162.19",
+        "calcium": "932.3",
+        "vitaminD": "5.32",
+        "fibre": "21.75"
+      }
+    },
+    {
+      "id": "C3C-7772:108",
+      "participant": "C3C-7772",
+      "date": "2006-08-22",
+      "sourceDate": "8/22/2006",
+      "phase": "POST_TEST",
+      "studyDay": 2,
+      "sourceId": "108",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 109,
+      "values": {
+        "energy": 1981.13,
+        "protein": 77.48,
+        "sodium": 2287.24,
+        "calcium": 946.07,
+        "vitaminD": 5.13,
+        "fibre": 21.46
+      },
+      "rawValues": {
+        "energy": "1981.13",
+        "protein": "77.48",
+        "sodium": "2287.24",
+        "calcium": "946.07",
+        "vitaminD": "5.13",
+        "fibre": "21.46"
+      }
+    },
+    {
+      "id": "C3C-7772:109",
+      "participant": "C3C-7772",
+      "date": "2006-08-23",
+      "sourceDate": "8/23/2006",
+      "phase": "POST_TEST",
+      "studyDay": 3,
+      "sourceId": "109",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 110,
+      "values": {
+        "energy": 2026.58,
+        "protein": 78.23,
+        "sodium": 2390.38,
+        "calcium": 1114.1,
+        "vitaminD": 6.43,
+        "fibre": 25.16
+      },
+      "rawValues": {
+        "energy": "2026.58",
+        "protein": "78.23",
+        "sodium": "2390.38",
+        "calcium": "1114.1",
+        "vitaminD": "6.43",
+        "fibre": "25.16"
+      }
+    },
+    {
+      "id": "C3C-7772:110",
+      "participant": "C3C-7772",
+      "date": "2006-08-24",
+      "sourceDate": "8/24/2006",
+      "phase": "POST_TEST",
+      "studyDay": 4,
+      "sourceId": "110",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 111,
+      "values": {
+        "energy": 1885.47,
+        "protein": 63.61,
+        "sodium": 1691.07,
+        "calcium": 966.55,
+        "vitaminD": 8.0,
+        "fibre": 13.56
+      },
+      "rawValues": {
+        "energy": "1885.47",
+        "protein": "63.61",
+        "sodium": "1691.07",
+        "calcium": "966.55",
+        "vitaminD": "8",
+        "fibre": "13.56"
+      }
+    },
+    {
+      "id": "C3C-7772:111",
+      "participant": "C3C-7772",
+      "date": "2006-08-25",
+      "sourceDate": "8/25/2006",
+      "phase": "POST_TEST",
+      "studyDay": 5,
+      "sourceId": "111",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 112,
+      "values": {
+        "energy": 1869.61,
+        "protein": 63.56,
+        "sodium": 2004.82,
+        "calcium": 937.5,
+        "vitaminD": 6.21,
+        "fibre": 17.13
+      },
+      "rawValues": {
+        "energy": "1869.61",
+        "protein": "63.56",
+        "sodium": "2004.82",
+        "calcium": "937.5",
+        "vitaminD": "6.21",
+        "fibre": "17.13"
+      }
+    },
+    {
+      "id": "C3C-7772:112",
+      "participant": "C3C-7772",
+      "date": "2006-08-26",
+      "sourceDate": "8/26/2006",
+      "phase": "POST_TEST",
+      "studyDay": 6,
+      "sourceId": "112",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 113,
+      "values": {
+        "energy": 1610.51,
+        "protein": 63.94,
+        "sodium": 1951.73,
+        "calcium": 910.56,
+        "vitaminD": 13.08,
+        "fibre": 19.42
+      },
+      "rawValues": {
+        "energy": "1610.51",
+        "protein": "63.94",
+        "sodium": "1951.73",
+        "calcium": "910.56",
+        "vitaminD": "13.08",
+        "fibre": "19.42"
+      }
+    },
+    {
+      "id": "C3C-7772:113",
+      "participant": "C3C-7772",
+      "date": "2006-08-27",
+      "sourceDate": "8/27/2006",
+      "phase": "POST_TEST",
+      "studyDay": 7,
+      "sourceId": "113",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 114,
+      "values": {
+        "energy": 1669.31,
+        "protein": 63.02,
+        "sodium": 2220.62,
+        "calcium": 773.06,
+        "vitaminD": 7.03,
+        "fibre": 11.64
+      },
+      "rawValues": {
+        "energy": "1669.31",
+        "protein": "63.02",
+        "sodium": "2220.62",
+        "calcium": "773.06",
+        "vitaminD": "7.03",
+        "fibre": "11.64"
+      }
+    },
+    {
+      "id": "C3C-7772:114",
+      "participant": "C3C-7772",
+      "date": "2006-08-28",
+      "sourceDate": "8/28/2006",
+      "phase": "POST_TEST",
+      "studyDay": 8,
+      "sourceId": "114",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 115,
+      "values": {
+        "energy": 2025.94,
+        "protein": 78.28,
+        "sodium": 2388.97,
+        "calcium": 1112.58,
+        "vitaminD": 6.44,
+        "fibre": 25.24
+      },
+      "rawValues": {
+        "energy": "2025.94",
+        "protein": "78.28",
+        "sodium": "2388.97",
+        "calcium": "1112.58",
+        "vitaminD": "6.44",
+        "fibre": "25.24"
+      }
+    },
+    {
+      "id": "C3C-7772:115",
+      "participant": "C3C-7772",
+      "date": "2006-08-29",
+      "sourceDate": "8/29/2006",
+      "phase": "POST_TEST",
+      "studyDay": 9,
+      "sourceId": "115",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 116,
+      "values": {
+        "energy": 1863.39,
+        "protein": 66.06,
+        "sodium": 2058.38,
+        "calcium": 869.1,
+        "vitaminD": 5.03,
+        "fibre": 17.94
+      },
+      "rawValues": {
+        "energy": "1863.39",
+        "protein": "66.06",
+        "sodium": "2058.38",
+        "calcium": "869.1",
+        "vitaminD": "5.03",
+        "fibre": "17.94"
+      }
+    },
+    {
+      "id": "C3C-7772:116",
+      "participant": "C3C-7772",
+      "date": "2006-08-30",
+      "sourceDate": "8/30/2006",
+      "phase": "POST_TEST",
+      "studyDay": 10,
+      "sourceId": "116",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 117,
+      "values": {
+        "energy": 1929.7,
+        "protein": 63.65,
+        "sodium": 1955.06,
+        "calcium": 931.11,
+        "vitaminD": 5.37,
+        "fibre": 23.46
+      },
+      "rawValues": {
+        "energy": "1929.7",
+        "protein": "63.65",
+        "sodium": "1955.06",
+        "calcium": "931.11",
+        "vitaminD": "5.37",
+        "fibre": "23.46"
+      }
+    },
+    {
+      "id": "C3C-7772:117",
+      "participant": "C3C-7772",
+      "date": "2006-08-31",
+      "sourceDate": "8/31/2006",
+      "phase": "POST_TEST",
+      "studyDay": 11,
+      "sourceId": "117",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 118,
+      "values": {
+        "energy": 1883.83,
+        "protein": 63.58,
+        "sodium": 1688.16,
+        "calcium": 961.55,
+        "vitaminD": 8.0,
+        "fibre": 13.53
+      },
+      "rawValues": {
+        "energy": "1883.83",
+        "protein": "63.58",
+        "sodium": "1688.16",
+        "calcium": "961.55",
+        "vitaminD": "8",
+        "fibre": "13.53"
+      }
+    },
+    {
+      "id": "C3C-7772:118",
+      "participant": "C3C-7772",
+      "date": "2006-09-01",
+      "sourceDate": "9/1/2006",
+      "phase": "POST_TEST",
+      "studyDay": 12,
+      "sourceId": "118",
+      "sourceFile": "MR016G_Campaign_3_C3C_7772_Dietary_Intake_obsv.csv",
+      "sourceRow": 119,
+      "values": {
+        "energy": 1913.04,
+        "protein": 63.27,
+        "sodium": 2024.4,
+        "calcium": 876.85,
+        "vitaminD": 5.87,
+        "fibre": 13.19
+      },
+      "rawValues": {
+        "energy": "1913.04",
+        "protein": "63.27",
+        "sodium": "2024.4",
+        "calcium": "876.85",
+        "vitaminD": "5.87",
+        "fibre": "13.19"
+      }
+    }
+  ]
+}

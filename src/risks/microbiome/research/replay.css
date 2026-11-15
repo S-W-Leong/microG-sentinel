@@ -1,0 +1,54 @@
+.microbiome-view-switch {
+  margin-bottom: 16px;
+}
+
+.microbiome-research > .risk-field {
+  margin-bottom: 14px;
+}
+
+.microbiome-genus-chart {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: grid;
+  gap: 18px;
+}
+
+.microbiome-genus-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 6px;
+}
+
+.microbiome-genus-value strong {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.microbiome-research .risk-numeric,
+.microbiome-research .risk-metric dd {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.microbiome-genus-track {
+  height: 7px;
+  background: #26373f;
+}
+
+.microbiome-genus-track span {
+  display: block;
+  height: 100%;
+  background: #b6e2e6;
+}
+
+.microbiome-source-values {
+  padding-left: 20px;
+}
+
+.microbiome-source-values li + li {
+  margin-top: 14px;
+}

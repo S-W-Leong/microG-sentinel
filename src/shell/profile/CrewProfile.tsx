@@ -83,7 +83,7 @@ export default function CrewProfile({ crewId, vector }: RiskTabProps) {
   const connections = readConnections(vector, crewId, evaluations);
   const traits = person?.traits;
   const clock = person?.exposures.asOf;
-  const missionDay = recent?.daysInFlight ?? scenarioMissionDay;
+  const missionDay = scenarioMissionDay;
   return (
     <article className="crew-profile">
       <header className="profile-header">

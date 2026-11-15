@@ -20,11 +20,11 @@ https://nlsp.nasa.gov/search/data/details/e26501eb-7d7a-5012-8c8e-c5bdb3eecaf6?d
 Files under `raw/` are byte-for-byte downloads, including spelling and BOMs.
 Download prefix: `https://nlsp.nasa.gov/api/v1/files/`, suffix: `/download`.
 
-| File | Download ID |
-| --- | --- |
-| BRSMACT_Campagin_1_Actigraphy.csv | 972badfb-238d-5dd5-81f2-8efc729a4452 |
+| File                                           | Download ID                          |
+| ---------------------------------------------- | ------------------------------------ |
+| BRSMACT_Campagin_1_Actigraphy.csv              | 972badfb-238d-5dd5-81f2-8efc729a4452 |
 | BRSMACT_Campagin_1_Actigraphy_Query_Result.csv | e4630225-a050-54fb-be99-795cf1053654 |
-| BRSMACT_Campaign_1_Actigraphy_ReadMe.txt | ba27dc5f-962a-5af8-a232-0b8bef1e4748 |
+| BRSMACT_Campaign_1_Actigraphy_ReadMe.txt       | ba27dc5f-962a-5af8-a232-0b8bef1e4748 |
 
 Catalog availability is “Available online”; this is attribution to a NASA public
 research release, not a claim of a separately verified blanket reuse licence.
