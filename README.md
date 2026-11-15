@@ -3,9 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="docs/slides/MicroG-Sentinel-slides.pdf"><img alt="Slides" src="https://img.shields.io/badge/Slides-7%20slides%20(PDF)-FF5A2B?style=for-the-badge"></a>
-  <a href="docs/slides/MicroG-Sentinel-slides.pptx"><img alt="Slides PowerPoint" src="https://img.shields.io/badge/Slides-PowerPoint-1A1D20?style=for-the-badge"></a>
-  <a href="#run-it"><img alt="Runs offline" src="https://img.shields.io/badge/Runs-offline%20%C2%B7%20no%20backend-2C3136?style=for-the-badge"></a>
+  <a href="https://micro-g-sentinel.vercel.app/"><img alt="Live app" src="https://img.shields.io/badge/Live%20app-Open%20MicroG%20Sentinel-FF5A2B?style=for-the-badge"></a>
+  <a href="docs/slides/MicroG-Sentinel-slides.pdf"><img alt="Slides" src="https://img.shields.io/badge/Slides-7%20slides%20(PDF)-1A1D20?style=for-the-badge"></a>
+  <a href="docs/slides/MicroG-Sentinel-slides.pptx"><img alt="Slides PowerPoint" src="https://img.shields.io/badge/Slides-PowerPoint-2C3136?style=for-the-badge"></a>
+  <a href="#run-it"><img alt="Runs offline" src="https://img.shields.io/badge/Runs-offline%20%C2%B7%20no%20backend-3A4046?style=for-the-badge"></a>
   <a href="#real-nasa-data-kept-separate"><img alt="NASA data" src="https://img.shields.io/badge/NASA%20data-4%20study%20replays-A3A8AD?style=for-the-badge"></a>
 </p>
 
@@ -108,6 +109,10 @@ Each replay is read-only: it never saves crew inputs, emits vector signals or in
 Reference datasets cited in the tabs but not analysed in the demo: [Google SCIN](https://github.com/google-research-datasets/scin), [PhysioNet Sleep-EDF](https://www.physionet.org/content/sleep-edfx/1.0.0/), [USDA FoodData Central](https://fdc.nal.usda.gov/download-datasets.html), [CDC NHANES DXA](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DXXSPN_H.htm).
 
 ## Run it
+
+**Try it now:** [micro-g-sentinel.vercel.app](https://micro-g-sentinel.vercel.app/). No sign-in; everything runs in your browser.
+
+To run it locally:
 
 ```sh
 npm install
