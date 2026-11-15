@@ -1,6 +1,6 @@
 # MicroG Sentinel · Battle plan v1
 
-> **For coding agents:** this file is the source of truth. Build only inside your owner's folders (see "File ownership and integration"), implement against the TypeScript contract in "Astronaut vector" → "Agent instructions", and never use diagnosis wording. Shared facts: `docs/battleplan-parts/_context.md`.
+> **For coding agents:** this file is the source of truth. Build only inside your owner's folders (see "File ownership and integration"), implement against the TypeScript contract in "Astronaut vector" → "Agent instructions", and never use diagnosis wording. Shared facts are merged into this document.
 
 Sections: Header · Status · The brief · The polish bar · Risk tabs (main table, indicative clinical scores, ground medical escalation, details) · Astronaut vector and signals contract · Mandatory vs Stretch · Team tracks · Build timeline · Rehearsals and backup
 
@@ -23,7 +23,7 @@ Planning snapshot: Sat 14 Nov 2026, approximately 19:00 KL. All times below are 
 | Area | Status | Note |
 |---|---|---|
 | Cardiovascular tab | Ready | Exists: exercise check, VO2peak trend, NASA MR080G replay and export. |
-| Body map home | In progress | Existing map has one live region and four planned. Three redesign options (A floating astronaut, B scanner, C stickers) are in `design/body-map-options.html`; Siang Woo picks one. |
+| Body map home | Done | Approved 3D body map implemented in `src/shell/astronaut3d/`; prototype source is in `design/astronaut-3d-v2/`. |
 | Branches | Action needed | Work from `unslop/flight-deck`. Shi Wei's `shiwei/sweep` commits ddf69d7 (17:09, guided steps) and 944d8d4 (18:21, guided values) are not merged; walkthrough text moves out of the app per the polish bar. |
 | Other 7 tabs + mood | Not started | Sleep, Immune, Bone, Balance, Microbiome, SANS, Food; Mood is optional. |
 | Astronaut vector | Not started | Siang Woo owns traits, baselines, exposures and personalisation reasons. |
@@ -61,7 +61,7 @@ Planning snapshot: Sat 14 Nov 2026, approximately 19:00 KL. All times below are 
 
 # Risk tabs
 
-Scope and ownership follow [`_context.md`](battleplan-parts/_context.md). This is the tab design specification; the [contract section](#astronaut-vector-and-signals-contract) defines the authoritative serialized fields, validation limits, vector API and personalisation rules. The signal lists below match its v1 interfaces. Inputs describe form fields, not extra shared fields. Keep raw input details and chart histories private to each tab.
+Scope and ownership are merged into this document. This is the tab design specification; the [contract section](#astronaut-vector-and-signals-contract) defines the authoritative serialized fields, validation limits, vector API and personalisation rules. The signal lists below match its v1 interfaces. Inputs describe form fields, not extra shared fields. Keep raw input details and chart histories private to each tab.
 
 All proposed numeric ranges are input domains, not medical thresholds. Numeric values must be finite; `null` means unknown, never zero. A known zero is valid only where the domain includes zero. Every observation carries crew identity, observation time, source, and simulation status through the contract section; convert explicit offset-bearing form timestamps to its UTC ISO format before emission. Dates in existing cardiovascular records retain their existing date-only semantics. Never join different people, research participants and crew, or real and simulated observations into a personal baseline.
 
@@ -443,7 +443,7 @@ Call `personalise` once with the base evaluation; only the vector applies the jo
 
 # Astronaut vector and signals contract
 
-Status: implementation contract v1. Owner: Siang Woo. `docs/battleplan-parts/_context.md` remains authoritative for product decisions. Numeric validation limits, time windows, baseline aggregation and personalisation weights below are explicit prototype assumptions, not clinical thresholds or trained parameters. This document defines interfaces; it does not claim that these interfaces already exist.
+Status: implementation contract v1. Owner: Siang Woo. Product decisions are merged into this document. Numeric validation limits, time windows, baseline aggregation and personalisation weights below are explicit prototype assumptions, not clinical thresholds or trained parameters. This document defines interfaces; it does not claim that these interfaces already exist.
 
 ## Astronaut vector — what it is (owner Siang Woo)
 
@@ -957,7 +957,7 @@ export interface RiskTab<R extends RiskId = RiskId> {
 }
 ```
 
-`loadScenario?(context: RiskEvaluationContext): void` saves the Mission day 100 simulated inputs for `context.crewId` through the tab's normal save path, emitting the same signals as a user save. It must be idempotent, preserve existing user observations, and never seed real/research identities. The shell calls available loaders once on startup, Food first, isolating failures per tab and crew; `?scenario=off` skips seeding in a fresh session. See `src/scenario/mission.ts` for the shared story and `docs/requests/scenario-shiwei.md` for the remaining loaders.
+`loadScenario?(context: RiskEvaluationContext): void` saves the Mission day 100 simulated inputs for `context.crewId` through the tab's normal save path, emitting the same signals as a user save. It must be idempotent, preserve existing user observations, and never seed real/research identities. The shell calls available loaders once on startup, Food first, isolating failures per tab and crew; `?scenario=off` skips seeding in a fresh session. See `src/scenario/mission.ts` for the shared story and each tab's `scenario.ts` for the implemented loaders.
 
 Use `satisfies RiskTab<'sleep'>` (and the corresponding literal for every tab) to enforce the region pairing. Titles are `Cardiovascular`, `Sleep`, `Immune`, `Bone`, `Balance`, `Microbiome`, `SANS`, `Food`, `Mood`. Region IDs are registration keys; the body-map integration adapter maps existing region identifiers without silently changing this contract. `evaluate` is synchronous and read-only: read that tab's selected private input state and vector snapshots, calculate base output, personalise once, and return its own risk and the requested crew. It never emits, changes selection, schedules work, fetches data, or renders UI. Components subscribe and re-evaluate after input saves/vector notifications. Detached exposures are not a permission to read another tab's store.
 
@@ -973,7 +973,7 @@ Agents never edit the other owner's folders. Coordinate shared-type changes with
 
 ## Agent instructions
 
-> To build a risk tab: 1. Read `docs/battleplan-parts/_context.md` and this contract; implement only your owned folder and import shared types. 2. Build the tab's input and documented base evaluator; preserve nulls, units, source and identity, then emit the complete typed signal snapshot after each saved observation. 3. Read cross-tab context through the vector API, personalise once, export `riskTab`, and render the tab's own display. 4. Add tests for emitted signals and the selected headline; hand the descriptor to Siang Woo for registration. Do not change another owner's code to make integration pass.
+> To build a risk tab: 1. Read this document's product decisions and contract; implement only your owned folder and import shared types. 2. Build the tab's input and documented base evaluator; preserve nulls, units, source and identity, then emit the complete typed signal snapshot after each saved observation. 3. Read cross-tab context through the vector API, personalise once, export `riskTab`, and render the tab's own display. 4. Add tests for emitted signals and the selected headline; hand the descriptor to Siang Woo for registration. Do not change another owner's code to make integration pass.
 
 Definition of done:
 
