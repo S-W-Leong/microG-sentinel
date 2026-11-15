@@ -58,10 +58,12 @@ React 19, TypeScript and Vite. No backend. Data for the demo is simulated crew d
 | `src/risks/<risk>/` | One folder per risk tab; each exports a `riskTab` descriptor |
 | `src/risks/types.ts` | Shared contract: signals, vector API, evaluation, escalation |
 | `src/vector/` | Astronaut vector: crew registry, signal store, exposures, personalisation |
-| `src/exercise/`, `src/logic/` | Existing exercise and VO₂ logic, used by the Cardio tab |
+| `src/screens/`, `src/exercise/`, `src/logic/` | Cardio exercise monitoring, NASA replay and VO₂ assessment routes |
 | `data/raw/`, `data/curated/` | Untouched NASA download and the curated, cited subset |
-| `design/` | Body map design options |
+| `design/astronaut-3d-v2/` | Approved 3D body map prototype source; the app uses `src/shell/astronaut3d/` |
 | `docs/battleplan.md` | Team plan, every tab's spec and the full contract |
+| `docs/exercise-import.md`, `docs/exercise-evaluation.md` | Cardio CSV import rules and software-case evaluation limits |
+| `docs/source-claims.md` | Source sections supporting the Cardio assessment context |
 
 Coding agents: read [`AGENTS.md`](AGENTS.md).
 

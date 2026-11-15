@@ -1,5 +1,7 @@
 # Exercise evaluation
 
+These cases evaluate the observation planner in Cardio's exercise monitoring workspace (`#/exercise`), not the nine-risk app as a whole.
+
 Software-case evaluator: `src/exercise/evaluation.ts`. Reproduce with `npx vitest run src/exercise/evaluation.test.ts src/exercise/planner.test.ts`.
 
 The demonstration missing-HR case requires one missing comparable observation. The planner selects the eligible one-action opportunity. A deliberately redundant fixed checklist selecting both eligible opportunities costs three modelled actions with the same coverage. This is an illustrative software case, not measured crew time or a validated operational baseline. The non-greedy regression covers three gaps: exact coverage selects W/Z at two actions rather than X/Y at four. Input order cannot change that result. Unavailable/expired opportunities and historical metadata gaps remain unresolved. Both strategies share eligibility and bypass rules.
