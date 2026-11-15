@@ -6,9 +6,6 @@
   <a href="https://cdn.jsdelivr.net/gh/S-W-Leong/microG-sentinel@a045e81009d1/docs/demo/MicroG-Sentinel-demo.mp4"><img alt="Demo video" src="https://img.shields.io/badge/Demo%20video-Watch%2041%20s-B9232D?style=for-the-badge"></a>
   <a href="https://micro-g-sentinel.vercel.app/"><img alt="Live app" src="https://img.shields.io/badge/Live%20app-Open%20MicroG%20Sentinel-FF5A2B?style=for-the-badge"></a>
   <a href="docs/slides/MicroG-Sentinel-slides.pdf"><img alt="Slides" src="https://img.shields.io/badge/Slides-7%20slides%20(PDF)-1A1D20?style=for-the-badge"></a>
-  <a href="docs/slides/MicroG-Sentinel-slides.pptx"><img alt="Slides PowerPoint" src="https://img.shields.io/badge/Slides-PowerPoint-2C3136?style=for-the-badge"></a>
-  <a href="#run-it"><img alt="Runs offline" src="https://img.shields.io/badge/Runs-offline%20%C2%B7%20no%20backend-3A4046?style=for-the-badge"></a>
-  <a href="#real-nasa-data-kept-separate"><img alt="NASA data" src="https://img.shields.io/badge/NASA%20data-4%20study%20replays-A3A8AD?style=for-the-badge"></a>
 </p>
 
 <p align="center">
