@@ -1,3 +1,20 @@
+.risk-tab.cardio-source {
+  margin-bottom: 16px;
+}
+.cardio-research .trend-viewport {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.cardio-research .trend-line {
+  stroke: #b4dfed;
+}
+.cardio-research .chart-point {
+  fill: #f2f4f0;
+  stroke: #b4dfed;
+}
+.cardio-research .chart-point.hollow {
+  fill: #131c22;
+}
 .risk-tab {
   --risk-line: #3c4a50;
   --risk-muted: #afbdc2;

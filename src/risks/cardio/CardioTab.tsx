@@ -8,6 +8,7 @@ import ExerciseComparison from '../../components/exercise/ExerciseComparison';
 import ObservationPlan from '../../components/exercise/ObservationPlan';
 import ExerciseReview from '../../components/exercise/ExerciseReview';
 import TrendChart from '../../components/TrendChart';
+import ResearchCardio from './ResearchCardio';
 import {
   adaptExercise,
   adaptVo2,
@@ -425,9 +426,33 @@ function CardioPanel(ctx: RiskTabProps) {
   );
 }
 export default function CardioTab(ctx: RiskTabProps) {
+  const [mode, setMode] = useState<'crew' | 'research'>('crew');
   return (
     <Registered {...ctx}>
-      <CardioPanel key={scopeKey(ctx)} {...ctx} />
+      <section className="risk-tab cardio-source" aria-label="Cardio data source">
+        <h2>Choose Cardio data</h2>
+        <div className="risk-actions">
+          <button type="button" aria-pressed={mode === 'crew'} onClick={() => setMode('crew')}>
+            Crew observations
+          </button>
+          <button
+            type="button"
+            aria-pressed={mode === 'research'}
+            onClick={() => setMode('research')}
+          >
+            NASA research
+          </button>
+        </div>
+        <p>
+          {mode === 'crew'
+            ? `${ctx.crewId} · try NASA research for recorded before/after comparisons.`
+            : 'MR080G · C3D-3985 · real bed-rest measurements.'}
+        </p>
+      </section>
+      <div hidden={mode !== 'crew'}>
+        <CardioPanel key={scopeKey(ctx)} {...ctx} />
+      </div>
+      {mode === 'research' && <ResearchCardio />}
     </Registered>
   );
 }

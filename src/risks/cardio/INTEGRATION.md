@@ -1,5 +1,30 @@
 # Handoff to the navigation/vector owner
 
+## Integrated NASA Cardio workflow
+
+Cardio now includes a visible **NASA research** source selector above the crew
+form. It loads the bundled MR080G C3D-3985 post-bed-rest test immediately, with
+selectors for recovery, recorded workload and VO2peak units. HR comparisons use
+the existing `compareSession` with `research-descriptive-v1`; peak retention uses
+the same `adaptVo2` / `assess` evaluator as crew reports. Both charts and a source
+packet download appear in Cardio, without navigating to the evidence page.
+
+The post-bed-rest 100 W comparison is +41.5 bpm; relative VO2peak retention is
+73.9%. Recovery is +14.5 bpm and 98.0% retained. Exercise stages and peak reports
+remain separately identified archival observations. The historical test stop is
+shown as archival context, not emitted as a current crew red flag. This read-only
+research mode does not emit timed vector signals, register a research participant
+as simulated crew, write the exercise archive or alter crew baselines. The crew
+form remains mounted so switching modes preserves an unsaved draft.
+
+Browser verification in headless Chrome covered the real registered Cardio
+route, test/workload/unit selections, chart rendering, JSON packet provenance,
+unchanged local storage, returning to the preserved crew draft and a 320 px
+layout with expanded sources and no page overflow. Controls and export also
+worked after disabling network access in the loaded app.
+
+The original handoff below describes the earlier tab implementation.
+
 Only `src/risks/cardio`, `sleep`, `immune` and `bone` were changed.
 Each `index.ts` exports `riskTab` with the exact five-field shared descriptor.
 Mount `riskTab.Component` with `{ crewId, vector }`; evaluators reject unknown IDs.
