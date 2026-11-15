@@ -569,10 +569,8 @@ function BonePanel(ctx: RiskTabProps) {
         </p>
         <p>NHANES is not a longitudinal astronaut baseline or a hip source.</p>
         <p>
-          <a href="https://www.nasa.gov/ames/research/space-biosciences/lsda/">
-            NASA LSDA reference
-          </a>{' '}
-          · access required, data not bundled.
+          <a href="https://lsda.jsc.nasa.gov/">NASA LSDA reference</a> · access required, data not
+          bundled.
         </p>
       </details>
     </TabFrame>
