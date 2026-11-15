@@ -1,4 +1,5 @@
 import { useId, useState } from 'react';
+import ResearchReplay from './research/ResearchReplay';
 import type { BoneSite, RiskTabProps } from '../types';
 import {
   ContextLink,
@@ -577,10 +578,31 @@ function BonePanel(ctx: RiskTabProps) {
     </TabFrame>
   );
 }
+function BoneViews(ctx: RiskTabProps) {
+  const [research, setResearch] = useState(false);
+  return (
+    <>
+      <nav className="risk-tab bone-view-switch" aria-label="Bone data source">
+        <div className="risk-actions">
+          <button type="button" aria-pressed={!research} onClick={() => setResearch(false)}>
+            Crew observations
+          </button>
+          <button type="button" aria-pressed={research} onClick={() => setResearch(true)}>
+            NASA replay
+          </button>
+        </div>
+      </nav>
+      <div hidden={research}>
+        <BonePanel {...ctx} />
+      </div>
+      {research && <ResearchReplay />}
+    </>
+  );
+}
 export default function BoneTab(ctx: RiskTabProps) {
   return (
     <Registered {...ctx}>
-      <BonePanel key={scopeKey(ctx)} {...ctx} />
+      <BoneViews key={scopeKey(ctx)} {...ctx} />
     </Registered>
   );
 }
