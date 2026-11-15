@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import ResearchReplay from './research/ResearchReplay';
 import type { RiskTabProps, Rating03 } from '../types';
 import {
   ContextLink,
@@ -466,10 +467,31 @@ function ImmunePanel(ctx: RiskTabProps) {
     </TabFrame>
   );
 }
+function ImmuneViews(ctx: RiskTabProps) {
+  const [research, setResearch] = useState(false);
+  return (
+    <>
+      <nav className="risk-tab immune-view-switch" aria-label="Immune data source">
+        <div className="risk-actions">
+          <button type="button" aria-pressed={!research} onClick={() => setResearch(false)}>
+            Crew check-in
+          </button>
+          <button type="button" aria-pressed={research} onClick={() => setResearch(true)}>
+            NASA labs
+          </button>
+        </div>
+      </nav>
+      <div hidden={research}>
+        <ImmunePanel {...ctx} />
+      </div>
+      {research && <ResearchReplay />}
+    </>
+  );
+}
 export default function ImmuneTab(ctx: RiskTabProps) {
   return (
     <Registered {...ctx}>
-      <ImmunePanel key={scopeKey(ctx)} {...ctx} />
+      <ImmuneViews key={scopeKey(ctx)} {...ctx} />
     </Registered>
   );
 }
