@@ -7,11 +7,11 @@ research view identifies NASA research and research participants, keeps its own
 selectors, and makes descriptive comparisons within that participant's source
 series. Missing or conflicting evidence never becomes a simulated measurement.
 
-| Module | Frozen research scope | Source audit |
-| --- | --- | --- |
-| Cardio | MR080G, C3D-3985; two pre-tests, post-bed-rest and recovery | All 12 stage HR/RPE/workload/duration values and eight unit-specific peak representations match their physical raw CSV rows. |
-| Sleep | BRSMAct, Campaign 1; 3 participants, 207 nights | Raw rows and all 3 file hashes match; curation reproduces identical bytes, including query conflicts and missing baselines. |
-| Bone | MR035G, Campaign 3; 7 participants, 285 curated source rows | All curated rows and 302 downloaded file hashes match; the selected 20-file artifact reproduces identical bytes. This remains an explicit subset. |
+| Module | Frozen research scope                                       | Source audit                                                                                                                                       |
+| ------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cardio | MR080G, C3D-3985; two pre-tests, post-bed-rest and recovery | All 12 stage HR/RPE/workload/duration values and eight unit-specific peak representations match their physical raw CSV rows.                       |
+| Sleep  | BRSMAct, Campaign 1; 3 participants, 207 nights             | Raw rows and all 3 file hashes match; curation reproduces identical bytes, including query conflicts and missing baselines.                        |
+| Bone   | MR035G, Campaign 3; 7 participants, 285 curated source rows | All curated rows and 302 downloaded file hashes match; the selected 20-file artifact reproduces identical bytes. This remains an explicit subset.  |
 | Immune | OSD-575, HD71 serum; 4 participants, 71 markers, 28 samples | All 1,988 submitted concentrations agree with the transformed representation; source rows and 9 hashes match; curation reproduces identical bytes. |
 
 Fixed Cardio's VO2peak chart shrinking into unreadable text at 320 px by keeping

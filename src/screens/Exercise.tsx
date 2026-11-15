@@ -1,10 +1,5 @@
 import { useMemo, useState, useSyncExternalStore } from 'react';
-import {
-  ArrowCounterClockwise,
-  ArrowRight,
-  Circle,
-  Flask,
-} from '@phosphor-icons/react';
+import { ArrowCounterClockwise, ArrowRight, Circle, Flask } from '@phosphor-icons/react';
 import { createExerciseStore, evaluateWorkspace } from '../exercise/store';
 import { parseExerciseCsv, exerciseCsvHeader, type CsvPreview } from '../exercise/csv';
 import type { ScenarioVariant } from '../exercise/data/scenarios';
@@ -179,7 +174,12 @@ export default function Exercise() {
               <h2 className="instrument-label">Evidence: heart rate during prescribed cycling</h2>
               <div className="plot-legend">
                 <span>
-                  <Circle size={12} weight="regular" className="baseline-symbol" aria-hidden="true" />
+                  <Circle
+                    size={12}
+                    weight="regular"
+                    className="baseline-symbol"
+                    aria-hidden="true"
+                  />
                   Baseline
                 </span>
                 <span>

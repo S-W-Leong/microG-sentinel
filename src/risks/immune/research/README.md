@@ -26,6 +26,7 @@ submitted Alamar workbook. URLs are `https://osdr.nasa.gov` plus each catalog
 nine downloads. NASA's study page lists CC0-1.0; retain study attribution.
 
 Inspection of CSV headers, records and ISA protocols found:
+
 - HD71: 1,988 submitted results, 71 markers × 28 samples; all concentrations
   labelled pg/ml and assay type HD71. The wide transformed CSV has the same
   28 samples and 71 concentration columns plus supplied percent columns.
