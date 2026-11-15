@@ -217,7 +217,7 @@ const foot = (s, text) => T(s, text, 120, 1010, 1500, 36, { fontSize: pt(20), co
     T(s, p, x + 40, y + 98, 750, 90, { fontSize: pt(27), color: MUTED });
   });
   T(s, '(SW)² · Siang Woo & Shi Wei', 120, 930, 700, 50, { fontSize: pt(34) });
-  T(s, 'Prototype, not for clinical use. AI-assisted research, data curation, code and writing (Claude, OpenAI Codex, DeepSeek), disclosed per Space Apps rules.', 900, 920, 900, 70, { fontSize: pt(22), color: MUTED, align: 'right' });
+  T(s, 'Prototype, not for clinical use. AI-assisted research, data curation, code and writing (Claude, OpenAI Codex), disclosed per Space Apps rules.', 900, 920, 900, 70, { fontSize: pt(22), color: MUTED, align: 'right' });
   s.addNotes(noteFor(7));
 }
 
