@@ -106,12 +106,6 @@ export default function App() {
           <a href={routeHref('/profile', crewId)} aria-current={profile ? 'page' : undefined}>
             Crew profile
           </a>
-          <a
-            href="#/exercise-research"
-            aria-current={page === 'exercise-research' ? 'page' : undefined}
-          >
-            NASA evidence
-          </a>
         </nav>
         {(home || region || profile) && (
           <label className="shell-crew">

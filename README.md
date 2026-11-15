@@ -20,7 +20,7 @@ Results are pattern matches or personal-baseline changes, never diagnoses. Red f
 | Head | Balance | Sensorimotor and vestibular change | Live |
 | Gut | Microbiome | Host–microorganism interactions | Live |
 | Eyes | SANS | Spaceflight-associated neuro-ocular syndrome | Live |
-| Head | Mood | Behavioural health (optional) | Planned |
+| Head | Mood | Behavioural health (optional) | Live |
 
 Every tab with no build shows **Planned** on the body map, with no values.
 
@@ -46,7 +46,7 @@ Crew member **SIM-CDR** (simulated) has a declared shellfish allergy. The demo c
 3. Immune shows **Hives pattern 80%**: a 60% base match from five hives metrics, plus +10 for the known allergy and +10 for the allergen eaten within six hours, each listed as a reason.
 4. Answer a red-flag question with **Yes** (for example "Trouble breathing") to see the score replaced by **Contact the flight surgeon now**.
 
-**Cardio** keeps the exercise heart-rate check and the NASA bed-rest replay (participant C3D-3985: VO₂peak 73.9% of baseline after bed rest, 98.0% after recovery; +41.5 bpm at 100 W). **NASA evidence** in the header opens the research replay.
+**Cardio** keeps the exercise heart-rate check and the NASA bed-rest replay (participant C3D-3985: VO₂peak 73.9% of baseline after bed rest, 98.0% after recovery; +41.5 bpm at 100 W). Each of Shi Wei's tabs (Cardio, Sleep, Immune, Bone) has a **NASA replay** toggle beside the crew check-in.
 
 ## How it's built
 

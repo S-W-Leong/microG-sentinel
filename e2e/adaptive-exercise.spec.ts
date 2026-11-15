@@ -29,7 +29,7 @@ test('adaptive observation, refresh and locally prepared review', async ({ page,
   const packet = JSON.parse(await readFile((await file.path())!, 'utf8'));
   expect(packet.transferState).toBe('prepared-locally');
   expect(packet.baseline.sessions).toHaveLength(2);
-  await page.getByRole('link', { name: 'NASA evidence', exact: true }).click();
+  await page.goto('/#/exercise-research');
   await expect(page.getByText('+41.5 bpm', { exact: true })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Use this observation plan' })).toHaveCount(0);
   await page.screenshot({ path: 'artifacts/adaptive-research.png', fullPage: true });
