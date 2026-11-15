@@ -87,6 +87,13 @@ A hackathon prototype, not a clinical tool. It gives no diagnosis, clearance, tr
 
 ## AI tools used
 
-Claude orchestrated the work and reviewed it. OpenAI Codex built most of the code as implementation workers. DeepSeek was used to prototype the 3D body map. This disclosure follows NASA Space Apps transparency requirements; AI assistance does not establish clinical validity.
+We used AI tools (Claude, OpenAI Codex, DeepSeek) for four kinds of work:
+
+- **Research:** finding datasets, clinical screening scores and NASA background.
+- **Data analysis:** curating the NASA datasets for the replays (see `data/curated/` and each tab's `research/` folder), checked against the source files.
+- **Coding:** Codex wrote most of the code under Claude's review, including the three.js body map and the scripts that build the slides. An early DeepSeek 3D prototype was not used.
+- **Writing:** this README, the docs and the slide text.
+
+No images, video or audio were AI-generated: the 3D astronaut is drawn by code, and the slide images are screenshots of the app. The app itself contains no AI model. This disclosure follows NASA Space Apps requirements; AI assistance does not establish clinical validity.
 
 Interface resources: [IBM Plex](https://github.com/IBM/plex) fonts via [Fontsource](https://fontsource.org/), [Phosphor](https://phosphoricons.com/) icons, [Observable Plot](https://observablehq.com/plot/) charts, [three.js](https://threejs.org/) (MIT) for 3D.
