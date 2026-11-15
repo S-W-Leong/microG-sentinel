@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import ResearchReplay from './research/ResearchReplay';
 import type { ComponentProps } from 'react';
 import type { RiskTabProps } from '../types';
 import {
@@ -631,10 +632,31 @@ function SansPanel(ctx: RiskTabProps) {
     </SansFrame>
   );
 }
+function SansViews(ctx: RiskTabProps) {
+  const [research, setResearch] = useState(false);
+  return (
+    <>
+      <nav className="risk-tab sans-view-switch" aria-label="SANS data source">
+        <div className="risk-actions">
+          <button type="button" aria-pressed={!research} onClick={() => setResearch(false)}>
+            Crew check-in
+          </button>
+          <button type="button" aria-pressed={research} onClick={() => setResearch(true)}>
+            NASA replay
+          </button>
+        </div>
+      </nav>
+      <div hidden={research}>
+        <SansPanel {...ctx} />
+      </div>
+      {research && <ResearchReplay />}
+    </>
+  );
+}
 export default function SansTab(ctx: RiskTabProps) {
   return (
     <Registered {...ctx}>
-      <SansPanel key={scopeKey(ctx)} {...ctx} />
+      <SansViews key={scopeKey(ctx)} {...ctx} />
     </Registered>
   );
 }

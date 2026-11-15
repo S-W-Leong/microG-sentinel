@@ -27,6 +27,7 @@ import {
   type MoodInput,
 } from './model';
 import './mood.css';
+import ResearchReplay from './research/ResearchReplay';
 
 const scales = [
   ['mood', 'Mood', 'Very low', 'Very good'],
@@ -227,7 +228,7 @@ function Calendar({ history, now }: { history: MoodInput[]; now: string }) {
   );
 }
 
-function MoodPanel(ctx: RiskTabProps) {
+function MoodPanel(ctx: RiskTabProps & { onUrgencyChange: (urgent: boolean) => void }) {
   useTabUpdates(ctx, moodStore);
   const person = ctx.vector.getVector(ctx.crewId)!;
   const now = person.exposures.asOf;
@@ -240,6 +241,10 @@ function MoodPanel(ctx: RiskTabProps) {
   const saved = moodStore.current(ctx);
   const history = moodStore.history(ctx);
   const urgent = isUrgent(draft) || (saved !== null && isUrgent(saved));
+  const onUrgencyChange = ctx.onUrgencyChange;
+  useEffect(() => {
+    onUrgencyChange(urgent);
+  }, [urgent, onUrgencyChange]);
   useEffect(() => {
     if (urgent) contactButton.current?.focus();
   }, [urgent]);
@@ -501,10 +506,39 @@ function MoodPanel(ctx: RiskTabProps) {
   );
 }
 
+function MoodViews(ctx: RiskTabProps) {
+  const [research, setResearch] = useState(false);
+  const [urgent, setUrgent] = useState(() => {
+    const saved = moodStore.current(ctx);
+    return saved !== null && isUrgent(saved);
+  });
+  const showResearch = research && !urgent;
+  return (
+    <>
+      {!urgent && (
+        <nav className="risk-tab mood-view-switch" aria-label="Mood data source">
+          <div className="risk-actions">
+            <button type="button" aria-pressed={!research} onClick={() => setResearch(false)}>
+              Crew check-in
+            </button>
+            <button type="button" aria-pressed={research} onClick={() => setResearch(true)}>
+              NASA replay
+            </button>
+          </div>
+        </nav>
+      )}
+      <div hidden={showResearch}>
+        <MoodPanel {...ctx} onUrgencyChange={setUrgent} />
+      </div>
+      {showResearch && <ResearchReplay />}
+    </>
+  );
+}
+
 export default function MoodTab(ctx: RiskTabProps) {
   return (
     <Registered {...ctx}>
-      <MoodPanel key={scopeKey(ctx)} {...ctx} />
+      <MoodViews key={scopeKey(ctx)} {...ctx} />
     </Registered>
   );
 }

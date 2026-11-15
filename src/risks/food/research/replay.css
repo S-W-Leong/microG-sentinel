@@ -1,0 +1,53 @@
+.food-view-switch {
+  padding-block: 12px;
+}
+.food-view-switch .food-actions {
+  margin: 0;
+}
+.food-research-participant {
+  margin-bottom: 16px;
+}
+.food-research-reading {
+  display: grid;
+  gap: 8px;
+  margin: 24px 0;
+  padding-block: 20px;
+  border-block: 1px solid var(--line, #3b4044);
+}
+.food-research-reading strong {
+  font-size: clamp(24px, 5vw, 36px);
+}
+.food-research-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.food-research-chart {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+  fill: #afbdc2;
+  font:
+    14px 'IBM Plex Sans',
+    system-ui,
+    sans-serif;
+}
+.food-research-evidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 12px;
+}
+.food-research-evidence dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.food-research :focus-visible,
+.food-view-switch :focus-visible {
+  outline: 2px solid var(--accent, #ff5a2b);
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .food-research .food-fields {
+    grid-template-columns: 1fr;
+  }
+}

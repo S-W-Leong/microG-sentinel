@@ -32,6 +32,7 @@ import {
   subscribeFood,
 } from './store';
 import './food.css';
+import ResearchReplay from './research/ResearchReplay';
 
 const number = (value: number | null) =>
   value === null
@@ -149,7 +150,29 @@ function Nutrient({
 }
 
 export default function FoodTab(props: RiskTabProps) {
-  return <FoodPanel key={props.crewId} {...props} />;
+  return <FoodViews key={props.crewId} {...props} />;
+}
+
+function FoodViews(props: RiskTabProps) {
+  const [research, setResearch] = useState(false);
+  return (
+    <>
+      <nav className="food-tab food-view-switch" aria-label="Food data source">
+        <div className="food-actions">
+          <button type="button" aria-pressed={!research} onClick={() => setResearch(false)}>
+            Crew check-in
+          </button>
+          <button type="button" aria-pressed={research} onClick={() => setResearch(true)}>
+            NASA replay
+          </button>
+        </div>
+      </nav>
+      <div hidden={research}>
+        <FoodPanel {...props} />
+      </div>
+      {research && <ResearchReplay />}
+    </>
+  );
 }
 
 function FoodPanel({ crewId, vector }: RiskTabProps) {

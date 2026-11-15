@@ -16,6 +16,7 @@ import {
 } from './model';
 import { Timeline } from './Timeline';
 import { GutForm } from './GutForm';
+import ResearchReplay from './research/ResearchReplay';
 import './microbiome.css';
 
 const answer = (value: boolean | null) => (value === null ? 'Unknown' : value ? 'Yes' : 'No');
@@ -261,8 +262,8 @@ function GutContent(ctx: RiskEvaluationContext) {
         <p>Session-only history; reload clears observations and photos.</p>
         <p>
           Research context: <a href="https://osdr.nasa.gov/bio/repo/">NASA OSDR</a> ·{' '}
-          <a href="https://soma.weill.cornell.edu/apps/SOMA_Browser">SOMA</a>; no study files
-          integrated or validated here.
+          <a href="https://soma.weill.cornell.edu/apps/SOMA_Browser">SOMA</a>; skin-swab research is
+          available separately in NASA replay.
         </p>
       </details>
       <footer>Prototype · not for clinical use</footer>
@@ -270,10 +271,32 @@ function GutContent(ctx: RiskEvaluationContext) {
   );
 }
 
+function MicrobiomeViews(props: RiskTabProps) {
+  const [research, setResearch] = useState(false);
+  return (
+    <>
+      <nav className="risk-tab microbiome-view-switch" aria-label="Microbiome data source">
+        <div className="risk-actions">
+          <button type="button" aria-pressed={!research} onClick={() => setResearch(false)}>
+            Crew check-in
+          </button>
+          <button type="button" aria-pressed={research} onClick={() => setResearch(true)}>
+            NASA replay
+          </button>
+        </div>
+      </nav>
+      <div hidden={research}>
+        <GutContent {...props} />
+      </div>
+      {research && <ResearchReplay />}
+    </>
+  );
+}
+
 export default function MicrobiomeTab(props: RiskTabProps) {
   return (
     <Registered {...props}>
-      <GutContent key={props.crewId} {...props} />
+      <MicrobiomeViews key={props.crewId} {...props} />
     </Registered>
   );
 }
