@@ -7,8 +7,9 @@ const dir = __dirname;
 const out = process.argv[2] || path.join(dir, 'MicroG-Sentinel-slides.pptx');
 const notes = fs.readFileSync(path.join(dir, 'speaker-notes.md'), 'utf8');
 const noteFor = (n) => {
-  const m = notes.match(new RegExp('\\*\\*' + n + ' ·[^*]*\\*\\*\\n([\\s\\S]*?)(?=\\n\\*\\*|$)'));
-  return m ? m[1].trim() : '';
+  const m = notes.match(new RegExp('^\\*\\*' + n + '\\s+·[^\\r\\n]*\\*\\*\\r?\\n([\\s\\S]*?)(?=^\\*\\*\\d+\\s+·|$(?![\\s\\S]))', 'm'));
+  if (!m?.[1].trim()) throw new Error(`Missing speaker notes for slide ${n}`);
+  return m[1].trim();
 };
 
 const BG = '111315', PANEL = '1A1D20', LINE = '2C3136', TEXT = 'F2EFE9', MUTED = 'A3A8AD', ACCENT = 'FF5A2B';
@@ -64,11 +65,11 @@ const foot = (s, text) => T(s, text, 120, 1010, 1500, 36, { fontSize: pt(20), co
   const stats = [
     ['Weekly', 'private medical conference with the flight surgeon on the ISS'],
     ['17', 'NASA human spaceflight health risks, each with its own signs'],
-    ['20 min', 'one-way signal delay from Mars, so help is never instant'],
+    ['up to 20 min', 'one-way signal delay from Mars, so help is never instant'],
   ];
   stats.forEach(([big, text], n) => {
     const x = 120 + n * 576;
-    T(s, big, x, 340, 540, 150, { fontSize: pt(128), bold: true });
+    T(s, big, x, 340, 540, 150, { fontSize: pt(n === 2 ? 78 : 128), bold: true });
     T(s, text, x, 510, 470, 100, { fontSize: pt(30), color: MUTED });
   });
   T(s, 'Astronauts need a quick way to notice change in their own body, and to know when it cannot wait.', 120, 700, 1500, 110, { fontSize: pt(38) });
@@ -142,7 +143,7 @@ const foot = (s, text) => T(s, text, 120, 1010, 1500, 36, { fontSize: pt(20), co
   kicker(s, 'One story, two tabs');
   title(s, 'Shrimp at breakfast, hives by eleven', 860, 150);
   const lines = [
-    ['60%', [{ text: 'photo matches 3 of 5 hives signs' }]],
+    ['60%', [{ text: '3 of 5 confirmed hives signs match' }]],
     ['+10', [{ text: 'known shellfish allergy ' }, { text: '(vector)', options: { color: MUTED } }]],
     ['+10', [{ text: 'shellfish eaten 3 h ago ' }, { text: '(Food tab)', options: { color: MUTED } }]],
   ];
@@ -175,27 +176,30 @@ const foot = (s, text) => T(s, text, 120, 1010, 1500, 36, { fontSize: pt(20), co
 {
   const s = pres.addSlide({ masterName: 'CONTENT' });
   kicker(s, 'Real NASA data, kept separate');
-  title(s, 'Four tabs replay a NASA study', 1000);
+  title(s, 'Every tab replays NASA data');
   const rows = [
     ['Cardio', 'MR080G bed-rest cycle tests', 'NASA LSDA'],
-    ['Sleep', 'BRSMAct wrist actigraphy, UTMB Campaign 1', 'NASA LSDA'],
+    ['Sleep', 'BRSMAct wrist actigraphy, Campaign 1', 'NASA LSDA'],
     ['Immune', 'OSD-575 Inspiration4 cytokine panel', 'NASA OSDR'],
     ['Bone', 'MR035G DXA hip and spine scans', 'NASA LSDA'],
+    ['Microbiome', 'OSD-574 Inspiration4 skin microbiome', 'NASA OSDR'],
+    ['SANS', 'OSD-679 / LSDS-81 rat eye OCT', 'NASA OSDR'],
+    ['Balance', 'BRSMFMT mobility, UTMB Campaign 1', 'NASA LSDA'],
+    ['Mood', 'AD ASTRA CFT70, Campaign 11', 'NASA LSDA'],
+    ['Food', 'MR016G dietary intake, Campaign 3', 'NASA LSDA'],
   ];
   rows.forEach(([tab, src, repo], n) => {
-    const y = 270 + n * 100;
-    panel(s, 120, y, 1000, 82);
-    T(s, tab, 150, y + 20, 170, 44, { fontSize: pt(30), bold: true });
-    T(s, [{ text: src + ' ' }, { text: '· ' + repo, options: { color: MUTED } }], 344, y + 24, 760, 40, { fontSize: pt(25) });
+    const x = 120 + Math.floor(n / 5) * 854;
+    const y = 270 + (n % 5) * 108;
+    panel(s, x, y, 826, 92);
+    T(s, tab, x + 24, y + 28, 190, 44, { fontSize: pt(30), bold: true });
+    T(s, [{ text: src + '\n' }, { text: repo, options: { color: MUTED } }], x + 220, y + 16, 582, 66, { fontSize: pt(25) });
   });
   T(
     s,
-    'Replays are read-only and never mix with crew data.\nScreening cut-offs (UAS7, PSQI, PHQ-9, MUST) come from Earth populations.\nCrew data in the demo is simulated and labelled.',
-    120, 690, 1000, 140, { fontSize: pt(25), color: MUTED, lineSpacingMultiple: 1.3 },
+    'Read-only replays, separate from crew data. SANS: rat ground analog; human eye scans require a data request.\nScreening cut-offs (UAS7, PSQI, PHQ-9, MUST) come from Earth populations. Demo crew data is simulated and labelled.',
+    120, 850, 1680, 130, { fontSize: pt(25), color: MUTED, lineSpacingMultiple: 1.3 },
   );
-  // sleep 0.842:1
-  shot(s, 'sleep.png', 1180, 96, 620, 620 / 0.842, 'Sleep tab NASA replay');
-  frame(s, 1180, 96, 620, 620 / 0.842);
   s.addNotes(noteFor(6));
 }
 

@@ -15,10 +15,10 @@ We started from NASA's five hazards. Altered gravity gives Cardio, Bone, Balance
 The home screen is a body map. Tap the region that feels different, and you land in a tab for one risk. Each tab has its own quick input and the chart that fits it: a night of sleep, a meal log, a photo. Behind the tabs sits the astronaut vector: each crew member's traits, baselines and recent exposures, so one tab can inform another.
 
 **5 · Core story (40 s)**
-The Commander has a shellfish allergy. They log shrimp rice at breakfast. Three hours later they photograph a rash. The photo matches three of five hives signs: 60%. The vector adds 10 for the known allergy and 10 because the allergen was eaten within six hours: 80%, with every reason listed. It's a pattern match, not a diagnosis. If they answer yes to trouble breathing, the score disappears and the app says: contact the flight surgeon now.
+The Commander has a shellfish allergy. They log shrimp rice at breakfast. Three hours later they photograph a rash and manually confirm the observations. Three of five confirmed hives signs match: a 60% base. The vector adds 10 for the known allergy and 10 because the allergen was eaten within six hours: 80%, with every reason listed. It's a pattern match, not a diagnosis. If they answer yes to trouble breathing, the score disappears and the app says: contact the flight surgeon now.
 
 **6 · Real NASA data (25 s)**
-Four tabs include a replay of a real NASA study: bed-rest exercise tests, wrist actigraphy, the Inspiration4 cytokine panel, and bone scans. Replays are read-only and never mix with crew data. Screening cut-offs come from Earth populations, and we say so. All crew data in the demo is simulated and labelled.
+All nine tabs replay NASA data: exercise, sleep, immune markers, bone scans, skin microbiome, eye OCT, mobility, mood and dietary intake. SANS uses rat ground-analog OCT because the human eye scans checked need a data request. Replays are read-only and separate from crew data. Screening cut-offs come from Earth populations; demo crew data is simulated and labelled.
 
 **7 · What's next (15 s)**
 Next: an offline onboard assistant that drafts questions for the medical conference, wearable feeds, validation with flight surgeons, and queued reports for Moon and Mars delays. Thank you.
