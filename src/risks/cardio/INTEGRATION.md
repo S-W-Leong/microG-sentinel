@@ -1,5 +1,55 @@
 # Handoff to the navigation/vector owner
 
+## Four-module replay review — 2026-11-15
+
+Reviewed the registered Cardio, Sleep, Bone and Immune routes together. Each
+research view identifies NASA research and research participants, keeps its own
+selectors, and makes descriptive comparisons within that participant's source
+series. Missing or conflicting evidence never becomes a simulated measurement.
+
+| Module | Frozen research scope | Source audit |
+| --- | --- | --- |
+| Cardio | MR080G, C3D-3985; two pre-tests, post-bed-rest and recovery | All 12 stage HR/RPE/workload/duration values and eight unit-specific peak representations match their physical raw CSV rows. |
+| Sleep | BRSMAct, Campaign 1; 3 participants, 207 nights | Raw rows and all 3 file hashes match; curation reproduces identical bytes, including query conflicts and missing baselines. |
+| Bone | MR035G, Campaign 3; 7 participants, 285 curated source rows | All curated rows and 302 downloaded file hashes match; the selected 20-file artifact reproduces identical bytes. This remains an explicit subset. |
+| Immune | OSD-575, HD71 serum; 4 participants, 71 markers, 28 samples | All 1,988 submitted concentrations agree with the transformed representation; source rows and 9 hashes match; curation reproduces identical bytes. |
+
+Fixed Cardio's VO2peak chart shrinking into unreadable text at 320 px by keeping
+its SVG at a readable width inside the existing focusable scroll container.
+Aligned its badge to **NASA research replay** and made the read-only separation
+explicit. The failing mobile scrolling check passed after this CSS fix.
+
+Added `research-browser.mjs` as a repeatable check using installed Chrome:
+
+```sh
+node src/risks/cardio/research-browser.mjs http://127.0.0.1:4174 --dev
+node src/risks/cardio/research-browser.mjs http://127.0.0.1:4175
+```
+
+Start a dev server at the first address and a production preview of `npm run
+build` at the second, or substitute the actual addresses. The script uses fresh
+browser state, saves simulated observations through the real registered UI, and
+blocks every external request while allowing local app assets. It visits every
+research participant/observation/region/marker/sample option, exercises both
+Cardio units and source-packet downloads, checks missing/conflicting evidence,
+and verifies source labels, expanded provenance, reloads and 320 px scrolling.
+Desktop and mobile checks passed in both development and production previews.
+
+The dev audit compares all three simulated crew members' real vectors, latest
+signals, private histories, selected observations and evaluations before/after
+research interactions. They remain identical, as does local storage; each
+unsaved crew draft survives switching back. Immune retains the saved **80%**
+hives result, then separately preserves a decoded local photo and unsaved itch
+selection through another lab-view round trip. The production audit checks
+storage, displayed results, drafts and photos; it does not import dev modules.
+Neither run reported a browser page error. Other browsers and a disconnected
+service-worker installation were not tested.
+
+Final checks: 451 tests passed, one existing test skipped; `npx tsc -b`,
+`npm run lint`, `npm run build` and `git diff --check` passed. Vite retains its
+existing large-chunk warning. No shared shell/vector files or research values
+were changed during this review.
+
 ## Integrated NASA Cardio workflow
 
 Cardio now includes a visible **NASA research** source selector above the crew

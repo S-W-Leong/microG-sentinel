@@ -15,7 +15,7 @@ export default function ResearchCardio() {
   const result = compareResearch(sessionId, workload, unit);
   const { session, selected, stage, vo2 } = result;
   return (
-    <section className="risk-tab cardio-research" aria-label="NASA Cardio workflow">
+    <section className="risk-tab cardio-research" aria-label="NASA cardio research replay">
       <header className="risk-heading">
         <div>
           <span className="risk-kicker">NASA MR080G · offline records</span>
@@ -24,10 +24,10 @@ export default function ResearchCardio() {
         <span className="risk-id">{session.scope.subjectId}</span>
       </header>
       <div className="risk-badges">
-        <strong>NASA data</strong>
+        <strong>NASA research replay</strong>
         <span>Research participant</span>
       </div>
-      <p>Bed-rest research participant · separate from the selected simulated crew.</p>
+      <p>Read-only bed-rest research · separate from selected crew.</p>
       <div className="risk-grid">
         <Field label="Research test">
           <select value={sessionId} onChange={(e) => setSessionId(e.target.value)}>

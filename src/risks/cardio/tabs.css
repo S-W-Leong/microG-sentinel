@@ -5,6 +5,9 @@
   overflow-x: auto;
   max-width: 100%;
 }
+.cardio-research .trend svg {
+  min-width: 690px;
+}
 .cardio-research .trend-line {
   stroke: #b4dfed;
 }
